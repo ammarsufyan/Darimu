@@ -1,1 +1,9 @@
 c:\users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\bin\Debug\Darimu.exe.config
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\bin\Debug\Darimu.exe
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\bin\Debug\Darimu.pdb
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.csprojResolveAssemblyReference.cache
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.panel_utama.resources
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.Properties.Resources.resources
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.csproj.GenerateResource.Cache
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.exe
+C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.pdb
