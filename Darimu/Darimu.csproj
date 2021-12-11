@@ -50,16 +50,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PanelUtama.cs">
+    <Compile Include="Panel_Beranda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PanelUtama.Designer.cs">
-      <DependentUpon>PanelUtama.cs</DependentUpon>
+    <Compile Include="Panel_Beranda.Designer.cs">
+      <DependentUpon>Panel_Beranda.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PanelUtama.resx">
-      <DependentUpon>PanelUtama.cs</DependentUpon>
+    <EmbeddedResource Include="Panel_Beranda.resx">
+      <DependentUpon>Panel_Beranda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,8 +96,10 @@
     <Content Include="Assets\icon_tentang_kami.png" />
     <Content Include="Assets\icon_topup.png" />
     <Content Include="Assets\LogoDarimuTransparant.png" />
+    <Content Include="Assets\maskot_beranda.png" />
     <Content Include="Assets\maximize.png" />
     <Content Include="Assets\minimize.png" />
+    <Content Include="Assets\Tagline_Beranda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

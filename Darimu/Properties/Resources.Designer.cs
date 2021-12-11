@@ -163,6 +163,16 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maskot_beranda {
+            get {
+                object obj = ResourceManager.GetObject("maskot_beranda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximize {
             get {
                 object obj = ResourceManager.GetObject("maximize", resourceCulture);
@@ -176,6 +186,16 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tagline_Beranda {
+            get {
+                object obj = ResourceManager.GetObject("Tagline_Beranda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
