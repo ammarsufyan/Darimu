@@ -25,7 +25,6 @@ namespace Darimu
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
-
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
@@ -118,6 +117,20 @@ namespace Darimu
             base.WndProc(ref m);
         }
 
+        private void AdjustForm()
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Maximized: //Maximized form (After)
+                    this.Padding = new Padding(8, 8, 8, 0);
+                    break;
+                case FormWindowState.Normal: //Restored form (After)
+                    if (this.Padding.Top != borderSize)
+                        this.Padding = new Padding(borderSize);
+                    break;
+            }
+        }
+
         private void button_minimize_click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -126,9 +139,15 @@ namespace Darimu
         private void button_maximize_click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
+            {
+                formSize = this.ClientSize;
                 this.WindowState = FormWindowState.Maximized;
+            }
             else
+            {
                 this.WindowState = FormWindowState.Normal;
+                this.Size = formSize;
+            }
         }
 
         private void button_exit_click(object sender, EventArgs e)
@@ -136,19 +155,9 @@ namespace Darimu
             Application.Exit();
         }
 
-        private void label_Rp_Click(object sender, EventArgs e)
+        private void panel_utama_Resize(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel_title_bar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            AdjustForm();
         }
     }
 }

@@ -36,6 +36,11 @@
             this.button_keluar = new System.Windows.Forms.Button();
             this.panel_menu_isi = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.icon_tentang_kami = new System.Windows.Forms.PictureBox();
+            this.icon_faq = new System.Windows.Forms.PictureBox();
+            this.icon_tabungan = new System.Windows.Forms.PictureBox();
+            this.icon_akun = new System.Windows.Forms.PictureBox();
+            this.icon_beranda = new System.Windows.Forms.PictureBox();
             this.label_tentang = new System.Windows.Forms.Label();
             this.label_faq = new System.Windows.Forms.Label();
             this.label_tabungan = new System.Windows.Forms.Label();
@@ -45,60 +50,55 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.logo_darimu = new System.Windows.Forms.PictureBox();
             this.panel_pemisah_2 = new System.Windows.Forms.Panel();
             this.label_username = new System.Windows.Forms.Label();
             this.label_hi = new System.Windows.Forms.Label();
             this.panel_title_bar = new System.Windows.Forms.Panel();
             this.panel_saldo_and_topup = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_saldo = new System.Windows.Forms.Label();
             this.label_Rp = new System.Windows.Forms.Label();
+            this.icon_saldo = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel_desktop = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel_pemisah = new System.Windows.Forms.Panel();
-            this.Tagline_Text = new System.Windows.Forms.PictureBox();
-            this.maskot_beranda = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.icon_saldo = new System.Windows.Forms.PictureBox();
             this.button_maximize = new System.Windows.Forms.Button();
             this.button_minimize = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
-            this.icon_tentang_kami = new System.Windows.Forms.PictureBox();
-            this.icon_faq = new System.Windows.Forms.PictureBox();
-            this.icon_tabungan = new System.Windows.Forms.PictureBox();
-            this.icon_akun = new System.Windows.Forms.PictureBox();
-            this.icon_beranda = new System.Windows.Forms.PictureBox();
-            this.logo_darimu = new System.Windows.Forms.PictureBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button_nabung = new System.Windows.Forms.Button();
+            this.panel_desktop = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_nabung = new System.Windows.Forms.Button();
+            this.Tagline_Text = new System.Windows.Forms.PictureBox();
+            this.maskot_beranda = new System.Windows.Forms.PictureBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel_pemisah = new System.Windows.Forms.Panel();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel_menu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel_menu_isi.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel_title_bar.SuspendLayout();
-            this.panel_saldo_and_topup.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel_desktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tagline_Text)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon_saldo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_tentang_kami)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_faq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_tabungan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_akun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_beranda)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.panel_title_bar.SuspendLayout();
+            this.panel_saldo_and_topup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon_saldo)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel_desktop.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tagline_Text)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_menu
@@ -185,6 +185,56 @@
             this.panel13.Size = new System.Drawing.Size(2, 431);
             this.panel13.TabIndex = 13;
             // 
+            // icon_tentang_kami
+            // 
+            this.icon_tentang_kami.Image = global::Darimu.Properties.Resources.icon_tentang_kami;
+            this.icon_tentang_kami.Location = new System.Drawing.Point(24, 252);
+            this.icon_tentang_kami.Name = "icon_tentang_kami";
+            this.icon_tentang_kami.Size = new System.Drawing.Size(25, 25);
+            this.icon_tentang_kami.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon_tentang_kami.TabIndex = 11;
+            this.icon_tentang_kami.TabStop = false;
+            // 
+            // icon_faq
+            // 
+            this.icon_faq.Image = global::Darimu.Properties.Resources.icon_faq;
+            this.icon_faq.Location = new System.Drawing.Point(24, 207);
+            this.icon_faq.Name = "icon_faq";
+            this.icon_faq.Size = new System.Drawing.Size(25, 25);
+            this.icon_faq.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon_faq.TabIndex = 11;
+            this.icon_faq.TabStop = false;
+            // 
+            // icon_tabungan
+            // 
+            this.icon_tabungan.Image = global::Darimu.Properties.Resources.icon_tabungan;
+            this.icon_tabungan.Location = new System.Drawing.Point(24, 159);
+            this.icon_tabungan.Name = "icon_tabungan";
+            this.icon_tabungan.Size = new System.Drawing.Size(25, 25);
+            this.icon_tabungan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon_tabungan.TabIndex = 12;
+            this.icon_tabungan.TabStop = false;
+            // 
+            // icon_akun
+            // 
+            this.icon_akun.Image = global::Darimu.Properties.Resources.icon_akun;
+            this.icon_akun.Location = new System.Drawing.Point(24, 110);
+            this.icon_akun.Name = "icon_akun";
+            this.icon_akun.Size = new System.Drawing.Size(25, 25);
+            this.icon_akun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon_akun.TabIndex = 11;
+            this.icon_akun.TabStop = false;
+            // 
+            // icon_beranda
+            // 
+            this.icon_beranda.Image = global::Darimu.Properties.Resources.icon_beranda;
+            this.icon_beranda.Location = new System.Drawing.Point(24, 61);
+            this.icon_beranda.Name = "icon_beranda";
+            this.icon_beranda.Size = new System.Drawing.Size(25, 25);
+            this.icon_beranda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon_beranda.TabIndex = 10;
+            this.icon_beranda.TabStop = false;
+            // 
             // label_tentang
             // 
             this.label_tentang.AutoSize = true;
@@ -242,7 +292,7 @@
             this.label_beranda.AutoSize = true;
             this.label_beranda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_beranda.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_beranda.ForeColor = System.Drawing.Color.White;
+            this.label_beranda.ForeColor = System.Drawing.Color.Cyan;
             this.label_beranda.Location = new System.Drawing.Point(55, 61);
             this.label_beranda.Name = "label_beranda";
             this.label_beranda.Size = new System.Drawing.Size(81, 22);
@@ -261,7 +311,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 100);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel15
             // 
@@ -292,6 +341,15 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Darimu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // logo_darimu
+            // 
+            this.logo_darimu.Image = global::Darimu.Properties.Resources.LogoDarimuTransparant;
+            this.logo_darimu.Location = new System.Drawing.Point(22, 25);
+            this.logo_darimu.Name = "logo_darimu";
+            this.logo_darimu.Size = new System.Drawing.Size(52, 50);
+            this.logo_darimu.TabIndex = 0;
+            this.logo_darimu.TabStop = false;
             // 
             // panel_pemisah_2
             // 
@@ -336,7 +394,6 @@
             this.panel_title_bar.Name = "panel_title_bar";
             this.panel_title_bar.Size = new System.Drawing.Size(784, 52);
             this.panel_title_bar.TabIndex = 1;
-            this.panel_title_bar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_title_bar_Paint);
             this.panel_title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_title_bar_MouseDown);
             // 
             // panel_saldo_and_topup
@@ -350,6 +407,16 @@
             this.panel_saldo_and_topup.Name = "panel_saldo_and_topup";
             this.panel_saldo_and_topup.Size = new System.Drawing.Size(126, 50);
             this.panel_saldo_and_topup.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Darimu.Properties.Resources.icon_topup;
+            this.pictureBox1.Location = new System.Drawing.Point(91, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // label_saldo
             // 
@@ -376,7 +443,16 @@
             this.label_Rp.TabIndex = 13;
             this.label_Rp.Text = "Rp";
             this.label_Rp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Rp.Click += new System.EventHandler(this.label_Rp_Click);
+            // 
+            // icon_saldo
+            // 
+            this.icon_saldo.Image = global::Darimu.Properties.Resources.icon_saldo;
+            this.icon_saldo.Location = new System.Drawing.Point(13, 12);
+            this.icon_saldo.Name = "icon_saldo";
+            this.icon_saldo.Size = new System.Drawing.Size(25, 25);
+            this.icon_saldo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon_saldo.TabIndex = 13;
+            this.icon_saldo.TabStop = false;
             // 
             // panel6
             // 
@@ -438,86 +514,6 @@
             this.panel9.Size = new System.Drawing.Size(180, 2);
             this.panel9.TabIndex = 6;
             // 
-            // panel_desktop
-            // 
-            this.panel_desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.panel_desktop.Controls.Add(this.panel2);
-            this.panel_desktop.Controls.Add(this.panel12);
-            this.panel_desktop.Controls.Add(this.panel11);
-            this.panel_desktop.Controls.Add(this.panel_pemisah);
-            this.panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_desktop.Location = new System.Drawing.Point(200, 52);
-            this.panel_desktop.Name = "panel_desktop";
-            this.panel_desktop.Size = new System.Drawing.Size(784, 479);
-            this.panel_desktop.TabIndex = 2;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(0, 477);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(782, 2);
-            this.panel12.TabIndex = 2;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(782, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(2, 477);
-            this.panel11.TabIndex = 1;
-            // 
-            // panel_pemisah
-            // 
-            this.panel_pemisah.BackColor = System.Drawing.Color.White;
-            this.panel_pemisah.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_pemisah.Location = new System.Drawing.Point(0, 0);
-            this.panel_pemisah.Name = "panel_pemisah";
-            this.panel_pemisah.Size = new System.Drawing.Size(784, 2);
-            this.panel_pemisah.TabIndex = 0;
-            // 
-            // Tagline_Text
-            // 
-            this.Tagline_Text.Image = global::Darimu.Properties.Resources.Tagline_Beranda;
-            this.Tagline_Text.Location = new System.Drawing.Point(61, 122);
-            this.Tagline_Text.Name = "Tagline_Text";
-            this.Tagline_Text.Size = new System.Drawing.Size(157, 66);
-            this.Tagline_Text.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Tagline_Text.TabIndex = 4;
-            this.Tagline_Text.TabStop = false;
-            // 
-            // maskot_beranda
-            // 
-            this.maskot_beranda.Image = global::Darimu.Properties.Resources.maskot_beranda;
-            this.maskot_beranda.Location = new System.Drawing.Point(279, 103);
-            this.maskot_beranda.Name = "maskot_beranda";
-            this.maskot_beranda.Size = new System.Drawing.Size(440, 230);
-            this.maskot_beranda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.maskot_beranda.TabIndex = 3;
-            this.maskot_beranda.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Darimu.Properties.Resources.icon_topup;
-            this.pictureBox1.Location = new System.Drawing.Point(91, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // icon_saldo
-            // 
-            this.icon_saldo.Image = global::Darimu.Properties.Resources.icon_saldo;
-            this.icon_saldo.Location = new System.Drawing.Point(13, 12);
-            this.icon_saldo.Name = "icon_saldo";
-            this.icon_saldo.Size = new System.Drawing.Size(25, 25);
-            this.icon_saldo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon_saldo.TabIndex = 13;
-            this.icon_saldo.TabStop = false;
-            // 
             // button_maximize
             // 
             this.button_maximize.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
@@ -569,64 +565,29 @@
             this.button_exit.UseVisualStyleBackColor = true;
             this.button_exit.Click += new System.EventHandler(this.button_exit_click);
             // 
-            // icon_tentang_kami
+            // panel_desktop
             // 
-            this.icon_tentang_kami.Image = global::Darimu.Properties.Resources.icon_tentang_kami;
-            this.icon_tentang_kami.Location = new System.Drawing.Point(24, 252);
-            this.icon_tentang_kami.Name = "icon_tentang_kami";
-            this.icon_tentang_kami.Size = new System.Drawing.Size(25, 25);
-            this.icon_tentang_kami.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon_tentang_kami.TabIndex = 11;
-            this.icon_tentang_kami.TabStop = false;
+            this.panel_desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.panel_desktop.Controls.Add(this.panel2);
+            this.panel_desktop.Controls.Add(this.panel12);
+            this.panel_desktop.Controls.Add(this.panel11);
+            this.panel_desktop.Controls.Add(this.panel_pemisah);
+            this.panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_desktop.Location = new System.Drawing.Point(200, 52);
+            this.panel_desktop.Name = "panel_desktop";
+            this.panel_desktop.Size = new System.Drawing.Size(784, 479);
+            this.panel_desktop.TabIndex = 2;
             // 
-            // icon_faq
+            // panel2
             // 
-            this.icon_faq.Image = global::Darimu.Properties.Resources.icon_faq;
-            this.icon_faq.Location = new System.Drawing.Point(24, 207);
-            this.icon_faq.Name = "icon_faq";
-            this.icon_faq.Size = new System.Drawing.Size(25, 25);
-            this.icon_faq.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon_faq.TabIndex = 11;
-            this.icon_faq.TabStop = false;
-            // 
-            // icon_tabungan
-            // 
-            this.icon_tabungan.Image = global::Darimu.Properties.Resources.icon_tabungan;
-            this.icon_tabungan.Location = new System.Drawing.Point(24, 159);
-            this.icon_tabungan.Name = "icon_tabungan";
-            this.icon_tabungan.Size = new System.Drawing.Size(25, 25);
-            this.icon_tabungan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon_tabungan.TabIndex = 12;
-            this.icon_tabungan.TabStop = false;
-            // 
-            // icon_akun
-            // 
-            this.icon_akun.Image = global::Darimu.Properties.Resources.icon_akun;
-            this.icon_akun.Location = new System.Drawing.Point(24, 110);
-            this.icon_akun.Name = "icon_akun";
-            this.icon_akun.Size = new System.Drawing.Size(25, 25);
-            this.icon_akun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon_akun.TabIndex = 11;
-            this.icon_akun.TabStop = false;
-            // 
-            // icon_beranda
-            // 
-            this.icon_beranda.Image = global::Darimu.Properties.Resources.icon_beranda;
-            this.icon_beranda.Location = new System.Drawing.Point(24, 61);
-            this.icon_beranda.Name = "icon_beranda";
-            this.icon_beranda.Size = new System.Drawing.Size(25, 25);
-            this.icon_beranda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon_beranda.TabIndex = 10;
-            this.icon_beranda.TabStop = false;
-            // 
-            // logo_darimu
-            // 
-            this.logo_darimu.Image = global::Darimu.Properties.Resources.LogoDarimuTransparant;
-            this.logo_darimu.Location = new System.Drawing.Point(22, 25);
-            this.logo_darimu.Name = "logo_darimu";
-            this.logo_darimu.Size = new System.Drawing.Size(52, 50);
-            this.logo_darimu.TabIndex = 0;
-            this.logo_darimu.TabStop = false;
+            this.panel2.Controls.Add(this.button_nabung);
+            this.panel2.Controls.Add(this.Tagline_Text);
+            this.panel2.Controls.Add(this.maskot_beranda);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(0, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(782, 475);
+            this.panel2.TabIndex = 12;
             // 
             // button_nabung
             // 
@@ -636,7 +597,7 @@
             this.button_nabung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_nabung.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_nabung.ForeColor = System.Drawing.Color.White;
-            this.button_nabung.Location = new System.Drawing.Point(61, 192);
+            this.button_nabung.Location = new System.Drawing.Point(89, 200);
             this.button_nabung.Name = "button_nabung";
             this.button_nabung.Size = new System.Drawing.Size(131, 34);
             this.button_nabung.TabIndex = 11;
@@ -644,16 +605,52 @@
             this.button_nabung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_nabung.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // Tagline_Text
             // 
-            this.panel2.Controls.Add(this.button_nabung);
-            this.panel2.Controls.Add(this.Tagline_Text);
-            this.panel2.Controls.Add(this.maskot_beranda);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 475);
-            this.panel2.TabIndex = 12;
+            this.Tagline_Text.Image = global::Darimu.Properties.Resources.Tagline_Beranda;
+            this.Tagline_Text.Location = new System.Drawing.Point(89, 125);
+            this.Tagline_Text.Name = "Tagline_Text";
+            this.Tagline_Text.Size = new System.Drawing.Size(157, 66);
+            this.Tagline_Text.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Tagline_Text.TabIndex = 4;
+            this.Tagline_Text.TabStop = false;
+            // 
+            // maskot_beranda
+            // 
+            this.maskot_beranda.Image = global::Darimu.Properties.Resources.maskot_beranda;
+            this.maskot_beranda.Location = new System.Drawing.Point(307, 106);
+            this.maskot_beranda.Name = "maskot_beranda";
+            this.maskot_beranda.Size = new System.Drawing.Size(440, 230);
+            this.maskot_beranda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.maskot_beranda.TabIndex = 3;
+            this.maskot_beranda.TabStop = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(0, 477);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(782, 2);
+            this.panel12.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(782, 2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(2, 477);
+            this.panel11.TabIndex = 1;
+            // 
+            // panel_pemisah
+            // 
+            this.panel_pemisah.BackColor = System.Drawing.Color.White;
+            this.panel_pemisah.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_pemisah.Location = new System.Drawing.Point(0, 0);
+            this.panel_pemisah.Name = "panel_pemisah";
+            this.panel_pemisah.Size = new System.Drawing.Size(784, 2);
+            this.panel_pemisah.TabIndex = 0;
             // 
             // panel_utama
             // 
@@ -671,28 +668,28 @@
             this.panel3.PerformLayout();
             this.panel_menu_isi.ResumeLayout(false);
             this.panel_menu_isi.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel_title_bar.ResumeLayout(false);
-            this.panel_saldo_and_topup.ResumeLayout(false);
-            this.panel_saldo_and_topup.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel_desktop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Tagline_Text)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icon_saldo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_tentang_kami)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_faq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_tabungan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_akun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_beranda)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.panel_title_bar.ResumeLayout(false);
+            this.panel_saldo_and_topup.ResumeLayout(false);
+            this.panel_saldo_and_topup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon_saldo)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel_desktop.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tagline_Text)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
