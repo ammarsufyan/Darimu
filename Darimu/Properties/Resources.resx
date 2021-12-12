@@ -136,11 +136,20 @@
   <data name="icon_tabungan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_tabungan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="maskot_beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\maskot_beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_akun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_akun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tagline_Beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Tagline_Beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_faq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_faq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +157,17 @@
   <data name="Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_masuk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_masuk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_daftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_daftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_faq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_faq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_profil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_akun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +175,28 @@
   <data name="icon_topup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_topup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tagline_Beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Tagline_Beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gambar_tentang_kami" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_tentang_kami.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_beranda_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_beranda_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_faq_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_faq_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_profil_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_profil_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tabungan_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_tabungan_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tentang_kami_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_tentang_kami_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_menu_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_menu_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_masuk_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_masuk_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

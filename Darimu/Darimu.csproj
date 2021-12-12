@@ -50,16 +50,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Panel_Beranda.cs">
+    <Compile Include="frm_beranda_sebelum_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Panel_Beranda.Designer.cs">
-      <DependentUpon>Panel_Beranda.cs</DependentUpon>
+    <Compile Include="frm_beranda_sebelum_login.Designer.cs">
+      <DependentUpon>frm_beranda_sebelum_login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Panel_Beranda.resx">
-      <DependentUpon>Panel_Beranda.cs</DependentUpon>
+    <EmbeddedResource Include="frm_beranda_sebelum_login.resx">
+      <DependentUpon>frm_beranda_sebelum_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,11 +86,26 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Assets\Blue\icon_beranda_biru.png" />
+    <None Include="Assets\Blue\icon_faq_biru.png" />
+    <None Include="Assets\Blue\icon_masuk_baru.png" />
+    <None Include="Assets\Blue\icon_profil_biru.png" />
+    <None Include="Assets\Blue\icon_tabungan_biru.png" />
+    <None Include="Assets\Blue\icon_tentang_kami_biru.png" />
+    <None Include="Assets\Blue\icon_menu_biru.png" />
+    <None Include="Assets\Blue\icon_masuk_biru.png" />
     <Content Include="Assets\Contacts.png" />
+    <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
+    <Content Include="Assets\gambar_daftar.png" />
+    <Content Include="Assets\gambar_faq.png" />
+    <Content Include="Assets\gambar_login.png" />
+    <Content Include="Assets\gambar_tentang_kami.png" />
     <Content Include="Assets\icon_akun.png" />
     <Content Include="Assets\icon_beranda.png" />
     <Content Include="Assets\icon_faq.png" />
+    <Content Include="Assets\icon_masuk.png" />
+    <Content Include="Assets\icon_menu.png" />
     <Content Include="Assets\icon_saldo.png" />
     <Content Include="Assets\icon_tabungan.png" />
     <Content Include="Assets\icon_tentang_kami.png" />
