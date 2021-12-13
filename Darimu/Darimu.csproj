@@ -94,6 +94,7 @@
     <None Include="Assets\Blue\icon_tentang_kami_biru.png" />
     <None Include="Assets\Blue\icon_menu_biru.png" />
     <None Include="Assets\Blue\icon_masuk_biru.png" />
+    <None Include="Assets\Blue\icon_topup_biru.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
@@ -110,6 +111,7 @@
     <Content Include="Assets\icon_tabungan.png" />
     <Content Include="Assets\icon_tentang_kami.png" />
     <Content Include="Assets\icon_topup.png" />
+    <Content Include="Assets\icon_topup_biru.png" />
     <Content Include="Assets\LogoDarimuTransparant.png" />
     <Content Include="Assets\maskot_beranda.png" />
     <Content Include="Assets\maximize.png" />

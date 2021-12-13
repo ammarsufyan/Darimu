@@ -283,6 +283,16 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_topup_biru {
+            get {
+                object obj = ResourceManager.GetObject("icon_topup_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoDarimuTransparant {
             get {
                 object obj = ResourceManager.GetObject("LogoDarimuTransparant", resourceCulture);
