@@ -524,6 +524,11 @@ namespace Darimu
         {
             if(txt_captcha_lupa_password.Text == angka.ToString())
             {
+                const string message = "Selamat Anda berhasil membuat password baru!";
+                const string caption = "Sukses Membuat Password Baru";
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
                 hide_panel();
                 default_color();
                 panel_isi_login.Visible = true;
