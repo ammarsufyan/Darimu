@@ -76,6 +76,15 @@
             this.profilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ubahProfilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riwayatTabunganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_isi_profil_saya = new System.Windows.Forms.Panel();
+            this.panel_isi_ubah_profil_saya = new System.Windows.Forms.Panel();
+            this.panel_isi_riwayat_tabungan = new System.Windows.Forms.Panel();
+            this.panel_isi_tabungan_impian = new System.Windows.Forms.Panel();
+            this.panel_isi_riwayat_tabungan_impian = new System.Windows.Forms.Panel();
+            this.panel_isi_laporan_saya = new System.Windows.Forms.Panel();
+            this.laporanSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_isi_tambah_tabungan_impian = new System.Windows.Forms.Panel();
+            this.panel_isi_ubah_tabungan_impian = new System.Windows.Forms.Panel();
             this.panel_menu.SuspendLayout();
             this.panel_header_sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).BeginInit();
@@ -574,7 +583,7 @@
             this.panel_isi_beranda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi_beranda.Location = new System.Drawing.Point(0, 0);
             this.panel_isi_beranda.Name = "panel_isi_beranda";
-            this.panel_isi_beranda.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_beranda.Size = new System.Drawing.Size(793, 468);
             this.panel_isi_beranda.TabIndex = 12;
             this.panel_isi_beranda.Visible = false;
             // 
@@ -619,10 +628,18 @@
             // panel_isi
             // 
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
-            this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
-            this.panel_isi.Controls.Add(this.panel_isi_faq);
+            this.panel_isi.Controls.Add(this.panel_isi_ubah_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan);
+            this.panel_isi.Controls.Add(this.panel_isi_ubah_profil_saya);
+            this.panel_isi.Controls.Add(this.panel_isi_profil_saya);
             this.panel_isi.Controls.Add(this.panel_isi_beranda);
+            this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
+            this.panel_isi.Controls.Add(this.panel_isi_faq);
+            this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
@@ -655,7 +672,7 @@
             this.panel_isi_faq.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi_faq.Location = new System.Drawing.Point(0, 0);
             this.panel_isi_faq.Name = "panel_isi_faq";
-            this.panel_isi_faq.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_faq.Size = new System.Drawing.Size(793, 470);
             this.panel_isi_faq.TabIndex = 16;
             this.panel_isi_faq.Visible = false;
             // 
@@ -698,6 +715,7 @@
             this.drop_down_profil.IsMainMenu = false;
             this.drop_down_profil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profilSayaToolStripMenuItem,
+            this.laporanSayaToolStripMenuItem,
             this.ubahProfilSayaToolStripMenuItem,
             this.riwayatTabunganToolStripMenuItem});
             this.drop_down_profil.MenuItemHeight = 25;
@@ -705,7 +723,7 @@
             this.drop_down_profil.Name = "drop_down_profil";
             this.drop_down_profil.PrimaryColor = System.Drawing.Color.Empty;
             this.drop_down_profil.ShowItemToolTips = false;
-            this.drop_down_profil.Size = new System.Drawing.Size(191, 70);
+            this.drop_down_profil.Size = new System.Drawing.Size(191, 92);
             // 
             // profilSayaToolStripMenuItem
             // 
@@ -727,6 +745,77 @@
             this.riwayatTabunganToolStripMenuItem.Name = "riwayatTabunganToolStripMenuItem";
             this.riwayatTabunganToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.riwayatTabunganToolStripMenuItem.Text = "Riwayat Tabungan";
+            // 
+            // panel_isi_profil_saya
+            // 
+            this.panel_isi_profil_saya.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_profil_saya.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_profil_saya.Name = "panel_isi_profil_saya";
+            this.panel_isi_profil_saya.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_profil_saya.TabIndex = 18;
+            // 
+            // panel_isi_ubah_profil_saya
+            // 
+            this.panel_isi_ubah_profil_saya.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_ubah_profil_saya.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_ubah_profil_saya.Name = "panel_isi_ubah_profil_saya";
+            this.panel_isi_ubah_profil_saya.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_ubah_profil_saya.TabIndex = 19;
+            // 
+            // panel_isi_riwayat_tabungan
+            // 
+            this.panel_isi_riwayat_tabungan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_riwayat_tabungan.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_riwayat_tabungan.Name = "panel_isi_riwayat_tabungan";
+            this.panel_isi_riwayat_tabungan.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_riwayat_tabungan.TabIndex = 20;
+            // 
+            // panel_isi_tabungan_impian
+            // 
+            this.panel_isi_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tabungan_impian.Name = "panel_isi_tabungan_impian";
+            this.panel_isi_tabungan_impian.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_tabungan_impian.TabIndex = 21;
+            // 
+            // panel_isi_riwayat_tabungan_impian
+            // 
+            this.panel_isi_riwayat_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_riwayat_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_riwayat_tabungan_impian.Name = "panel_isi_riwayat_tabungan_impian";
+            this.panel_isi_riwayat_tabungan_impian.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_riwayat_tabungan_impian.TabIndex = 22;
+            // 
+            // panel_isi_laporan_saya
+            // 
+            this.panel_isi_laporan_saya.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_laporan_saya.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_laporan_saya.Name = "panel_isi_laporan_saya";
+            this.panel_isi_laporan_saya.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_laporan_saya.TabIndex = 23;
+            // 
+            // laporanSayaToolStripMenuItem
+            // 
+            this.laporanSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.laporanSayaToolStripMenuItem.Name = "laporanSayaToolStripMenuItem";
+            this.laporanSayaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.laporanSayaToolStripMenuItem.Text = "Laporan Saya";
+            // 
+            // panel_isi_tambah_tabungan_impian
+            // 
+            this.panel_isi_tambah_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tambah_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tambah_tabungan_impian.Name = "panel_isi_tambah_tabungan_impian";
+            this.panel_isi_tambah_tabungan_impian.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_tambah_tabungan_impian.TabIndex = 24;
+            // 
+            // panel_isi_ubah_tabungan_impian
+            // 
+            this.panel_isi_ubah_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_ubah_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_ubah_tabungan_impian.Name = "panel_isi_ubah_tabungan_impian";
+            this.panel_isi_ubah_tabungan_impian.Size = new System.Drawing.Size(793, 468);
+            this.panel_isi_ubah_tabungan_impian.TabIndex = 25;
             // 
             // frm_beranda_setelah_login
             // 
@@ -819,6 +908,15 @@
         private System.Windows.Forms.ToolStripMenuItem profilSayaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ubahProfilSayaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem riwayatTabunganToolStripMenuItem;
+        private System.Windows.Forms.Panel panel_isi_ubah_tabungan_impian;
+        private System.Windows.Forms.Panel panel_isi_tambah_tabungan_impian;
+        private System.Windows.Forms.Panel panel_isi_laporan_saya;
+        private System.Windows.Forms.Panel panel_isi_riwayat_tabungan_impian;
+        private System.Windows.Forms.Panel panel_isi_tabungan_impian;
+        private System.Windows.Forms.Panel panel_isi_riwayat_tabungan;
+        private System.Windows.Forms.Panel panel_isi_ubah_profil_saya;
+        private System.Windows.Forms.Panel panel_isi_profil_saya;
+        private System.Windows.Forms.ToolStripMenuItem laporanSayaToolStripMenuItem;
     }
 }
 

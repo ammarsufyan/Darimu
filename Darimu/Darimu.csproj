@@ -50,6 +50,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassFolder\ClassKoneksi.cs" />
+    <Compile Include="ClassFolder\ClassUser.cs" />
+    <Compile Include="ClassFolder\ClassValidasi.cs" />
     <Compile Include="CustomControls\DRMDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>

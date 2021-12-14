@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Darimu.ClassFolder;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,8 @@ namespace Darimu
     {
         // declaration var
         private int borderSize = 2;
-        private Size formSize;
         int angka = 0;
+        ClassUser cs = new ClassUser();
 
         public frm_beranda_sebelum_login()
         {
@@ -390,7 +391,10 @@ namespace Darimu
 
         private void button_submit_masuk_MouseClick(object sender, MouseEventArgs e)
         {
-            const string message = "Selamat Anda berhasil masuk!";
+            string user_login = txt_username_email.Text;
+            string user_pwd = txt_password.Text;
+            string hasil = cs.loginUser(user_login, user_pwd);
+            string message = hasil;
             const string caption = "Sukses Masuk";
             var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.OK,
@@ -527,7 +531,19 @@ namespace Darimu
 
         private void button_daftar_MouseClick(object sender, MouseEventArgs e)
         {
-            const string message = "Selamat Anda berhasil terdaftar!";
+            string nama_lengkap = txt_nama_depan.Text + " " + txt_nama_belakang.Text;
+            string nama_pengguna = txt_username_daftar.Text;
+            //get the datepicker value
+            tanggal_lahir_daftar.Format = DateTimePickerFormat.Custom;
+            tanggal_lahir_daftar.CustomFormat = "yyyy/MM/dd";
+            tanggal_lahir_daftar.ShowUpDown = true;
+            string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
+            string alamat_email = txt_email_daftar.Text;
+            string kata_sandi = txt_password_daftar.Text;
+
+            string hasil = cs.daftarUser(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
+
+            string message = hasil;
             const string caption = "Sukses Mendaftar";
             var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.OK,
@@ -543,7 +559,9 @@ namespace Darimu
         {
             if(txt_captcha_lupa_password.Text == angka.ToString())
             {
-                const string message = "Selamat Anda berhasil membuat password baru!";
+                string hasil = cs.ubahPassword(txt_username_email_lupa_password.Text, txt_lupa_password.Text);
+
+                string message = hasil;
                 const string caption = "Sukses Membuat Password Baru";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,

@@ -19,6 +19,7 @@ USE db_darimu;
 -- ========================================================================
 -- membuat trigger dan procedure untuk membuat tabungan otomatis
 -- setelah user berhasil mendaftar pada aplikasi Darimu
+--DROP TRIGGER tr_tabungan;
 CREATE TRIGGER tr_tabungan
 	ON tb_pengguna
 	AFTER INSERT
@@ -29,6 +30,7 @@ AS
         EXEC sp_tabungan_insert @nama_pengguna
 	END
 
+--DROP PROCEDURE sp_tabungan_insert;
 CREATE PROCEDURE sp_tabungan_insert
     @nama_pengguna VARCHAR(100)
 AS
