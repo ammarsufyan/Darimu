@@ -83,6 +83,16 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_pressed {
+            get {
+                object obj = ResourceManager.GetObject("exit_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gambar_daftar {
             get {
                 object obj = ResourceManager.GetObject("gambar_daftar", resourceCulture);
@@ -163,6 +173,26 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_keluar {
+            get {
+                object obj = ResourceManager.GetObject("icon_keluar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_keluar_biru {
+            get {
+                object obj = ResourceManager.GetObject("icon_keluar_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_masuk {
             get {
                 object obj = ResourceManager.GetObject("icon_masuk", resourceCulture);
@@ -196,6 +226,16 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap icon_menu_biru {
             get {
                 object obj = ResourceManager.GetObject("icon_menu_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_minimize_biru {
+            get {
+                object obj = ResourceManager.GetObject("icon_minimize_biru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

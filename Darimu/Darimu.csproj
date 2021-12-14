@@ -50,6 +50,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\DRMDropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\MenuColorTable.cs" />
+    <Compile Include="CustomControls\MenuRenderer.cs" />
+    <Compile Include="frm_beranda_setelah_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_beranda_setelah_login.Designer.cs">
+      <DependentUpon>frm_beranda_setelah_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_beranda_sebelum_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_beranda_setelah_login.resx">
+      <DependentUpon>frm_beranda_setelah_login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_beranda_sebelum_login.resx">
       <DependentUpon>frm_beranda_sebelum_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,9 +109,12 @@
     <None Include="Assets\Blue\icon_menu_biru.png" />
     <None Include="Assets\Blue\icon_masuk_biru.png" />
     <None Include="Assets\Blue\icon_topup_biru.png" />
+    <None Include="Assets\Blue\icon_minimize_biru.png" />
+    <None Include="Assets\Blue\icon_keluar_biru.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
+    <None Include="Assets\exit_pressed.png" />
     <Content Include="Assets\gambar_daftar.png" />
     <Content Include="Assets\gambar_faq.png" />
     <Content Include="Assets\gambar_login.png" />
@@ -105,6 +122,7 @@
     <Content Include="Assets\icon_akun.png" />
     <Content Include="Assets\icon_beranda.png" />
     <Content Include="Assets\icon_faq.png" />
+    <None Include="Assets\icon_keluar.png" />
     <Content Include="Assets\icon_masuk.png" />
     <Content Include="Assets\icon_menu.png" />
     <Content Include="Assets\icon_saldo.png" />

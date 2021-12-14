@@ -114,7 +114,7 @@ namespace Darimu
                 logo_darimu.Visible = false;
                 label_nama_logo.Visible = false;
                 button_menu.Location = new System.Drawing.Point(33, 36);
-                this.ClientSize = new System.Drawing.Size(874, 531);
+                this.ClientSize = new System.Drawing.Size(890, 570);
                 foreach (Button menuButton in panel_menu.Controls.OfType<Button>())
                 {
                     menuButton.Text = "";
@@ -128,7 +128,7 @@ namespace Darimu
                 logo_darimu.Visible = true;
                 label_nama_logo.Visible = true;
                 button_menu.Location = new System.Drawing.Point(148, 36);
-                this.ClientSize = new System.Drawing.Size(984, 531);
+                this.ClientSize = new System.Drawing.Size(1000, 570);
                 foreach (Button menuButton in panel_menu.Controls.OfType<Button>())
                 {
                     menuButton.Text = menuButton.Tag.ToString();
@@ -289,6 +289,25 @@ namespace Darimu
             icon_topup.Image = global::Darimu.Properties.Resources.icon_topup;
         }
 
+        private void button_minimize_MouseEnter(object sender, EventArgs e)
+        {
+            button_minimize.Image = global::Darimu.Properties.Resources.icon_minimize_biru;
+        }
+
+        private void button_minimize_MouseLeave(object sender, EventArgs e)
+        {
+            button_minimize.Image = global::Darimu.Properties.Resources.minimize;
+        }
+
+        private void button_exit_MouseEnter(object sender, EventArgs e)
+        {
+            button_exit.Image = global::Darimu.Properties.Resources.exit_pressed;
+        }
+
+        private void button_exit_MouseLeave(object sender, EventArgs e)
+        {
+            button_exit.Image = global::Darimu.Properties.Resources.exit;
+        }
         // event beranda
         private void button_nabung_MouseClick(object sender, MouseEventArgs e)
         {
@@ -377,9 +396,9 @@ namespace Darimu
                                          MessageBoxButtons.OK,
                                          MessageBoxIcon.Information);
 
-            //frm_beranda_setelah_login p = new frm_beranda_setelah_login();
+            frm_beranda_setelah_login p = new frm_beranda_setelah_login();
             this.Hide();
-            //p.Visible = true;
+            p.Show();
         }
 
         /* event daftar */

@@ -1,6 +1,6 @@
 ﻿namespace Darimu
 {
-    partial class frm_beranda_sebelum_login
+    partial class frm_beranda_setelah_login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_beranda_sebelum_login));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_beranda_setelah_login));
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
             this.button_tabungan = new System.Windows.Forms.Button();
             this.button_profil = new System.Windows.Forms.Button();
             this.button_beranda = new System.Windows.Forms.Button();
-            this.button_masuk = new System.Windows.Forms.Button();
+            this.button_keluar = new System.Windows.Forms.Button();
             this.panel_border_sidebar_bawah = new System.Windows.Forms.Panel();
             this.panel_border_sidebar_kiri = new System.Windows.Forms.Panel();
             this.panel_header_sidebar = new System.Windows.Forms.Panel();
@@ -67,42 +68,14 @@
             this.panel_isi = new System.Windows.Forms.Panel();
             this.panel_border_isi_bawah = new System.Windows.Forms.Panel();
             this.panel_border_isi_kanan = new System.Windows.Forms.Panel();
-            this.panel_isi_tentang_kami = new System.Windows.Forms.Panel();
-            this.gambar_tentang_kami = new System.Windows.Forms.PictureBox();
-            this.panel_isi_login = new System.Windows.Forms.Panel();
-            this.gambar_login = new System.Windows.Forms.PictureBox();
-            this.button_submit_masuk = new System.Windows.Forms.Button();
-            this.label_lupa_password = new System.Windows.Forms.Label();
-            this.txt_password = new System.Windows.Forms.TextBox();
-            this.txt_username_email = new System.Windows.Forms.TextBox();
-            this.label_daftar_yuk = new System.Windows.Forms.Label();
-            this.label_belum_punya_akun = new System.Windows.Forms.Label();
-            this.panel_isi_daftar = new System.Windows.Forms.Panel();
-            this.label_tanggal_lahir = new System.Windows.Forms.Label();
-            this.tanggal_lahir_daftar = new System.Windows.Forms.DateTimePicker();
-            this.label_masuk_yuk = new System.Windows.Forms.Label();
-            this.label_sudah_punya_akun = new System.Windows.Forms.Label();
-            this.gambar_daftar = new System.Windows.Forms.PictureBox();
-            this.txt_konfirmasi_password = new System.Windows.Forms.TextBox();
-            this.txt_password_daftar = new System.Windows.Forms.TextBox();
-            this.txt_email_daftar = new System.Windows.Forms.TextBox();
-            this.txt_username_daftar = new System.Windows.Forms.TextBox();
-            this.txt_nama_belakang = new System.Windows.Forms.TextBox();
-            this.txt_nama_depan = new System.Windows.Forms.TextBox();
-            this.button_batal = new System.Windows.Forms.Button();
-            this.button_daftar = new System.Windows.Forms.Button();
             this.panel_isi_faq = new System.Windows.Forms.Panel();
             this.gambar_faq = new System.Windows.Forms.PictureBox();
-            this.panel_lupa_kata_sandi = new System.Windows.Forms.Panel();
-            this.label_refresh_captcha_lupa_sandi = new System.Windows.Forms.Label();
-            this.label_judul_lupa_sandi = new System.Windows.Forms.Label();
-            this.button_batal_lupa_sandi = new System.Windows.Forms.Button();
-            this.button_simpan_lupa_sandi = new System.Windows.Forms.Button();
-            this.gambar_captcha = new System.Windows.Forms.PictureBox();
-            this.txt_captcha_lupa_password = new System.Windows.Forms.TextBox();
-            this.txt_konfirmasi_lupa_password = new System.Windows.Forms.TextBox();
-            this.txt_lupa_password = new System.Windows.Forms.TextBox();
-            this.txt_username_email_lupa_password = new System.Windows.Forms.TextBox();
+            this.panel_isi_tentang_kami = new System.Windows.Forms.Panel();
+            this.gambar_tentang_kami = new System.Windows.Forms.PictureBox();
+            this.drop_down_profil = new Darimu.CustomControls.DRMDropDownMenu(this.components);
+            this.profilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ubahProfilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.riwayatTabunganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_menu.SuspendLayout();
             this.panel_header_sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).BeginInit();
@@ -116,16 +89,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nama_logo_dan_tagline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
             this.panel_isi.SuspendLayout();
-            this.panel_isi_tentang_kami.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_tentang_kami)).BeginInit();
-            this.panel_isi_login.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_login)).BeginInit();
-            this.panel_isi_daftar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_daftar)).BeginInit();
             this.panel_isi_faq.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_faq)).BeginInit();
-            this.panel_lupa_kata_sandi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_captcha)).BeginInit();
+            this.panel_isi_tentang_kami.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_tentang_kami)).BeginInit();
+            this.drop_down_profil.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_menu
@@ -136,7 +104,7 @@
             this.panel_menu.Controls.Add(this.button_tabungan);
             this.panel_menu.Controls.Add(this.button_profil);
             this.panel_menu.Controls.Add(this.button_beranda);
-            this.panel_menu.Controls.Add(this.button_masuk);
+            this.panel_menu.Controls.Add(this.button_keluar);
             this.panel_menu.Controls.Add(this.panel_border_sidebar_bawah);
             this.panel_menu.Controls.Add(this.panel_border_sidebar_kiri);
             this.panel_menu.Controls.Add(this.panel_header_sidebar);
@@ -286,33 +254,32 @@
             this.button_beranda.MouseEnter += new System.EventHandler(this.button_beranda_MouseEnter);
             this.button_beranda.MouseLeave += new System.EventHandler(this.button_beranda_MouseLeave);
             // 
-            // button_masuk
+            // button_keluar
             // 
-            this.button_masuk.AutoSize = true;
-            this.button_masuk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_masuk.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_masuk.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_masuk.FlatAppearance.BorderSize = 0;
-            this.button_masuk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_masuk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_masuk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_masuk.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_masuk.ForeColor = System.Drawing.Color.White;
-            this.button_masuk.Image = global::Darimu.Properties.Resources.icon_masuk;
-            this.button_masuk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_masuk.Location = new System.Drawing.Point(2, 508);
-            this.button_masuk.Name = "button_masuk";
-            this.button_masuk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_masuk.Size = new System.Drawing.Size(203, 60);
-            this.button_masuk.TabIndex = 20;
-            this.button_masuk.Tag = "  Masuk";
-            this.button_masuk.Text = "  Masuk";
-            this.button_masuk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_masuk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_masuk.UseVisualStyleBackColor = true;
-            this.button_masuk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_masuk_MouseClick);
-            this.button_masuk.MouseEnter += new System.EventHandler(this.button_masuk_MouseEnter);
-            this.button_masuk.MouseLeave += new System.EventHandler(this.button_masuk_MouseLeave);
+            this.button_keluar.AutoSize = true;
+            this.button_keluar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_keluar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_keluar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_keluar.FlatAppearance.BorderSize = 0;
+            this.button_keluar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_keluar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_keluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_keluar.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_keluar.ForeColor = System.Drawing.Color.White;
+            this.button_keluar.Image = global::Darimu.Properties.Resources.icon_keluar;
+            this.button_keluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_keluar.Location = new System.Drawing.Point(2, 508);
+            this.button_keluar.Name = "button_keluar";
+            this.button_keluar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_keluar.Size = new System.Drawing.Size(203, 60);
+            this.button_keluar.TabIndex = 20;
+            this.button_keluar.Tag = "  Keluar";
+            this.button_keluar.Text = "  Keluar";
+            this.button_keluar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_keluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_keluar.UseVisualStyleBackColor = true;
+            this.button_keluar.MouseEnter += new System.EventHandler(this.button_keluar_MouseEnter);
+            this.button_keluar.MouseLeave += new System.EventHandler(this.button_keluar_MouseLeave);
             // 
             // panel_border_sidebar_bawah
             // 
@@ -419,12 +386,13 @@
             // panel_saldo_and_topup
             // 
             this.panel_saldo_and_topup.AutoSize = true;
+            this.panel_saldo_and_topup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_saldo_and_topup.Controls.Add(this.icon_topup);
             this.panel_saldo_and_topup.Controls.Add(this.label_saldo);
             this.panel_saldo_and_topup.Controls.Add(this.label_Rp);
             this.panel_saldo_and_topup.Controls.Add(this.icon_saldo);
             this.panel_saldo_and_topup.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_saldo_and_topup.Location = new System.Drawing.Point(167, 2);
+            this.panel_saldo_and_topup.Location = new System.Drawing.Point(148, 2);
             this.panel_saldo_and_topup.Name = "panel_saldo_and_topup";
             this.panel_saldo_and_topup.Size = new System.Drawing.Size(112, 98);
             this.panel_saldo_and_topup.TabIndex = 18;
@@ -482,9 +450,9 @@
             // 
             this.panel_title_bar_atas.BackColor = System.Drawing.Color.White;
             this.panel_title_bar_atas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_title_bar_atas.Location = new System.Drawing.Point(167, 0);
+            this.panel_title_bar_atas.Location = new System.Drawing.Point(148, 0);
             this.panel_title_bar_atas.Name = "panel_title_bar_atas";
-            this.panel_title_bar_atas.Size = new System.Drawing.Size(513, 2);
+            this.panel_title_bar_atas.Size = new System.Drawing.Size(532, 2);
             this.panel_title_bar_atas.TabIndex = 17;
             // 
             // panel_greeting
@@ -496,7 +464,7 @@
             this.panel_greeting.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_greeting.Location = new System.Drawing.Point(0, 0);
             this.panel_greeting.Name = "panel_greeting";
-            this.panel_greeting.Size = new System.Drawing.Size(167, 100);
+            this.panel_greeting.Size = new System.Drawing.Size(148, 100);
             this.panel_greeting.TabIndex = 16;
             // 
             // panel_greeting_atas
@@ -505,12 +473,11 @@
             this.panel_greeting_atas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_greeting_atas.Location = new System.Drawing.Point(0, 0);
             this.panel_greeting_atas.Name = "panel_greeting_atas";
-            this.panel_greeting_atas.Size = new System.Drawing.Size(167, 2);
+            this.panel_greeting_atas.Size = new System.Drawing.Size(148, 2);
             this.panel_greeting_atas.TabIndex = 5;
             // 
             // label_hi
             // 
-            this.label_hi.AutoSize = true;
             this.label_hi.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_hi.ForeColor = System.Drawing.Color.White;
             this.label_hi.Location = new System.Drawing.Point(23, 42);
@@ -526,9 +493,9 @@
             this.label_username.ForeColor = System.Drawing.Color.White;
             this.label_username.Location = new System.Drawing.Point(50, 42);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(114, 22);
+            this.label_username.Size = new System.Drawing.Size(95, 22);
             this.label_username.TabIndex = 4;
-            this.label_username.Text = "Pengunjung";
+            this.label_username.Text = "username";
             // 
             // panel_control_box
             // 
@@ -620,7 +587,7 @@
             this.button_nabung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_nabung.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_nabung.ForeColor = System.Drawing.Color.Black;
-            this.button_nabung.Location = new System.Drawing.Point(71, 164);
+            this.button_nabung.Location = new System.Drawing.Point(67, 164);
             this.button_nabung.Name = "button_nabung";
             this.button_nabung.Size = new System.Drawing.Size(131, 34);
             this.button_nabung.TabIndex = 11;
@@ -632,7 +599,7 @@
             // nama_logo_dan_tagline
             // 
             this.nama_logo_dan_tagline.Image = global::Darimu.Properties.Resources.Tagline_Beranda;
-            this.nama_logo_dan_tagline.Location = new System.Drawing.Point(71, 89);
+            this.nama_logo_dan_tagline.Location = new System.Drawing.Point(67, 89);
             this.nama_logo_dan_tagline.Name = "nama_logo_dan_tagline";
             this.nama_logo_dan_tagline.Size = new System.Drawing.Size(157, 66);
             this.nama_logo_dan_tagline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -642,7 +609,7 @@
             // maskot_beranda
             // 
             this.maskot_beranda.Image = global::Darimu.Properties.Resources.maskot_beranda;
-            this.maskot_beranda.Location = new System.Drawing.Point(289, 70);
+            this.maskot_beranda.Location = new System.Drawing.Point(285, 70);
             this.maskot_beranda.Name = "maskot_beranda";
             this.maskot_beranda.Size = new System.Drawing.Size(440, 230);
             this.maskot_beranda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -654,12 +621,9 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
+            this.panel_isi.Controls.Add(this.panel_isi_faq);
             this.panel_isi.Controls.Add(this.panel_isi_beranda);
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
-            this.panel_isi.Controls.Add(this.panel_isi_login);
-            this.panel_isi.Controls.Add(this.panel_isi_daftar);
-            this.panel_isi.Controls.Add(this.panel_isi_faq);
-            this.panel_isi.Controls.Add(this.panel_lupa_kata_sandi);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -684,335 +648,6 @@
             this.panel_border_isi_kanan.Size = new System.Drawing.Size(2, 470);
             this.panel_border_isi_kanan.TabIndex = 13;
             // 
-            // panel_isi_tentang_kami
-            // 
-            this.panel_isi_tentang_kami.AutoSize = true;
-            this.panel_isi_tentang_kami.Controls.Add(this.gambar_tentang_kami);
-            this.panel_isi_tentang_kami.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_tentang_kami.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_tentang_kami.Name = "panel_isi_tentang_kami";
-            this.panel_isi_tentang_kami.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_tentang_kami.TabIndex = 17;
-            this.panel_isi_tentang_kami.Visible = false;
-            // 
-            // gambar_tentang_kami
-            // 
-            this.gambar_tentang_kami.Image = global::Darimu.Properties.Resources.gambar_tentang_kami;
-            this.gambar_tentang_kami.Location = new System.Drawing.Point(15, 19);
-            this.gambar_tentang_kami.Name = "gambar_tentang_kami";
-            this.gambar_tentang_kami.Size = new System.Drawing.Size(765, 436);
-            this.gambar_tentang_kami.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_tentang_kami.TabIndex = 0;
-            this.gambar_tentang_kami.TabStop = false;
-            // 
-            // panel_isi_login
-            // 
-            this.panel_isi_login.Controls.Add(this.gambar_login);
-            this.panel_isi_login.Controls.Add(this.button_submit_masuk);
-            this.panel_isi_login.Controls.Add(this.label_lupa_password);
-            this.panel_isi_login.Controls.Add(this.txt_password);
-            this.panel_isi_login.Controls.Add(this.txt_username_email);
-            this.panel_isi_login.Controls.Add(this.label_daftar_yuk);
-            this.panel_isi_login.Controls.Add(this.label_belum_punya_akun);
-            this.panel_isi_login.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_login.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_login.Name = "panel_isi_login";
-            this.panel_isi_login.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_login.TabIndex = 12;
-            this.panel_isi_login.Visible = false;
-            // 
-            // gambar_login
-            // 
-            this.gambar_login.Image = global::Darimu.Properties.Resources.gambar_login;
-            this.gambar_login.Location = new System.Drawing.Point(427, 77);
-            this.gambar_login.Name = "gambar_login";
-            this.gambar_login.Size = new System.Drawing.Size(302, 236);
-            this.gambar_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_login.TabIndex = 22;
-            this.gambar_login.TabStop = false;
-            // 
-            // button_submit_masuk
-            // 
-            this.button_submit_masuk.AutoSize = true;
-            this.button_submit_masuk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(210)))), ((int)(((byte)(232)))));
-            this.button_submit_masuk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_submit_masuk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_submit_masuk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_submit_masuk.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_submit_masuk.ForeColor = System.Drawing.Color.Black;
-            this.button_submit_masuk.Location = new System.Drawing.Point(298, 231);
-            this.button_submit_masuk.Name = "button_submit_masuk";
-            this.button_submit_masuk.Size = new System.Drawing.Size(83, 34);
-            this.button_submit_masuk.TabIndex = 21;
-            this.button_submit_masuk.Text = "Masuk";
-            this.button_submit_masuk.UseVisualStyleBackColor = false;
-            this.button_submit_masuk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_submit_masuk_MouseClick);
-            // 
-            // label_lupa_password
-            // 
-            this.label_lupa_password.AutoSize = true;
-            this.label_lupa_password.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_lupa_password.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_lupa_password.ForeColor = System.Drawing.Color.White;
-            this.label_lupa_password.Location = new System.Drawing.Point(53, 198);
-            this.label_lupa_password.Name = "label_lupa_password";
-            this.label_lupa_password.Size = new System.Drawing.Size(131, 23);
-            this.label_lupa_password.TabIndex = 20;
-            this.label_lupa_password.Text = "Lupa Kata Sandi?";
-            this.label_lupa_password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_lupa_password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_lupa_password_MouseClick);
-            this.label_lupa_password.MouseEnter += new System.EventHandler(this.label_lupa_password_MouseEnter);
-            this.label_lupa_password.MouseLeave += new System.EventHandler(this.label_lupa_password_MouseLeave);
-            // 
-            // txt_password
-            // 
-            this.txt_password.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.ForeColor = System.Drawing.Color.Black;
-            this.txt_password.Location = new System.Drawing.Point(57, 167);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(324, 27);
-            this.txt_password.TabIndex = 19;
-            this.txt_password.Text = "password";
-            this.txt_password.GotFocus += new System.EventHandler(this.txt_password_GotFocus);
-            this.txt_password.LostFocus += new System.EventHandler(this.txt_password_LostFocus);
-            // 
-            // txt_username_email
-            // 
-            this.txt_username_email.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username_email.ForeColor = System.Drawing.Color.Black;
-            this.txt_username_email.Location = new System.Drawing.Point(57, 132);
-            this.txt_username_email.Name = "txt_username_email";
-            this.txt_username_email.Size = new System.Drawing.Size(324, 27);
-            this.txt_username_email.TabIndex = 18;
-            this.txt_username_email.Text = "username/email";
-            this.txt_username_email.GotFocus += new System.EventHandler(this.txt_username_email_GotFocus);
-            this.txt_username_email.LostFocus += new System.EventHandler(this.txt_username_email_LostFocus);
-            // 
-            // label_daftar_yuk
-            // 
-            this.label_daftar_yuk.AutoSize = true;
-            this.label_daftar_yuk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_daftar_yuk.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_daftar_yuk.ForeColor = System.Drawing.Color.White;
-            this.label_daftar_yuk.Location = new System.Drawing.Point(193, 96);
-            this.label_daftar_yuk.Name = "label_daftar_yuk";
-            this.label_daftar_yuk.Size = new System.Drawing.Size(88, 23);
-            this.label_daftar_yuk.TabIndex = 17;
-            this.label_daftar_yuk.Text = "Daftar yuk!";
-            this.label_daftar_yuk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_daftar_yuk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_daftar_yuk_MouseClick);
-            this.label_daftar_yuk.MouseEnter += new System.EventHandler(this.label_daftar_yuk_MouseEnter);
-            this.label_daftar_yuk.MouseLeave += new System.EventHandler(this.label_daftar_yuk_MouseLeave);
-            // 
-            // label_belum_punya_akun
-            // 
-            this.label_belum_punya_akun.AutoSize = true;
-            this.label_belum_punya_akun.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label_belum_punya_akun.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_belum_punya_akun.ForeColor = System.Drawing.Color.White;
-            this.label_belum_punya_akun.Location = new System.Drawing.Point(53, 96);
-            this.label_belum_punya_akun.Name = "label_belum_punya_akun";
-            this.label_belum_punya_akun.Size = new System.Drawing.Size(147, 23);
-            this.label_belum_punya_akun.TabIndex = 16;
-            this.label_belum_punya_akun.Text = "Belum punya akun?";
-            this.label_belum_punya_akun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel_isi_daftar
-            // 
-            this.panel_isi_daftar.Controls.Add(this.label_tanggal_lahir);
-            this.panel_isi_daftar.Controls.Add(this.tanggal_lahir_daftar);
-            this.panel_isi_daftar.Controls.Add(this.label_masuk_yuk);
-            this.panel_isi_daftar.Controls.Add(this.label_sudah_punya_akun);
-            this.panel_isi_daftar.Controls.Add(this.gambar_daftar);
-            this.panel_isi_daftar.Controls.Add(this.txt_konfirmasi_password);
-            this.panel_isi_daftar.Controls.Add(this.txt_password_daftar);
-            this.panel_isi_daftar.Controls.Add(this.txt_email_daftar);
-            this.panel_isi_daftar.Controls.Add(this.txt_username_daftar);
-            this.panel_isi_daftar.Controls.Add(this.txt_nama_belakang);
-            this.panel_isi_daftar.Controls.Add(this.txt_nama_depan);
-            this.panel_isi_daftar.Controls.Add(this.button_batal);
-            this.panel_isi_daftar.Controls.Add(this.button_daftar);
-            this.panel_isi_daftar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_daftar.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_daftar.Name = "panel_isi_daftar";
-            this.panel_isi_daftar.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_daftar.TabIndex = 15;
-            this.panel_isi_daftar.Visible = false;
-            // 
-            // label_tanggal_lahir
-            // 
-            this.label_tanggal_lahir.AutoSize = true;
-            this.label_tanggal_lahir.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label_tanggal_lahir.Font = new System.Drawing.Font("Cabin", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tanggal_lahir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_tanggal_lahir.Location = new System.Drawing.Point(71, 125);
-            this.label_tanggal_lahir.Name = "label_tanggal_lahir";
-            this.label_tanggal_lahir.Size = new System.Drawing.Size(69, 16);
-            this.label_tanggal_lahir.TabIndex = 23;
-            this.label_tanggal_lahir.Text = "Tanggal Lahir";
-            this.label_tanggal_lahir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tanggal_lahir_daftar
-            // 
-            this.tanggal_lahir_daftar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tanggal_lahir_daftar.Font = new System.Drawing.Font("Cabin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tanggal_lahir_daftar.Location = new System.Drawing.Point(74, 142);
-            this.tanggal_lahir_daftar.MaxDate = new System.DateTime(2004, 12, 31, 0, 0, 0, 0);
-            this.tanggal_lahir_daftar.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
-            this.tanggal_lahir_daftar.Name = "tanggal_lahir_daftar";
-            this.tanggal_lahir_daftar.Size = new System.Drawing.Size(274, 25);
-            this.tanggal_lahir_daftar.TabIndex = 22;
-            this.tanggal_lahir_daftar.Value = new System.DateTime(2004, 12, 31, 0, 0, 0, 0);
-            // 
-            // label_masuk_yuk
-            // 
-            this.label_masuk_yuk.AutoSize = true;
-            this.label_masuk_yuk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_masuk_yuk.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_masuk_yuk.ForeColor = System.Drawing.Color.White;
-            this.label_masuk_yuk.Location = new System.Drawing.Point(210, 24);
-            this.label_masuk_yuk.Name = "label_masuk_yuk";
-            this.label_masuk_yuk.Size = new System.Drawing.Size(89, 23);
-            this.label_masuk_yuk.TabIndex = 21;
-            this.label_masuk_yuk.Text = "Masuk yuk!";
-            this.label_masuk_yuk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_masuk_yuk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_masuk_yuk_MouseClick);
-            this.label_masuk_yuk.MouseEnter += new System.EventHandler(this.label_masuk_yuk_MouseEnter);
-            this.label_masuk_yuk.MouseLeave += new System.EventHandler(this.label_masuk_yuk_MouseLeave);
-            // 
-            // label_sudah_punya_akun
-            // 
-            this.label_sudah_punya_akun.AutoSize = true;
-            this.label_sudah_punya_akun.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label_sudah_punya_akun.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_sudah_punya_akun.ForeColor = System.Drawing.Color.White;
-            this.label_sudah_punya_akun.Location = new System.Drawing.Point(70, 24);
-            this.label_sudah_punya_akun.Name = "label_sudah_punya_akun";
-            this.label_sudah_punya_akun.Size = new System.Drawing.Size(146, 23);
-            this.label_sudah_punya_akun.TabIndex = 20;
-            this.label_sudah_punya_akun.Text = "Sudah punya akun?";
-            this.label_sudah_punya_akun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gambar_daftar
-            // 
-            this.gambar_daftar.Image = global::Darimu.Properties.Resources.gambar_daftar;
-            this.gambar_daftar.Location = new System.Drawing.Point(392, 36);
-            this.gambar_daftar.Name = "gambar_daftar";
-            this.gambar_daftar.Size = new System.Drawing.Size(337, 264);
-            this.gambar_daftar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_daftar.TabIndex = 19;
-            this.gambar_daftar.TabStop = false;
-            // 
-            // txt_konfirmasi_password
-            // 
-            this.txt_konfirmasi_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_konfirmasi_password.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_konfirmasi_password.Location = new System.Drawing.Point(74, 268);
-            this.txt_konfirmasi_password.Name = "txt_konfirmasi_password";
-            this.txt_konfirmasi_password.PasswordChar = '*';
-            this.txt_konfirmasi_password.Size = new System.Drawing.Size(274, 27);
-            this.txt_konfirmasi_password.TabIndex = 18;
-            this.txt_konfirmasi_password.Text = "konfirmasi password";
-            this.txt_konfirmasi_password.GotFocus += new System.EventHandler(this.txt_konfirmasi_password_GotFocus);
-            this.txt_konfirmasi_password.LostFocus += new System.EventHandler(this.txt_konfirmasi_password_LostFocus);
-            // 
-            // txt_password_daftar
-            // 
-            this.txt_password_daftar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_password_daftar.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password_daftar.Location = new System.Drawing.Point(74, 225);
-            this.txt_password_daftar.Name = "txt_password_daftar";
-            this.txt_password_daftar.PasswordChar = '*';
-            this.txt_password_daftar.Size = new System.Drawing.Size(274, 27);
-            this.txt_password_daftar.TabIndex = 17;
-            this.txt_password_daftar.Text = "password";
-            this.txt_password_daftar.GotFocus += new System.EventHandler(this.txt_password_daftar_GotFocus);
-            this.txt_password_daftar.LostFocus += new System.EventHandler(this.txt_password_daftar_LostFocus);
-            // 
-            // txt_email_daftar
-            // 
-            this.txt_email_daftar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_email_daftar.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email_daftar.Location = new System.Drawing.Point(74, 182);
-            this.txt_email_daftar.Name = "txt_email_daftar";
-            this.txt_email_daftar.Size = new System.Drawing.Size(274, 27);
-            this.txt_email_daftar.TabIndex = 16;
-            this.txt_email_daftar.Text = "Alamat Email";
-            this.txt_email_daftar.GotFocus += new System.EventHandler(this.txt_email_daftar_GotFocus);
-            this.txt_email_daftar.LostFocus += new System.EventHandler(this.txt_email_daftar_LostFocus);
-            // 
-            // txt_username_daftar
-            // 
-            this.txt_username_daftar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_username_daftar.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username_daftar.Location = new System.Drawing.Point(74, 94);
-            this.txt_username_daftar.Name = "txt_username_daftar";
-            this.txt_username_daftar.Size = new System.Drawing.Size(274, 27);
-            this.txt_username_daftar.TabIndex = 15;
-            this.txt_username_daftar.Text = "Nama Pengguna";
-            this.txt_username_daftar.GotFocus += new System.EventHandler(this.txt_username_daftar_GotFocus);
-            this.txt_username_daftar.LostFocus += new System.EventHandler(this.txt_username_daftar_LostFocus);
-            // 
-            // txt_nama_belakang
-            // 
-            this.txt_nama_belakang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_nama_belakang.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nama_belakang.Location = new System.Drawing.Point(214, 50);
-            this.txt_nama_belakang.Name = "txt_nama_belakang";
-            this.txt_nama_belakang.Size = new System.Drawing.Size(134, 27);
-            this.txt_nama_belakang.TabIndex = 14;
-            this.txt_nama_belakang.Text = "Nama Belakang";
-            this.txt_nama_belakang.GotFocus += new System.EventHandler(this.txt_nama_belakang_GotFocus);
-            this.txt_nama_belakang.LostFocus += new System.EventHandler(this.txt_nama_belakang_LostFocus);
-            // 
-            // txt_nama_depan
-            // 
-            this.txt_nama_depan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_nama_depan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nama_depan.Location = new System.Drawing.Point(74, 50);
-            this.txt_nama_depan.Name = "txt_nama_depan";
-            this.txt_nama_depan.Size = new System.Drawing.Size(127, 27);
-            this.txt_nama_depan.TabIndex = 13;
-            this.txt_nama_depan.Text = "Nama Depan";
-            this.txt_nama_depan.GotFocus += new System.EventHandler(this.txt_nama_depan_GotFocus);
-            this.txt_nama_depan.LostFocus += new System.EventHandler(this.txt_nama_depan_LostFocus);
-            // 
-            // button_batal
-            // 
-            this.button_batal.AutoSize = true;
-            this.button_batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.button_batal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_batal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_batal.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_batal.ForeColor = System.Drawing.Color.Black;
-            this.button_batal.Location = new System.Drawing.Point(198, 311);
-            this.button_batal.Name = "button_batal";
-            this.button_batal.Size = new System.Drawing.Size(68, 32);
-            this.button_batal.TabIndex = 12;
-            this.button_batal.Text = "Batal";
-            this.button_batal.UseVisualStyleBackColor = false;
-            this.button_batal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_MouseClick);
-            // 
-            // button_daftar
-            // 
-            this.button_daftar.AutoSize = true;
-            this.button_daftar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_daftar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(210)))), ((int)(((byte)(232)))));
-            this.button_daftar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_daftar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_daftar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_daftar.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_daftar.ForeColor = System.Drawing.Color.Black;
-            this.button_daftar.Location = new System.Drawing.Point(279, 311);
-            this.button_daftar.Name = "button_daftar";
-            this.button_daftar.Size = new System.Drawing.Size(68, 32);
-            this.button_daftar.TabIndex = 11;
-            this.button_daftar.Text = "Daftar";
-            this.button_daftar.UseVisualStyleBackColor = false;
-            this.button_daftar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_daftar_MouseClick);
-            // 
             // panel_isi_faq
             // 
             this.panel_isi_faq.AutoSize = true;
@@ -1034,142 +669,66 @@
             this.gambar_faq.TabIndex = 0;
             this.gambar_faq.TabStop = false;
             // 
-            // panel_lupa_kata_sandi
+            // panel_isi_tentang_kami
             // 
-            this.panel_lupa_kata_sandi.Controls.Add(this.label_refresh_captcha_lupa_sandi);
-            this.panel_lupa_kata_sandi.Controls.Add(this.label_judul_lupa_sandi);
-            this.panel_lupa_kata_sandi.Controls.Add(this.button_batal_lupa_sandi);
-            this.panel_lupa_kata_sandi.Controls.Add(this.button_simpan_lupa_sandi);
-            this.panel_lupa_kata_sandi.Controls.Add(this.gambar_captcha);
-            this.panel_lupa_kata_sandi.Controls.Add(this.txt_captcha_lupa_password);
-            this.panel_lupa_kata_sandi.Controls.Add(this.txt_konfirmasi_lupa_password);
-            this.panel_lupa_kata_sandi.Controls.Add(this.txt_lupa_password);
-            this.panel_lupa_kata_sandi.Controls.Add(this.txt_username_email_lupa_password);
-            this.panel_lupa_kata_sandi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_lupa_kata_sandi.Location = new System.Drawing.Point(0, 0);
-            this.panel_lupa_kata_sandi.Name = "panel_lupa_kata_sandi";
-            this.panel_lupa_kata_sandi.Size = new System.Drawing.Size(795, 470);
-            this.panel_lupa_kata_sandi.TabIndex = 18;
-            this.panel_lupa_kata_sandi.Visible = false;
+            this.panel_isi_tentang_kami.AutoSize = true;
+            this.panel_isi_tentang_kami.Controls.Add(this.gambar_tentang_kami);
+            this.panel_isi_tentang_kami.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tentang_kami.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tentang_kami.Name = "panel_isi_tentang_kami";
+            this.panel_isi_tentang_kami.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_tentang_kami.TabIndex = 17;
+            this.panel_isi_tentang_kami.Visible = false;
             // 
-            // label_refresh_captcha_lupa_sandi
+            // gambar_tentang_kami
             // 
-            this.label_refresh_captcha_lupa_sandi.AutoSize = true;
-            this.label_refresh_captcha_lupa_sandi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_refresh_captcha_lupa_sandi.Font = new System.Drawing.Font("Cabin", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_refresh_captcha_lupa_sandi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_refresh_captcha_lupa_sandi.Location = new System.Drawing.Point(347, 168);
-            this.label_refresh_captcha_lupa_sandi.Name = "label_refresh_captcha_lupa_sandi";
-            this.label_refresh_captcha_lupa_sandi.Size = new System.Drawing.Size(129, 16);
-            this.label_refresh_captcha_lupa_sandi.TabIndex = 27;
-            this.label_refresh_captcha_lupa_sandi.Text = "Klik Untuk Memuat Ulang";
-            this.label_refresh_captcha_lupa_sandi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_refresh_captcha_lupa_sandi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_refresh_captcha_lupa_sandi_MouseClick);
-            this.label_refresh_captcha_lupa_sandi.MouseEnter += new System.EventHandler(this.label_refresh_captcha_lupa_sandi_MouseEnter);
-            this.label_refresh_captcha_lupa_sandi.MouseLeave += new System.EventHandler(this.label_refresh_captcha_lupa_sandi_MouseLeave);
+            this.gambar_tentang_kami.Image = global::Darimu.Properties.Resources.gambar_tentang_kami;
+            this.gambar_tentang_kami.Location = new System.Drawing.Point(15, 19);
+            this.gambar_tentang_kami.Name = "gambar_tentang_kami";
+            this.gambar_tentang_kami.Size = new System.Drawing.Size(765, 436);
+            this.gambar_tentang_kami.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_tentang_kami.TabIndex = 0;
+            this.gambar_tentang_kami.TabStop = false;
             // 
-            // label_judul_lupa_sandi
+            // drop_down_profil
             // 
-            this.label_judul_lupa_sandi.AutoSize = true;
-            this.label_judul_lupa_sandi.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_judul_lupa_sandi.ForeColor = System.Drawing.Color.White;
-            this.label_judul_lupa_sandi.Location = new System.Drawing.Point(339, 13);
-            this.label_judul_lupa_sandi.Name = "label_judul_lupa_sandi";
-            this.label_judul_lupa_sandi.Size = new System.Drawing.Size(148, 22);
-            this.label_judul_lupa_sandi.TabIndex = 24;
-            this.label_judul_lupa_sandi.Text = "Lupa Kata Sandi";
+            this.drop_down_profil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.drop_down_profil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.drop_down_profil.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.drop_down_profil.IsMainMenu = false;
+            this.drop_down_profil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.profilSayaToolStripMenuItem,
+            this.ubahProfilSayaToolStripMenuItem,
+            this.riwayatTabunganToolStripMenuItem});
+            this.drop_down_profil.MenuItemHeight = 25;
+            this.drop_down_profil.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.drop_down_profil.Name = "drop_down_profil";
+            this.drop_down_profil.PrimaryColor = System.Drawing.Color.Empty;
+            this.drop_down_profil.ShowItemToolTips = false;
+            this.drop_down_profil.Size = new System.Drawing.Size(191, 70);
             // 
-            // button_batal_lupa_sandi
+            // profilSayaToolStripMenuItem
             // 
-            this.button_batal_lupa_sandi.AutoSize = true;
-            this.button_batal_lupa_sandi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.button_batal_lupa_sandi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_batal_lupa_sandi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_batal_lupa_sandi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_batal_lupa_sandi.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_batal_lupa_sandi.ForeColor = System.Drawing.Color.Black;
-            this.button_batal_lupa_sandi.Location = new System.Drawing.Point(390, 333);
-            this.button_batal_lupa_sandi.Name = "button_batal_lupa_sandi";
-            this.button_batal_lupa_sandi.Size = new System.Drawing.Size(86, 34);
-            this.button_batal_lupa_sandi.TabIndex = 23;
-            this.button_batal_lupa_sandi.Text = "Batal";
-            this.button_batal_lupa_sandi.UseVisualStyleBackColor = false;
-            this.button_batal_lupa_sandi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_lupa_sandi_MouseClick);
+            this.profilSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.profilSayaToolStripMenuItem.Name = "profilSayaToolStripMenuItem";
+            this.profilSayaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.profilSayaToolStripMenuItem.Text = "Profil Saya";
             // 
-            // button_simpan_lupa_sandi
+            // ubahProfilSayaToolStripMenuItem
             // 
-            this.button_simpan_lupa_sandi.AutoSize = true;
-            this.button_simpan_lupa_sandi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(210)))), ((int)(((byte)(232)))));
-            this.button_simpan_lupa_sandi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_simpan_lupa_sandi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_simpan_lupa_sandi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_simpan_lupa_sandi.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_simpan_lupa_sandi.ForeColor = System.Drawing.Color.Black;
-            this.button_simpan_lupa_sandi.Location = new System.Drawing.Point(483, 333);
-            this.button_simpan_lupa_sandi.Name = "button_simpan_lupa_sandi";
-            this.button_simpan_lupa_sandi.Size = new System.Drawing.Size(86, 34);
-            this.button_simpan_lupa_sandi.TabIndex = 22;
-            this.button_simpan_lupa_sandi.Text = "Simpan";
-            this.button_simpan_lupa_sandi.UseVisualStyleBackColor = false;
-            this.button_simpan_lupa_sandi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_lupa_sandi_MouseClick);
+            this.ubahProfilSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ubahProfilSayaToolStripMenuItem.Name = "ubahProfilSayaToolStripMenuItem";
+            this.ubahProfilSayaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.ubahProfilSayaToolStripMenuItem.Text = "Ubah Profil Saya";
             // 
-            // gambar_captcha
+            // riwayatTabunganToolStripMenuItem
             // 
-            this.gambar_captcha.Location = new System.Drawing.Point(338, 190);
-            this.gambar_captcha.Name = "gambar_captcha";
-            this.gambar_captcha.Size = new System.Drawing.Size(149, 63);
-            this.gambar_captcha.TabIndex = 4;
-            this.gambar_captcha.TabStop = false;
+            this.riwayatTabunganToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.riwayatTabunganToolStripMenuItem.Name = "riwayatTabunganToolStripMenuItem";
+            this.riwayatTabunganToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.riwayatTabunganToolStripMenuItem.Text = "Riwayat Tabungan";
             // 
-            // txt_captcha_lupa_password
-            // 
-            this.txt_captcha_lupa_password.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_captcha_lupa_password.Location = new System.Drawing.Point(338, 265);
-            this.txt_captcha_lupa_password.Name = "txt_captcha_lupa_password";
-            this.txt_captcha_lupa_password.Size = new System.Drawing.Size(149, 27);
-            this.txt_captcha_lupa_password.TabIndex = 3;
-            this.txt_captcha_lupa_password.Text = "captcha";
-            this.txt_captcha_lupa_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_captcha_lupa_password.GotFocus += new System.EventHandler(this.txt_captcha_lupa_password_GotFocus);
-            this.txt_captcha_lupa_password.LostFocus += new System.EventHandler(this.txt_captcha_lupa_password_LostFocus);
-            // 
-            // txt_konfirmasi_lupa_password
-            // 
-            this.txt_konfirmasi_lupa_password.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_konfirmasi_lupa_password.Location = new System.Drawing.Point(251, 127);
-            this.txt_konfirmasi_lupa_password.Name = "txt_konfirmasi_lupa_password";
-            this.txt_konfirmasi_lupa_password.PasswordChar = '*';
-            this.txt_konfirmasi_lupa_password.Size = new System.Drawing.Size(318, 27);
-            this.txt_konfirmasi_lupa_password.TabIndex = 2;
-            this.txt_konfirmasi_lupa_password.Text = "konfirmasi password";
-            this.txt_konfirmasi_lupa_password.GotFocus += new System.EventHandler(this.txt_konfirmasi_lupa_password_GotFocus);
-            this.txt_konfirmasi_lupa_password.LostFocus += new System.EventHandler(this.txt_konfirmasi_lupa_password_LostFocus);
-            // 
-            // txt_lupa_password
-            // 
-            this.txt_lupa_password.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lupa_password.Location = new System.Drawing.Point(251, 87);
-            this.txt_lupa_password.Name = "txt_lupa_password";
-            this.txt_lupa_password.PasswordChar = '*';
-            this.txt_lupa_password.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_lupa_password.Size = new System.Drawing.Size(318, 27);
-            this.txt_lupa_password.TabIndex = 1;
-            this.txt_lupa_password.Text = "password";
-            this.txt_lupa_password.GotFocus += new System.EventHandler(this.txt_lupa_password_GotFocus);
-            this.txt_lupa_password.LostFocus += new System.EventHandler(this.txt_lupa_password_LostFocus);
-            // 
-            // txt_username_email_lupa_password
-            // 
-            this.txt_username_email_lupa_password.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username_email_lupa_password.Location = new System.Drawing.Point(251, 50);
-            this.txt_username_email_lupa_password.Name = "txt_username_email_lupa_password";
-            this.txt_username_email_lupa_password.Size = new System.Drawing.Size(318, 27);
-            this.txt_username_email_lupa_password.TabIndex = 0;
-            this.txt_username_email_lupa_password.Text = "username/email";
-            this.txt_username_email_lupa_password.GotFocus += new System.EventHandler(this.txt_username_email_lupa_password_GotFocus);
-            this.txt_username_email_lupa_password.LostFocus += new System.EventHandler(this.txt_username_email_lupa_password_LostFocus);
-            // 
-            // frm_beranda_sebelum_login
+            // frm_beranda_setelah_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1178,8 +737,9 @@
             this.Controls.Add(this.panel_title_bar);
             this.Controls.Add(this.panel_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_beranda_sebelum_login";
+            this.Name = "frm_beranda_setelah_login";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frm_beranda_setelah_login_Load);
             this.panel_menu.ResumeLayout(false);
             this.panel_menu.PerformLayout();
             this.panel_header_sidebar.ResumeLayout(false);
@@ -1201,21 +761,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).EndInit();
             this.panel_isi.ResumeLayout(false);
             this.panel_isi.PerformLayout();
-            this.panel_isi_tentang_kami.ResumeLayout(false);
-            this.panel_isi_tentang_kami.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_tentang_kami)).EndInit();
-            this.panel_isi_login.ResumeLayout(false);
-            this.panel_isi_login.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_login)).EndInit();
-            this.panel_isi_daftar.ResumeLayout(false);
-            this.panel_isi_daftar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_daftar)).EndInit();
             this.panel_isi_faq.ResumeLayout(false);
             this.panel_isi_faq.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_faq)).EndInit();
-            this.panel_lupa_kata_sandi.ResumeLayout(false);
-            this.panel_lupa_kata_sandi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_captcha)).EndInit();
+            this.panel_isi_tentang_kami.ResumeLayout(false);
+            this.panel_isi_tentang_kami.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_tentang_kami)).EndInit();
+            this.drop_down_profil.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1245,32 +797,10 @@
         private System.Windows.Forms.PictureBox nama_logo_dan_tagline;
         private System.Windows.Forms.PictureBox maskot_beranda;
         private System.Windows.Forms.Panel panel_isi;
-        private System.Windows.Forms.Panel panel_isi_login;
-        private System.Windows.Forms.PictureBox gambar_login;
-        private System.Windows.Forms.Button button_submit_masuk;
-        private System.Windows.Forms.Label label_lupa_password;
-        private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.TextBox txt_username_email;
-        private System.Windows.Forms.Label label_daftar_yuk;
-        private System.Windows.Forms.Label label_belum_punya_akun;
         private System.Windows.Forms.Panel panel_border_isi_bawah;
         private System.Windows.Forms.Panel panel_border_isi_kanan;
-        private System.Windows.Forms.Panel panel_isi_daftar;
-        private System.Windows.Forms.Button button_batal;
-        private System.Windows.Forms.Button button_daftar;
-        private System.Windows.Forms.TextBox txt_nama_depan;
-        private System.Windows.Forms.TextBox txt_konfirmasi_password;
-        private System.Windows.Forms.TextBox txt_password_daftar;
-        private System.Windows.Forms.TextBox txt_email_daftar;
-        private System.Windows.Forms.TextBox txt_username_daftar;
-        private System.Windows.Forms.TextBox txt_nama_belakang;
-        private System.Windows.Forms.PictureBox gambar_daftar;
-        private System.Windows.Forms.Label label_masuk_yuk;
-        private System.Windows.Forms.Label label_sudah_punya_akun;
-        private System.Windows.Forms.DateTimePicker tanggal_lahir_daftar;
-        private System.Windows.Forms.Label label_tanggal_lahir;
         private System.Windows.Forms.Panel panel_border_sidebar_kiri;
-        private System.Windows.Forms.Button button_masuk;
+        private System.Windows.Forms.Button button_keluar;
         private System.Windows.Forms.Panel panel_border_sidebar_bawah;
         private System.Windows.Forms.Button button_tentang_kami;
         private System.Windows.Forms.Button button_faq;
@@ -1285,16 +815,10 @@
         private System.Windows.Forms.PictureBox gambar_faq;
         private System.Windows.Forms.Panel panel_isi_tentang_kami;
         private System.Windows.Forms.PictureBox gambar_tentang_kami;
-        private System.Windows.Forms.Panel panel_lupa_kata_sandi;
-        private System.Windows.Forms.PictureBox gambar_captcha;
-        private System.Windows.Forms.TextBox txt_captcha_lupa_password;
-        private System.Windows.Forms.TextBox txt_konfirmasi_lupa_password;
-        private System.Windows.Forms.TextBox txt_lupa_password;
-        private System.Windows.Forms.TextBox txt_username_email_lupa_password;
-        private System.Windows.Forms.Button button_batal_lupa_sandi;
-        private System.Windows.Forms.Button button_simpan_lupa_sandi;
-        private System.Windows.Forms.Label label_judul_lupa_sandi;
-        private System.Windows.Forms.Label label_refresh_captcha_lupa_sandi;
+        private CustomControls.DRMDropDownMenu drop_down_profil;
+        private System.Windows.Forms.ToolStripMenuItem profilSayaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ubahProfilSayaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem riwayatTabunganToolStripMenuItem;
     }
 }
 
