@@ -17,64 +17,81 @@ dan pengeluaran keuanganmu.
 USE db_darimu;
 
 -- ========================================================================
--- membuat trigger dan procedure untuk membuat tabungan otomatis
--- setelah user berhasil mendaftar pada aplikasi Darimu
---DROP TRIGGER tr_tabungan;
-CREATE TRIGGER tr_tabungan
-	ON tb_pengguna
-	AFTER INSERT
-AS
-	BEGIN
-    	DECLARE @nama_pengguna VARCHAR(100)	
-		SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
-        EXEC sp_tabungan_insert @nama_pengguna
-	END
-
---DROP PROCEDURE sp_tabungan_insert;
-CREATE PROCEDURE sp_tabungan_insert
-    @nama_pengguna VARCHAR(100)
-AS
-    BEGIN
-        INSERT INTO tb_tabungan(nama_pengguna, saldo, tanggal_buka, status_tabungan)
-            VALUES(@nama_pengguna, 0, GETDATE(), 'Aktif')
-    END
-
--- ========================================================================
 -- membuat trigger dan procedure untuk update saldo di tabungan
-CREATE TRIGGER tr_tabungan_update_saldo
-    ON tb_riwayat_tabungan
-    AFTER INSERT
+DROP TRIGGER tr_transaksi_saldo;
+CREATE TRIGGER tr_transaksi_saldo
+    ON tb_pengguna
+    AFTER UPDATE 
 AS
     BEGIN
-        DECLARE @saldo BIGINT, id_tabungan INT
-        SET @saldo = (SELECT saldo FROM inserted)
-        SET @id_tabungan = (SELECT id_tabungan FROM inserted)
-        EXEC sp_tabungan_update_saldo @saldo @id_tabungan
+
+        DECLARE @nama_pengguna VARCHAR(100)
+        DECLARE @keterangan VARCHAR(100)
+        DECLARE @perubahan_saldo BIGINT
+
+        SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
+        SET @perubahan_saldo = (SELECT saldo FROM inserted) - (SELECT saldo FROM deleted)
+        IF (@perubahan_saldo < 0)
+        BEGIN
+	       SET @keterangan = 'Tarik Saldo' 
+        END
+        IF (@perubahan_saldo > 0)
+        BEGIN
+	        SET @keterangan = 'Setor Saldo'
+        END
+        IF UPDATE(saldo)
+        BEGIN
+			EXEC sp_transaksi @nama_pengguna, @perubahan_saldo, @keterangan      
+        END
     END
 
-CREATE PROCEDURE sp_tabungan_update_saldo
-    @saldo BIGINT, @id_tabungan INT
+DROP PROCEDURE sp_transaksi;
+CREATE PROCEDURE sp_transaksi
+	@nama_pengguna VARCHAR(100), @perubahan_saldo BIGINT, @keterangan VARCHAR(100)
 AS
     BEGIN
-        UPDATE INTO tb_tabungan SET saldo = @saldo WHERE id_tabungan = @id_tabungan
+        IF (@perubahan_saldo > 0)
+        	BEGIN
+	   			INSERT INTO tb_transaksi(nama_pengguna, tanggal, keterangan, debit, kredit)
+	   			VALUES(@nama_pengguna, GETDATE(), @keterangan, ABS(@perubahan_saldo), 0)
+        	END
+		IF (@perubahan_saldo < 0)
+			BEGIN
+				
+	   			INSERT INTO tb_transaksi(nama_pengguna, tanggal, keterangan, debit, kredit)
+	   			VALUES(@nama_pengguna, GETDATE(), @keterangan, 0, ABS(@perubahan_saldo))
+        	END
     END
 
 -- ========================================================================
 -- membuat trigger dan procedure untuk update saldo di tabungan impian
-CREATE TRIGGER tr_tabungan_impian_update_saldo
-    ON tb_riwayat_tabungan_impian
-    AFTER INSERT
+CREATE TRIGGER tr_tabungan_impian
+    ON tb_tabungan_impian
+    AFTER UPDATE
 AS
     BEGIN
-        DECLARE @saldo BIGINT, id_tabungan INT
-        SET @saldo = (SELECT saldo FROM inserted)
-        SET @id_tabungan = (SELECT id_tabungan FROM inserted)
-        EXEC sp_tabungan_impian_update_saldo @saldo @id_tabungan
-    END
-
-CREATE PROCEDURE sp_tabungan_impian_update_saldo
-    @saldo BIGINT, @id_tabungan INT
-AS
-    BEGIN
-        UPDATE INTO tb_tabungan SET saldo = @saldo WHERE id_tabungan = @id_tabungan
+        DECLARE @nama_pengguna VARCHAR(100)
+        DECLARE @keterangan VARCHAR(100)
+        DECLARE @perubahan_saldo BIGINT
+        DECLARE @nama_tabungan_impian VARCHAR(255)
+        
+        SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
+        SET @perubahan_saldo = (SELECT saldo_terkumpul FROM inserted) - (SELECT saldo_terkumpul FROM deleted)
+        SET @nama_tabungan_impian = (SELECT nama_tabungan_impian FROM inserted)
+ 
+        IF (@perubahan_saldo < 0)
+        BEGIN
+	       SET @keterangan = CONCAT('tarik saldo dari tabungan "', @nama_tabungan_impian, '"') 
+        END
+        IF (@perubahan_saldo > 0)
+        BEGIN
+	        SET @keterangan = CONCAT('setor saldo ke tabungan "', @nama_tabungan_impian, '"') 
+        END
+        
+        IF UPDATE(saldo_terkumpul)
+        BEGIN
+			EXEC sp_transaksi @nama_pengguna, @perubahan_saldo, @keterangan
+            UPDATE tb_pengguna SET saldo = saldo - @perubahan_saldo WHERE nama_pengguna = @nama_pengguna
+        END
+        
     END
