@@ -7,13 +7,12 @@ namespace Darimu.ClassFolder
     class ClassUser
     {
         static SqlConnection sqlcon = new ClassKoneksi().getSQLCon();
-        
+
         public static string hashPassword(string password)
         {
             string hashedPassword = "";
             byte[] data = System.Text.Encoding.UTF8.GetBytes(ClassGaram.garamDapur(password));
             data = new System.Security.Cryptography.SHA512Managed().ComputeHash(data);
-
             hashedPassword = BitConverter.ToString(data).Replace("-", "");
             return hashedPassword;
         }
@@ -21,16 +20,20 @@ namespace Darimu.ClassFolder
         public static string daftarUser(string nama_pengguna, String nama_lengkap, string tanggal_lahir, string alamat_email, string kata_sandi)
         {
             string hasil = "";
-            try {
+            try
+            {
                 sqlcon.Open();
                 SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE alamat_email = '" + alamat_email + "'", sqlcon);
                 SqlDataReader dr = sqlcom.ExecuteReader();
 
-                if(dr.Read()){
+                if (dr.Read())
+                {
                     hasil = "Email sudah terdaftar";
-                } else {
+                }
+                else
+                {
                     dr.Close();
-                    
+
                     SqlDataAdapter sqlda = new SqlDataAdapter("INSERT INTO tb_pengguna (nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi, saldo, tanggal_buka, status_pengguna) VALUES(@nama_pengguna, @nama_lengkap, @tanggal_lahir, @alamat_email, @kata_sandi, 0, GETDATE(), 'Aktif')", sqlcon);
                     sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna", SqlDbType.VarChar, 100));
                     sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_lengkap", SqlDbType.VarChar, 100));
@@ -45,7 +48,7 @@ namespace Darimu.ClassFolder
                     sqlda.SelectCommand.Parameters["@kata_sandi"].Value = hashPassword(kata_sandi);
                     sqlda.SelectCommand.ExecuteNonQuery();
 
-                    hasil = "Data berhasil disimpan";
+                    hasil = "Selamat! Anda telah terdaftar";
                 }
             }
             catch (Exception ex)

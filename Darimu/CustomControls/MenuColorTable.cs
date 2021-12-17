@@ -18,7 +18,7 @@ namespace Darimu.CustomControls
             if (isMainMenu)
             {
                 backColor = Color.FromArgb(33, 106, 155);
-                leftColumnColor = Color.FromArgb(16, 53, 78); 
+                leftColumnColor = Color.FromArgb(16, 53, 78);
                 borderColor = Color.FromArgb(16, 53, 78);
                 menuItemBorderColor = primaryColor;
                 menuItemSelectedColor = primaryColor;

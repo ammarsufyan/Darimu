@@ -63,9 +63,8 @@ namespace Darimu
 
         private void button_exit_click(object sender, EventArgs e)
         {
-            const string message = "Apakah Anda yakin ingin menutup aplikasi?";
-            const string caption = "Keluar Aplikasi";
-            var result = MessageBox.Show(message, caption,
+            var result = MessageBox.Show("Apakah Anda yakin ingin menutup aplikasi?",
+                                         "Keluar Aplikasi",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Stop);
 
@@ -78,11 +77,6 @@ namespace Darimu
 
         private void icon_topup_MouseClick(object sender, MouseEventArgs e)
         {
-            const string message = "Maaf, Anda harus masuk terlebih dahulu.";
-            const string caption = "Gagal Mengakses Menu Topup";
-            var result = MessageBox.Show(message, caption,
-                                         MessageBoxButtons.OK,
-                                         MessageBoxIcon.Information);
         }
 
         // create method to collapse and uncollapse menu
@@ -103,7 +97,7 @@ namespace Darimu
                 }
             }
             else // uncollapse menu
-            { 
+            {
                 panel_menu.Width = 210;
                 logo_darimu.Visible = true;
                 label_nama_logo.Visible = true;
@@ -284,6 +278,24 @@ namespace Darimu
         {
             drop_down_profil.IsMainMenu = true;
             drop_down_profil.PrimaryColor = Color.FromArgb(16, 53, 78);
+        }
+
+        private void button_keluar_MouseClick(object sender, MouseEventArgs e)
+        {
+            var result = MessageBox.Show("Apakah Anda yakin ingin keluar akun?",
+                                         "Keluar Akun",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Information);
+
+            // If the yes button was pressed ...
+            if (result == DialogResult.Yes)
+            {
+                hide_panel();
+                default_color();
+                frm_beranda_sebelum_login p = new frm_beranda_sebelum_login();
+                this.Hide();
+                p.Show();
+            }
         }
     }
 }
