@@ -16,12 +16,13 @@ dan pengeluaran keuanganmu.
 -- ========================================================================
 -- membuat db_darimu
 CREATE DATABASE db_darimu;
+DROP DATABASE db_darimu;
 -- menggunakan db_darimu
 USE db_darimu;
 
 -- ========================================================================
 -- membuat tb_admin
--- DROP TABLE tb_admin;
+ DROP TABLE tb_admin;
 CREATE TABLE tb_admin(
 	nama_pengguna_admin VARCHAR(100) NOT NULL PRIMARY KEY,
 	nama_lengkap VARCHAR(100) NOT NULL,
@@ -59,6 +60,7 @@ CREATE TABLE tb_pengguna(
 
 -- ========================================================================
 -- membuat tb_transaksi
+ DROP TABLE tb_transaksi;
 CREATE TABLE tb_transaksi (
     id INT IDENTITY(1,1) NOT NULL,
 	id_transaksi AS ('TR-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
@@ -67,11 +69,13 @@ CREATE TABLE tb_transaksi (
     keterangan VARCHAR(255) NOT NULL,
     debit BIGINT NOT NULL,
     kredit BIGINT NOT NULL,
+    saldo BIGINT NOT NULL,
     [status_data] VARCHAR(255) NULL CHECK ([status_data] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
 
 -- ========================================================================
 -- membuat tb_tabungan_impian
+ DROP TABLE tb_tabungan_impian;
 CREATE TABLE tb_tabungan_impian(
 	id INT IDENTITY(1,1) NOT NULL,
 	id_tabungan_impian AS ('TI-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
@@ -85,20 +89,6 @@ CREATE TABLE tb_tabungan_impian(
     [status_tabungan_impian] VARCHAR(255) NULL CHECK ([status_tabungan_impian] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
 
--- ========================================================================
--- membuat tb_tabungan_impian
-CREATE TABLE tb_tabungan_impian(
-	id INT IDENTITY(1,1) NOT NULL,
-	id_tabungan_impian AS ('TI-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
-    nama_pengguna VARCHAR(10) NOT NULL,
-    nama_tabungan_impian VARCHAR(100) NOT NULL,
-    saldo_terkumpul BIGINT NOT NULL,
-    saldo_impian BIGINT NOT NULL,
-    tenggat_waktu DATETIME NOT NULL,
-    tanggal_buka DATETIME NOT NULL,
-    tanggal_tutup DATETIME NULL,
-    [status_tabungan_impian] VARCHAR(255) NULL CHECK ([status_tabungan_impian] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
-);
 
 -- ========================================================================
 -- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
