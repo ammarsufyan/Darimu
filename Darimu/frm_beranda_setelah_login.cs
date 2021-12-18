@@ -1,5 +1,6 @@
 ﻿using Darimu.ClassFolder;
 using System;
+using System.Collections;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -11,7 +12,7 @@ namespace Darimu
     public partial class frm_beranda_setelah_login : Form
     {
         // declaration var
-        public string nama_pengguna, nama_lengkap, alamat_email, tanggal_lahir;
+        public string nama_pengguna;
         private int borderSize = 2;
         private Size formSize;
         int angka = 0;
@@ -51,6 +52,14 @@ namespace Darimu
             panel_isi_beranda.Visible = false;
             panel_isi_faq.Visible = false;
             panel_isi_tentang_kami.Visible = false;
+            panel_isi_laporan_saya.Visible = false;
+            panel_isi_riwayat_tabungan.Visible = false;
+            panel_isi_profil_saya.Visible = false;
+            panel_isi_riwayat_tabungan_impian.Visible = false;
+            panel_isi_tabungan_impian.Visible = false;
+            panel_isi_tambah_tabungan_impian.Visible = false;
+            panel_isi_ubah_profil_saya.Visible = false;
+            panel_isi_ubah_tabungan_impian.Visible = false;
         }
 
         /* event title bar */
@@ -345,40 +354,78 @@ namespace Darimu
 
         private void profilSayaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ArrayList data_pengguna = ClassUser.lihatPengguna(nama_pengguna);
+            string[] nama_depan_belakang = data_pengguna[1].ToString().Split(' ');
+            label_nama_depan.Text = nama_depan_belakang[0];
+            label_nama_belakang.Text = nama_depan_belakang[1];
+            label_alamat_email.Text = data_pengguna[3].ToString();
+            label_tanggal_lahir.Text = data_pengguna[2].ToString();
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load(@"http://localhost:81/webservice/xml/darimu/lihat_pengguna.php?nama_pengguna" + nama_pengguna);
-            XmlElement root = doc.DocumentElement;
-            XmlNodeList nodes = root.SelectNodes("/data_pengguna");
+            hide_panel();
+            panel_isi_profil_saya.Visible = true;
 
-            String res = "";
 
-            foreach (XmlNode node in nodes)
-            {
-                // Respon apakah gagal atau tidak
-                res = node["response"].InnerText.Trim();
+            // XmlDocument doc = new XmlDocument();
+            // doc.Load(@"http://localhost:81/webservice/xml/darimu/lihat_pengguna.php?nama_pengguna" + nama_pengguna);
+            // XmlElement root = doc.DocumentElement;
+            // XmlNodeList nodes = root.SelectNodes("/datapengguna");
 
-                // respon yang digunakan untuk menampilkan data profil
-                nama_lengkap = node["nama_lengkap"].InnerText.Trim();
-                alamat_email = node["alamat_email"].InnerText.Trim();
-                tanggal_lahir = node["tanggal_lahir"].InnerText.Trim();
-            }
+            // String res = "";
 
-            if (res.Equals("Berhasil"))
-            {
-                string[] nama_depan_belakang = nama_lengkap.Split(' ');
-                label_nama_depan.Text = nama_depan_belakang[0];
-                label_nama_belakang.Text = nama_depan_belakang[1];
-                label_alamat_email.Text = alamat_email;
-                label_tanggal_lahir.Text = tanggal_lahir;
-            }
-            else
-            {
-                MessageBox.Show("Gagal mengambil data profil",
-                                "Gagal Mengakses Profil",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
+            // foreach (XmlNode node in nodes)
+            // {
+            //     // Respon apakah gagal atau tidak
+            //     res = node["response"].InnerText.Trim();
+
+            //     // respon yang digunakan untuk menampilkan data profil
+            //     nama_lengkap = node["nama_lengkap"].InnerText.Trim();
+            //     alamat_email = node["alamat_email"].InnerText.Trim();
+            //     tanggal_lahir = node["tanggal_lahir"].InnerText.Trim();
+            // }
+
+            // if (res.Equals("Berhasil"))
+            // {
+            //     string[] nama_depan_belakang = nama_lengkap.Split(' ');
+            //     label_nama_depan.Text = nama_depan_belakang[0];
+            //     label_nama_belakang.Text = nama_depan_belakang[1];
+            //     label_alamat_email.Text = alamat_email;
+            //     label_tanggal_lahir.Text = tanggal_lahir;
+            // }
+            // else
+            // {
+            //     MessageBox.Show("Gagal mengambil data profil",
+            //                     "Gagal Mengakses Profil",
+            //                     MessageBoxButtons.OK,
+            //                     MessageBoxIcon.Information);
+            // }
+        }
+
+        private void button_simpan_MouseEnter(object sender, EventArgs e)
+        {
+            button_simpan.BackColor = System.Drawing.Color.White;
+            button_simpan.Image = global::Darimu.Properties.Resources.button_simpan_dipencet;
+        }
+
+        private void button_simpan_MouseLeave(object sender, EventArgs e)
+        {
+            button_simpan.Image = global::Darimu.Properties.Resources.button_simpan;
+        }
+
+        private void button_batal_MouseEnter(object sender, EventArgs e)
+        {
+            button_batal.BackColor = System.Drawing.Color.White;
+            button_batal.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
+        }
+
+        private void button_batal_MouseLeave(object sender, EventArgs e)
+        {
+            button_batal.Image = global::Darimu.Properties.Resources.button_batal;
+        }
+
+        private void ubahProfilSayaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hide_panel();
+            panel_isi_ubah_profil_saya.Visible = true;
         }
     }
 }

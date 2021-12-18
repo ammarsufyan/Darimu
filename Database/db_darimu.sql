@@ -37,11 +37,15 @@ CREATE TABLE tb_admin(
 );
 
 -- memasukkan data admin (di sini ada 3 admin, yaitu Vera Liani, Uli Paris Usada, dan Maman Sitorus)
-INSERT INTO tb_admin(nik, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_lahir, tanggal_lahir, alamat_email, nama_pengguna_admin, kata_sandi, status_admin)
+TRUNCATE TABLE tb_admin;
+INSERT INTO tb_admin(nama_pengguna_admin, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_lahir, tanggal_lahir, alamat_email, nik, kata_sandi, status_admin)
     VALUES
-    ('vera_liani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', 'dahC3ahz', 'Aktif'),
-    ('Uli_PH', 'Uli Paris Usada', 'Perempuan', 'Kpg. Haji No. 518, Salatiga 99947', 'Gorontalo', '1988-04-01', 'uli_ph@gmail.com', '8795200921584695', 'uli123', 'Aktif'),
-    ('S_maman', 'Maman Sitorus' , 'Laki-laki', 'Psr. Suryo No. 367, Langsa 82078, Jakarta', 'Papua Barat', '1970-06-10', 'abcdefg@gmail.com', '2221686886311030', 'maman10670', 'Aktif');
+    ('veraliani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', '0F23C5A1EC787D7AB58C34B8FA18158B601789402374420BDBBF1E7E6E6DEB4641DAA0D772D52771A6081AF132B379059128289DD2DE41D75B1F70EBAB8E0588
+', 'Aktif'),
+    ('UliGoblok', 'Uli Paris Usada', 'Perempuan', 'Kpg. Haji No. 518, Salatiga 99947', 'Gorontalo', '1988-04-01', 'uli_ph@gmail.com', '8795200921584695', '9B348D97A051CDFB8D1C0E10C3A849B9C7C398B33922FEC992EFCA229B7B3415F6611448FF0CA11CAFB33C93E680026BAF95C8100DE9F76EF7F2540D89C82699
+', 'Aktif'),
+    ('Supermaman', 'Maman Sitorus' , 'Laki-laki', 'Psr. Suryo No. 367, Langsa 82078, Jakarta', 'Papua Barat', '1970-06-10', 'abcdefg@gmail.com', '2221686886311030', 'E76D380D70D4F85616708B4A959C75DB7DA9321D4C945FAF5234AEBB218B22F0A6FA1492D86FDC97C701BC3E0C1E1F15BC3CE85A1DF1F4D345CFC1BA5D2BC092
+', 'Aktif');
 
 -- ========================================================================
 -- membuat tb_pengguna
@@ -105,5 +109,8 @@ CREATE TABLE tb_laporan(
 );
 
 SELECT * FROM tb_pengguna tp
+
+F4B30CE73C45C1060F9EC8098941780EC0DEF060F5781B574894801C3349072A83013298996DC34B5548574CE605CB093D29A4D309411F495D30E92CA35FED4F
+F4B30CE73C45C1060F9EC8098941780EC0DEF060F5781B574894801C3349072A83013298996DC34B5548574CE605CB093D29A4D309411F495D30E92CA35FED4F
 
 SELECT * FROM tb_pengguna WHERE nama_pengguna='ammarsufyan'

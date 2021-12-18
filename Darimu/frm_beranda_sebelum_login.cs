@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -417,392 +418,425 @@ namespace Darimu
 
                 string nama_pengguna_atau_email_input = txt_nama_pengguna_atau_email_masuk.Text.Trim();
                 string kata_sandi_input = ClassUser.hashPassword(txt_kata_sandi_masuk.Text.Trim());
+                Console.WriteLine(kata_sandi_input);
 
-                try
+                if (ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input))
                 {
-                    XmlDocument doc = new XmlDocument();
-                    doc.Load(@"http://localhost:81/webservice/xml/darimu/cek_masuk.php?nama_pengguna_atau_email=" + nama_pengguna_atau_email_input + "&kata_sandi=" + kata_sandi_input);
-                    XmlElement root = doc.DocumentElement;
-                    XmlNodeList nodes = root.SelectNodes("/data");
+                    MessageBox.Show("Selamat Anda berhasil masuk!",
+                                    "Sukses Masuk",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
 
-                    String res = "";
-
-                    foreach (XmlNode node in nodes)
-                    {
-                        // Respon apakah gagal atau tidak
-                        res = node["response"].InnerText.Trim();
-
-                        // respon yang digunakan untuk menampilkan data profil
-                        nama_pengguna = node["nama_pengguna"].InnerText.Trim();
-                    }
-
-                    if (res.Equals("Berhasil"))
-                    {
-                        MessageBox.Show("Selamat Anda berhasil masuk!",
-                                        "Sukses Masuk",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-
-                        hide_panel();
-                        default_color();
-                        clear_text();
-                        frm_beranda_setelah_login p = new frm_beranda_setelah_login(nama_pengguna);
-                        this.Hide();
-                        p.Show();
-                    }
+                    hide_panel();
+                    default_color();
+                    clear_text();
+                    frm_beranda_setelah_login p = new frm_beranda_setelah_login(nama_pengguna_atau_email_input);
+                    this.Hide();
+                    p.Show();
                 }
-                catch (Exception ex)
+                else if (kesempatan_masuk <= 0)
                 {
-                    if(ClassAdmin.cek_admin(nama_pengguna_atau_email_input))
-                    {
-                        MessageBox.Show("Selamat Admin berhasil masuk!",
-                                        "Sukses Masuk",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-
-                        frm_admin fadmin = new frm_admin(nama_pengguna_atau_email_input);
-                        hide_panel();
-                        default_color();
-                        clear_text();
-                        this.Hide();
-                        fadmin.Show();
-                    }
-                    else if (kesempatan_masuk <= 0)
-                    {
-                        MessageBox.Show("Maaf, Anda sudah gagal 3 kali untuk mencoba masuk",
-                                        "Keluar Aplikasi",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Stop);
-                        Application.Exit();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Nama pengguna, email atau kata sandi salah" + "\nKesempatan Anda sisa " + kesempatan_masuk + " kesempatan",
-                                        "Gagal Masuk",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Exclamation);
-                        clear_text();
-                    }
+                    MessageBox.Show("Maaf, Anda sudah gagal 3 kali untuk mencoba masuk",
+                                    "Keluar Aplikasi",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Stop);
+                    Application.Exit();
                 }
-            }
-            else
-            {
-                MessageBox.Show(cek,
-                                "Gagal Masuk",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-            }
-        }
+                else
+                {
+                    MessageBox.Show("Nama pengguna, email atau kata sandi salah" + "\nKesempatan Anda sisa " + kesempatan_masuk + " kesempatan",
+                                    "Gagal Masuk",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Exclamation);
+                    clear_text();
+                }
 
-        /* event daftar */
-        // event label masuk yuk!
-        private void label_masuk_yuk_MouseClick(object sender, MouseEventArgs e)
-        {
-            hide_panel();
-            default_color();
-            clear_text();
-            panel_isi_masuk.Visible = true;
-        }
-        private void label_masuk_yuk_MouseEnter(object sender, EventArgs e)
-        {
-            label_masuk_yuk.ForeColor = System.Drawing.Color.Cyan;
-        }
+                //     try
+                //     {
+                //         XmlDocument doc = new XmlDocument();
+                //         doc.Load(@"http://localhost:81/webservice/xml/darimu/cek_masuk.php?nama_pengguna_atau_email=" + nama_pengguna_atau_email_input + "&kata_sandi=" + kata_sandi_input);
+                //         XmlElement root = doc.DocumentElement;
+                //         XmlNodeList nodes = root.SelectNodes("/data");
 
-        private void label_masuk_yuk_MouseLeave(object sender, EventArgs e)
-        {
-            label_masuk_yuk.ForeColor = System.Drawing.Color.White;
-        }
+                //         String res = "";
 
+                //         foreach (XmlNode node in nodes)
+                //         {
+                //             // Respon apakah gagal atau tidak
+                //             res = node["response"].InnerText.Trim();
 
-        // gotfocus daftar
-        private void txt_nama_depan_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_depan.Text == "Nama Depan")
-            {
-                txt_nama_depan.Text = "";
-            }
-        }
+                //             // respon yang digunakan untuk menampilkan data profil
+                //             nama_pengguna = node["nama_pengguna"].InnerText.Trim();
+                //         }
 
-        private void txt_nama_belakang_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_belakang.Text == "Nama Belakang")
-            {
-                txt_nama_belakang.Text = "";
-            }
-        }
+                //         if (res.Equals("Berhasil"))
+                //         {
+                //             MessageBox.Show("Selamat Anda berhasil masuk!",
+                //                             "Sukses Masuk",
+                //                             MessageBoxButtons.OK,
+                //                             MessageBoxIcon.Information);
 
-        private void txt_nama_pengguna_daftar_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_pengguna_daftar.Text == "Nama Pengguna")
-            {
-                txt_nama_pengguna_daftar.Text = "";
-            }
-        }
+                //             hide_panel();
+                //             default_color();
+                //             clear_text();
+                //             frm_beranda_setelah_login p = new frm_beranda_setelah_login(nama_pengguna);
+                //             this.Hide();
+                //             p.Show();
+                //         }
+                //     }
+                //     catch (Exception ex)
+                //     {
+                //         if(ClassAdmin.cek_admin(nama_pengguna_atau_email_input, kata_sandi))
+                //         {
+                //             MessageBox.Show("Selamat Admin berhasil masuk!",
+                //                             "Sukses Masuk",
+                //                             MessageBoxButtons.OK,
+                //                             MessageBoxIcon.Information);
 
-        private void txt_email_daftar_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_email_daftar.Text == "Alamat Email")
-            {
-                txt_email_daftar.Text = "";
-            }
-        }
-
-        private void txt_kata_sandi_daftar_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_kata_sandi_daftar.Text == "password")
-            {
-                txt_kata_sandi_daftar.Text = "";
-            }
-        }
-
-        private void txt_konfirmasi_kata_sandi_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_konfirmasi_kata_sandi.Text == "konfirmasi password")
-            {
-                txt_konfirmasi_kata_sandi.Text = "";
-            }
-        }
-
-        // lostfocus daftar
-        private void txt_nama_depan_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_depan.Text == "")
-            {
-                txt_nama_depan.Text = "Nama Depan";
+                //             frm_admin fadmin = new frm_admin(nama_pengguna_atau_email_input);
+                //             hide_panel();
+                //             default_color();
+                //             clear_text();
+                //             this.Hide();
+                //             fadmin.Show();
+                //         }
+                //         else if (kesempatan_masuk <= 0)
+                //         {
+                //             MessageBox.Show("Maaf, Anda sudah gagal 3 kali untuk mencoba masuk",
+                //                             "Keluar Aplikasi",
+                //                             MessageBoxButtons.OK,
+                //                             MessageBoxIcon.Stop);
+                //             Application.Exit();
+                //         }
+                //         else
+                //         {
+                //             MessageBox.Show("Nama pengguna, email atau kata sandi salah" + "\nKesempatan Anda sisa " + kesempatan_masuk + " kesempatan",
+                //                             "Gagal Masuk",
+                //                             MessageBoxButtons.OK,
+                //                             MessageBoxIcon.Exclamation);
+                //             clear_text();
+                //         }
+                //     }
+                // }
+                // else
+                // {
+                //     MessageBox.Show(cek,
+                //                     "Gagal Masuk",
+                //                     MessageBoxButtons.OK,
+                //                     MessageBoxIcon.Warning);
+                // }
             }
         }
 
-        private void txt_nama_belakang_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_belakang.Text == "")
+            /* event daftar */
+            // event label masuk yuk!
+            private void label_masuk_yuk_MouseClick(object sender, MouseEventArgs e)
             {
-                txt_nama_belakang.Text = "Nama Belakang";
-            }
-        }
-
-        private void txt_nama_pengguna_daftar_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_pengguna_daftar.Text == "")
-            {
-                txt_nama_pengguna_daftar.Text = "Nama Pengguna";
-            }
-        }
-
-        private void txt_email_daftar_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_email_daftar.Text == "")
-            {
-                txt_email_daftar.Text = "Alamat Email";
-            }
-        }
-
-        private void txt_kata_sandi_daftar_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_kata_sandi_daftar.Text == "")
-            {
-                txt_kata_sandi_daftar.Text = "password";
-            }
-        }
-
-        private void txt_konfirmasi_kata_sandi_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_konfirmasi_kata_sandi.Text == "")
-            {
-                txt_konfirmasi_kata_sandi.Text = "konfirmasi password";
-            }
-        }
-
-        private void button_batal_MouseClick(object sender, MouseEventArgs e)
-        {
-            hide_panel();
-            default_color();
-            panel_isi_masuk.Visible = true;
-        }
-
-        private void button_daftar_MouseClick(object sender, MouseEventArgs e)
-        {
-            string cek = ClassValidasi.cekPendaftaran(txt_nama_depan, txt_email_daftar, txt_nama_pengguna_daftar, txt_kata_sandi_daftar, txt_konfirmasi_kata_sandi);
-
-            if (cek == "valid")
-            {
-                string nama_lengkap = txt_nama_depan.Text + " " + txt_nama_belakang.Text;
-                string nama_pengguna = txt_nama_pengguna_daftar.Text;
-                string alamat_email = txt_email_daftar.Text;
-                string kata_sandi = txt_kata_sandi_daftar.Text;
-                //get the datepicker value
-                tanggal_lahir_daftar.Format = DateTimePickerFormat.Custom;
-                tanggal_lahir_daftar.CustomFormat = "yyyy/MM/dd";
-                tanggal_lahir_daftar.ShowUpDown = true;
-                string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
-
-                string hasil = ClassUser.daftarUser(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
-                MessageBox.Show(hasil, "Sukses Mendaftar",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-
                 hide_panel();
                 default_color();
                 clear_text();
                 panel_isi_masuk.Visible = true;
             }
-            else
+            private void label_masuk_yuk_MouseEnter(object sender, EventArgs e)
             {
-                MessageBox.Show(cek, "Gagal Mendaftar",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                label_masuk_yuk.ForeColor = System.Drawing.Color.Cyan;
             }
 
-        }
-
-        /* event panel lupa kata sandi */
-        private void button_simpan_lupa_sandi_MouseClick(object sender, MouseEventArgs e)
-        {
-            string cek = ClassValidasi.cekLupaKataSandi(txt_nama_pengguna_atau_email_lupa_kata_sandi, txt_lupa_kata_sandi, txt_konfirmasi_lupa_kata_sandi, txt_captcha_lupa_kata_sandi, angka);
-
-            if (cek == "valid")
+            private void label_masuk_yuk_MouseLeave(object sender, EventArgs e)
             {
-                string hasil = ClassUser.ubahPassword(txt_nama_pengguna_atau_email_lupa_kata_sandi.Text, txt_lupa_kata_sandi.Text);
-                MessageBox.Show(hasil, "Sukses Membuat Password Baru",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                label_masuk_yuk.ForeColor = System.Drawing.Color.White;
+            }
+
+
+            // gotfocus daftar
+            private void txt_nama_depan_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_depan.Text == "Nama Depan")
+                {
+                    txt_nama_depan.Text = "";
+                }
+            }
+
+            private void txt_nama_belakang_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_belakang.Text == "Nama Belakang")
+                {
+                    txt_nama_belakang.Text = "";
+                }
+            }
+
+            private void txt_nama_pengguna_daftar_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_pengguna_daftar.Text == "Nama Pengguna")
+                {
+                    txt_nama_pengguna_daftar.Text = "";
+                }
+            }
+
+            private void txt_email_daftar_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_email_daftar.Text == "Alamat Email")
+                {
+                    txt_email_daftar.Text = "";
+                }
+            }
+
+            private void txt_kata_sandi_daftar_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_kata_sandi_daftar.Text == "password")
+                {
+                    txt_kata_sandi_daftar.Text = "";
+                }
+            }
+
+            private void txt_konfirmasi_kata_sandi_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_konfirmasi_kata_sandi.Text == "konfirmasi password")
+                {
+                    txt_konfirmasi_kata_sandi.Text = "";
+                }
+            }
+
+            // lostfocus daftar
+            private void txt_nama_depan_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_depan.Text == "")
+                {
+                    txt_nama_depan.Text = "Nama Depan";
+                }
+            }
+
+            private void txt_nama_belakang_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_belakang.Text == "")
+                {
+                    txt_nama_belakang.Text = "Nama Belakang";
+                }
+            }
+
+            private void txt_nama_pengguna_daftar_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_pengguna_daftar.Text == "")
+                {
+                    txt_nama_pengguna_daftar.Text = "Nama Pengguna";
+                }
+            }
+
+            private void txt_email_daftar_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_email_daftar.Text == "")
+                {
+                    txt_email_daftar.Text = "Alamat Email";
+                }
+            }
+
+            private void txt_kata_sandi_daftar_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_kata_sandi_daftar.Text == "")
+                {
+                    txt_kata_sandi_daftar.Text = "password";
+                }
+            }
+
+            private void txt_konfirmasi_kata_sandi_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_konfirmasi_kata_sandi.Text == "")
+                {
+                    txt_konfirmasi_kata_sandi.Text = "konfirmasi password";
+                }
+            }
+
+            private void button_batal_MouseClick(object sender, MouseEventArgs e)
+            {
                 hide_panel();
                 default_color();
-                clear_text();
+                panel_isi_masuk.Visible = true;
+            }
+
+            private void button_daftar_MouseClick(object sender, MouseEventArgs e)
+            {
+                string cek = ClassValidasi.cekPendaftaran(txt_nama_depan, txt_email_daftar, txt_nama_pengguna_daftar, txt_kata_sandi_daftar, txt_konfirmasi_kata_sandi);
+
+                if (cek == "valid")
+                {
+                    string nama_lengkap = txt_nama_depan.Text + " " + txt_nama_belakang.Text;
+                    string nama_pengguna = txt_nama_pengguna_daftar.Text;
+                    string alamat_email = txt_email_daftar.Text;
+                    string kata_sandi = txt_kata_sandi_daftar.Text;
+                    //get the datepicker value
+                    tanggal_lahir_daftar.Format = DateTimePickerFormat.Custom;
+                    tanggal_lahir_daftar.CustomFormat = "yyyy/MM/dd";
+                    tanggal_lahir_daftar.ShowUpDown = true;
+                    string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
+
+                    string hasil = ClassUser.daftarUser(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
+                    MessageBox.Show(hasil, "Sukses Mendaftar",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    hide_panel();
+                    default_color();
+                    clear_text();
+                    panel_isi_masuk.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show(cek, "Gagal Mendaftar",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+
+            }
+
+            /* event panel lupa kata sandi */
+            private void button_simpan_lupa_sandi_MouseClick(object sender, MouseEventArgs e)
+            {
+                string cek = ClassValidasi.cekLupaKataSandi(txt_nama_pengguna_atau_email_lupa_kata_sandi, txt_lupa_kata_sandi, txt_konfirmasi_lupa_kata_sandi, txt_captcha_lupa_kata_sandi, angka);
+
+                if (cek == "valid")
+                {
+                    string hasil = ClassUser.ubahPassword(txt_nama_pengguna_atau_email_lupa_kata_sandi.Text, txt_lupa_kata_sandi.Text);
+                    MessageBox.Show(hasil, "Sukses Membuat Password Baru",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    hide_panel();
+                    default_color();
+                    clear_text();
+                    panel_isi_masuk.Visible = true;
+                    button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
+                }
+                else
+                {
+                    MessageBox.Show(cek, "Lengkapi Semua Syarat!",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                    generate_captcha_image();
+                }
+            }
+
+            // gotfocus lupa sandi
+            private void txt_nama_pengguna_atau_email_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_pengguna_atau_email_lupa_kata_sandi.Text == "Nama Pengguna atau Email")
+                {
+                    txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "";
+                }
+            }
+
+            private void txt_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_lupa_kata_sandi.Text == "password")
+                {
+                    txt_lupa_kata_sandi.Text = "";
+                }
+            }
+
+            private void txt_konfirmasi_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_konfirmasi_lupa_kata_sandi.Text == "konfirmasi password")
+                {
+                    txt_konfirmasi_lupa_kata_sandi.Text = "";
+                }
+            }
+
+            private void txt_captcha_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
+            {
+                if (txt_captcha_lupa_kata_sandi.Text == "captcha")
+                {
+                    txt_captcha_lupa_kata_sandi.Text = "";
+                }
+            }
+
+            private void button_berikutnya_faq_MouseClick(object sender, MouseEventArgs e)
+            {
+                gambar_faq_1.Visible = false;
+                gambar_faq_2.Visible = true;
+                button_sebelum_faq.Visible = true;
+            }
+
+            private void button_berikutnya_faq_MouseEnter(object sender, EventArgs e)
+            {
+                button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya_biru;
+            }
+
+            private void button_berikutnya_faq_MouseLeave(object sender, EventArgs e)
+            {
+                button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya;
+            }
+
+            private void button_sebelum_faq_MouseEnter(object sender, EventArgs e)
+            {
+                button_sebelum_faq.Image = global::Darimu.Properties.Resources.panah_sebelum_biru;
+            }
+
+            private void button_sebelum_faq_MouseLeave(object sender, EventArgs e)
+            {
+                button_sebelum_faq.Image = global::Darimu.Properties.Resources.panah_sebelum;
+            }
+
+            private void button_sebelum_faq_MouseClick(object sender, MouseEventArgs e)
+            {
+                gambar_faq_2.Visible = false;
+                button_sebelum_faq.Visible = false;
+                gambar_faq_1.Visible = true;
+            }
+
+            // lostfocus lupa sandi
+            private void txt_nama_pengguna_atau_email_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_nama_pengguna_atau_email_lupa_kata_sandi.Text == "")
+                {
+                    txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "Nama Pengguna atau Email";
+                }
+            }
+
+            private void txt_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_lupa_kata_sandi.Text == "")
+                {
+                    txt_lupa_kata_sandi.Text = "password";
+                }
+            }
+
+            private void txt_konfirmasi_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_konfirmasi_lupa_kata_sandi.Text == "")
+                {
+                    txt_konfirmasi_lupa_kata_sandi.Text = "konfirmasi password";
+                }
+            }
+
+            private void txt_captcha_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
+            {
+                if (txt_captcha_lupa_kata_sandi.Text == "")
+                {
+                    txt_captcha_lupa_kata_sandi.Text = "captcha";
+                }
+            }
+
+            // event button batal pada panel lupa sandi
+            private void button_batal_lupa_sandi_MouseClick(object sender, MouseEventArgs e)
+            {
+                hide_panel();
+                default_color();
                 panel_isi_masuk.Visible = true;
                 button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
             }
-            else
+
+            // event button refresh pada panel lupa sandi
+            private void label_refresh_captcha_lupa_sandi_MouseClick(object sender, MouseEventArgs e)
             {
-                MessageBox.Show(cek, "Lengkapi Semua Syarat!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
                 generate_captcha_image();
             }
-        }
 
-        // gotfocus lupa sandi
-        private void txt_nama_pengguna_atau_email_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_pengguna_atau_email_lupa_kata_sandi.Text == "Nama Pengguna atau Email")
+            private void label_refresh_captcha_lupa_sandi_MouseEnter(object sender, EventArgs e)
             {
-                txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "";
+                label_refresh_captcha_lupa_sandi.ForeColor = System.Drawing.Color.Cyan;
             }
-        }
 
-        private void txt_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_lupa_kata_sandi.Text == "password")
+            private void label_refresh_captcha_lupa_sandi_MouseLeave(object sender, EventArgs e)
             {
-                txt_lupa_kata_sandi.Text = "";
+                label_refresh_captcha_lupa_sandi.ForeColor = Color.FromArgb(194, 194, 194);
             }
-        }
-
-        private void txt_konfirmasi_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_konfirmasi_lupa_kata_sandi.Text == "konfirmasi password")
-            {
-                txt_konfirmasi_lupa_kata_sandi.Text = "";
-            }
-        }
-
-        private void txt_captcha_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
-        {
-            if (txt_captcha_lupa_kata_sandi.Text == "captcha")
-            {
-                txt_captcha_lupa_kata_sandi.Text = "";
-            }
-        }
-
-        private void button_berikutnya_faq_MouseClick(object sender, MouseEventArgs e)
-        {
-            gambar_faq_1.Visible = false;
-            gambar_faq_2.Visible = true;
-            button_sebelum_faq.Visible = true;
-        }
-
-        private void button_berikutnya_faq_MouseEnter(object sender, EventArgs e)
-        {
-            button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya_biru;
-        }
-
-        private void button_berikutnya_faq_MouseLeave(object sender, EventArgs e)
-        {
-            button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya;
-        }
-
-        private void button_sebelum_faq_MouseEnter(object sender, EventArgs e)
-        {
-            button_sebelum_faq.Image = global::Darimu.Properties.Resources.panah_sebelum_biru;
-        }
-
-        private void button_sebelum_faq_MouseLeave(object sender, EventArgs e)
-        {
-            button_sebelum_faq.Image = global::Darimu.Properties.Resources.panah_sebelum;
-        }
-
-        private void button_sebelum_faq_MouseClick(object sender, MouseEventArgs e)
-        {
-            gambar_faq_2.Visible = false;
-            button_sebelum_faq.Visible = false;
-            gambar_faq_1.Visible = true;
-        }
-
-        // lostfocus lupa sandi
-        private void txt_nama_pengguna_atau_email_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_nama_pengguna_atau_email_lupa_kata_sandi.Text == "")
-            {
-                txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "Nama Pengguna atau Email";
-            }
-        }
-
-        private void txt_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_lupa_kata_sandi.Text == "")
-            {
-                txt_lupa_kata_sandi.Text = "password";
-            }
-        }
-
-        private void txt_konfirmasi_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_konfirmasi_lupa_kata_sandi.Text == "")
-            {
-                txt_konfirmasi_lupa_kata_sandi.Text = "konfirmasi password";
-            }
-        }
-
-        private void txt_captcha_lupa_kata_sandi_LostFocus(object sender, EventArgs e)
-        {
-            if (txt_captcha_lupa_kata_sandi.Text == "")
-            {
-                txt_captcha_lupa_kata_sandi.Text = "captcha";
-            }
-        }
-
-        // event button batal pada panel lupa sandi
-        private void button_batal_lupa_sandi_MouseClick(object sender, MouseEventArgs e)
-        {
-            hide_panel();
-            default_color();
-            panel_isi_masuk.Visible = true;
-            button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
-        }
-
-        // event button refresh pada panel lupa sandi
-        private void label_refresh_captcha_lupa_sandi_MouseClick(object sender, MouseEventArgs e)
-        {
-            generate_captcha_image();
-        }
-
-        private void label_refresh_captcha_lupa_sandi_MouseEnter(object sender, EventArgs e)
-        {
-            label_refresh_captcha_lupa_sandi.ForeColor = System.Drawing.Color.Cyan;
-        }
-
-        private void label_refresh_captcha_lupa_sandi_MouseLeave(object sender, EventArgs e)
-        {
-            label_refresh_captcha_lupa_sandi.ForeColor = Color.FromArgb(194, 194, 194);
         }
     }
-}

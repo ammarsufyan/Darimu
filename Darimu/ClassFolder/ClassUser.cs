@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -86,6 +87,43 @@ namespace Darimu.ClassFolder
                 sqlcon.Close();
             }
             return hasil;
+        }
+
+        public static bool cekMasuk(string nama_pengguna_atau_email, string kata_sandi)
+        {
+            sqlcon.Open();
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE (nama_pengguna = '" + nama_pengguna_atau_email + "' OR alamat_email = '" + nama_pengguna_atau_email + "') AND kata_sandi = '" + kata_sandi + "' AND status_pengguna = 'Aktif'", sqlcon);
+            SqlDataReader dr = sqlcom.ExecuteReader();
+
+            if (dr.Read())
+            {
+                sqlcon.Close();
+                return true;
+            }
+
+            sqlcon.Close();
+            return false;
+        }
+
+        public static ArrayList lihatPengguna(string nama_pengguna_atau_email)
+        {
+            sqlcon.Open();
+            ArrayList data_pengguna = new ArrayList();
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE nama_pengguna = '" + nama_pengguna_atau_email + "'", sqlcon);
+            SqlDataReader dr = sqlcom.ExecuteReader();
+            while (dr.Read())
+            {
+                data_pengguna.Add(dr.GetString(0));
+                data_pengguna.Add(dr.GetString(1));
+                data_pengguna.Add(dr.GetDateTime(2).ToString("dd/MM/yyyy"));
+                data_pengguna.Add(dr.GetString(3));
+                data_pengguna.Add(dr.GetString(4));
+                data_pengguna.Add(dr.GetInt64(5));
+                data_pengguna.Add(dr.GetDateTime(6));
+            }
+
+            sqlcon.Close();
+            return data_pengguna;
         }
     }
 }

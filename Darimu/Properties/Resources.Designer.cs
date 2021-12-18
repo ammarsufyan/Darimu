@@ -63,6 +63,46 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_batal {
+            get {
+                object obj = ResourceManager.GetObject("button_batal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_batal_dipencet {
+            get {
+                object obj = ResourceManager.GetObject("button_batal_dipencet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_simpan {
+            get {
+                object obj = ResourceManager.GetObject("button_simpan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_simpan_dipencet {
+            get {
+                object obj = ResourceManager.GetObject("button_simpan_dipencet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Contacts {
             get {
                 object obj = ResourceManager.GetObject("Contacts", resourceCulture);
@@ -146,6 +186,16 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap gambar_tentang_kami {
             get {
                 object obj = ResourceManager.GetObject("gambar_tentang_kami", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gambar_ubah_profil_saya {
+            get {
+                object obj = ResourceManager.GetObject("gambar_ubah_profil_saya", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
