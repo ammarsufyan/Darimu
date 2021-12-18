@@ -4,19 +4,17 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace Darimu
 {
-    public partial class frm_beranda_setelah_login : Form
+    public partial class frm_admin : Form
     {
         // declaration var
-        public string nama_pengguna, nama_lengkap, alamat_email, tanggal_lahir;
         private int borderSize = 2;
         private Size formSize;
         int angka = 0;
 
-        public frm_beranda_setelah_login(string nama_pengguna)
+        public frm_admin(string nama_pengguna)
         {
             InitializeComponent();
             CollapseMenu();
@@ -24,8 +22,6 @@ namespace Darimu
             this.BackColor = Color.FromArgb(33, 106, 155);
             panel_isi_beranda.Visible = true;
             label_username.Text = nama_pengguna;
-            label_saldo.Text = ClassTransaksi.get_saldo(nama_pengguna).ToString();
-            this.nama_pengguna = nama_pengguna;
         }
 
         // drag form
@@ -242,16 +238,6 @@ namespace Darimu
             button_keluar.Image = global::Darimu.Properties.Resources.icon_keluar;
         }
 
-        private void icon_topup_MouseEnter(object sender, EventArgs e)
-        {
-            icon_topup.Image = global::Darimu.Properties.Resources.icon_topup_biru;
-        }
-
-        private void icon_topup_MouseLeave(object sender, EventArgs e)
-        {
-            icon_topup.Image = global::Darimu.Properties.Resources.icon_topup;
-        }
-
         private void button_minimize_MouseEnter(object sender, EventArgs e)
         {
             button_minimize.Image = global::Darimu.Properties.Resources.icon_minimize_biru;
@@ -336,49 +322,6 @@ namespace Darimu
         private void button_berikutnya_faq_MouseLeave(object sender, EventArgs e)
         {
             button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya;
-        }
-
-        private void icon_topup_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void profilSayaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            XmlDocument doc = new XmlDocument();
-            doc.Load(@"http://localhost:81/webservice/xml/darimu/lihat_pengguna.php?nama_pengguna" + nama_pengguna);
-            XmlElement root = doc.DocumentElement;
-            XmlNodeList nodes = root.SelectNodes("/data_pengguna");
-
-            String res = "";
-
-            foreach (XmlNode node in nodes)
-            {
-                // Respon apakah gagal atau tidak
-                res = node["response"].InnerText.Trim();
-
-                // respon yang digunakan untuk menampilkan data profil
-                nama_lengkap = node["nama_lengkap"].InnerText.Trim();
-                alamat_email = node["alamat_email"].InnerText.Trim();
-                tanggal_lahir = node["tanggal_lahir"].InnerText.Trim();
-            }
-
-            if (res.Equals("Berhasil"))
-            {
-                string[] nama_depan_belakang = nama_lengkap.Split(' ');
-                label_nama_depan.Text = nama_depan_belakang[0];
-                label_nama_belakang.Text = nama_depan_belakang[1];
-                label_alamat_email.Text = alamat_email;
-                label_tanggal_lahir.Text = tanggal_lahir;
-            }
-            else
-            {
-                MessageBox.Show("Gagal mengambil data profil",
-                                "Gagal Mengakses Profil",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
         }
     }
 }

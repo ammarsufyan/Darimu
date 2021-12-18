@@ -103,9 +103,19 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gambar_faq {
+        internal static System.Drawing.Bitmap gambar_faq_1 {
             get {
-                object obj = ResourceManager.GetObject("gambar_faq", resourceCulture);
+                object obj = ResourceManager.GetObject("gambar_faq_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gambar_faq_2 {
+            get {
+                object obj = ResourceManager.GetObject("gambar_faq_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +126,16 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap gambar_login {
             get {
                 object obj = ResourceManager.GetObject("gambar_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gambar_profil_saya {
+            get {
+                object obj = ResourceManager.GetObject("gambar_profil_saya", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +386,46 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap panah_berikutnya {
+            get {
+                object obj = ResourceManager.GetObject("panah_berikutnya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap panah_berikutnya_biru {
+            get {
+                object obj = ResourceManager.GetObject("panah_berikutnya_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap panah_sebelum {
+            get {
+                object obj = ResourceManager.GetObject("panah_sebelum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap panah_sebelum_biru {
+            get {
+                object obj = ResourceManager.GetObject("panah_sebelum_biru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

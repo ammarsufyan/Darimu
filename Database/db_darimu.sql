@@ -113,3 +113,7 @@ CREATE TABLE tb_laporan(
     tanggal_laporan_ditutup DATETIME NULL,
     [status_laporan] VARCHAR(255) NULL CHECK ([status_laporan] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
+
+SELECT * FROM tb_pengguna tp
+
+SELECT * FROM tb_pengguna WHERE nama_pengguna='ammarsufyan'

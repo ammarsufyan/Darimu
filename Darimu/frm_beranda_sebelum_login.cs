@@ -418,21 +418,64 @@ namespace Darimu
                 string nama_pengguna_atau_email_input = txt_nama_pengguna_atau_email_masuk.Text.Trim();
                 string kata_sandi_input = ClassUser.hashPassword(txt_kata_sandi_masuk.Text.Trim());
 
-                XmlDocument doc = new XmlDocument();
                 try
                 {
+                    XmlDocument doc = new XmlDocument();
                     doc.Load(@"http://localhost:81/webservice/xml/darimu/cek_masuk.php?nama_pengguna_atau_email=" + nama_pengguna_atau_email_input + "&kata_sandi=" + kata_sandi_input);
+                    XmlElement root = doc.DocumentElement;
+                    XmlNodeList nodes = root.SelectNodes("/data");
+
+                    String res = "";
+
+                    foreach (XmlNode node in nodes)
+                    {
+                        // Respon apakah gagal atau tidak
+                        res = node["response"].InnerText.Trim();
+
+                        // respon yang digunakan untuk menampilkan data profil
+                        nama_pengguna = node["nama_pengguna"].InnerText.Trim();
+                    }
+
+                    if (res.Equals("Berhasil"))
+                    {
+                        MessageBox.Show("Selamat Anda berhasil masuk!",
+                                        "Sukses Masuk",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+
+                        hide_panel();
+                        default_color();
+                        clear_text();
+                        frm_beranda_setelah_login p = new frm_beranda_setelah_login(nama_pengguna);
+                        this.Hide();
+                        p.Show();
+                    }
                 }
                 catch (Exception ex)
                 {
-                    if (kesempatan_masuk <= 0)
+                    if(ClassAdmin.cek_admin(nama_pengguna_atau_email_input))
+                    {
+                        MessageBox.Show("Selamat Admin berhasil masuk!",
+                                        "Sukses Masuk",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+
+                        frm_admin fadmin = new frm_admin(nama_pengguna_atau_email_input);
+                        hide_panel();
+                        default_color();
+                        clear_text();
+                        this.Hide();
+                        fadmin.Show();
+                    }
+                    else if (kesempatan_masuk <= 0)
                     {
                         MessageBox.Show("Maaf, Anda sudah gagal 3 kali untuk mencoba masuk",
                                         "Keluar Aplikasi",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Stop);
                         Application.Exit();
-                    } else
+                    }
+                    else
                     {
                         MessageBox.Show("Nama pengguna, email atau kata sandi salah" + "\nKesempatan Anda sisa " + kesempatan_masuk + " kesempatan",
                                         "Gagal Masuk",
@@ -440,43 +483,6 @@ namespace Darimu
                                         MessageBoxIcon.Exclamation);
                         clear_text();
                     }
-                }
-
-                XmlElement root = doc.DocumentElement;
-                XmlNodeList nodes = root.SelectNodes("/data");
-
-                String res = "";
-
-                foreach (XmlNode node in nodes)
-                {
-                    // Respon apakah gagal atau tidak
-                    res = node["response"].InnerText.Trim();
-
-                    // respon yang digunakan untuk menampilkan data profil
-                    nama_pengguna = node["nama_pengguna"].InnerText.Trim();
-                    kata_sandi = node["kata_sandi"].InnerText.Trim();
-                    nama_lengkap = node["nama_lengkap"].InnerText.Trim();
-                    tanggal_lahir = node["tanggal_lahir"].InnerText.Trim();
-                    alamat_email = node["alamat_email"].InnerText.Trim();
-                    saldo = node["saldo"].InnerText.Trim();
-                    tanggal_buka = node["tanggal_buka"].InnerText.Trim();
-                    tanggal_tutup = node["tanggal_tutup"].InnerText.Trim();
-                    status_pengguna = node["status_pengguna"].InnerText.Trim();
-                }
-
-                if (res.Equals("Berhasil"))
-                {
-                    MessageBox.Show("Selamat Anda berhasil masuk!",
-                                    "Sukses Masuk",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-
-                    hide_panel();
-                    default_color();
-                    clear_text();
-                    frm_beranda_setelah_login p = new frm_beranda_setelah_login();
-                    this.Hide();
-                    p.Show();
                 }
             }
             else
@@ -705,6 +711,40 @@ namespace Darimu
             {
                 txt_captcha_lupa_kata_sandi.Text = "";
             }
+        }
+
+        private void button_berikutnya_faq_MouseClick(object sender, MouseEventArgs e)
+        {
+            gambar_faq_1.Visible = false;
+            gambar_faq_2.Visible = true;
+            button_sebelum_faq.Visible = true;
+        }
+
+        private void button_berikutnya_faq_MouseEnter(object sender, EventArgs e)
+        {
+            button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya_biru;
+        }
+
+        private void button_berikutnya_faq_MouseLeave(object sender, EventArgs e)
+        {
+            button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya;
+        }
+
+        private void button_sebelum_faq_MouseEnter(object sender, EventArgs e)
+        {
+            button_sebelum_faq.Image = global::Darimu.Properties.Resources.panah_sebelum_biru;
+        }
+
+        private void button_sebelum_faq_MouseLeave(object sender, EventArgs e)
+        {
+            button_sebelum_faq.Image = global::Darimu.Properties.Resources.panah_sebelum;
+        }
+
+        private void button_sebelum_faq_MouseClick(object sender, MouseEventArgs e)
+        {
+            gambar_faq_2.Visible = false;
+            button_sebelum_faq.Visible = false;
+            gambar_faq_1.Visible = true;
         }
 
         // lostfocus lupa sandi

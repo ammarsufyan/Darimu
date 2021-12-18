@@ -50,8 +50,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassFolder\ClassAdmin.cs" />
     <Compile Include="ClassFolder\ClassGaram.cs" />
     <Compile Include="ClassFolder\ClassKoneksi.cs" />
+    <Compile Include="ClassFolder\ClassTransaksi.cs" />
     <Compile Include="ClassFolder\ClassUser.cs" />
     <Compile Include="ClassFolder\ClassValidasi.cs" />
     <Compile Include="CustomControls\DRMDropDownMenu.cs">
@@ -59,6 +61,12 @@
     </Compile>
     <Compile Include="CustomControls\MenuColorTable.cs" />
     <Compile Include="CustomControls\MenuRenderer.cs" />
+    <Compile Include="frm_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_admin.Designer.cs">
+      <DependentUpon>frm_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_beranda_setelah_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_admin.resx">
+      <DependentUpon>frm_admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_beranda_setelah_login.resx">
       <DependentUpon>frm_beranda_setelah_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,13 +126,18 @@
     <None Include="Assets\Blue\icon_topup_biru.png" />
     <None Include="Assets\Blue\icon_minimize_biru.png" />
     <None Include="Assets\Blue\icon_keluar_biru.png" />
+    <None Include="Assets\Blue\panah_berikutnya_biru.png" />
+    <None Include="Assets\Blue\panah_sebelum_biru.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
     <None Include="Assets\exit_pressed.png" />
     <Content Include="Assets\gambar_daftar.png" />
     <Content Include="Assets\gambar_faq.png" />
+    <None Include="Assets\gambar_faq_1.png" />
+    <Content Include="Assets\gambar_faq_2.png" />
     <Content Include="Assets\gambar_login.png" />
+    <None Include="Assets\gambar_profil_saya.png" />
     <Content Include="Assets\gambar_tentang_kami.png" />
     <Content Include="Assets\icon_akun.png" />
     <Content Include="Assets\icon_beranda.png" />
@@ -138,6 +154,8 @@
     <Content Include="Assets\maskot_beranda.png" />
     <Content Include="Assets\maximize.png" />
     <Content Include="Assets\minimize.png" />
+    <None Include="Assets\panah_sebelum.png" />
+    <None Include="Assets\panah_berikutnya.png" />
     <Content Include="Assets\Tagline_Beranda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
