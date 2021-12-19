@@ -419,7 +419,16 @@ namespace Darimu
                 string nama_pengguna_atau_email_input = txt_nama_pengguna_atau_email_masuk.Text.Trim();
                 string kata_sandi_input = ClassUser.hashPassword(txt_kata_sandi_masuk.Text.Trim());
 
-                if (ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input))
+
+                if (kesempatan_masuk <= 0)
+                {
+                    MessageBox.Show("Maaf, Anda sudah gagal 3 kali untuk mencoba masuk",
+                                    "Keluar Aplikasi",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Stop);
+                    Application.Exit();
+                }
+                else if (ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input))
                 {
                     MessageBox.Show("Selamat Anda berhasil masuk!",
                                     "Sukses Masuk",
@@ -432,14 +441,6 @@ namespace Darimu
                     frm_beranda_setelah_login p = new frm_beranda_setelah_login(nama_pengguna_atau_email_input);
                     this.Hide();
                     p.Show();
-                }
-                else if (kesempatan_masuk <= 0)
-                {
-                    MessageBox.Show("Maaf, Anda sudah gagal 3 kali untuk mencoba masuk",
-                                    "Keluar Aplikasi",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Stop);
-                    Application.Exit();
                 }
                 else
                 {

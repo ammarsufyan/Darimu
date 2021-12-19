@@ -7,9 +7,9 @@ namespace Darimu.ClassFolder
 {
     class ClassValidasi
     {
-        static Regex re_nama_pengguna_atau_kata_sandi = new Regex("[a-zA-Z0-9]{8,16}");
-        static Regex re_huruf = new Regex("[a-zA-Z]*");
-        static Regex re_saldo = new Regex("^[0-9]{5,10}$");
+        static Regex re_nama_pengguna_atau_kata_sandi = new Regex("^[a-zA-Z0-9]{8,16}$");
+        static Regex re_huruf = new Regex(@"^[a-z\sA-Z]+$");
+        static Regex re_saldo = new Regex("^[0-9]+$");
         static Regex re_email = new Regex("^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
 
         public static string cekPendaftaran(TextBox nama_depan, TextBox nama_belakang, TextBox email, TextBox nama_pengguna, TextBox kata_sandi, TextBox konfirmasi_kata_sandi)
@@ -146,6 +146,32 @@ namespace Darimu.ClassFolder
             } else if(String.Equals("", val_email) || !re_email.IsMatch(val_email)) {
                 hasil = "Mohon isi email dengan benar";
             } 
+            else
+            {
+                hasil = "valid";
+            }
+
+            return hasil;
+        }
+
+        public static string cekDaftarImpian(TextBox nama_impian, TextBox saldo_impian, bool validasi_button)
+        {
+            string hasil = "";
+            string val_nama_impian = nama_impian.Text.Trim();
+            string val_saldo_impian = saldo_impian.Text.Trim();
+
+            if (String.Equals("", val_nama_impian) || !re_huruf.IsMatch(val_nama_impian))
+            {
+                hasil = "Mohon isi nama impian dengan benar";
+            }
+            else if (String.Equals("", val_saldo_impian) || !re_saldo.IsMatch(val_saldo_impian))
+            {
+                hasil = "Mohon isi saldo impian dengan benar";
+            }
+            else if (validasi_button == false)
+            {
+                hasil = "Mohon pilih jenis impianmu :)";
+            }
             else
             {
                 hasil = "valid";

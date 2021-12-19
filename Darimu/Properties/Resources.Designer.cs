@@ -143,6 +143,26 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap elektronik {
+            get {
+                object obj = ResourceManager.GetObject("elektronik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elektronik_biru {
+            get {
+                object obj = ResourceManager.GetObject("elektronik_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
@@ -156,6 +176,26 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap exit_pressed {
             get {
                 object obj = ResourceManager.GetObject("exit_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fashion {
+            get {
+                object obj = ResourceManager.GetObject("fashion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fashion_biru {
+            get {
+                object obj = ResourceManager.GetObject("fashion_biru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +226,16 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap gambar_faq_2 {
             get {
                 object obj = ResourceManager.GetObject("gambar_faq_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gambar_isi_impian {
+            get {
+                object obj = ResourceManager.GetObject("gambar_isi_impian", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +296,26 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap gambar_ubah_profil_saya {
             get {
                 object obj = ResourceManager.GetObject("gambar_ubah_profil_saya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hiburan {
+            get {
+                object obj = ResourceManager.GetObject("hiburan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hiburan_biru {
+            get {
+                object obj = ResourceManager.GetObject("hiburan_biru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,6 +523,76 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jalan_jalan {
+            get {
+                object obj = ResourceManager.GetObject("jalan_jalan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jalan_jalan_biru {
+            get {
+                object obj = ResourceManager.GetObject("jalan_jalan_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_elektronik {
+            get {
+                object obj = ResourceManager.GetObject("logo_elektronik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_fashion {
+            get {
+                object obj = ResourceManager.GetObject("logo_fashion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_hiburan {
+            get {
+                object obj = ResourceManager.GetObject("logo_hiburan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_jalan_jalan {
+            get {
+                object obj = ResourceManager.GetObject("logo_jalan_jalan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_umum {
+            get {
+                object obj = ResourceManager.GetObject("logo_umum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoDarimuTransparant {
             get {
                 object obj = ResourceManager.GetObject("LogoDarimuTransparant", resourceCulture);
@@ -546,6 +686,26 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap Tagline_Beranda {
             get {
                 object obj = ResourceManager.GetObject("Tagline_Beranda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap umum {
+            get {
+                object obj = ResourceManager.GetObject("umum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap umum_biru {
+            get {
+                object obj = ResourceManager.GetObject("umum_biru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

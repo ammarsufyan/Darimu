@@ -120,9 +120,6 @@
   <metadata name="panel_control_box.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="panel_control_box.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button_sebelum_faq.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -133,17 +130,6 @@
         hPhRgVsUKyDUdW57Y9Q5CPGJqgKvMiQwtNQHMI5Kn0PqEp0yttQHMOok+7g3/0M5TMbtMoy/8ia6i0Jo
         T5oW8u6Juit0R4mm3XVtqY/BcdlzInD20GVPvCBAt2mMDXovHx3mlioMQbqFn4vw5ixRo+te5ya2dBWK
         m6O0Aj9hUh+tUN2XUf76PUiBJGrvIdK3Xf94YmN/m/5RsmwPR9JHKh2LVuQAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="icon_topup.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAUFJREFUSEvllUFuwjAQRcMF4ByFiwCXAbaQnqHsW1hSCYnLwQLEJrzvDKobHJOE
-        sEA86Suy53uSeMZJ8l5kWdZDYzRDn2hq465ZmkOSAfpFJxRC84oPbEl1WNRBeuIzqoJ8KepYijgyohVq
-        whrdvxEmvcEjLCxVGAyqQWyL9ugLHdwojNb3LeUtBFXEGDvz7fJhKRuXsAgBtWlZF13ZmnebD0tRntv2
-        ZlJ9f4+qNxEjl9iHSR2wIqqBtkZJpZl5dSivc4qHajRxiX2YVJ8XWVo4iny5/R+phf9gMvQmesJW36Tt
-        mgxdYh8mu6it7jqi8MeTwHPPiSDYR7ETr71XkZufeIEh1GV1mFuqcjDpK/zt7PX5QbU+9wsU2zof+eao
-        2g18WKQabVDsz6j4hy1pDknU3iOkA6ua6TpEj//jX4gkuQAqBhOs2XcEKQAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

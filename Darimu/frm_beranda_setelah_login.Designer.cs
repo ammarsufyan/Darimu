@@ -29,19 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_beranda_setelah_login));
             this.panel_menu = new System.Windows.Forms.Panel();
-            this.button_tentang_kami = new System.Windows.Forms.Button();
-            this.button_faq = new System.Windows.Forms.Button();
-            this.button_tabungan = new System.Windows.Forms.Button();
-            this.button_profil = new System.Windows.Forms.Button();
-            this.button_beranda = new System.Windows.Forms.Button();
-            this.button_keluar = new System.Windows.Forms.Button();
             this.panel_border_sidebar_bawah = new System.Windows.Forms.Panel();
             this.panel_border_sidebar_kiri = new System.Windows.Forms.Panel();
             this.panel_header_sidebar = new System.Windows.Forms.Panel();
-            this.button_menu = new System.Windows.Forms.Button();
             this.panel_header_sidebar_kiri = new System.Windows.Forms.Panel();
             this.panel_header_sidebar_atas = new System.Windows.Forms.Panel();
             this.label_nama_logo = new System.Windows.Forms.Label();
@@ -63,30 +56,10 @@
             this.panel_isi = new System.Windows.Forms.Panel();
             this.panel_border_isi_bawah = new System.Windows.Forms.Panel();
             this.panel_border_isi_kanan = new System.Windows.Forms.Panel();
-            this.panel_isi_ubah_profil_saya = new System.Windows.Forms.Panel();
-            this.label_ubah_email = new System.Windows.Forms.Label();
-            this.button_batal_ubah_profil = new System.Windows.Forms.Button();
-            this.button_simpan_ubah_profil = new System.Windows.Forms.Button();
-            this.ubah_tanggal_lahir = new System.Windows.Forms.DateTimePicker();
-            this.txt_ubah_email = new System.Windows.Forms.TextBox();
-            this.txt_ubah_nama_belakang = new System.Windows.Forms.TextBox();
-            this.txt_ubah_nama_depan = new System.Windows.Forms.TextBox();
-            this.panel_isi_profil_saya = new System.Windows.Forms.Panel();
-            this.label_tanggal_lahir = new System.Windows.Forms.Label();
-            this.label_alamat_email = new System.Windows.Forms.Label();
-            this.label_nama_belakang = new System.Windows.Forms.Label();
-            this.label_nama_depan = new System.Windows.Forms.Label();
-            this.panel_isi_faq = new System.Windows.Forms.Panel();
-            this.button_berikutnya_faq = new System.Windows.Forms.Button();
-            this.panel_isi_tentang_kami = new System.Windows.Forms.Panel();
-            this.panel_isi_tambah_saldo = new System.Windows.Forms.Panel();
-            this.button_batal_saldo = new System.Windows.Forms.Button();
-            this.button_simpan_saldo = new System.Windows.Forms.Button();
-            this.txt_isi_saldo = new System.Windows.Forms.TextBox();
-            this.button_BNI = new System.Windows.Forms.Button();
-            this.button_BCA = new System.Windows.Forms.Button();
-            this.button_BRI = new System.Windows.Forms.Button();
             this.panel_isi_tambah_tabungan_impian = new System.Windows.Forms.Panel();
+            this.tenggat_waktu_impian = new System.Windows.Forms.DateTimePicker();
+            this.txt_saldo_impian = new System.Windows.Forms.TextBox();
+            this.txt_nama_tabungan_impian = new System.Windows.Forms.TextBox();
             this.panel_isi_laporan_saya = new System.Windows.Forms.Panel();
             this.panel_isi_riwayat_tabungan_impian = new System.Windows.Forms.Panel();
             this.panel_isi_tabungan_impian = new System.Windows.Forms.Panel();
@@ -98,30 +71,68 @@
             this.debit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_isi_ubah_profil_saya = new System.Windows.Forms.Panel();
+            this.label_ubah_email = new System.Windows.Forms.Label();
+            this.ubah_tanggal_lahir = new System.Windows.Forms.DateTimePicker();
+            this.txt_ubah_email = new System.Windows.Forms.TextBox();
+            this.txt_ubah_nama_belakang = new System.Windows.Forms.TextBox();
+            this.txt_ubah_nama_depan = new System.Windows.Forms.TextBox();
+            this.panel_isi_profil_saya = new System.Windows.Forms.Panel();
+            this.label_tanggal_lahir = new System.Windows.Forms.Label();
+            this.label_alamat_email = new System.Windows.Forms.Label();
+            this.label_nama_belakang = new System.Windows.Forms.Label();
+            this.label_nama_depan = new System.Windows.Forms.Label();
+            this.panel_isi_faq = new System.Windows.Forms.Panel();
+            this.panel_isi_tentang_kami = new System.Windows.Forms.Panel();
+            this.panel_isi_tambah_saldo = new System.Windows.Forms.Panel();
+            this.txt_isi_saldo = new System.Windows.Forms.TextBox();
             this.drop_down_profil = new Darimu.CustomControls.DRMDropDownMenu(this.components);
             this.profilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ubahProfilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riwayatTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drop_down_tabungan = new Darimu.CustomControls.DRMDropDownMenu(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.TabunganImpiantoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TambahTabunganImpiantoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button_batal_ubah_profil = new System.Windows.Forms.Button();
+            this.button_simpan_ubah_profil = new System.Windows.Forms.Button();
+            this.gambar_ubah_profil_saya = new System.Windows.Forms.PictureBox();
+            this.gambar_profil_saya = new System.Windows.Forms.PictureBox();
             this.nama_logo_dan_tagline = new System.Windows.Forms.PictureBox();
             this.maskot_beranda = new System.Windows.Forms.PictureBox();
             this.button_sebelum_faq = new System.Windows.Forms.Button();
+            this.button_berikutnya_faq = new System.Windows.Forms.Button();
             this.gambar_faq_1 = new System.Windows.Forms.PictureBox();
             this.gambar_faq_2 = new System.Windows.Forms.PictureBox();
             this.gambar_tentang_kami = new System.Windows.Forms.PictureBox();
             this.gambar_bank = new System.Windows.Forms.PictureBox();
+            this.button_batal_saldo = new System.Windows.Forms.Button();
+            this.button_simpan_saldo = new System.Windows.Forms.Button();
+            this.button_BNI = new System.Windows.Forms.Button();
+            this.button_BCA = new System.Windows.Forms.Button();
+            this.button_BRI = new System.Windows.Forms.Button();
             this.gambar_tambah_saldo = new System.Windows.Forms.PictureBox();
+            this.jenis_impian_hiburan = new System.Windows.Forms.Button();
+            this.jenis_impian_fashion = new System.Windows.Forms.Button();
+            this.jenis_impian_elektronik = new System.Windows.Forms.Button();
+            this.jenis_impian_jalan_jalan = new System.Windows.Forms.Button();
+            this.jenis_impian_umum = new System.Windows.Forms.Button();
+            this.button_batal_impian = new System.Windows.Forms.Button();
+            this.button_simpan_impian = new System.Windows.Forms.Button();
             this.gambar_tambah_impian = new System.Windows.Forms.PictureBox();
-            this.gambar_ubah_profil_saya = new System.Windows.Forms.PictureBox();
-            this.gambar_profil_saya = new System.Windows.Forms.PictureBox();
             this.icon_topup = new System.Windows.Forms.PictureBox();
             this.icon_saldo = new System.Windows.Forms.PictureBox();
             this.button_minimize = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
+            this.button_tentang_kami = new System.Windows.Forms.Button();
+            this.button_faq = new System.Windows.Forms.Button();
+            this.button_tabungan = new System.Windows.Forms.Button();
+            this.button_profil = new System.Windows.Forms.Button();
+            this.button_beranda = new System.Windows.Forms.Button();
+            this.button_keluar = new System.Windows.Forms.Button();
+            this.button_menu = new System.Windows.Forms.Button();
             this.logo_darimu = new System.Windows.Forms.PictureBox();
+            this.gambar_isi_impian = new System.Windows.Forms.PictureBox();
             this.panel_menu.SuspendLayout();
             this.panel_header_sidebar.SuspendLayout();
             this.panel_title_bar.SuspendLayout();
@@ -131,16 +142,19 @@
             this.panel_control_box.SuspendLayout();
             this.panel_isi_beranda.SuspendLayout();
             this.panel_isi.SuspendLayout();
+            this.panel_isi_tambah_tabungan_impian.SuspendLayout();
+            this.panel_isi_tabungan_impian.SuspendLayout();
+            this.panel_isi_riwayat_transaksi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).BeginInit();
             this.panel_isi_ubah_profil_saya.SuspendLayout();
             this.panel_isi_profil_saya.SuspendLayout();
             this.panel_isi_faq.SuspendLayout();
             this.panel_isi_tentang_kami.SuspendLayout();
             this.panel_isi_tambah_saldo.SuspendLayout();
-            this.panel_isi_tambah_tabungan_impian.SuspendLayout();
-            this.panel_isi_riwayat_transaksi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).BeginInit();
             this.drop_down_profil.SuspendLayout();
             this.drop_down_tabungan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_ubah_profil_saya)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_profil_saya)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nama_logo_dan_tagline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_faq_1)).BeginInit();
@@ -149,11 +163,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gambar_bank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_saldo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_impian)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_ubah_profil_saya)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_profil_saya)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_topup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_saldo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_impian)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_menu
@@ -173,174 +186,6 @@
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(205, 570);
             this.panel_menu.TabIndex = 0;
-            // 
-            // button_tentang_kami
-            // 
-            this.button_tentang_kami.AutoSize = true;
-            this.button_tentang_kami.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_tentang_kami.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_tentang_kami.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_tentang_kami.FlatAppearance.BorderSize = 0;
-            this.button_tentang_kami.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_tentang_kami.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_tentang_kami.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_tentang_kami.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_tentang_kami.ForeColor = System.Drawing.Color.White;
-            this.button_tentang_kami.Image = global::Darimu.Properties.Resources.icon_tentang_kami;
-            this.button_tentang_kami.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_tentang_kami.Location = new System.Drawing.Point(2, 340);
-            this.button_tentang_kami.Name = "button_tentang_kami";
-            this.button_tentang_kami.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_tentang_kami.Size = new System.Drawing.Size(203, 60);
-            this.button_tentang_kami.TabIndex = 27;
-            this.button_tentang_kami.Tag = "  Tentang Kami";
-            this.button_tentang_kami.Text = "  Tentang Kami";
-            this.button_tentang_kami.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_tentang_kami.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_tentang_kami.UseVisualStyleBackColor = true;
-            this.button_tentang_kami.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_tentang_kami_MouseClick);
-            this.button_tentang_kami.MouseEnter += new System.EventHandler(this.button_tentang_kami_MouseEnter);
-            this.button_tentang_kami.MouseLeave += new System.EventHandler(this.button_tentang_kami_MouseLeave);
-            // 
-            // button_faq
-            // 
-            this.button_faq.AutoSize = true;
-            this.button_faq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_faq.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_faq.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_faq.FlatAppearance.BorderSize = 0;
-            this.button_faq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_faq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_faq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_faq.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_faq.ForeColor = System.Drawing.Color.White;
-            this.button_faq.Image = global::Darimu.Properties.Resources.icon_faq;
-            this.button_faq.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_faq.Location = new System.Drawing.Point(2, 280);
-            this.button_faq.Name = "button_faq";
-            this.button_faq.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_faq.Size = new System.Drawing.Size(203, 60);
-            this.button_faq.TabIndex = 26;
-            this.button_faq.Tag = "  FAQ";
-            this.button_faq.Text = "  FAQ";
-            this.button_faq.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_faq.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_faq.UseVisualStyleBackColor = true;
-            this.button_faq.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_faq_MouseClick);
-            this.button_faq.MouseEnter += new System.EventHandler(this.button_faq_MouseEnter);
-            this.button_faq.MouseLeave += new System.EventHandler(this.button_faq_MouseLeave);
-            // 
-            // button_tabungan
-            // 
-            this.button_tabungan.AutoSize = true;
-            this.button_tabungan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_tabungan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_tabungan.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_tabungan.FlatAppearance.BorderSize = 0;
-            this.button_tabungan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_tabungan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_tabungan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_tabungan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_tabungan.ForeColor = System.Drawing.Color.White;
-            this.button_tabungan.Image = global::Darimu.Properties.Resources.icon_tabungan;
-            this.button_tabungan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_tabungan.Location = new System.Drawing.Point(2, 220);
-            this.button_tabungan.Name = "button_tabungan";
-            this.button_tabungan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_tabungan.Size = new System.Drawing.Size(203, 60);
-            this.button_tabungan.TabIndex = 25;
-            this.button_tabungan.Tag = " Tabungan";
-            this.button_tabungan.Text = " Tabungan";
-            this.button_tabungan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_tabungan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_tabungan.UseVisualStyleBackColor = true;
-            this.button_tabungan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_tabungan_MouseClick);
-            this.button_tabungan.MouseEnter += new System.EventHandler(this.button_tabungan_MouseEnter);
-            this.button_tabungan.MouseLeave += new System.EventHandler(this.button_tabungan_MouseLeave);
-            // 
-            // button_profil
-            // 
-            this.button_profil.AutoSize = true;
-            this.button_profil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_profil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_profil.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_profil.FlatAppearance.BorderSize = 0;
-            this.button_profil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_profil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_profil.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_profil.ForeColor = System.Drawing.Color.White;
-            this.button_profil.Image = global::Darimu.Properties.Resources.icon_profil;
-            this.button_profil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_profil.Location = new System.Drawing.Point(2, 160);
-            this.button_profil.Name = "button_profil";
-            this.button_profil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_profil.Size = new System.Drawing.Size(203, 60);
-            this.button_profil.TabIndex = 24;
-            this.button_profil.Tag = "  Profil";
-            this.button_profil.Text = "  Profil";
-            this.button_profil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_profil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_profil.UseVisualStyleBackColor = true;
-            this.button_profil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_profil_MouseClick);
-            this.button_profil.MouseEnter += new System.EventHandler(this.button_profil_MouseEnter);
-            this.button_profil.MouseLeave += new System.EventHandler(this.button_profil_MouseLeave);
-            // 
-            // button_beranda
-            // 
-            this.button_beranda.AutoSize = true;
-            this.button_beranda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_beranda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_beranda.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_beranda.FlatAppearance.BorderSize = 0;
-            this.button_beranda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_beranda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_beranda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_beranda.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_beranda.ForeColor = System.Drawing.Color.Cyan;
-            this.button_beranda.Image = global::Darimu.Properties.Resources.icon_beranda;
-            this.button_beranda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_beranda.Location = new System.Drawing.Point(2, 100);
-            this.button_beranda.Name = "button_beranda";
-            this.button_beranda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_beranda.Size = new System.Drawing.Size(203, 60);
-            this.button_beranda.TabIndex = 23;
-            this.button_beranda.Tag = "  Beranda";
-            this.button_beranda.Text = "  Beranda";
-            this.button_beranda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_beranda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_beranda.UseVisualStyleBackColor = true;
-            this.button_beranda.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_beranda_MouseClick);
-            this.button_beranda.MouseEnter += new System.EventHandler(this.button_beranda_MouseEnter);
-            this.button_beranda.MouseLeave += new System.EventHandler(this.button_beranda_MouseLeave);
-            // 
-            // button_keluar
-            // 
-            this.button_keluar.AutoSize = true;
-            this.button_keluar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_keluar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_keluar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_keluar.FlatAppearance.BorderSize = 0;
-            this.button_keluar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_keluar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_keluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_keluar.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_keluar.ForeColor = System.Drawing.Color.White;
-            this.button_keluar.Image = global::Darimu.Properties.Resources.icon_keluar;
-            this.button_keluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_keluar.Location = new System.Drawing.Point(2, 508);
-            this.button_keluar.Name = "button_keluar";
-            this.button_keluar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button_keluar.Size = new System.Drawing.Size(203, 60);
-            this.button_keluar.TabIndex = 20;
-            this.button_keluar.Tag = "  Keluar";
-            this.button_keluar.Text = "  Keluar";
-            this.button_keluar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_keluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_keluar.UseVisualStyleBackColor = true;
-            this.button_keluar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_keluar_MouseClick);
-            this.button_keluar.MouseEnter += new System.EventHandler(this.button_keluar_MouseEnter);
-            this.button_keluar.MouseLeave += new System.EventHandler(this.button_keluar_MouseLeave);
             // 
             // panel_border_sidebar_bawah
             // 
@@ -372,24 +217,6 @@
             this.panel_header_sidebar.Name = "panel_header_sidebar";
             this.panel_header_sidebar.Size = new System.Drawing.Size(205, 100);
             this.panel_header_sidebar.TabIndex = 1;
-            // 
-            // button_menu
-            // 
-            this.button_menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_menu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_menu.FlatAppearance.BorderSize = 0;
-            this.button_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_menu.Image = global::Darimu.Properties.Resources.icon_menu;
-            this.button_menu.Location = new System.Drawing.Point(148, 36);
-            this.button_menu.Name = "button_menu";
-            this.button_menu.Size = new System.Drawing.Size(33, 31);
-            this.button_menu.TabIndex = 8;
-            this.button_menu.UseVisualStyleBackColor = true;
-            this.button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseClick);
-            this.button_menu.MouseEnter += new System.EventHandler(this.button_menu_MouseEnter);
-            this.button_menu.MouseLeave += new System.EventHandler(this.button_menu_MouseLeave);
             // 
             // panel_header_sidebar_kiri
             // 
@@ -600,9 +427,6 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
-            this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
-            this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Controls.Add(this.panel_isi_ubah_profil_saya);
@@ -611,6 +435,9 @@
             this.panel_isi.Controls.Add(this.panel_isi_faq);
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
             this.panel_isi.Controls.Add(this.panel_isi_tambah_saldo);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -634,6 +461,167 @@
             this.panel_border_isi_kanan.Name = "panel_border_isi_kanan";
             this.panel_border_isi_kanan.Size = new System.Drawing.Size(2, 470);
             this.panel_border_isi_kanan.TabIndex = 13;
+            // 
+            // panel_isi_tambah_tabungan_impian
+            // 
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.jenis_impian_hiburan);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.jenis_impian_fashion);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.jenis_impian_elektronik);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.jenis_impian_jalan_jalan);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.jenis_impian_umum);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.button_batal_impian);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.button_simpan_impian);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.tenggat_waktu_impian);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.txt_saldo_impian);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.txt_nama_tabungan_impian);
+            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.gambar_tambah_impian);
+            this.panel_isi_tambah_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tambah_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tambah_tabungan_impian.Name = "panel_isi_tambah_tabungan_impian";
+            this.panel_isi_tambah_tabungan_impian.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_tambah_tabungan_impian.TabIndex = 24;
+            this.panel_isi_tambah_tabungan_impian.Visible = false;
+            // 
+            // tenggat_waktu_impian
+            // 
+            this.tenggat_waktu_impian.CalendarFont = new System.Drawing.Font("Cabin", 12F);
+            this.tenggat_waktu_impian.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenggat_waktu_impian.Location = new System.Drawing.Point(373, 303);
+            this.tenggat_waktu_impian.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.tenggat_waktu_impian.Name = "tenggat_waktu_impian";
+            this.tenggat_waktu_impian.Size = new System.Drawing.Size(214, 25);
+            this.tenggat_waktu_impian.TabIndex = 21;
+            this.tenggat_waktu_impian.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            // 
+            // txt_saldo_impian
+            // 
+            this.txt_saldo_impian.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_saldo_impian.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_saldo_impian.Location = new System.Drawing.Point(373, 271);
+            this.txt_saldo_impian.Name = "txt_saldo_impian";
+            this.txt_saldo_impian.Size = new System.Drawing.Size(214, 20);
+            this.txt_saldo_impian.TabIndex = 20;
+            // 
+            // txt_nama_tabungan_impian
+            // 
+            this.txt_nama_tabungan_impian.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nama_tabungan_impian.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nama_tabungan_impian.Location = new System.Drawing.Point(373, 234);
+            this.txt_nama_tabungan_impian.Name = "txt_nama_tabungan_impian";
+            this.txt_nama_tabungan_impian.Size = new System.Drawing.Size(214, 22);
+            this.txt_nama_tabungan_impian.TabIndex = 19;
+            // 
+            // panel_isi_laporan_saya
+            // 
+            this.panel_isi_laporan_saya.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_laporan_saya.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_laporan_saya.Name = "panel_isi_laporan_saya";
+            this.panel_isi_laporan_saya.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_laporan_saya.TabIndex = 23;
+            this.panel_isi_laporan_saya.Visible = false;
+            // 
+            // panel_isi_riwayat_tabungan_impian
+            // 
+            this.panel_isi_riwayat_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_riwayat_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_riwayat_tabungan_impian.Name = "panel_isi_riwayat_tabungan_impian";
+            this.panel_isi_riwayat_tabungan_impian.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_riwayat_tabungan_impian.TabIndex = 22;
+            this.panel_isi_riwayat_tabungan_impian.Visible = false;
+            // 
+            // panel_isi_tabungan_impian
+            // 
+            this.panel_isi_tabungan_impian.Controls.Add(this.gambar_isi_impian);
+            this.panel_isi_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tabungan_impian.Name = "panel_isi_tabungan_impian";
+            this.panel_isi_tabungan_impian.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_tabungan_impian.TabIndex = 21;
+            this.panel_isi_tabungan_impian.Visible = false;
+            // 
+            // panel_isi_riwayat_transaksi
+            // 
+            this.panel_isi_riwayat_transaksi.Controls.Add(this.label_transaksi);
+            this.panel_isi_riwayat_transaksi.Controls.Add(this.grid_transaksi);
+            this.panel_isi_riwayat_transaksi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_riwayat_transaksi.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_riwayat_transaksi.Name = "panel_isi_riwayat_transaksi";
+            this.panel_isi_riwayat_transaksi.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_riwayat_transaksi.TabIndex = 20;
+            this.panel_isi_riwayat_transaksi.Visible = false;
+            // 
+            // label_transaksi
+            // 
+            this.label_transaksi.AutoSize = true;
+            this.label_transaksi.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_transaksi.ForeColor = System.Drawing.Color.White;
+            this.label_transaksi.Location = new System.Drawing.Point(224, 7);
+            this.label_transaksi.Name = "label_transaksi";
+            this.label_transaksi.Size = new System.Drawing.Size(360, 37);
+            this.label_transaksi.TabIndex = 6;
+            this.label_transaksi.Text = "Riwayat Transaksi Anda";
+            // 
+            // grid_transaksi
+            // 
+            this.grid_transaksi.AllowUserToAddRows = false;
+            this.grid_transaksi.AllowUserToDeleteRows = false;
+            this.grid_transaksi.AllowUserToResizeColumns = false;
+            this.grid_transaksi.AllowUserToResizeRows = false;
+            this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grid_transaksi.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tanggal,
+            this.keterangan,
+            this.debit,
+            this.kredit,
+            this.saldo});
+            this.grid_transaksi.EnableHeadersVisualStyles = false;
+            this.grid_transaksi.Location = new System.Drawing.Point(32, 47);
+            this.grid_transaksi.Name = "grid_transaksi";
+            this.grid_transaksi.ReadOnly = true;
+            this.grid_transaksi.RowHeadersVisible = false;
+            this.grid_transaksi.Size = new System.Drawing.Size(733, 374);
+            this.grid_transaksi.TabIndex = 0;
+            // 
+            // tanggal
+            // 
+            this.tanggal.HeaderText = "tanggal";
+            this.tanggal.Name = "tanggal";
+            this.tanggal.ReadOnly = true;
+            // 
+            // keterangan
+            // 
+            this.keterangan.HeaderText = "keterangan";
+            this.keterangan.Name = "keterangan";
+            this.keterangan.ReadOnly = true;
+            // 
+            // debit
+            // 
+            this.debit.HeaderText = "debit";
+            this.debit.Name = "debit";
+            this.debit.ReadOnly = true;
+            // 
+            // kredit
+            // 
+            this.kredit.HeaderText = "kredit";
+            this.kredit.Name = "kredit";
+            this.kredit.ReadOnly = true;
+            // 
+            // saldo
+            // 
+            this.saldo.HeaderText = "saldo";
+            this.saldo.Name = "saldo";
+            this.saldo.ReadOnly = true;
             // 
             // panel_isi_ubah_profil_saya
             // 
@@ -666,45 +654,6 @@
             this.label_ubah_email.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_ubah_email_MouseClick);
             this.label_ubah_email.MouseEnter += new System.EventHandler(this.label_ubah_email_MouseEnter);
             this.label_ubah_email.MouseLeave += new System.EventHandler(this.label_ubah_email_MouseLeave);
-            // 
-            // button_batal_ubah_profil
-            // 
-            this.button_batal_ubah_profil.AutoSize = true;
-            this.button_batal_ubah_profil.BackColor = System.Drawing.Color.White;
-            this.button_batal_ubah_profil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_batal_ubah_profil.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_batal_ubah_profil.FlatAppearance.BorderSize = 0;
-            this.button_batal_ubah_profil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_batal_ubah_profil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_batal_ubah_profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_batal_ubah_profil.Image = global::Darimu.Properties.Resources.button_batal;
-            this.button_batal_ubah_profil.Location = new System.Drawing.Point(597, 342);
-            this.button_batal_ubah_profil.Name = "button_batal_ubah_profil";
-            this.button_batal_ubah_profil.Size = new System.Drawing.Size(67, 40);
-            this.button_batal_ubah_profil.TabIndex = 9;
-            this.button_batal_ubah_profil.UseVisualStyleBackColor = false;
-            this.button_batal_ubah_profil.MouseEnter += new System.EventHandler(this.button_batal_MouseEnter);
-            this.button_batal_ubah_profil.MouseLeave += new System.EventHandler(this.button_batal_MouseLeave);
-            // 
-            // button_simpan_ubah_profil
-            // 
-            this.button_simpan_ubah_profil.AutoSize = true;
-            this.button_simpan_ubah_profil.BackColor = System.Drawing.Color.White;
-            this.button_simpan_ubah_profil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_simpan_ubah_profil.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_simpan_ubah_profil.FlatAppearance.BorderSize = 0;
-            this.button_simpan_ubah_profil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_simpan_ubah_profil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_simpan_ubah_profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_simpan_ubah_profil.Image = global::Darimu.Properties.Resources.button_simpan;
-            this.button_simpan_ubah_profil.Location = new System.Drawing.Point(670, 342);
-            this.button_simpan_ubah_profil.Name = "button_simpan_ubah_profil";
-            this.button_simpan_ubah_profil.Size = new System.Drawing.Size(67, 40);
-            this.button_simpan_ubah_profil.TabIndex = 8;
-            this.button_simpan_ubah_profil.UseVisualStyleBackColor = false;
-            this.button_simpan_ubah_profil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_ubah_profil_MouseClick);
-            this.button_simpan_ubah_profil.MouseEnter += new System.EventHandler(this.button_simpan_MouseEnter);
-            this.button_simpan_ubah_profil.MouseLeave += new System.EventHandler(this.button_simpan_MouseLeave);
             // 
             // ubah_tanggal_lahir
             // 
@@ -816,25 +765,6 @@
             this.panel_isi_faq.TabIndex = 16;
             this.panel_isi_faq.Visible = false;
             // 
-            // button_berikutnya_faq
-            // 
-            this.button_berikutnya_faq.AutoSize = true;
-            this.button_berikutnya_faq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_berikutnya_faq.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_berikutnya_faq.FlatAppearance.BorderSize = 0;
-            this.button_berikutnya_faq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_berikutnya_faq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_berikutnya_faq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya;
-            this.button_berikutnya_faq.Location = new System.Drawing.Point(686, 79);
-            this.button_berikutnya_faq.Name = "button_berikutnya_faq";
-            this.button_berikutnya_faq.Size = new System.Drawing.Size(35, 35);
-            this.button_berikutnya_faq.TabIndex = 11;
-            this.button_berikutnya_faq.UseVisualStyleBackColor = true;
-            this.button_berikutnya_faq.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_berikutnya_faq_MouseClick);
-            this.button_berikutnya_faq.MouseEnter += new System.EventHandler(this.button_berikutnya_faq_MouseEnter);
-            this.button_berikutnya_faq.MouseLeave += new System.EventHandler(this.button_berikutnya_faq_MouseLeave);
-            // 
             // panel_isi_tentang_kami
             // 
             this.panel_isi_tentang_kami.AutoSize = true;
@@ -862,6 +792,254 @@
             this.panel_isi_tambah_saldo.Size = new System.Drawing.Size(795, 470);
             this.panel_isi_tambah_saldo.TabIndex = 25;
             this.panel_isi_tambah_saldo.Visible = false;
+            // 
+            // txt_isi_saldo
+            // 
+            this.txt_isi_saldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_isi_saldo.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_saldo.Location = new System.Drawing.Point(423, 199);
+            this.txt_isi_saldo.Name = "txt_isi_saldo";
+            this.txt_isi_saldo.Size = new System.Drawing.Size(214, 20);
+            this.txt_isi_saldo.TabIndex = 18;
+            // 
+            // drop_down_profil
+            // 
+            this.drop_down_profil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.drop_down_profil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.drop_down_profil.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.drop_down_profil.IsMainMenu = false;
+            this.drop_down_profil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.profilSayaToolStripMenuItem,
+            this.laporanSayaToolStripMenuItem,
+            this.ubahProfilSayaToolStripMenuItem,
+            this.riwayatTransaksiToolStripMenuItem});
+            this.drop_down_profil.MenuItemHeight = 25;
+            this.drop_down_profil.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.drop_down_profil.Name = "drop_down_profil";
+            this.drop_down_profil.PrimaryColor = System.Drawing.Color.Empty;
+            this.drop_down_profil.ShowItemToolTips = false;
+            this.drop_down_profil.Size = new System.Drawing.Size(188, 92);
+            // 
+            // profilSayaToolStripMenuItem
+            // 
+            this.profilSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.profilSayaToolStripMenuItem.Name = "profilSayaToolStripMenuItem";
+            this.profilSayaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.profilSayaToolStripMenuItem.Text = "Profil Saya";
+            this.profilSayaToolStripMenuItem.Click += new System.EventHandler(this.profilSayaToolStripMenuItem_Click);
+            // 
+            // laporanSayaToolStripMenuItem
+            // 
+            this.laporanSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.laporanSayaToolStripMenuItem.Name = "laporanSayaToolStripMenuItem";
+            this.laporanSayaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.laporanSayaToolStripMenuItem.Text = "Laporan Saya";
+            // 
+            // ubahProfilSayaToolStripMenuItem
+            // 
+            this.ubahProfilSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ubahProfilSayaToolStripMenuItem.Name = "ubahProfilSayaToolStripMenuItem";
+            this.ubahProfilSayaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.ubahProfilSayaToolStripMenuItem.Text = "Ubah Profil Saya";
+            this.ubahProfilSayaToolStripMenuItem.Click += new System.EventHandler(this.ubahProfilSayaToolStripMenuItem_Click);
+            // 
+            // riwayatTransaksiToolStripMenuItem
+            // 
+            this.riwayatTransaksiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.riwayatTransaksiToolStripMenuItem.Name = "riwayatTransaksiToolStripMenuItem";
+            this.riwayatTransaksiToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.riwayatTransaksiToolStripMenuItem.Text = "Riwayat Transaksi";
+            this.riwayatTransaksiToolStripMenuItem.Click += new System.EventHandler(this.riwayatTransaksiToolStripMenuItem_Click);
+            // 
+            // drop_down_tabungan
+            // 
+            this.drop_down_tabungan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.drop_down_tabungan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.drop_down_tabungan.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.drop_down_tabungan.IsMainMenu = false;
+            this.drop_down_tabungan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TabunganImpiantoolStripMenuItem,
+            this.TambahTabunganImpiantoolStripMenuItem});
+            this.drop_down_tabungan.MenuItemHeight = 25;
+            this.drop_down_tabungan.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.drop_down_tabungan.Name = "drop_down_profil";
+            this.drop_down_tabungan.PrimaryColor = System.Drawing.Color.Empty;
+            this.drop_down_tabungan.ShowItemToolTips = false;
+            this.drop_down_tabungan.Size = new System.Drawing.Size(238, 48);
+            // 
+            // TabunganImpiantoolStripMenuItem
+            // 
+            this.TabunganImpiantoolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.TabunganImpiantoolStripMenuItem.Name = "TabunganImpiantoolStripMenuItem";
+            this.TabunganImpiantoolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.TabunganImpiantoolStripMenuItem.Text = "Tabungan Impian";
+            // 
+            // TambahTabunganImpiantoolStripMenuItem
+            // 
+            this.TambahTabunganImpiantoolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.TambahTabunganImpiantoolStripMenuItem.Name = "TambahTabunganImpiantoolStripMenuItem";
+            this.TambahTabunganImpiantoolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.TambahTabunganImpiantoolStripMenuItem.Text = "Tambah Tabungan Impian";
+            this.TambahTabunganImpiantoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // button_batal_ubah_profil
+            // 
+            this.button_batal_ubah_profil.AutoSize = true;
+            this.button_batal_ubah_profil.BackColor = System.Drawing.Color.White;
+            this.button_batal_ubah_profil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_batal_ubah_profil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_batal_ubah_profil.FlatAppearance.BorderSize = 0;
+            this.button_batal_ubah_profil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_batal_ubah_profil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_batal_ubah_profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_batal_ubah_profil.Image = global::Darimu.Properties.Resources.button_batal;
+            this.button_batal_ubah_profil.Location = new System.Drawing.Point(597, 342);
+            this.button_batal_ubah_profil.Name = "button_batal_ubah_profil";
+            this.button_batal_ubah_profil.Size = new System.Drawing.Size(67, 40);
+            this.button_batal_ubah_profil.TabIndex = 9;
+            this.button_batal_ubah_profil.UseVisualStyleBackColor = false;
+            this.button_batal_ubah_profil.MouseEnter += new System.EventHandler(this.button_batal_MouseEnter);
+            this.button_batal_ubah_profil.MouseLeave += new System.EventHandler(this.button_batal_MouseLeave);
+            // 
+            // button_simpan_ubah_profil
+            // 
+            this.button_simpan_ubah_profil.AutoSize = true;
+            this.button_simpan_ubah_profil.BackColor = System.Drawing.Color.White;
+            this.button_simpan_ubah_profil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_simpan_ubah_profil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_simpan_ubah_profil.FlatAppearance.BorderSize = 0;
+            this.button_simpan_ubah_profil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_simpan_ubah_profil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_simpan_ubah_profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_simpan_ubah_profil.Image = global::Darimu.Properties.Resources.button_simpan;
+            this.button_simpan_ubah_profil.Location = new System.Drawing.Point(670, 342);
+            this.button_simpan_ubah_profil.Name = "button_simpan_ubah_profil";
+            this.button_simpan_ubah_profil.Size = new System.Drawing.Size(67, 40);
+            this.button_simpan_ubah_profil.TabIndex = 8;
+            this.button_simpan_ubah_profil.UseVisualStyleBackColor = false;
+            this.button_simpan_ubah_profil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_ubah_profil_MouseClick);
+            this.button_simpan_ubah_profil.MouseEnter += new System.EventHandler(this.button_simpan_MouseEnter);
+            this.button_simpan_ubah_profil.MouseLeave += new System.EventHandler(this.button_simpan_MouseLeave);
+            // 
+            // gambar_ubah_profil_saya
+            // 
+            this.gambar_ubah_profil_saya.Image = ((System.Drawing.Image)(resources.GetObject("gambar_ubah_profil_saya.Image")));
+            this.gambar_ubah_profil_saya.Location = new System.Drawing.Point(38, 19);
+            this.gambar_ubah_profil_saya.Name = "gambar_ubah_profil_saya";
+            this.gambar_ubah_profil_saya.Size = new System.Drawing.Size(718, 374);
+            this.gambar_ubah_profil_saya.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_ubah_profil_saya.TabIndex = 0;
+            this.gambar_ubah_profil_saya.TabStop = false;
+            // 
+            // gambar_profil_saya
+            // 
+            this.gambar_profil_saya.Image = ((System.Drawing.Image)(resources.GetObject("gambar_profil_saya.Image")));
+            this.gambar_profil_saya.Location = new System.Drawing.Point(38, 19);
+            this.gambar_profil_saya.Name = "gambar_profil_saya";
+            this.gambar_profil_saya.Size = new System.Drawing.Size(718, 374);
+            this.gambar_profil_saya.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_profil_saya.TabIndex = 0;
+            this.gambar_profil_saya.TabStop = false;
+            // 
+            // nama_logo_dan_tagline
+            // 
+            this.nama_logo_dan_tagline.Image = global::Darimu.Properties.Resources.Tagline_Beranda;
+            this.nama_logo_dan_tagline.Location = new System.Drawing.Point(67, 89);
+            this.nama_logo_dan_tagline.Name = "nama_logo_dan_tagline";
+            this.nama_logo_dan_tagline.Size = new System.Drawing.Size(157, 66);
+            this.nama_logo_dan_tagline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.nama_logo_dan_tagline.TabIndex = 4;
+            this.nama_logo_dan_tagline.TabStop = false;
+            // 
+            // maskot_beranda
+            // 
+            this.maskot_beranda.Image = global::Darimu.Properties.Resources.maskot_beranda;
+            this.maskot_beranda.Location = new System.Drawing.Point(285, 70);
+            this.maskot_beranda.Name = "maskot_beranda";
+            this.maskot_beranda.Size = new System.Drawing.Size(380, 221);
+            this.maskot_beranda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.maskot_beranda.TabIndex = 3;
+            this.maskot_beranda.TabStop = false;
+            // 
+            // button_sebelum_faq
+            // 
+            this.button_sebelum_faq.AutoSize = true;
+            this.button_sebelum_faq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_sebelum_faq.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_sebelum_faq.FlatAppearance.BorderSize = 0;
+            this.button_sebelum_faq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_sebelum_faq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_sebelum_faq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sebelum_faq.Image = ((System.Drawing.Image)(resources.GetObject("button_sebelum_faq.Image")));
+            this.button_sebelum_faq.Location = new System.Drawing.Point(645, 79);
+            this.button_sebelum_faq.Name = "button_sebelum_faq";
+            this.button_sebelum_faq.Size = new System.Drawing.Size(35, 35);
+            this.button_sebelum_faq.TabIndex = 12;
+            this.button_sebelum_faq.UseVisualStyleBackColor = true;
+            this.button_sebelum_faq.Visible = false;
+            this.button_sebelum_faq.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_sebelum_faq_MouseClick);
+            this.button_sebelum_faq.MouseEnter += new System.EventHandler(this.button_sebelum_faq_MouseEnter);
+            this.button_sebelum_faq.MouseLeave += new System.EventHandler(this.button_sebelum_faq_MouseLeave);
+            // 
+            // button_berikutnya_faq
+            // 
+            this.button_berikutnya_faq.AutoSize = true;
+            this.button_berikutnya_faq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_berikutnya_faq.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_berikutnya_faq.FlatAppearance.BorderSize = 0;
+            this.button_berikutnya_faq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_berikutnya_faq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_berikutnya_faq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya;
+            this.button_berikutnya_faq.Location = new System.Drawing.Point(686, 79);
+            this.button_berikutnya_faq.Name = "button_berikutnya_faq";
+            this.button_berikutnya_faq.Size = new System.Drawing.Size(35, 35);
+            this.button_berikutnya_faq.TabIndex = 11;
+            this.button_berikutnya_faq.UseVisualStyleBackColor = true;
+            this.button_berikutnya_faq.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_berikutnya_faq_MouseClick);
+            this.button_berikutnya_faq.MouseEnter += new System.EventHandler(this.button_berikutnya_faq_MouseEnter);
+            this.button_berikutnya_faq.MouseLeave += new System.EventHandler(this.button_berikutnya_faq_MouseLeave);
+            // 
+            // gambar_faq_1
+            // 
+            this.gambar_faq_1.Image = global::Darimu.Properties.Resources.gambar_faq_1;
+            this.gambar_faq_1.Location = new System.Drawing.Point(67, 19);
+            this.gambar_faq_1.Name = "gambar_faq_1";
+            this.gambar_faq_1.Size = new System.Drawing.Size(659, 418);
+            this.gambar_faq_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_faq_1.TabIndex = 0;
+            this.gambar_faq_1.TabStop = false;
+            // 
+            // gambar_faq_2
+            // 
+            this.gambar_faq_2.Image = global::Darimu.Properties.Resources.gambar_faq_2;
+            this.gambar_faq_2.Location = new System.Drawing.Point(67, 19);
+            this.gambar_faq_2.Name = "gambar_faq_2";
+            this.gambar_faq_2.Size = new System.Drawing.Size(659, 418);
+            this.gambar_faq_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_faq_2.TabIndex = 2;
+            this.gambar_faq_2.TabStop = false;
+            this.gambar_faq_2.Visible = false;
+            // 
+            // gambar_tentang_kami
+            // 
+            this.gambar_tentang_kami.Image = global::Darimu.Properties.Resources.gambar_tentang_kami;
+            this.gambar_tentang_kami.Location = new System.Drawing.Point(15, 19);
+            this.gambar_tentang_kami.Name = "gambar_tentang_kami";
+            this.gambar_tentang_kami.Size = new System.Drawing.Size(765, 436);
+            this.gambar_tentang_kami.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_tentang_kami.TabIndex = 0;
+            this.gambar_tentang_kami.TabStop = false;
+            // 
+            // gambar_bank
+            // 
+            this.gambar_bank.BackColor = System.Drawing.Color.White;
+            this.gambar_bank.Location = new System.Drawing.Point(423, 240);
+            this.gambar_bank.Name = "gambar_bank";
+            this.gambar_bank.Size = new System.Drawing.Size(119, 44);
+            this.gambar_bank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_bank.TabIndex = 21;
+            this.gambar_bank.TabStop = false;
             // 
             // button_batal_saldo
             // 
@@ -902,15 +1080,6 @@
             this.button_simpan_saldo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_saldo_MouseClick);
             this.button_simpan_saldo.MouseEnter += new System.EventHandler(this.button_simpan_saldo_MouseEnter);
             this.button_simpan_saldo.MouseLeave += new System.EventHandler(this.button_simpan_saldo_MouseLeave);
-            // 
-            // txt_isi_saldo
-            // 
-            this.txt_isi_saldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_saldo.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_isi_saldo.Location = new System.Drawing.Point(423, 199);
-            this.txt_isi_saldo.Name = "txt_isi_saldo";
-            this.txt_isi_saldo.Size = new System.Drawing.Size(214, 20);
-            this.txt_isi_saldo.TabIndex = 18;
             // 
             // button_BNI
             // 
@@ -972,287 +1141,6 @@
             this.button_BRI.MouseEnter += new System.EventHandler(this.button_BRI_MouseEnter);
             this.button_BRI.MouseLeave += new System.EventHandler(this.button_BRI_MouseLeave);
             // 
-            // panel_isi_tambah_tabungan_impian
-            // 
-            this.panel_isi_tambah_tabungan_impian.Controls.Add(this.gambar_tambah_impian);
-            this.panel_isi_tambah_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_tambah_tabungan_impian.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_tambah_tabungan_impian.Name = "panel_isi_tambah_tabungan_impian";
-            this.panel_isi_tambah_tabungan_impian.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_tambah_tabungan_impian.TabIndex = 24;
-            this.panel_isi_tambah_tabungan_impian.Visible = false;
-            // 
-            // panel_isi_laporan_saya
-            // 
-            this.panel_isi_laporan_saya.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_laporan_saya.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_laporan_saya.Name = "panel_isi_laporan_saya";
-            this.panel_isi_laporan_saya.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_laporan_saya.TabIndex = 23;
-            this.panel_isi_laporan_saya.Visible = false;
-            // 
-            // panel_isi_riwayat_tabungan_impian
-            // 
-            this.panel_isi_riwayat_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_riwayat_tabungan_impian.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_riwayat_tabungan_impian.Name = "panel_isi_riwayat_tabungan_impian";
-            this.panel_isi_riwayat_tabungan_impian.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_riwayat_tabungan_impian.TabIndex = 22;
-            this.panel_isi_riwayat_tabungan_impian.Visible = false;
-            // 
-            // panel_isi_tabungan_impian
-            // 
-            this.panel_isi_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_tabungan_impian.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_tabungan_impian.Name = "panel_isi_tabungan_impian";
-            this.panel_isi_tabungan_impian.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_tabungan_impian.TabIndex = 21;
-            this.panel_isi_tabungan_impian.Visible = false;
-            // 
-            // panel_isi_riwayat_transaksi
-            // 
-            this.panel_isi_riwayat_transaksi.Controls.Add(this.label_transaksi);
-            this.panel_isi_riwayat_transaksi.Controls.Add(this.grid_transaksi);
-            this.panel_isi_riwayat_transaksi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_riwayat_transaksi.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_riwayat_transaksi.Name = "panel_isi_riwayat_transaksi";
-            this.panel_isi_riwayat_transaksi.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_riwayat_transaksi.TabIndex = 20;
-            this.panel_isi_riwayat_transaksi.Visible = false;
-            // 
-            // label_transaksi
-            // 
-            this.label_transaksi.AutoSize = true;
-            this.label_transaksi.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_transaksi.ForeColor = System.Drawing.Color.White;
-            this.label_transaksi.Location = new System.Drawing.Point(224, 7);
-            this.label_transaksi.Name = "label_transaksi";
-            this.label_transaksi.Size = new System.Drawing.Size(360, 37);
-            this.label_transaksi.TabIndex = 6;
-            this.label_transaksi.Text = "Riwayat Transaksi Anda";
-            // 
-            // grid_transaksi
-            // 
-            this.grid_transaksi.AllowUserToAddRows = false;
-            this.grid_transaksi.AllowUserToDeleteRows = false;
-            this.grid_transaksi.AllowUserToResizeColumns = false;
-            this.grid_transaksi.AllowUserToResizeRows = false;
-            this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grid_transaksi.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tanggal,
-            this.keterangan,
-            this.debit,
-            this.kredit,
-            this.saldo});
-            this.grid_transaksi.EnableHeadersVisualStyles = false;
-            this.grid_transaksi.Location = new System.Drawing.Point(32, 47);
-            this.grid_transaksi.Name = "grid_transaksi";
-            this.grid_transaksi.ReadOnly = true;
-            this.grid_transaksi.RowHeadersVisible = false;
-            this.grid_transaksi.Size = new System.Drawing.Size(733, 374);
-            this.grid_transaksi.TabIndex = 0;
-            // 
-            // tanggal
-            // 
-            this.tanggal.HeaderText = "tanggal";
-            this.tanggal.Name = "tanggal";
-            this.tanggal.ReadOnly = true;
-            // 
-            // keterangan
-            // 
-            this.keterangan.HeaderText = "keterangan";
-            this.keterangan.Name = "keterangan";
-            this.keterangan.ReadOnly = true;
-            // 
-            // debit
-            // 
-            this.debit.HeaderText = "debit";
-            this.debit.Name = "debit";
-            this.debit.ReadOnly = true;
-            // 
-            // kredit
-            // 
-            this.kredit.HeaderText = "kredit";
-            this.kredit.Name = "kredit";
-            this.kredit.ReadOnly = true;
-            // 
-            // saldo
-            // 
-            this.saldo.HeaderText = "saldo";
-            this.saldo.Name = "saldo";
-            this.saldo.ReadOnly = true;
-            // 
-            // drop_down_profil
-            // 
-            this.drop_down_profil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.drop_down_profil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.drop_down_profil.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
-            this.drop_down_profil.IsMainMenu = false;
-            this.drop_down_profil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.profilSayaToolStripMenuItem,
-            this.laporanSayaToolStripMenuItem,
-            this.ubahProfilSayaToolStripMenuItem,
-            this.riwayatTransaksiToolStripMenuItem});
-            this.drop_down_profil.MenuItemHeight = 25;
-            this.drop_down_profil.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.drop_down_profil.Name = "drop_down_profil";
-            this.drop_down_profil.PrimaryColor = System.Drawing.Color.Empty;
-            this.drop_down_profil.ShowItemToolTips = false;
-            this.drop_down_profil.Size = new System.Drawing.Size(188, 92);
-            // 
-            // profilSayaToolStripMenuItem
-            // 
-            this.profilSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.profilSayaToolStripMenuItem.Name = "profilSayaToolStripMenuItem";
-            this.profilSayaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.profilSayaToolStripMenuItem.Text = "Profil Saya";
-            this.profilSayaToolStripMenuItem.Click += new System.EventHandler(this.profilSayaToolStripMenuItem_Click);
-            // 
-            // laporanSayaToolStripMenuItem
-            // 
-            this.laporanSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.laporanSayaToolStripMenuItem.Name = "laporanSayaToolStripMenuItem";
-            this.laporanSayaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.laporanSayaToolStripMenuItem.Text = "Laporan Saya";
-            // 
-            // ubahProfilSayaToolStripMenuItem
-            // 
-            this.ubahProfilSayaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ubahProfilSayaToolStripMenuItem.Name = "ubahProfilSayaToolStripMenuItem";
-            this.ubahProfilSayaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.ubahProfilSayaToolStripMenuItem.Text = "Ubah Profil Saya";
-            this.ubahProfilSayaToolStripMenuItem.Click += new System.EventHandler(this.ubahProfilSayaToolStripMenuItem_Click);
-            // 
-            // riwayatTransaksiToolStripMenuItem
-            // 
-            this.riwayatTransaksiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.riwayatTransaksiToolStripMenuItem.Name = "riwayatTransaksiToolStripMenuItem";
-            this.riwayatTransaksiToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.riwayatTransaksiToolStripMenuItem.Text = "Riwayat Transaksi";
-            this.riwayatTransaksiToolStripMenuItem.Click += new System.EventHandler(this.riwayatTransaksiToolStripMenuItem_Click);
-            // 
-            // drop_down_tabungan
-            // 
-            this.drop_down_tabungan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.drop_down_tabungan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.drop_down_tabungan.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
-            this.drop_down_tabungan.IsMainMenu = false;
-            this.drop_down_tabungan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
-            this.drop_down_tabungan.MenuItemHeight = 25;
-            this.drop_down_tabungan.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.drop_down_tabungan.Name = "drop_down_profil";
-            this.drop_down_tabungan.PrimaryColor = System.Drawing.Color.Empty;
-            this.drop_down_tabungan.ShowItemToolTips = false;
-            this.drop_down_tabungan.Size = new System.Drawing.Size(238, 48);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(237, 22);
-            this.toolStripMenuItem1.Text = "Tabungan Impian";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 22);
-            this.toolStripMenuItem2.Text = "Tambah Tabungan Impian";
-            // 
-            // nama_logo_dan_tagline
-            // 
-            this.nama_logo_dan_tagline.Image = global::Darimu.Properties.Resources.Tagline_Beranda;
-            this.nama_logo_dan_tagline.Location = new System.Drawing.Point(67, 89);
-            this.nama_logo_dan_tagline.Name = "nama_logo_dan_tagline";
-            this.nama_logo_dan_tagline.Size = new System.Drawing.Size(157, 66);
-            this.nama_logo_dan_tagline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.nama_logo_dan_tagline.TabIndex = 4;
-            this.nama_logo_dan_tagline.TabStop = false;
-            // 
-            // maskot_beranda
-            // 
-            this.maskot_beranda.Image = global::Darimu.Properties.Resources.maskot_beranda;
-            this.maskot_beranda.Location = new System.Drawing.Point(285, 70);
-            this.maskot_beranda.Name = "maskot_beranda";
-            this.maskot_beranda.Size = new System.Drawing.Size(380, 221);
-            this.maskot_beranda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.maskot_beranda.TabIndex = 3;
-            this.maskot_beranda.TabStop = false;
-            // 
-            // button_sebelum_faq
-            // 
-            this.button_sebelum_faq.AutoSize = true;
-            this.button_sebelum_faq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_sebelum_faq.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_sebelum_faq.FlatAppearance.BorderSize = 0;
-            this.button_sebelum_faq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_sebelum_faq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_sebelum_faq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_sebelum_faq.Image = ((System.Drawing.Image)(resources.GetObject("button_sebelum_faq.Image")));
-            this.button_sebelum_faq.Location = new System.Drawing.Point(645, 79);
-            this.button_sebelum_faq.Name = "button_sebelum_faq";
-            this.button_sebelum_faq.Size = new System.Drawing.Size(35, 35);
-            this.button_sebelum_faq.TabIndex = 12;
-            this.button_sebelum_faq.UseVisualStyleBackColor = true;
-            this.button_sebelum_faq.Visible = false;
-            this.button_sebelum_faq.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_sebelum_faq_MouseClick);
-            this.button_sebelum_faq.MouseEnter += new System.EventHandler(this.button_sebelum_faq_MouseEnter);
-            this.button_sebelum_faq.MouseLeave += new System.EventHandler(this.button_sebelum_faq_MouseLeave);
-            // 
-            // gambar_faq_1
-            // 
-            this.gambar_faq_1.Image = global::Darimu.Properties.Resources.gambar_faq_1;
-            this.gambar_faq_1.Location = new System.Drawing.Point(67, 19);
-            this.gambar_faq_1.Name = "gambar_faq_1";
-            this.gambar_faq_1.Size = new System.Drawing.Size(659, 418);
-            this.gambar_faq_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_faq_1.TabIndex = 0;
-            this.gambar_faq_1.TabStop = false;
-            // 
-            // gambar_faq_2
-            // 
-            this.gambar_faq_2.Image = global::Darimu.Properties.Resources.gambar_faq_2;
-            this.gambar_faq_2.Location = new System.Drawing.Point(67, 19);
-            this.gambar_faq_2.Name = "gambar_faq_2";
-            this.gambar_faq_2.Size = new System.Drawing.Size(659, 418);
-            this.gambar_faq_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_faq_2.TabIndex = 2;
-            this.gambar_faq_2.TabStop = false;
-            this.gambar_faq_2.Visible = false;
-            // 
-            // gambar_tentang_kami
-            // 
-            this.gambar_tentang_kami.Image = global::Darimu.Properties.Resources.gambar_tentang_kami;
-            this.gambar_tentang_kami.Location = new System.Drawing.Point(15, 19);
-            this.gambar_tentang_kami.Name = "gambar_tentang_kami";
-            this.gambar_tentang_kami.Size = new System.Drawing.Size(765, 436);
-            this.gambar_tentang_kami.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_tentang_kami.TabIndex = 0;
-            this.gambar_tentang_kami.TabStop = false;
-            // 
-            // gambar_bank
-            // 
-            this.gambar_bank.BackColor = System.Drawing.Color.White;
-            this.gambar_bank.Location = new System.Drawing.Point(423, 240);
-            this.gambar_bank.Name = "gambar_bank";
-            this.gambar_bank.Size = new System.Drawing.Size(119, 44);
-            this.gambar_bank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_bank.TabIndex = 21;
-            this.gambar_bank.TabStop = false;
-            // 
             // gambar_tambah_saldo
             // 
             this.gambar_tambah_saldo.Image = ((System.Drawing.Image)(resources.GetObject("gambar_tambah_saldo.Image")));
@@ -1263,40 +1151,152 @@
             this.gambar_tambah_saldo.TabIndex = 17;
             this.gambar_tambah_saldo.TabStop = false;
             // 
+            // jenis_impian_hiburan
+            // 
+            this.jenis_impian_hiburan.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.jenis_impian_hiburan.AutoSize = true;
+            this.jenis_impian_hiburan.BackColor = System.Drawing.Color.White;
+            this.jenis_impian_hiburan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.jenis_impian_hiburan.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.jenis_impian_hiburan.FlatAppearance.BorderSize = 0;
+            this.jenis_impian_hiburan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.jenis_impian_hiburan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.jenis_impian_hiburan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jenis_impian_hiburan.Image = global::Darimu.Properties.Resources.hiburan;
+            this.jenis_impian_hiburan.Location = new System.Drawing.Point(545, 113);
+            this.jenis_impian_hiburan.Name = "jenis_impian_hiburan";
+            this.jenis_impian_hiburan.Size = new System.Drawing.Size(64, 64);
+            this.jenis_impian_hiburan.TabIndex = 27;
+            this.jenis_impian_hiburan.UseVisualStyleBackColor = false;
+            this.jenis_impian_hiburan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.jenis_impian_hiburan_MouseClick);
+            // 
+            // jenis_impian_fashion
+            // 
+            this.jenis_impian_fashion.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.jenis_impian_fashion.AutoSize = true;
+            this.jenis_impian_fashion.BackColor = System.Drawing.Color.White;
+            this.jenis_impian_fashion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.jenis_impian_fashion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.jenis_impian_fashion.FlatAppearance.BorderSize = 0;
+            this.jenis_impian_fashion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.jenis_impian_fashion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.jenis_impian_fashion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jenis_impian_fashion.Image = global::Darimu.Properties.Resources.fashion;
+            this.jenis_impian_fashion.Location = new System.Drawing.Point(448, 113);
+            this.jenis_impian_fashion.Name = "jenis_impian_fashion";
+            this.jenis_impian_fashion.Size = new System.Drawing.Size(64, 64);
+            this.jenis_impian_fashion.TabIndex = 26;
+            this.jenis_impian_fashion.UseVisualStyleBackColor = false;
+            this.jenis_impian_fashion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.jenis_impian_fashion_MouseClick);
+            // 
+            // jenis_impian_elektronik
+            // 
+            this.jenis_impian_elektronik.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.jenis_impian_elektronik.AutoSize = true;
+            this.jenis_impian_elektronik.BackColor = System.Drawing.Color.White;
+            this.jenis_impian_elektronik.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.jenis_impian_elektronik.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.jenis_impian_elektronik.FlatAppearance.BorderSize = 0;
+            this.jenis_impian_elektronik.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.jenis_impian_elektronik.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.jenis_impian_elektronik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jenis_impian_elektronik.Image = global::Darimu.Properties.Resources.elektronik;
+            this.jenis_impian_elektronik.Location = new System.Drawing.Point(358, 113);
+            this.jenis_impian_elektronik.Name = "jenis_impian_elektronik";
+            this.jenis_impian_elektronik.Size = new System.Drawing.Size(64, 64);
+            this.jenis_impian_elektronik.TabIndex = 25;
+            this.jenis_impian_elektronik.UseVisualStyleBackColor = false;
+            this.jenis_impian_elektronik.MouseClick += new System.Windows.Forms.MouseEventHandler(this.jenis_impian_elektronik_MouseClick);
+            // 
+            // jenis_impian_jalan_jalan
+            // 
+            this.jenis_impian_jalan_jalan.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.jenis_impian_jalan_jalan.AutoSize = true;
+            this.jenis_impian_jalan_jalan.BackColor = System.Drawing.Color.White;
+            this.jenis_impian_jalan_jalan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.jenis_impian_jalan_jalan.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.jenis_impian_jalan_jalan.FlatAppearance.BorderSize = 0;
+            this.jenis_impian_jalan_jalan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.jenis_impian_jalan_jalan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.jenis_impian_jalan_jalan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jenis_impian_jalan_jalan.Image = global::Darimu.Properties.Resources.jalan_jalan;
+            this.jenis_impian_jalan_jalan.Location = new System.Drawing.Point(264, 113);
+            this.jenis_impian_jalan_jalan.Name = "jenis_impian_jalan_jalan";
+            this.jenis_impian_jalan_jalan.Size = new System.Drawing.Size(64, 64);
+            this.jenis_impian_jalan_jalan.TabIndex = 24;
+            this.jenis_impian_jalan_jalan.UseVisualStyleBackColor = false;
+            this.jenis_impian_jalan_jalan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.jenis_impian_jalan_jalan_MouseClick);
+            // 
+            // jenis_impian_umum
+            // 
+            this.jenis_impian_umum.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.jenis_impian_umum.AutoSize = true;
+            this.jenis_impian_umum.BackColor = System.Drawing.Color.White;
+            this.jenis_impian_umum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.jenis_impian_umum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.jenis_impian_umum.FlatAppearance.BorderSize = 0;
+            this.jenis_impian_umum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.jenis_impian_umum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.jenis_impian_umum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jenis_impian_umum.Image = global::Darimu.Properties.Resources.umum;
+            this.jenis_impian_umum.Location = new System.Drawing.Point(170, 113);
+            this.jenis_impian_umum.Name = "jenis_impian_umum";
+            this.jenis_impian_umum.Size = new System.Drawing.Size(64, 64);
+            this.jenis_impian_umum.TabIndex = 8;
+            this.jenis_impian_umum.UseVisualStyleBackColor = false;
+            this.jenis_impian_umum.MouseClick += new System.Windows.Forms.MouseEventHandler(this.jenis_impian_umum_MouseClick);
+            // 
+            // button_batal_impian
+            // 
+            this.button_batal_impian.AutoSize = true;
+            this.button_batal_impian.BackColor = System.Drawing.Color.White;
+            this.button_batal_impian.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_batal_impian.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_batal_impian.FlatAppearance.BorderSize = 0;
+            this.button_batal_impian.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_batal_impian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_batal_impian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_batal_impian.Image = global::Darimu.Properties.Resources.button_batal;
+            this.button_batal_impian.Location = new System.Drawing.Point(539, 358);
+            this.button_batal_impian.Name = "button_batal_impian";
+            this.button_batal_impian.Size = new System.Drawing.Size(67, 40);
+            this.button_batal_impian.TabIndex = 23;
+            this.button_batal_impian.UseVisualStyleBackColor = false;
+            // 
+            // button_simpan_impian
+            // 
+            this.button_simpan_impian.AutoSize = true;
+            this.button_simpan_impian.BackColor = System.Drawing.Color.White;
+            this.button_simpan_impian.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_simpan_impian.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_simpan_impian.FlatAppearance.BorderSize = 0;
+            this.button_simpan_impian.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_simpan_impian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_simpan_impian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_simpan_impian.Image = global::Darimu.Properties.Resources.button_simpan;
+            this.button_simpan_impian.Location = new System.Drawing.Point(612, 358);
+            this.button_simpan_impian.Name = "button_simpan_impian";
+            this.button_simpan_impian.Size = new System.Drawing.Size(67, 40);
+            this.button_simpan_impian.TabIndex = 22;
+            this.button_simpan_impian.UseVisualStyleBackColor = false;
+            this.button_simpan_impian.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_impian_MouseClick);
+            this.button_simpan_impian.MouseEnter += new System.EventHandler(this.button_simpan_impian_MouseEnter);
+            this.button_simpan_impian.MouseLeave += new System.EventHandler(this.button_simpan_impian_MouseLeave);
+            // 
             // gambar_tambah_impian
             // 
-            this.gambar_tambah_impian.Image = global::Darimu.Properties.Resources.gambar_tambah_impian;
-            this.gambar_tambah_impian.Location = new System.Drawing.Point(91, 11);
+            this.gambar_tambah_impian.Image = ((System.Drawing.Image)(resources.GetObject("gambar_tambah_impian.Image")));
+            this.gambar_tambah_impian.Location = new System.Drawing.Point(91, 4);
             this.gambar_tambah_impian.Name = "gambar_tambah_impian";
-            this.gambar_tambah_impian.Size = new System.Drawing.Size(621, 436);
+            this.gambar_tambah_impian.Size = new System.Drawing.Size(613, 402);
             this.gambar_tambah_impian.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.gambar_tambah_impian.TabIndex = 0;
             this.gambar_tambah_impian.TabStop = false;
             // 
-            // gambar_ubah_profil_saya
-            // 
-            this.gambar_ubah_profil_saya.Image = ((System.Drawing.Image)(resources.GetObject("gambar_ubah_profil_saya.Image")));
-            this.gambar_ubah_profil_saya.Location = new System.Drawing.Point(38, 19);
-            this.gambar_ubah_profil_saya.Name = "gambar_ubah_profil_saya";
-            this.gambar_ubah_profil_saya.Size = new System.Drawing.Size(718, 374);
-            this.gambar_ubah_profil_saya.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_ubah_profil_saya.TabIndex = 0;
-            this.gambar_ubah_profil_saya.TabStop = false;
-            // 
-            // gambar_profil_saya
-            // 
-            this.gambar_profil_saya.Image = ((System.Drawing.Image)(resources.GetObject("gambar_profil_saya.Image")));
-            this.gambar_profil_saya.Location = new System.Drawing.Point(38, 19);
-            this.gambar_profil_saya.Name = "gambar_profil_saya";
-            this.gambar_profil_saya.Size = new System.Drawing.Size(718, 374);
-            this.gambar_profil_saya.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_profil_saya.TabIndex = 0;
-            this.gambar_profil_saya.TabStop = false;
-            // 
             // icon_topup
             // 
             this.icon_topup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.icon_topup.Image = ((System.Drawing.Image)(resources.GetObject("icon_topup.Image")));
+            this.icon_topup.Image = global::Darimu.Properties.Resources.icon_topup;
             this.icon_topup.Location = new System.Drawing.Point(3, 41);
             this.icon_topup.Name = "icon_topup";
             this.icon_topup.Size = new System.Drawing.Size(25, 25);
@@ -1357,6 +1357,192 @@
             this.button_exit.MouseEnter += new System.EventHandler(this.button_exit_MouseEnter);
             this.button_exit.MouseLeave += new System.EventHandler(this.button_exit_MouseLeave);
             // 
+            // button_tentang_kami
+            // 
+            this.button_tentang_kami.AutoSize = true;
+            this.button_tentang_kami.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_tentang_kami.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_tentang_kami.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_tentang_kami.FlatAppearance.BorderSize = 0;
+            this.button_tentang_kami.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_tentang_kami.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_tentang_kami.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_tentang_kami.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_tentang_kami.ForeColor = System.Drawing.Color.White;
+            this.button_tentang_kami.Image = global::Darimu.Properties.Resources.icon_tentang_kami;
+            this.button_tentang_kami.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_tentang_kami.Location = new System.Drawing.Point(2, 340);
+            this.button_tentang_kami.Name = "button_tentang_kami";
+            this.button_tentang_kami.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_tentang_kami.Size = new System.Drawing.Size(203, 60);
+            this.button_tentang_kami.TabIndex = 27;
+            this.button_tentang_kami.Tag = "  Tentang Kami";
+            this.button_tentang_kami.Text = "  Tentang Kami";
+            this.button_tentang_kami.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_tentang_kami.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_tentang_kami.UseVisualStyleBackColor = true;
+            this.button_tentang_kami.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_tentang_kami_MouseClick);
+            this.button_tentang_kami.MouseEnter += new System.EventHandler(this.button_tentang_kami_MouseEnter);
+            this.button_tentang_kami.MouseLeave += new System.EventHandler(this.button_tentang_kami_MouseLeave);
+            // 
+            // button_faq
+            // 
+            this.button_faq.AutoSize = true;
+            this.button_faq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_faq.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_faq.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_faq.FlatAppearance.BorderSize = 0;
+            this.button_faq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_faq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_faq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_faq.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_faq.ForeColor = System.Drawing.Color.White;
+            this.button_faq.Image = global::Darimu.Properties.Resources.icon_faq;
+            this.button_faq.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_faq.Location = new System.Drawing.Point(2, 280);
+            this.button_faq.Name = "button_faq";
+            this.button_faq.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_faq.Size = new System.Drawing.Size(203, 60);
+            this.button_faq.TabIndex = 26;
+            this.button_faq.Tag = "  FAQ";
+            this.button_faq.Text = "  FAQ";
+            this.button_faq.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_faq.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_faq.UseVisualStyleBackColor = true;
+            this.button_faq.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_faq_MouseClick);
+            this.button_faq.MouseEnter += new System.EventHandler(this.button_faq_MouseEnter);
+            this.button_faq.MouseLeave += new System.EventHandler(this.button_faq_MouseLeave);
+            // 
+            // button_tabungan
+            // 
+            this.button_tabungan.AutoSize = true;
+            this.button_tabungan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_tabungan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_tabungan.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_tabungan.FlatAppearance.BorderSize = 0;
+            this.button_tabungan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_tabungan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_tabungan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_tabungan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_tabungan.ForeColor = System.Drawing.Color.White;
+            this.button_tabungan.Image = global::Darimu.Properties.Resources.icon_tabungan;
+            this.button_tabungan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_tabungan.Location = new System.Drawing.Point(2, 220);
+            this.button_tabungan.Name = "button_tabungan";
+            this.button_tabungan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_tabungan.Size = new System.Drawing.Size(203, 60);
+            this.button_tabungan.TabIndex = 25;
+            this.button_tabungan.Tag = " Tabungan";
+            this.button_tabungan.Text = " Tabungan";
+            this.button_tabungan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_tabungan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_tabungan.UseVisualStyleBackColor = true;
+            this.button_tabungan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_tabungan_MouseClick);
+            this.button_tabungan.MouseEnter += new System.EventHandler(this.button_tabungan_MouseEnter);
+            this.button_tabungan.MouseLeave += new System.EventHandler(this.button_tabungan_MouseLeave);
+            // 
+            // button_profil
+            // 
+            this.button_profil.AutoSize = true;
+            this.button_profil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_profil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_profil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_profil.FlatAppearance.BorderSize = 0;
+            this.button_profil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_profil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_profil.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_profil.ForeColor = System.Drawing.Color.White;
+            this.button_profil.Image = global::Darimu.Properties.Resources.icon_profil;
+            this.button_profil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_profil.Location = new System.Drawing.Point(2, 160);
+            this.button_profil.Name = "button_profil";
+            this.button_profil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_profil.Size = new System.Drawing.Size(203, 60);
+            this.button_profil.TabIndex = 24;
+            this.button_profil.Tag = "  Profil";
+            this.button_profil.Text = "  Profil";
+            this.button_profil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_profil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_profil.UseVisualStyleBackColor = true;
+            this.button_profil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_profil_MouseClick);
+            this.button_profil.MouseEnter += new System.EventHandler(this.button_profil_MouseEnter);
+            this.button_profil.MouseLeave += new System.EventHandler(this.button_profil_MouseLeave);
+            // 
+            // button_beranda
+            // 
+            this.button_beranda.AutoSize = true;
+            this.button_beranda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_beranda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_beranda.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_beranda.FlatAppearance.BorderSize = 0;
+            this.button_beranda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_beranda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_beranda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_beranda.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_beranda.ForeColor = System.Drawing.Color.Cyan;
+            this.button_beranda.Image = global::Darimu.Properties.Resources.icon_beranda;
+            this.button_beranda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_beranda.Location = new System.Drawing.Point(2, 100);
+            this.button_beranda.Name = "button_beranda";
+            this.button_beranda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_beranda.Size = new System.Drawing.Size(203, 60);
+            this.button_beranda.TabIndex = 23;
+            this.button_beranda.Tag = "  Beranda";
+            this.button_beranda.Text = "  Beranda";
+            this.button_beranda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_beranda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_beranda.UseVisualStyleBackColor = true;
+            this.button_beranda.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_beranda_MouseClick);
+            this.button_beranda.MouseEnter += new System.EventHandler(this.button_beranda_MouseEnter);
+            this.button_beranda.MouseLeave += new System.EventHandler(this.button_beranda_MouseLeave);
+            // 
+            // button_keluar
+            // 
+            this.button_keluar.AutoSize = true;
+            this.button_keluar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_keluar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_keluar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_keluar.FlatAppearance.BorderSize = 0;
+            this.button_keluar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_keluar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_keluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_keluar.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_keluar.ForeColor = System.Drawing.Color.White;
+            this.button_keluar.Image = global::Darimu.Properties.Resources.icon_keluar;
+            this.button_keluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_keluar.Location = new System.Drawing.Point(2, 508);
+            this.button_keluar.Name = "button_keluar";
+            this.button_keluar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_keluar.Size = new System.Drawing.Size(203, 60);
+            this.button_keluar.TabIndex = 20;
+            this.button_keluar.Tag = "  Keluar";
+            this.button_keluar.Text = "  Keluar";
+            this.button_keluar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_keluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_keluar.UseVisualStyleBackColor = true;
+            this.button_keluar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_keluar_MouseClick);
+            this.button_keluar.MouseEnter += new System.EventHandler(this.button_keluar_MouseEnter);
+            this.button_keluar.MouseLeave += new System.EventHandler(this.button_keluar_MouseLeave);
+            // 
+            // button_menu
+            // 
+            this.button_menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_menu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_menu.FlatAppearance.BorderSize = 0;
+            this.button_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_menu.Image = global::Darimu.Properties.Resources.icon_menu;
+            this.button_menu.Location = new System.Drawing.Point(148, 36);
+            this.button_menu.Name = "button_menu";
+            this.button_menu.Size = new System.Drawing.Size(33, 31);
+            this.button_menu.TabIndex = 8;
+            this.button_menu.UseVisualStyleBackColor = true;
+            this.button_menu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_menu_MouseClick);
+            this.button_menu.MouseEnter += new System.EventHandler(this.button_menu_MouseEnter);
+            this.button_menu.MouseLeave += new System.EventHandler(this.button_menu_MouseLeave);
+            // 
             // logo_darimu
             // 
             this.logo_darimu.Image = global::Darimu.Properties.Resources.LogoDarimuTransparant;
@@ -1365,6 +1551,16 @@
             this.logo_darimu.Size = new System.Drawing.Size(52, 50);
             this.logo_darimu.TabIndex = 0;
             this.logo_darimu.TabStop = false;
+            // 
+            // gambar_isi_impian
+            // 
+            this.gambar_isi_impian.Image = global::Darimu.Properties.Resources.gambar_isi_impian;
+            this.gambar_isi_impian.Location = new System.Drawing.Point(14, 7);
+            this.gambar_isi_impian.Name = "gambar_isi_impian";
+            this.gambar_isi_impian.Size = new System.Drawing.Size(766, 376);
+            this.gambar_isi_impian.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_isi_impian.TabIndex = 1;
+            this.gambar_isi_impian.TabStop = false;
             // 
             // frm_beranda_setelah_login
             // 
@@ -1395,6 +1591,13 @@
             this.panel_isi_beranda.PerformLayout();
             this.panel_isi.ResumeLayout(false);
             this.panel_isi.PerformLayout();
+            this.panel_isi_tambah_tabungan_impian.ResumeLayout(false);
+            this.panel_isi_tambah_tabungan_impian.PerformLayout();
+            this.panel_isi_tabungan_impian.ResumeLayout(false);
+            this.panel_isi_tabungan_impian.PerformLayout();
+            this.panel_isi_riwayat_transaksi.ResumeLayout(false);
+            this.panel_isi_riwayat_transaksi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).EndInit();
             this.panel_isi_ubah_profil_saya.ResumeLayout(false);
             this.panel_isi_ubah_profil_saya.PerformLayout();
             this.panel_isi_profil_saya.ResumeLayout(false);
@@ -1405,13 +1608,10 @@
             this.panel_isi_tentang_kami.PerformLayout();
             this.panel_isi_tambah_saldo.ResumeLayout(false);
             this.panel_isi_tambah_saldo.PerformLayout();
-            this.panel_isi_tambah_tabungan_impian.ResumeLayout(false);
-            this.panel_isi_tambah_tabungan_impian.PerformLayout();
-            this.panel_isi_riwayat_transaksi.ResumeLayout(false);
-            this.panel_isi_riwayat_transaksi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).EndInit();
             this.drop_down_profil.ResumeLayout(false);
             this.drop_down_tabungan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_ubah_profil_saya)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_profil_saya)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nama_logo_dan_tagline)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_faq_1)).EndInit();
@@ -1420,11 +1620,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gambar_bank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_saldo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_impian)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_ubah_profil_saya)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_profil_saya)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_topup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_saldo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_impian)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1518,9 +1717,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
         private System.Windows.Forms.Label label_transaksi;
         private CustomControls.DRMDropDownMenu drop_down_tabungan;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem TabunganImpiantoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TambahTabunganImpiantoolStripMenuItem;
         private System.Windows.Forms.PictureBox gambar_tambah_impian;
+        private System.Windows.Forms.TextBox txt_saldo_impian;
+        private System.Windows.Forms.TextBox txt_nama_tabungan_impian;
+        private System.Windows.Forms.DateTimePicker tenggat_waktu_impian;
+        private System.Windows.Forms.Button button_batal_impian;
+        private System.Windows.Forms.Button button_simpan_impian;
+        private System.Windows.Forms.Button jenis_impian_umum;
+        private System.Windows.Forms.Button jenis_impian_jalan_jalan;
+        private System.Windows.Forms.Button jenis_impian_elektronik;
+        private System.Windows.Forms.Button jenis_impian_fashion;
+        private System.Windows.Forms.Button jenis_impian_hiburan;
+        private System.Windows.Forms.PictureBox gambar_isi_impian;
     }
 }
 

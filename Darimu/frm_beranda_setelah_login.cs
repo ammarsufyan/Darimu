@@ -12,10 +12,9 @@ namespace Darimu
     public partial class frm_beranda_setelah_login : Form
     {
         // declaration var
-        public string nama_pengguna, pilihan_bank;
+        private string nama_pengguna, pilihan_bank, jenis_impian, tautan_gambar;
+        private bool validasi_button = false;
         private int borderSize = 2;
-        private Size formSize;
-        int angka = 0;
 
         public frm_beranda_setelah_login(string nama_pengguna)
         {
@@ -24,6 +23,8 @@ namespace Darimu
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(33, 106, 155);
             panel_isi_beranda.Visible = true;
+            tenggat_waktu_impian.MinDate = System.DateTime.Now;
+            tenggat_waktu_impian.Value = System.DateTime.Now;
             label_username.Text = nama_pengguna;
             label_saldo.Text = ClassTransaksi.get_saldo(nama_pengguna).ToString();
             this.nama_pengguna = nama_pengguna;
@@ -558,6 +559,103 @@ namespace Darimu
             hide_panel();
             panel_isi_riwayat_transaksi.Visible = true;
             ClassTransaksi.riwayat_transaksi(nama_pengguna, grid_transaksi);
+        }
+
+        private void button_simpan_impian_MouseEnter(object sender, EventArgs e)
+        {
+            button_simpan_impian.Image = global::Darimu.Properties.Resources.button_simpan_dipencet;
+        }
+
+        private void button_simpan_impian_MouseLeave(object sender, EventArgs e)
+        {
+            button_simpan_impian.Image = global::Darimu.Properties.Resources.button_simpan;
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            hide_panel();
+            panel_isi_tambah_tabungan_impian.Visible = true;
+        }
+
+        private void button_simpan_impian_MouseClick(object sender, MouseEventArgs e)
+        {
+            string cek = ClassValidasi.cekDaftarImpian(txt_nama_tabungan_impian, txt_saldo_impian, validasi_button);
+            if(cek == "valid")
+            {
+                string nama_tabungan_impian = txt_nama_tabungan_impian.Text.Trim();
+                string saldo_impian = txt_saldo_impian.Text.Trim();
+                // get the datepicker value
+                tenggat_waktu_impian.Format = DateTimePickerFormat.Custom;
+                tenggat_waktu_impian.CustomFormat = "yyyy/MM/dd";
+                tenggat_waktu_impian.ShowUpDown = true;
+                string tenggat_waktu = tenggat_waktu_impian.Value.ToString("yyyy/MM/dd");
+
+                string hasil = ClassTabunganImpian.tambahImpian(nama_pengguna, nama_tabungan_impian, jenis_impian, tautan_gambar, saldo_impian, tenggat_waktu);
+                MessageBox.Show(hasil,
+                                "Sukses Menambah Impian",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            } else
+            {
+                MessageBox.Show(cek,
+                                "Gagal Menambah Impian",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+        }
+
+        private void default_impian()
+        {
+            jenis_impian_jalan_jalan.Image = global::Darimu.Properties.Resources.jalan_jalan;
+            jenis_impian_elektronik.Image = global::Darimu.Properties.Resources.elektronik;
+            jenis_impian_hiburan.Image = global::Darimu.Properties.Resources.hiburan;
+            jenis_impian_fashion.Image = global::Darimu.Properties.Resources.fashion;
+            jenis_impian_umum.Image = global::Darimu.Properties.Resources.umum;
+        }
+
+        private void jenis_impian_umum_MouseClick(object sender, MouseEventArgs e)
+        {
+            default_impian();
+            jenis_impian_umum.Image = global::Darimu.Properties.Resources.umum_biru;
+            jenis_impian = "Umum";
+            tautan_gambar = "global::Darimu.Properties.Resources.logo_umum";
+            validasi_button = true;
+        }
+
+        private void jenis_impian_jalan_jalan_MouseClick(object sender, MouseEventArgs e)
+        {
+            default_impian();
+            jenis_impian_jalan_jalan.Image = global::Darimu.Properties.Resources.jalan_jalan_biru;
+            jenis_impian = "Jalan-jalan";
+            tautan_gambar = "global::Darimu.Properties.Resources.logo_jalan_jalan";
+            validasi_button = true;
+        }
+
+        private void jenis_impian_elektronik_MouseClick(object sender, MouseEventArgs e)
+        {
+            default_impian();
+            jenis_impian_elektronik.Image = global::Darimu.Properties.Resources.elektronik_biru;
+            jenis_impian = "Elektronik";
+            tautan_gambar = "global::Darimu.Properties.Resources.logo_elektronik";
+            validasi_button = true;
+        }
+
+        private void jenis_impian_fashion_MouseClick(object sender, MouseEventArgs e)
+        {
+            default_impian();
+            jenis_impian_fashion.Image = global::Darimu.Properties.Resources.fashion_biru;
+            jenis_impian = "Fashion";
+            tautan_gambar = "global::Darimu.Properties.Resources.logo_fashion";
+            validasi_button = true;
+        }
+
+        private void jenis_impian_hiburan_MouseClick(object sender, MouseEventArgs e)
+        {
+            default_impian();
+            jenis_impian_hiburan.Image = global::Darimu.Properties.Resources.hiburan_biru;
+            jenis_impian = "Hiburan";
+            tautan_gambar = "global::Darimu.Properties.Resources.logo_hiburan";
+            validasi_button = true;
         }
 
         private void button_simpan_saldo_MouseClick(object sender, MouseEventArgs e)
