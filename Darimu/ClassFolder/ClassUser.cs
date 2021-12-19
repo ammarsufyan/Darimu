@@ -125,5 +125,48 @@ namespace Darimu.ClassFolder
             sqlcon.Close();
             return data_pengguna;
         }
+
+        public static string ubah_data_pengguna(string nama_pengguna, String nama_lengkap, string tanggal_lahir, string alamat_email)
+        {
+            string hasil = "";
+            try
+            {
+                sqlcon.Open();
+                SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE alamat_email = '" + alamat_email + "'", sqlcon);
+                SqlDataReader dr = sqlcom.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    hasil = "Email sudah terdaftar";
+                }
+                else
+                {
+                    dr.Close();
+
+                    SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_pengguna SET nama_lengkap = '@nama_lengkap', tanggal_lahir = '@tanggal_lahir',alamat_email = '@alamat_email' WHERE nama_pengguna = '@nama_pengguna' ", sqlcon);
+                    sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna", SqlDbType.VarChar, 100));
+                    sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_lengkap", SqlDbType.VarChar, 100));
+                    sqlda.SelectCommand.Parameters.Add(new SqlParameter("@tanggal_lahir", SqlDbType.Date));
+                    sqlda.SelectCommand.Parameters.Add(new SqlParameter("@alamat_email", SqlDbType.VarChar, 100));
+
+                    sqlda.SelectCommand.Parameters["@nama_pengguna"].Value = nama_pengguna;
+                    sqlda.SelectCommand.Parameters["@nama_lengkap"].Value = nama_lengkap;
+                    sqlda.SelectCommand.Parameters["@tanggal_lahir"].Value = tanggal_lahir;
+                    sqlda.SelectCommand.Parameters["@alamat_email"].Value = alamat_email;
+                    sqlda.SelectCommand.ExecuteNonQuery();
+
+                    hasil = "Data Berhasil Diubah";
+                }
+            }
+            catch (Exception ex)
+            {
+                hasil = ex.Message;
+            }
+            finally
+            {
+                sqlcon.Close();
+            }
+            return hasil;
+        }
     }
 }
