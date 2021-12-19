@@ -45,16 +45,17 @@ namespace Darimu.ClassFolder
 
         public static void riwayat_transaksi(string nama_pengguna, DataGridView grid_transaksi)
         {
+            grid_transaksi.Rows.Clear();
             sqlcon.Open();
             SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_transaksi WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
             while(dr.Read())
             {
-                string tanggal = dr.GetDateTime(0).ToString("yyyy/mm/dd");
-                string keterangan = dr.GetString(1);
-                string debit = dr.GetInt64(2).ToString();
-                string kredit = dr.GetInt64(3).ToString();
-                string saldo = dr.GetInt64(4).ToString();
+                string tanggal = dr.GetDateTime(3).ToString();
+                string keterangan = dr.GetString(4);
+                string debit = dr.GetInt64(5).ToString();
+                string kredit = dr.GetInt64(6).ToString();
+                string saldo = dr.GetInt64(7).ToString();
                 grid_transaksi.Rows.Add(tanggal, keterangan, debit, kredit, saldo);
             }
             sqlcon.Close();
