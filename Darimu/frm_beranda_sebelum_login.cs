@@ -80,11 +80,11 @@ namespace Darimu
         private void generate_captcha_image()
         {
             Random r = new Random();
-            angka = r.Next(100, 10000);
+            angka = r.Next(1000, 9999);
             var image = new Bitmap(this.gambar_captcha.Width, this.gambar_captcha.Height);
             var font = new Font("Cabin", 55, FontStyle.Bold, GraphicsUnit.Pixel);
             var graphics = Graphics.FromImage(image);
-            graphics.DrawString(angka.ToString(), font, Brushes.Green, new Point(0, 0));
+            graphics.DrawString(angka.ToString(), font, Brushes.DeepSkyBlue, new Point(0, 0));
             gambar_captcha.Image = image;
         }
 

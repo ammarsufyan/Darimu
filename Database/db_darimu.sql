@@ -85,6 +85,8 @@ CREATE TABLE tb_tabungan_impian(
 	id_tabungan_impian AS ('TI-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
     nama_pengguna VARCHAR(10) NOT NULL,
     nama_tabungan_impian VARCHAR(100) NOT NULL,
+    nama_gambar VARCHAR(100) NOT NULL,
+    tautan_gambar AS ('global::Darimu.Properties.Resources.' + nama_gambar) PERSISTED, 
     saldo_terkumpul BIGINT NOT NULL,
     saldo_impian BIGINT NOT NULL,
     tenggat_waktu DATETIME NOT NULL,
@@ -92,6 +94,7 @@ CREATE TABLE tb_tabungan_impian(
     tanggal_tutup DATETIME NULL,
     [status_tabungan_impian] VARCHAR(255) NULL CHECK ([status_tabungan_impian] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
+
 
 
 -- ========================================================================

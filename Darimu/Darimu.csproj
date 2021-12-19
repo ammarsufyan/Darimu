@@ -147,6 +147,7 @@
     <Content Include="Assets\gambar_login.png" />
     <None Include="Assets\gambar_profil_saya.png" />
     <None Include="Assets\gambar_tambah_saldo.png" />
+    <None Include="Assets\gambar_tambah_impian.png" />
     <Content Include="Assets\gambar_tentang_kami.png" />
     <None Include="Assets\gambar_ubah_profil_saya.png" />
     <Content Include="Assets\icon_akun.png" />

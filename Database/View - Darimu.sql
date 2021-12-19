@@ -3,7 +3,7 @@
 
 
 CREATE VIEW view_transaksi AS
-SELECT tbt.tanggal, tbt.keterangan, tbt.debit, tbt.kredit, tbt.saldo
+SELECT tbp.nama_pengguna, tbt.tanggal, tbt.keterangan, tbt.debit, tbt.kredit, tbt.saldo
 FROM tb_transaksi AS tbt
 INNER JOIN tb_pengguna tbp
 ON tbt.nama_pengguna = tbp.nama_pengguna
