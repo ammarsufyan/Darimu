@@ -183,6 +183,16 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gambar_tambah_saldo {
+            get {
+                object obj = ResourceManager.GetObject("gambar_tambah_saldo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gambar_tentang_kami {
             get {
                 object obj = ResourceManager.GetObject("gambar_tentang_kami", resourceCulture);
@@ -476,6 +486,26 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap panah_sebelum_biru {
             get {
                 object obj = ResourceManager.GetObject("panah_sebelum_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pilih_bank {
+            get {
+                object obj = ResourceManager.GetObject("pilih_bank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pilih_bank_biru {
+            get {
+                object obj = ResourceManager.GetObject("pilih_bank_biru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

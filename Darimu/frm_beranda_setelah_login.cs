@@ -59,7 +59,7 @@ namespace Darimu
             panel_isi_tabungan_impian.Visible = false;
             panel_isi_tambah_tabungan_impian.Visible = false;
             panel_isi_ubah_profil_saya.Visible = false;
-            panel_isi_ubah_tabungan_impian.Visible = false;
+            panel_isi_tambah_saldo.Visible = false;
         }
 
         /* event title bar */
@@ -92,6 +92,9 @@ namespace Darimu
 
         private void icon_topup_MouseClick(object sender, MouseEventArgs e)
         {
+            hide_panel();
+            default_color();
+            panel_isi_tambah_saldo.Visible = true;
         }
 
         // create method to collapse and uncollapse menu
@@ -363,46 +366,10 @@ namespace Darimu
 
             hide_panel();
             panel_isi_profil_saya.Visible = true;
-
-
-            // XmlDocument doc = new XmlDocument();
-            // doc.Load(@"http://localhost:81/webservice/xml/darimu/lihat_pengguna.php?nama_pengguna" + nama_pengguna);
-            // XmlElement root = doc.DocumentElement;
-            // XmlNodeList nodes = root.SelectNodes("/datapengguna");
-
-            // String res = "";
-
-            // foreach (XmlNode node in nodes)
-            // {
-            //     // Respon apakah gagal atau tidak
-            //     res = node["response"].InnerText.Trim();
-
-            //     // respon yang digunakan untuk menampilkan data profil
-            //     nama_lengkap = node["nama_lengkap"].InnerText.Trim();
-            //     alamat_email = node["alamat_email"].InnerText.Trim();
-            //     tanggal_lahir = node["tanggal_lahir"].InnerText.Trim();
-            // }
-
-            // if (res.Equals("Berhasil"))
-            // {
-            //     string[] nama_depan_belakang = nama_lengkap.Split(' ');
-            //     label_nama_depan.Text = nama_depan_belakang[0];
-            //     label_nama_belakang.Text = nama_depan_belakang[1];
-            //     label_alamat_email.Text = alamat_email;
-            //     label_tanggal_lahir.Text = tanggal_lahir;
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Gagal mengambil data profil",
-            //                     "Gagal Mengakses Profil",
-            //                     MessageBoxButtons.OK,
-            //                     MessageBoxIcon.Information);
-            // }
         }
 
         private void button_simpan_MouseEnter(object sender, EventArgs e)
         {
-            button_simpan.BackColor = System.Drawing.Color.White;
             button_simpan.Image = global::Darimu.Properties.Resources.button_simpan_dipencet;
         }
 
@@ -413,7 +380,6 @@ namespace Darimu
 
         private void button_batal_MouseEnter(object sender, EventArgs e)
         {
-            button_batal.BackColor = System.Drawing.Color.White;
             button_batal.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
         }
 
@@ -426,6 +392,56 @@ namespace Darimu
         {
             hide_panel();
             panel_isi_ubah_profil_saya.Visible = true;
+        }
+
+        private void button_BRI_MouseEnter(object sender, EventArgs e)
+        {
+            button_BRI.Image = global::Darimu.Properties.Resources.pilih_bank_biru;
+        }
+
+        private void button_BRI_MouseLeave(object sender, EventArgs e)
+        {
+            button_BRI.Image = global::Darimu.Properties.Resources.pilih_bank;
+        }
+
+        private void button_BCA_MouseEnter(object sender, EventArgs e)
+        {
+            button_BCA.Image = global::Darimu.Properties.Resources.pilih_bank_biru;
+        }
+
+        private void button_BCA_MouseLeave(object sender, EventArgs e)
+        {
+            button_BCA.Image = global::Darimu.Properties.Resources.pilih_bank;
+        }
+
+        private void button_BNI_MouseEnter(object sender, EventArgs e)
+        {
+            button_BNI.Image = global::Darimu.Properties.Resources.pilih_bank_biru;
+        }
+
+        private void button_BNI_MouseLeave(object sender, EventArgs e)
+        {
+            button_BNI.Image = global::Darimu.Properties.Resources.pilih_bank;
+        }
+
+        private void button_simpan_saldo_MouseEnter(object sender, EventArgs e)
+        {
+            button_simpan_saldo.Image = global::Darimu.Properties.Resources.button_simpan_dipencet;
+        }
+
+        private void button_simpan_saldo_MouseLeave(object sender, EventArgs e)
+        {
+            button_simpan_saldo.Image = global::Darimu.Properties.Resources.button_simpan;
+        }
+
+        private void button_batal_saldo_MouseEnter(object sender, EventArgs e)
+        {
+            button_batal_saldo.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
+        }
+
+        private void button_batal_saldo_MouseLeave(object sender, EventArgs e)
+        {
+            button_batal_saldo.Image = global::Darimu.Properties.Resources.button_batal;
         }
     }
 }

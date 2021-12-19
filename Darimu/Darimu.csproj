@@ -132,6 +132,7 @@
     <None Include="Assets\button_batal_dipencet.png" />
     <None Include="Assets\button_simpan.png" />
     <None Include="Assets\button_simpan_dipencet.png" />
+    <None Include="Assets\Blue\pilih_bank_biru.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
@@ -142,6 +143,7 @@
     <Content Include="Assets\gambar_faq_2.png" />
     <Content Include="Assets\gambar_login.png" />
     <None Include="Assets\gambar_profil_saya.png" />
+    <None Include="Assets\gambar_tambah_saldo.png" />
     <Content Include="Assets\gambar_tentang_kami.png" />
     <None Include="Assets\gambar_ubah_profil_saya.png" />
     <Content Include="Assets\icon_akun.png" />
@@ -161,6 +163,7 @@
     <Content Include="Assets\minimize.png" />
     <None Include="Assets\panah_sebelum.png" />
     <None Include="Assets\panah_berikutnya.png" />
+    <None Include="Assets\pilih_bank.png" />
     <Content Include="Assets\Tagline_Beranda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
