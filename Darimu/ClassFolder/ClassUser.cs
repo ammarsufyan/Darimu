@@ -139,7 +139,7 @@ namespace Darimu.ClassFolder
             try
             {
                 sqlcon.Open();
-                SqlCommand sqlcom = new SqlCommand("SELECT alamat_email FROM tb_pengguna", sqlcon);
+                SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE alamat_email = '" + alamat_email + "'", sqlcon);
                 SqlDataReader dr = sqlcom.ExecuteReader();
 
                 if (dr.Read())

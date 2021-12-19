@@ -35,7 +35,7 @@ namespace Darimu
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        // change all button and label color to white
+        // get profile data
         private void ambil_data_profil()
         {
             ArrayList data_pengguna = ClassUser.lihatPengguna(nama_pengguna);
@@ -44,6 +44,11 @@ namespace Darimu
             txt_ubah_nama_belakang.Text = nama_depan_belakang[1];
             txt_ubah_email.Text = data_pengguna[3].ToString();
             ubah_tanggal_lahir.Text = data_pengguna[2].ToString();
+
+            label_nama_depan.Text = nama_depan_belakang[0];
+            label_nama_belakang.Text = nama_depan_belakang[1];
+            label_tanggal_lahir.Text = data_pengguna[2].ToString();
+            label_alamat_email.Text = data_pengguna[3].ToString();
         }
         // hide all panel
         private void hide_panel()
@@ -142,6 +147,7 @@ namespace Darimu
 
         private void button_tabungan_MouseClick(object sender, MouseEventArgs e)
         {
+            drop_down_tabungan.Show(button_tabungan, button_tabungan.Width, 0);
         }
 
         private void button_beranda_MouseClick(object sender, MouseEventArgs e)
@@ -290,6 +296,9 @@ namespace Darimu
         {
             drop_down_profil.IsMainMenu = true;
             drop_down_profil.PrimaryColor = Color.FromArgb(16, 53, 78);
+
+            drop_down_tabungan.IsMainMenu = true;
+            drop_down_tabungan.PrimaryColor = Color.FromArgb(16, 53, 78);
         }
 
         private void button_keluar_MouseClick(object sender, MouseEventArgs e)

@@ -71,6 +71,13 @@
             this.panel_border_isi_bawah = new System.Windows.Forms.Panel();
             this.panel_border_isi_kanan = new System.Windows.Forms.Panel();
             this.panel_isi_riwayat_transaksi = new System.Windows.Forms.Panel();
+            this.label_transaksi = new System.Windows.Forms.Label();
+            this.grid_transaksi = new System.Windows.Forms.DataGridView();
+            this.tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keterangan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_isi_ubah_profil_saya = new System.Windows.Forms.Panel();
             this.label_ubah_email = new System.Windows.Forms.Label();
             this.button_batal_ubah_profil = new System.Windows.Forms.Button();
@@ -111,12 +118,9 @@
             this.laporanSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ubahProfilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riwayatTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grid_transaksi = new System.Windows.Forms.DataGridView();
-            this.tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.keterangan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.debit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drop_down_tabungan = new Darimu.CustomControls.DRMDropDownMenu(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_menu.SuspendLayout();
             this.panel_header_sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).BeginInit();
@@ -132,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
             this.panel_isi.SuspendLayout();
             this.panel_isi_riwayat_transaksi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).BeginInit();
             this.panel_isi_ubah_profil_saya.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_ubah_profil_saya)).BeginInit();
             this.panel_isi_profil_saya.SuspendLayout();
@@ -145,7 +150,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gambar_bank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_saldo)).BeginInit();
             this.drop_down_profil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).BeginInit();
+            this.drop_down_tabungan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_menu
@@ -685,7 +690,6 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
-            this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Controls.Add(this.panel_isi_ubah_profil_saya);
             this.panel_isi.Controls.Add(this.panel_isi_profil_saya);
             this.panel_isi.Controls.Add(this.panel_isi_beranda);
@@ -696,6 +700,7 @@
             this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -722,6 +727,7 @@
             // 
             // panel_isi_riwayat_transaksi
             // 
+            this.panel_isi_riwayat_transaksi.Controls.Add(this.label_transaksi);
             this.panel_isi_riwayat_transaksi.Controls.Add(this.grid_transaksi);
             this.panel_isi_riwayat_transaksi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi_riwayat_transaksi.Location = new System.Drawing.Point(0, 0);
@@ -729,6 +735,79 @@
             this.panel_isi_riwayat_transaksi.Size = new System.Drawing.Size(795, 470);
             this.panel_isi_riwayat_transaksi.TabIndex = 20;
             this.panel_isi_riwayat_transaksi.Visible = false;
+            // 
+            // label_transaksi
+            // 
+            this.label_transaksi.AutoSize = true;
+            this.label_transaksi.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_transaksi.ForeColor = System.Drawing.Color.White;
+            this.label_transaksi.Location = new System.Drawing.Point(224, 7);
+            this.label_transaksi.Name = "label_transaksi";
+            this.label_transaksi.Size = new System.Drawing.Size(360, 37);
+            this.label_transaksi.TabIndex = 6;
+            this.label_transaksi.Text = "Riwayat Transaksi Anda";
+            // 
+            // grid_transaksi
+            // 
+            this.grid_transaksi.AllowUserToAddRows = false;
+            this.grid_transaksi.AllowUserToDeleteRows = false;
+            this.grid_transaksi.AllowUserToResizeColumns = false;
+            this.grid_transaksi.AllowUserToResizeRows = false;
+            this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grid_transaksi.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tanggal,
+            this.keterangan,
+            this.debit,
+            this.kredit,
+            this.saldo});
+            this.grid_transaksi.EnableHeadersVisualStyles = false;
+            this.grid_transaksi.Location = new System.Drawing.Point(32, 47);
+            this.grid_transaksi.Name = "grid_transaksi";
+            this.grid_transaksi.ReadOnly = true;
+            this.grid_transaksi.RowHeadersVisible = false;
+            this.grid_transaksi.Size = new System.Drawing.Size(733, 374);
+            this.grid_transaksi.TabIndex = 0;
+            // 
+            // tanggal
+            // 
+            this.tanggal.HeaderText = "tanggal";
+            this.tanggal.Name = "tanggal";
+            this.tanggal.ReadOnly = true;
+            // 
+            // keterangan
+            // 
+            this.keterangan.HeaderText = "keterangan";
+            this.keterangan.Name = "keterangan";
+            this.keterangan.ReadOnly = true;
+            // 
+            // debit
+            // 
+            this.debit.HeaderText = "debit";
+            this.debit.Name = "debit";
+            this.debit.ReadOnly = true;
+            // 
+            // kredit
+            // 
+            this.kredit.HeaderText = "kredit";
+            this.kredit.Name = "kredit";
+            this.kredit.ReadOnly = true;
+            // 
+            // saldo
+            // 
+            this.saldo.HeaderText = "saldo";
+            this.saldo.Name = "saldo";
+            this.saldo.ReadOnly = true;
             // 
             // panel_isi_ubah_profil_saya
             // 
@@ -753,7 +832,7 @@
             this.label_ubah_email.BackColor = System.Drawing.Color.White;
             this.label_ubah_email.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_ubah_email.Font = new System.Drawing.Font("Cabin", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ubah_email.Location = new System.Drawing.Point(135, 257);
+            this.label_ubah_email.Location = new System.Drawing.Point(85, 257);
             this.label_ubah_email.Name = "label_ubah_email";
             this.label_ubah_email.Size = new System.Drawing.Size(182, 18);
             this.label_ubah_email.TabIndex = 10;
@@ -804,18 +883,19 @@
             // ubah_tanggal_lahir
             // 
             this.ubah_tanggal_lahir.CalendarFont = new System.Drawing.Font("Cabin", 12F);
-            this.ubah_tanggal_lahir.Location = new System.Drawing.Point(387, 230);
+            this.ubah_tanggal_lahir.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ubah_tanggal_lahir.Location = new System.Drawing.Point(442, 230);
             this.ubah_tanggal_lahir.MaxDate = new System.DateTime(2004, 12, 31, 0, 0, 0, 0);
             this.ubah_tanggal_lahir.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
             this.ubah_tanggal_lahir.Name = "ubah_tanggal_lahir";
-            this.ubah_tanggal_lahir.Size = new System.Drawing.Size(200, 20);
+            this.ubah_tanggal_lahir.Size = new System.Drawing.Size(200, 27);
             this.ubah_tanggal_lahir.TabIndex = 4;
             this.ubah_tanggal_lahir.Value = new System.DateTime(2004, 12, 31, 0, 0, 0, 0);
             // 
             // txt_ubah_email
             // 
-            this.txt_ubah_email.Font = new System.Drawing.Font("Cabin", 12F);
-            this.txt_ubah_email.Location = new System.Drawing.Point(136, 226);
+            this.txt_ubah_email.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.txt_ubah_email.Location = new System.Drawing.Point(86, 226);
             this.txt_ubah_email.Name = "txt_ubah_email";
             this.txt_ubah_email.ReadOnly = true;
             this.txt_ubah_email.Size = new System.Drawing.Size(200, 27);
@@ -823,8 +903,8 @@
             // 
             // txt_ubah_nama_belakang
             // 
-            this.txt_ubah_nama_belakang.Font = new System.Drawing.Font("Cabin", 12F);
-            this.txt_ubah_nama_belakang.Location = new System.Drawing.Point(387, 155);
+            this.txt_ubah_nama_belakang.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.txt_ubah_nama_belakang.Location = new System.Drawing.Point(442, 155);
             this.txt_ubah_nama_belakang.Name = "txt_ubah_nama_belakang";
             this.txt_ubah_nama_belakang.Size = new System.Drawing.Size(200, 27);
             this.txt_ubah_nama_belakang.TabIndex = 2;
@@ -832,15 +912,15 @@
             // 
             // txt_ubah_nama_depan
             // 
-            this.txt_ubah_nama_depan.Font = new System.Drawing.Font("Cabin", 12F);
-            this.txt_ubah_nama_depan.Location = new System.Drawing.Point(136, 155);
+            this.txt_ubah_nama_depan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.txt_ubah_nama_depan.Location = new System.Drawing.Point(86, 155);
             this.txt_ubah_nama_depan.Name = "txt_ubah_nama_depan";
             this.txt_ubah_nama_depan.Size = new System.Drawing.Size(200, 27);
             this.txt_ubah_nama_depan.TabIndex = 1;
             // 
             // gambar_ubah_profil_saya
             // 
-            this.gambar_ubah_profil_saya.Image = global::Darimu.Properties.Resources.gambar_ubah_profil_saya;
+            this.gambar_ubah_profil_saya.Image = ((System.Drawing.Image)(resources.GetObject("gambar_ubah_profil_saya.Image")));
             this.gambar_ubah_profil_saya.Location = new System.Drawing.Point(38, 19);
             this.gambar_ubah_profil_saya.Name = "gambar_ubah_profil_saya";
             this.gambar_ubah_profil_saya.Size = new System.Drawing.Size(718, 374);
@@ -867,7 +947,7 @@
             this.label_tanggal_lahir.AutoSize = true;
             this.label_tanggal_lahir.BackColor = System.Drawing.Color.White;
             this.label_tanggal_lahir.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tanggal_lahir.Location = new System.Drawing.Point(383, 222);
+            this.label_tanggal_lahir.Location = new System.Drawing.Point(439, 230);
             this.label_tanggal_lahir.Name = "label_tanggal_lahir";
             this.label_tanggal_lahir.Size = new System.Drawing.Size(126, 22);
             this.label_tanggal_lahir.TabIndex = 4;
@@ -878,7 +958,7 @@
             this.label_alamat_email.AutoSize = true;
             this.label_alamat_email.BackColor = System.Drawing.Color.White;
             this.label_alamat_email.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_alamat_email.Location = new System.Drawing.Point(132, 222);
+            this.label_alamat_email.Location = new System.Drawing.Point(80, 226);
             this.label_alamat_email.Name = "label_alamat_email";
             this.label_alamat_email.Size = new System.Drawing.Size(124, 22);
             this.label_alamat_email.TabIndex = 3;
@@ -889,7 +969,7 @@
             this.label_nama_belakang.AutoSize = true;
             this.label_nama_belakang.BackColor = System.Drawing.Color.White;
             this.label_nama_belakang.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_belakang.Location = new System.Drawing.Point(383, 151);
+            this.label_nama_belakang.Location = new System.Drawing.Point(439, 155);
             this.label_nama_belakang.Name = "label_nama_belakang";
             this.label_nama_belakang.Size = new System.Drawing.Size(145, 22);
             this.label_nama_belakang.TabIndex = 2;
@@ -900,7 +980,7 @@
             this.label_nama_depan.AutoSize = true;
             this.label_nama_depan.BackColor = System.Drawing.Color.White;
             this.label_nama_depan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_depan.Location = new System.Drawing.Point(132, 151);
+            this.label_nama_depan.Location = new System.Drawing.Point(80, 155);
             this.label_nama_depan.Name = "label_nama_depan";
             this.label_nama_depan.Size = new System.Drawing.Size(120, 22);
             this.label_nama_depan.TabIndex = 1;
@@ -908,7 +988,7 @@
             // 
             // gambar_profil_saya
             // 
-            this.gambar_profil_saya.Image = global::Darimu.Properties.Resources.gambar_profil_saya;
+            this.gambar_profil_saya.Image = ((System.Drawing.Image)(resources.GetObject("gambar_profil_saya.Image")));
             this.gambar_profil_saya.Location = new System.Drawing.Point(38, 19);
             this.gambar_profil_saya.Name = "gambar_profil_saya";
             this.gambar_profil_saya.Size = new System.Drawing.Size(718, 374);
@@ -1242,64 +1322,35 @@
             this.riwayatTransaksiToolStripMenuItem.Text = "Riwayat Transaksi";
             this.riwayatTransaksiToolStripMenuItem.Click += new System.EventHandler(this.riwayatTransaksiToolStripMenuItem_Click);
             // 
-            // grid_transaksi
+            // drop_down_tabungan
             // 
-            this.grid_transaksi.AllowUserToAddRows = false;
-            this.grid_transaksi.AllowUserToDeleteRows = false;
-            this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grid_transaksi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tanggal,
-            this.keterangan,
-            this.debit,
-            this.kredit,
-            this.saldo});
-            this.grid_transaksi.EnableHeadersVisualStyles = false;
-            this.grid_transaksi.Location = new System.Drawing.Point(38, 19);
-            this.grid_transaksi.Name = "grid_transaksi";
-            this.grid_transaksi.ReadOnly = true;
-            this.grid_transaksi.Size = new System.Drawing.Size(733, 374);
-            this.grid_transaksi.TabIndex = 0;
+            this.drop_down_tabungan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.drop_down_tabungan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.drop_down_tabungan.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.drop_down_tabungan.IsMainMenu = false;
+            this.drop_down_tabungan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.drop_down_tabungan.MenuItemHeight = 25;
+            this.drop_down_tabungan.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.drop_down_tabungan.Name = "drop_down_profil";
+            this.drop_down_tabungan.PrimaryColor = System.Drawing.Color.Empty;
+            this.drop_down_tabungan.ShowItemToolTips = false;
+            this.drop_down_tabungan.Size = new System.Drawing.Size(238, 48);
             // 
-            // tanggal
+            // toolStripMenuItem1
             // 
-            this.tanggal.HeaderText = "tanggal";
-            this.tanggal.Name = "tanggal";
-            this.tanggal.ReadOnly = true;
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(237, 22);
+            this.toolStripMenuItem1.Text = "Tabungan Impian";
             // 
-            // keterangan
+            // toolStripMenuItem2
             // 
-            this.keterangan.HeaderText = "keterangan";
-            this.keterangan.Name = "keterangan";
-            this.keterangan.ReadOnly = true;
-            // 
-            // debit
-            // 
-            this.debit.HeaderText = "debit";
-            this.debit.Name = "debit";
-            this.debit.ReadOnly = true;
-            // 
-            // kredit
-            // 
-            this.kredit.HeaderText = "kredit";
-            this.kredit.Name = "kredit";
-            this.kredit.ReadOnly = true;
-            // 
-            // saldo
-            // 
-            this.saldo.HeaderText = "saldo";
-            this.saldo.Name = "saldo";
-            this.saldo.ReadOnly = true;
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 22);
+            this.toolStripMenuItem2.Text = "Tambah Tabungan Impian";
             // 
             // frm_beranda_setelah_login
             // 
@@ -1336,6 +1387,8 @@
             this.panel_isi.ResumeLayout(false);
             this.panel_isi.PerformLayout();
             this.panel_isi_riwayat_transaksi.ResumeLayout(false);
+            this.panel_isi_riwayat_transaksi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).EndInit();
             this.panel_isi_ubah_profil_saya.ResumeLayout(false);
             this.panel_isi_ubah_profil_saya.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_ubah_profil_saya)).EndInit();
@@ -1354,7 +1407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gambar_bank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_saldo)).EndInit();
             this.drop_down_profil.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).EndInit();
+            this.drop_down_tabungan.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1446,6 +1499,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn debit;
         private System.Windows.Forms.DataGridViewTextBoxColumn kredit;
         private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
+        private System.Windows.Forms.Label label_transaksi;
+        private CustomControls.DRMDropDownMenu drop_down_tabungan;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 
