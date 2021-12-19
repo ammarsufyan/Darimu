@@ -18,7 +18,7 @@ namespace Darimu.ClassFolder
             return hashedPassword;
         }
 
-        public static string daftarUser(string nama_pengguna, String nama_lengkap, string tanggal_lahir, string alamat_email, string kata_sandi)
+        public static string daftarUser(string nama_pengguna, string nama_lengkap, string tanggal_lahir, string alamat_email, string kata_sandi)
         {
             string hasil = "";
             try
@@ -29,7 +29,14 @@ namespace Darimu.ClassFolder
 
                 if (dr.Read())
                 {
-                    hasil = "Email sudah terdaftar";
+                    string ambil_nama_pengguna = dr.GetString(0);
+                    if(ambil_nama_pengguna == nama_pengguna)
+                    {
+                        hasil = "Nama pengguna sudah terdaftar";
+                    } else
+                    {
+                        hasil = "Email sudah terdaftar";
+                    }
                 }
                 else
                 {
@@ -132,18 +139,18 @@ namespace Darimu.ClassFolder
             try
             {
                 sqlcon.Open();
-                SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE alamat_email = '" + alamat_email + "'", sqlcon);
+                SqlCommand sqlcom = new SqlCommand("SELECT alamat_email FROM tb_pengguna", sqlcon);
                 SqlDataReader dr = sqlcom.ExecuteReader();
 
                 if (dr.Read())
                 {
                     hasil = "Email sudah terdaftar";
-                }
+                } 
                 else
                 {
                     dr.Close();
 
-                    SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_pengguna SET nama_lengkap = '@nama_lengkap', tanggal_lahir = '@tanggal_lahir',alamat_email = '@alamat_email' WHERE nama_pengguna = '@nama_pengguna' ", sqlcon);
+                    SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_pengguna SET nama_lengkap = @nama_lengkap, tanggal_lahir = @tanggal_lahir, alamat_email = @alamat_email WHERE nama_pengguna = @nama_pengguna", sqlcon);
                     sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna", SqlDbType.VarChar, 100));
                     sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_lengkap", SqlDbType.VarChar, 100));
                     sqlda.SelectCommand.Parameters.Add(new SqlParameter("@tanggal_lahir", SqlDbType.Date));
@@ -157,6 +164,35 @@ namespace Darimu.ClassFolder
 
                     hasil = "Data Berhasil Diubah";
                 }
+            }
+            catch (Exception ex)
+            {
+                hasil = ex.Message;
+            }
+            finally
+            {
+                sqlcon.Close();
+            }
+            return hasil;
+        }
+
+        public static string ubah_data_pengguna_tanpa_email(string nama_pengguna, string nama_lengkap, string tanggal_lahir)
+        {
+            string hasil = "";
+            try
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_pengguna SET nama_lengkap = @nama_lengkap, tanggal_lahir = @tanggal_lahir WHERE nama_pengguna = @nama_pengguna", sqlcon);
+                sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna", SqlDbType.VarChar, 100));
+                sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_lengkap", SqlDbType.VarChar, 100));
+                sqlda.SelectCommand.Parameters.Add(new SqlParameter("@tanggal_lahir", SqlDbType.Date));
+
+                sqlda.SelectCommand.Parameters["@nama_pengguna"].Value = nama_pengguna;
+                sqlda.SelectCommand.Parameters["@nama_lengkap"].Value = nama_lengkap;
+                sqlda.SelectCommand.Parameters["@tanggal_lahir"].Value = tanggal_lahir;
+                sqlda.SelectCommand.ExecuteNonQuery();
+
+                hasil = "Data Berhasil Diubah";
             }
             catch (Exception ex)
             {

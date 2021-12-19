@@ -133,6 +133,9 @@
     <None Include="Assets\button_simpan.png" />
     <None Include="Assets\button_simpan_dipencet.png" />
     <None Include="Assets\Blue\pilih_bank_biru.png" />
+    <None Include="Assets\bank_bca.png" />
+    <None Include="Assets\bank_bni.png" />
+    <None Include="Assets\bank_bri.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />

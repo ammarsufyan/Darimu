@@ -12,7 +12,7 @@ namespace Darimu
     public partial class frm_beranda_setelah_login : Form
     {
         // declaration var
-        public string nama_pengguna;
+        public string nama_pengguna, pilihan_bank;
         private int borderSize = 2;
         private Size formSize;
         int angka = 0;
@@ -36,16 +36,15 @@ namespace Darimu
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         // change all button and label color to white
-        private void default_color()
+        private void ambil_data_profil()
         {
-            button_beranda.ForeColor = System.Drawing.Color.White;
-            button_profil.ForeColor = System.Drawing.Color.White;
-            button_tabungan.ForeColor = System.Drawing.Color.White;
-            button_faq.ForeColor = System.Drawing.Color.White;
-            button_tentang_kami.ForeColor = System.Drawing.Color.White;
-            button_keluar.ForeColor = System.Drawing.Color.White;
+            ArrayList data_pengguna = ClassUser.lihatPengguna(nama_pengguna);
+            string[] nama_depan_belakang = data_pengguna[1].ToString().Split(' ');
+            txt_ubah_nama_depan.Text = nama_depan_belakang[0];
+            txt_ubah_nama_belakang.Text = nama_depan_belakang[1];
+            txt_ubah_email.Text = data_pengguna[3].ToString();
+            ubah_tanggal_lahir.Text = data_pengguna[2].ToString();
         }
-
         // hide all panel
         private void hide_panel()
         {
@@ -53,7 +52,7 @@ namespace Darimu
             panel_isi_faq.Visible = false;
             panel_isi_tentang_kami.Visible = false;
             panel_isi_laporan_saya.Visible = false;
-            panel_isi_riwayat_tabungan.Visible = false;
+            panel_isi_riwayat_transaksi.Visible = false;
             panel_isi_profil_saya.Visible = false;
             panel_isi_riwayat_tabungan_impian.Visible = false;
             panel_isi_tabungan_impian.Visible = false;
@@ -93,7 +92,6 @@ namespace Darimu
         private void icon_topup_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_tambah_saldo.Visible = true;
         }
 
@@ -149,7 +147,6 @@ namespace Darimu
         private void button_beranda_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_beranda.Visible = true;
             button_beranda.ForeColor = System.Drawing.Color.Cyan;
         }
@@ -157,7 +154,6 @@ namespace Darimu
         private void button_faq_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_faq.Visible = true;
             button_faq.ForeColor = System.Drawing.Color.Cyan;
         }
@@ -165,7 +161,6 @@ namespace Darimu
         private void button_tentang_kami_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_tentang_kami.Visible = true;
             button_tentang_kami.ForeColor = System.Drawing.Color.Cyan;
         }
@@ -288,7 +283,6 @@ namespace Darimu
         private void button_nabung_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             button_keluar.ForeColor = System.Drawing.Color.Cyan;
         }
 
@@ -309,7 +303,6 @@ namespace Darimu
             if (result == DialogResult.Yes)
             {
                 hide_panel();
-                default_color();
                 frm_beranda_sebelum_login p = new frm_beranda_sebelum_login();
                 this.Hide();
                 p.Show();
@@ -357,41 +350,36 @@ namespace Darimu
 
         private void profilSayaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ArrayList data_pengguna = ClassUser.lihatPengguna(nama_pengguna);
-            string[] nama_depan_belakang = data_pengguna[1].ToString().Split(' ');
-            label_nama_depan.Text = nama_depan_belakang[0];
-            label_nama_belakang.Text = nama_depan_belakang[1];
-            label_alamat_email.Text = data_pengguna[3].ToString();
-            label_tanggal_lahir.Text = data_pengguna[2].ToString();
-
             hide_panel();
             panel_isi_profil_saya.Visible = true;
+            ambil_data_profil();
         }
 
         private void button_simpan_MouseEnter(object sender, EventArgs e)
         {
-            button_simpan.Image = global::Darimu.Properties.Resources.button_simpan_dipencet;
+            button_simpan_ubah_profil.Image = global::Darimu.Properties.Resources.button_simpan_dipencet;
         }
 
         private void button_simpan_MouseLeave(object sender, EventArgs e)
         {
-            button_simpan.Image = global::Darimu.Properties.Resources.button_simpan;
+            button_simpan_ubah_profil.Image = global::Darimu.Properties.Resources.button_simpan;
         }
 
         private void button_batal_MouseEnter(object sender, EventArgs e)
         {
-            button_batal.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
+            button_batal_ubah_profil.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
         }
 
         private void button_batal_MouseLeave(object sender, EventArgs e)
         {
-            button_batal.Image = global::Darimu.Properties.Resources.button_batal;
+            button_batal_ubah_profil.Image = global::Darimu.Properties.Resources.button_batal;
         }
 
         private void ubahProfilSayaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             hide_panel();
             panel_isi_ubah_profil_saya.Visible = true;
+            ambil_data_profil();
         }
 
         private void button_BRI_MouseEnter(object sender, EventArgs e)
@@ -442,6 +430,147 @@ namespace Darimu
         private void button_batal_saldo_MouseLeave(object sender, EventArgs e)
         {
             button_batal_saldo.Image = global::Darimu.Properties.Resources.button_batal;
+        }
+
+        private void button_BRI_MouseClick(object sender, MouseEventArgs e)
+        {
+            pilihan_bank = "Setor Saldo Melalui BRI";
+            gambar_bank.Image = global::Darimu.Properties.Resources.bank_bri;
+        }
+
+        private void button_BCA_MouseClick(object sender, MouseEventArgs e)
+        {
+            pilihan_bank = "Setor Saldo Melalui BCA";
+            gambar_bank.Image = global::Darimu.Properties.Resources.bank_bca;
+        }
+
+        private void button_BNI_MouseClick(object sender, MouseEventArgs e)
+        {
+            pilihan_bank = "Setor Saldo Melalui BNI";
+            gambar_bank.Image = global::Darimu.Properties.Resources.bank_bni;
+        }
+
+        private void button_batal_saldo_MouseClick(object sender, MouseEventArgs e)
+        {
+            hide_panel();
+            panel_isi_beranda.Visible = true;
+        }
+
+        private void button_simpan_ubah_profil_MouseClick(object sender, MouseEventArgs e)
+        {
+            string cek = ClassValidasi.cekUbahProfil(txt_ubah_nama_depan, txt_ubah_nama_belakang, txt_ubah_email);
+
+            if (cek == "valid")
+            {
+                string nama_belakang;
+
+                if (txt_ubah_nama_belakang.Text == "Nama Belakang")
+                {
+                    nama_belakang = "";
+                }
+                else
+                {
+                    nama_belakang = txt_ubah_nama_belakang.Text.Trim();
+                }
+                string nama_lengkap = txt_ubah_nama_depan.Text.Trim() + " " + nama_belakang;
+                string alamat_email = txt_ubah_email.Text.Trim();
+                // get the datepicker value
+                ubah_tanggal_lahir.Format = DateTimePickerFormat.Custom;
+                ubah_tanggal_lahir.CustomFormat = "yyyy/MM/dd";
+                ubah_tanggal_lahir.ShowUpDown = true;
+                string tanggal_lahir = ubah_tanggal_lahir.Value.ToString("yyyy/MM/dd");
+                var result = MessageBox.Show("Apakah Anda yakin ingin mengubah?",
+                                             "Konfirmasi Ubah Data",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    if (txt_ubah_email.ReadOnly == true)
+                    {
+                        string hasil = ClassUser.ubah_data_pengguna_tanpa_email(nama_pengguna, nama_lengkap, tanggal_lahir);
+                        MessageBox.Show(hasil, "Sukses Mengubah Data",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        hide_panel();
+                        panel_isi_profil_saya.Visible = true;
+                        txt_ubah_email.ReadOnly = true;
+                        ambil_data_profil();
+                    } else
+                    {
+                        string hasil = ClassUser.ubah_data_pengguna(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email);
+                        if(hasil == "Data Berhasil Diubah")
+                        {
+                            MessageBox.Show(hasil, "Sukses Mengubah Data",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Information);
+                            hide_panel();
+                            panel_isi_profil_saya.Visible = true;
+                            txt_ubah_email.ReadOnly = true;
+                            ambil_data_profil();
+                        }
+                        else
+                        {
+                            MessageBox.Show(hasil, "Gagal Mengubah Data",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Information);
+                            hide_panel();
+                            panel_isi_profil_saya.Visible = true;
+                            txt_ubah_email.ReadOnly = true;
+                            ambil_data_profil();
+                        }
+                    }
+                }
+            } else
+            {
+                MessageBox.Show(cek, "Lengkapi Syarat",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            }
+        }
+
+        private void label_ubah_email_MouseEnter(object sender, EventArgs e)
+        {
+            label_ubah_email.ForeColor = Color.Cyan;
+        }
+
+        private void label_ubah_email_MouseLeave(object sender, EventArgs e)
+        {
+            label_ubah_email.ForeColor = Color.Black;
+        }
+
+        private void label_ubah_email_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_ubah_email.ReadOnly = false;
+        }
+
+        private void riwayatTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hide_panel();
+            panel_isi_riwayat_transaksi.Visible = true;
+            ClassTransaksi.riwayat_transaksi(nama_pengguna, grid_transaksi);
+        }
+
+        private void button_simpan_saldo_MouseClick(object sender, MouseEventArgs e)
+        {
+            string cek = ClassValidasi.cekTambahSaldo(txt_isi_saldo, gambar_bank);
+
+            if(cek == "valid")
+            {
+                long saldo_baru = long.Parse(txt_isi_saldo.Text.Trim());
+                label_saldo.Text = ClassTransaksi.isi_saldo(nama_pengguna, saldo_baru, pilihan_bank).ToString();
+                MessageBox.Show("Selamat! Anda berhasil tambah saldo",
+                                "Tambah Saldo Berhasil",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            } else
+            {
+                MessageBox.Show(cek,
+                                "Lengkapi Syarat!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+
         }
     }
 }

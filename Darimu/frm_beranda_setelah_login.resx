@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="panel_control_box.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="icon_topup.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -133,6 +130,35 @@
 </value>
   </data>
   <metadata name="panel_control_box.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tanggal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="keterangan.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="debit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="kredit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="saldo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="button_sebelum_faq.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAUJJREFUSEvllUFSAjEQRYdyj15A9sBFkIPoEtginERwpXIYPYLFEo8gxWZ4f6an
+        EJJMMlThQl/VLybdnW4m6WSy/0We5200QGM0s9871LaQ8yFJF72hLfIhu/w9m5IOk1poinYoBcU9opal
+        qEeBaIHO4QnFCxGkN4jxhT7KR4eZpfJDgPYgtkRr1EE3xchF8/uW0gWnNrGOqsAVepEhwMpSHoNDbfpd
+        hPhRgVsUKyDUdW57Y9Q5CPGJqgKvMiQwtNQHMI5Kn0PqEp0yttQHMOok+7g3/0M5TMbtMoy/8ia6i0Jo
+        T5oW8u6Juit0R4mm3XVtqY/BcdlzInD20GVPvCBAt2mMDXovHx3mlioMQbqFn4vw5ixRo+te5ya2dBWK
+        m6O0Aj9hUh+tUN2XUf76PUiBJGrvIdK3Xf94YmN/m/5RsmwPR9JHKh2LVuQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="gambar_bank.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="gambar_tambah_saldo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -402,19 +428,8 @@
         iDQK7qVhw/4/TuSRfCjgNlkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button_sebelum_faq.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAUJJREFUSEvllUFSAjEQRYdyj15A9sBFkIPoEtginERwpXIYPYLFEo8gxWZ4f6an
-        EJJMMlThQl/VLybdnW4m6WSy/0We5200QGM0s9871LaQ8yFJF72hLfIhu/w9m5IOk1poinYoBcU9opal
-        qEeBaIHO4QnFCxGkN4jxhT7KR4eZpfJDgPYgtkRr1EE3xchF8/uW0gWnNrGOqsAVepEhwMpSHoNDbfpd
-        hPhRgVsUKyDUdW57Y9Q5CPGJqgKvMiQwtNQHMI5Kn0PqEp0yttQHMOok+7g3/0M5TMbtMoy/8ia6i0Jo
-        T5oW8u6Juit0R4mm3XVtqY/BcdlzInD20GVPvCBAt2mMDXovHx3mlioMQbqFn4vw5ixRo+te5ya2dBWK
-        m6O0Aj9hUh+tUN2XUf76PUiBJGrvIdK3Xf94YmN/m/5RsmwPR9JHKh2LVuQAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="drop_down_profil.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 3</value>
+    <value>26, 9</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>

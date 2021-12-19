@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -6,47 +7,16 @@ namespace Darimu.ClassFolder
 {
     class ClassValidasi
     {
-        static Regex re_username_password = new Regex("[a-zA-Z0-9]{8,16}");
+        static Regex re_nama_pengguna_atau_kata_sandi = new Regex("[a-zA-Z0-9]{8,16}");
+        static Regex re_huruf = new Regex("[a-zA-Z]*");
+        static Regex re_saldo = new Regex("^[0-9]{5,10}$");
         static Regex re_email = new Regex("^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
-        public static string cekAngka(string str)
-        {
-            string hasil = "false";
 
-            char[] data = str.ToCharArray();
-            for (int i = 0; i < data.Length; i++)
-            {
-                Boolean cek = Char.IsDigit(data[i]);
-                if (cek == true)
-                {
-                    hasil = "true";
-                }
-            }
-
-            return hasil;
-        }
-
-        public static string cekHuruf(string str)
-        {
-            string hasil = "false";
-
-            char[] data = str.ToCharArray();
-            for (int i = 0; i < data.Length; i++)
-            {
-                Boolean cek = Char.IsLetter(data[i]);
-                if (cek == true)
-                {
-                    hasil = "true";
-                }
-            }
-
-            return hasil;
-        }
-
-        public static string cekPendaftaran(TextBox nama_depan, TextBox email, TextBox nama_pengguna, TextBox kata_sandi, TextBox konfirmasi_kata_sandi)
+        public static string cekPendaftaran(TextBox nama_depan, TextBox nama_belakang, TextBox email, TextBox nama_pengguna, TextBox kata_sandi, TextBox konfirmasi_kata_sandi)
         {
             string hasil;
             string val_nama_depan = nama_depan.Text.Trim();
-            string cek_huruf_nama_depan = cekHuruf(val_nama_depan);
+            string val_nama_belakang = nama_belakang.Text.Trim();
             string val_nama_pengguna = nama_pengguna.Text.Trim();
             string val_email = email.Text.Trim();
             string val_kata_sandi = kata_sandi.Text.Trim();
@@ -55,21 +25,21 @@ namespace Darimu.ClassFolder
             {
                 hasil = "Masukkan nama Anda (MINIMAL NAMA DEPAN)";
             }
-            else if (cek_huruf_nama_depan.Equals("false"))
+            else if (!re_huruf.IsMatch(val_nama_depan) || !re_huruf.IsMatch(val_nama_belakang))
             {
                 hasil = "Nama harus huruf";
             }
-            else if (String.Equals("", val_nama_pengguna) || String.Equals("Nama Pengguna", val_nama_pengguna) || !re_username_password.IsMatch(val_nama_pengguna))
+            else if (String.Equals("", val_nama_pengguna) || String.Equals("Nama Pengguna", val_nama_pengguna) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_nama_pengguna))
             {
-                hasil = "Masukkan nama pengguna (MINIMAL 8 HURUF TANPA SPASI)";
+                hasil = "Masukkan nama pengguna (MINIMAL 8 HURUF TANPA KARAKTER SPESIAL)";
             }
             else if (String.Equals("", val_email) || String.Equals("Alamat Email", val_email) || !re_email.IsMatch(val_email))
             {
                 hasil = "Email harus diisi dengan benar";
             }
-            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_username_password.IsMatch(val_kata_sandi))
+            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_kata_sandi))
             {
-                hasil = "Kata sandi harus diisi dengan benar (MINIMAL 8 HURUF TANPA SPASI)";
+                hasil = "Kata sandi harus diisi dengan benar (MINIMAL 8 HURUF TANPA KARAKTER SPESIAL)";
             }
             else if (!(String.Equals(val_kata_sandi, konfirmasi_kata_sandi.Text.Trim())))
             {
@@ -89,11 +59,11 @@ namespace Darimu.ClassFolder
             string val_username = username.Text.Trim();
             string val_password = password.Text.Trim();
 
-            if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username) || !re_username_password.IsMatch(val_username))
+            if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_username))
             {
                 hasil = "Masukkan nama pengguna dengan benar";
             }
-            else if (String.Equals("", val_password) || String.Equals("password", val_password) || !re_username_password.IsMatch(val_password))
+            else if (String.Equals("", val_password) || String.Equals("password", val_password) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_password))
             {
                 hasil = "Masukkan kata sandi dengan benar";
             }
@@ -112,11 +82,11 @@ namespace Darimu.ClassFolder
             string val_kata_sandi = kata_sandi.Text.Trim();
             string val_captcha = captcha.Text.Trim();
 
-            if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email) || !re_username_password.IsMatch(val_nama_pengguna_atau_email))
+            if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_nama_pengguna_atau_email))
             {
                 hasil = "Masukkan nama pengguna dengan benar";
             }
-            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_username_password.IsMatch(val_kata_sandi))
+            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_kata_sandi))
             {
                 hasil = "Masukkan kata sandi dengan benar";
             }
@@ -128,6 +98,54 @@ namespace Darimu.ClassFolder
             {
                 hasil = "Masukkan captcha dengan benar";
             }
+            else
+            {
+                hasil = "valid";
+            }
+
+            return hasil;
+        }
+
+        public static string cekTambahSaldo(TextBox tambah_saldo, PictureBox bank)
+        {
+            string hasil = "";
+            string val_tambah_saldo = tambah_saldo.Text.Trim();
+
+            if (String.Equals("", val_tambah_saldo))
+            {
+                hasil = "Mohon diisi saldonya terlebih dahulu";
+            } 
+            else if (!re_saldo.IsMatch(val_tambah_saldo))
+            {
+                hasil = "Saldo hanya dapat diisi oleh angka saja";
+            }
+            else if (long.Parse(val_tambah_saldo) < 50000)
+            {
+                hasil = "Minimal isi saldo Rp50.000";
+            } else if (bank.Image == null)
+            {
+                hasil = "Silakan pilih bank dahulu";
+            }
+            else
+            {
+                hasil = "valid";
+            }
+            return hasil;
+        }
+        public static string cekUbahProfil(TextBox nama_depan, TextBox nama_belakang, TextBox email)
+        {
+            string hasil = "";
+            string val_nama_depan = nama_depan.Text.Trim();
+            string val_nama_belakang = nama_belakang.Text.Trim();
+            string val_email = email.Text.Trim();
+
+            if(String.Equals("", val_nama_depan) || !re_huruf.IsMatch(val_nama_depan)) {
+                hasil = "Mohon isi nama depan dengan benar";
+            } else if(!re_huruf.IsMatch(val_nama_belakang)) {
+                hasil = "Mohon isi nama belakang dengan benar";
+            } else if(String.Equals("", val_email) || !re_email.IsMatch(val_email)) {
+                hasil = "Mohon isi email dengan benar";
+            } 
             else
             {
                 hasil = "valid";

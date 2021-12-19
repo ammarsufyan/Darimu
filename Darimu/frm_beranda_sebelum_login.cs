@@ -418,7 +418,6 @@ namespace Darimu
 
                 string nama_pengguna_atau_email_input = txt_nama_pengguna_atau_email_masuk.Text.Trim();
                 string kata_sandi_input = ClassUser.hashPassword(txt_kata_sandi_masuk.Text.Trim());
-                Console.WriteLine(kata_sandi_input);
 
                 if (ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input))
                 {
@@ -580,14 +579,24 @@ namespace Darimu
 
             private void button_daftar_MouseClick(object sender, MouseEventArgs e)
             {
-                string cek = ClassValidasi.cekPendaftaran(txt_nama_depan, txt_email_daftar, txt_nama_pengguna_daftar, txt_kata_sandi_daftar, txt_konfirmasi_kata_sandi);
-
+                string cek = ClassValidasi.cekPendaftaran(txt_nama_depan, txt_nama_belakang, txt_email_daftar, txt_nama_pengguna_daftar, txt_kata_sandi_daftar, txt_konfirmasi_kata_sandi);
+                
                 if (cek == "valid")
                 {
-                    string nama_lengkap = txt_nama_depan.Text + " " + txt_nama_belakang.Text;
-                    string nama_pengguna = txt_nama_pengguna_daftar.Text;
-                    string alamat_email = txt_email_daftar.Text;
-                    string kata_sandi = txt_kata_sandi_daftar.Text;
+                    string nama_belakang;
+
+                    if (txt_nama_belakang.Text == "Nama Belakang")
+                    {
+                        nama_belakang = "";
+                    }
+                    else
+                    {
+                        nama_belakang = txt_nama_belakang.Text.Trim();    
+                    }
+                    string nama_lengkap = txt_nama_depan.Text.Trim() + " " + nama_belakang;
+                    string nama_pengguna = txt_nama_pengguna_daftar.Text.Trim();
+                    string alamat_email = txt_email_daftar.Text.Trim();
+                    string kata_sandi = txt_kata_sandi_daftar.Text.Trim();
                     //get the datepicker value
                     tanggal_lahir_daftar.Format = DateTimePickerFormat.Custom;
                     tanggal_lahir_daftar.CustomFormat = "yyyy/MM/dd";
@@ -595,14 +604,23 @@ namespace Darimu
                     string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
 
                     string hasil = ClassUser.daftarUser(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
-                    MessageBox.Show(hasil, "Sukses Mendaftar",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                    if(hasil == "Selamat! Anda telah terdaftar")
+                    {
+                        MessageBox.Show(hasil, "Sukses Mendaftar",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
 
-                    hide_panel();
-                    default_color();
-                    clear_text();
-                    panel_isi_masuk.Visible = true;
+                        hide_panel();
+                        default_color();
+                        clear_text();
+                        panel_isi_masuk.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show(hasil, "Gagal Mendaftar",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
