@@ -60,9 +60,9 @@ namespace Darimu.ClassFolder
             string val_username = username.Text.Trim();
             string val_password = password.Text;
 
-            if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username) || !re_nama_pengguna.IsMatch(val_username))
+            if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username))
             {
-                hasil = "Masukkan nama pengguna dengan benar";
+                hasil = "Masukkan nama pengguna atau email dengan benar";
             }
             else if (String.Equals("", val_password) || String.Equals("password", val_password) || !re_nama_pengguna.IsMatch(val_password))
             {
@@ -83,9 +83,9 @@ namespace Darimu.ClassFolder
             string val_kata_sandi = kata_sandi.Text;
             string val_captcha = captcha.Text.Trim();
 
-            if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email) || !re_nama_pengguna.IsMatch(val_nama_pengguna_atau_email))
+            if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email))
             {
-                hasil = "Masukkan nama pengguna dengan benar";
+                hasil = "Masukkan nama pengguna atau email dengan benar";
             }
             else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_kata_sandi.IsMatch(val_kata_sandi))
             {
