@@ -79,6 +79,13 @@ namespace Darimu
             selesai.Visible = false;
         }
 
+        private void tampil_button_isi_impian(Button hapus, Button topup, Button selesai)
+        {
+            hapus.Visible = true;
+            topup.Visible = true;
+            selesai.Visible = true;
+        }
+
         private void tampil_impian()
         {
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
@@ -100,6 +107,7 @@ namespace Darimu
                     label_saldo_impianmu_1.Text = isi_impian[3].ToString();
                     label_saldo_terkumpulmu_1.Text = isi_impian[4].ToString();
                     label_tenggat_waktu_1.Text = isi_impian[5].ToString();
+                    tampil_button_isi_impian(button_hapus_impian_1, button_topup_impian_1, button_selesai_impian_1);
                 }
                 else
                 {
@@ -113,6 +121,7 @@ namespace Darimu
                     label_saldo_impianmu_2.Text = isi_impian[9].ToString();
                     label_saldo_terkumpulmu_2.Text = isi_impian[10].ToString();
                     label_tenggat_waktu_2.Text = isi_impian[11].ToString();
+                    tampil_button_isi_impian(button_hapus_impian_2, button_topup_impian_2, button_selesai_impian_2);
                 }
                 else
                 {
@@ -126,6 +135,7 @@ namespace Darimu
                     label_saldo_impianmu_3.Text = isi_impian[15].ToString();
                     label_saldo_terkumpulmu_3.Text = isi_impian[16].ToString();
                     label_tenggat_waktu_3.Text = isi_impian[17].ToString();
+                    tampil_button_isi_impian(button_hapus_impian_3, button_topup_impian_3, button_selesai_impian_3);
                 }
                 else
                 {
