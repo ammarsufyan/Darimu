@@ -645,6 +645,23 @@ namespace Darimu
             validasi_button = true;
         }
 
+        private void button_batal_ubah_profil_MouseClick(object sender, MouseEventArgs e)
+        {
+            hide_panel();
+            panel_isi_profil_saya.Visible = true;
+            ambil_data_profil();
+        }
+
+        private void button_batal_impian_MouseEnter(object sender, EventArgs e)
+        {
+            button_batal_impian.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
+        }
+
+        private void button_batal_impian_MouseLeave(object sender, EventArgs e)
+        {
+            button_batal_impian.Image = global::Darimu.Properties.Resources.button_batal;
+        }
+
         private void jenis_impian_fashion_MouseClick(object sender, MouseEventArgs e)
         {
             default_impian();

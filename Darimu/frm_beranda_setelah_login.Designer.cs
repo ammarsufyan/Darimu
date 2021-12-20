@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_beranda_setelah_login));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -706,6 +706,8 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
+            this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Controls.Add(this.panel_isi_ubah_profil_saya);
             this.panel_isi.Controls.Add(this.panel_isi_profil_saya);
             this.panel_isi.Controls.Add(this.panel_isi_beranda);
@@ -715,8 +717,6 @@
             this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -753,10 +753,10 @@
             // 
             // gambar_isi_impian
             // 
-            this.gambar_isi_impian.Image = global::Darimu.Properties.Resources.gambar_isi_impian;
-            this.gambar_isi_impian.Location = new System.Drawing.Point(14, 7);
+            this.gambar_isi_impian.Image = ((System.Drawing.Image)(resources.GetObject("gambar_isi_impian.Image")));
+            this.gambar_isi_impian.Location = new System.Drawing.Point(32, 0);
             this.gambar_isi_impian.Name = "gambar_isi_impian";
-            this.gambar_isi_impian.Size = new System.Drawing.Size(766, 376);
+            this.gambar_isi_impian.Size = new System.Drawing.Size(730, 428);
             this.gambar_isi_impian.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.gambar_isi_impian.TabIndex = 1;
             this.gambar_isi_impian.TabStop = false;
@@ -893,6 +893,7 @@
             this.button_batal_ubah_profil.Size = new System.Drawing.Size(67, 40);
             this.button_batal_ubah_profil.TabIndex = 9;
             this.button_batal_ubah_profil.UseVisualStyleBackColor = false;
+            this.button_batal_ubah_profil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_ubah_profil_MouseClick);
             this.button_batal_ubah_profil.MouseEnter += new System.EventHandler(this.button_batal_MouseEnter);
             this.button_batal_ubah_profil.MouseLeave += new System.EventHandler(this.button_batal_MouseLeave);
             // 
@@ -1404,6 +1405,8 @@
             this.button_batal_impian.Size = new System.Drawing.Size(67, 40);
             this.button_batal_impian.TabIndex = 23;
             this.button_batal_impian.UseVisualStyleBackColor = false;
+            this.button_batal_impian.MouseEnter += new System.EventHandler(this.button_batal_impian_MouseEnter);
+            this.button_batal_impian.MouseLeave += new System.EventHandler(this.button_batal_impian_MouseLeave);
             // 
             // button_simpan_impian
             // 

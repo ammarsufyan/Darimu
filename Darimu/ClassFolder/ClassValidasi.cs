@@ -7,11 +7,11 @@ namespace Darimu.ClassFolder
 {
     class ClassValidasi
     {
-        static Regex re_nama_pengguna = new Regex(@"^[a-zA-Z0-9]{8,16}$");
+        static Regex re_nama_pengguna = new Regex("^[a-zA-Z0-9]{8,16}$");
         static Regex re_kata_sandi = new Regex(@"^[a-zA-Z0-9!@#$%^{}()\[\]\\/:,._`~'&*+\-?]{8,16}$"); 
         static Regex re_huruf = new Regex(@"^[a-z\sA-Z]+$");
-        static Regex re_saldo = new Regex(@"^[0-9]+$");
-        static Regex re_email = new Regex(@"^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
+        static Regex re_saldo = new Regex("^[0-9]+$");
+        static Regex re_email = new Regex("^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
 
         public static string cekPendaftaran(TextBox nama_depan, TextBox nama_belakang, TextBox email, TextBox nama_pengguna, TextBox kata_sandi, TextBox konfirmasi_kata_sandi)
         {
