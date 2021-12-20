@@ -741,6 +741,8 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
+            this.panel_isi.Controls.Add(this.panel_isi_saldo_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Controls.Add(this.panel_isi_ubah_profil_saya);
@@ -750,8 +752,6 @@
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
             this.panel_isi.Controls.Add(this.panel_isi_tambah_saldo);
             this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_saldo_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -850,6 +850,8 @@
             this.txt_isi_saldo_impian.Size = new System.Drawing.Size(321, 20);
             this.txt_isi_saldo_impian.TabIndex = 19;
             this.txt_isi_saldo_impian.Text = "Masukkan Nominal Di sini";
+            this.txt_isi_saldo_impian.GotFocus += new System.EventHandler(this.txt_isi_saldo_impian_GotFocus);
+            this.txt_isi_saldo_impian.LostFocus += new System.EventHandler(this.txt_isi_saldo_impian_LostFocus);
             // 
             // gambar_isi_saldo_impian
             // 
@@ -921,6 +923,9 @@
             this.button_topup_impian_3.Size = new System.Drawing.Size(35, 35);
             this.button_topup_impian_3.TabIndex = 34;
             this.button_topup_impian_3.UseVisualStyleBackColor = false;
+            this.button_topup_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_3_MouseClick);
+            this.button_topup_impian_3.MouseEnter += new System.EventHandler(this.button_topup_impian_3_MouseEnter);
+            this.button_topup_impian_3.MouseLeave += new System.EventHandler(this.button_topup_impian_3_MouseLeave);
             // 
             // button_selesai_impian_3
             // 
@@ -939,6 +944,9 @@
             this.button_selesai_impian_3.TabIndex = 33;
             this.button_selesai_impian_3.UseVisualStyleBackColor = false;
             this.button_selesai_impian_3.Visible = false;
+            this.button_selesai_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_3_MouseClick);
+            this.button_selesai_impian_3.MouseEnter += new System.EventHandler(this.button_selesai_impian_3_MouseEnter);
+            this.button_selesai_impian_3.MouseLeave += new System.EventHandler(this.button_selesai_impian_3_MouseLeave);
             // 
             // button_hapus_impian_3
             // 
@@ -956,6 +964,9 @@
             this.button_hapus_impian_3.Size = new System.Drawing.Size(35, 35);
             this.button_hapus_impian_3.TabIndex = 32;
             this.button_hapus_impian_3.UseVisualStyleBackColor = false;
+            this.button_hapus_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_3_MouseClick);
+            this.button_hapus_impian_3.MouseEnter += new System.EventHandler(this.button_hapus_impian_3_MouseEnter);
+            this.button_hapus_impian_3.MouseLeave += new System.EventHandler(this.button_hapus_impian_3_MouseLeave);
             // 
             // button_topup_impian_2
             // 
@@ -973,6 +984,9 @@
             this.button_topup_impian_2.Size = new System.Drawing.Size(35, 35);
             this.button_topup_impian_2.TabIndex = 31;
             this.button_topup_impian_2.UseVisualStyleBackColor = false;
+            this.button_topup_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_2_MouseClick);
+            this.button_topup_impian_2.MouseEnter += new System.EventHandler(this.button_topup_impian_2_MouseEnter);
+            this.button_topup_impian_2.MouseLeave += new System.EventHandler(this.button_topup_impian_2_MouseLeave);
             // 
             // button_selesai_impian_2
             // 
@@ -991,6 +1005,9 @@
             this.button_selesai_impian_2.TabIndex = 30;
             this.button_selesai_impian_2.UseVisualStyleBackColor = false;
             this.button_selesai_impian_2.Visible = false;
+            this.button_selesai_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_2_MouseClick);
+            this.button_selesai_impian_2.MouseEnter += new System.EventHandler(this.button_selesai_impian_2_MouseEnter);
+            this.button_selesai_impian_2.MouseLeave += new System.EventHandler(this.button_selesai_impian_2_MouseLeave);
             // 
             // button_hapus_impian_2
             // 
@@ -1008,6 +1025,9 @@
             this.button_hapus_impian_2.Size = new System.Drawing.Size(35, 35);
             this.button_hapus_impian_2.TabIndex = 29;
             this.button_hapus_impian_2.UseVisualStyleBackColor = false;
+            this.button_hapus_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_2_MouseClick);
+            this.button_hapus_impian_2.MouseEnter += new System.EventHandler(this.button_hapus_impian_2_MouseEnter);
+            this.button_hapus_impian_2.MouseLeave += new System.EventHandler(this.button_hapus_impian_2_MouseLeave);
             // 
             // button_topup_impian_1
             // 
@@ -1046,6 +1066,7 @@
             this.button_selesai_impian_1.TabIndex = 27;
             this.button_selesai_impian_1.UseVisualStyleBackColor = false;
             this.button_selesai_impian_1.Visible = false;
+            this.button_selesai_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_1_MouseClick);
             this.button_selesai_impian_1.MouseEnter += new System.EventHandler(this.button_selesai_impian_1_MouseEnter);
             this.button_selesai_impian_1.MouseLeave += new System.EventHandler(this.button_selesai_impian_1_MouseLeave);
             // 
@@ -1326,30 +1347,35 @@
             // 
             // tanggal
             // 
+            this.tanggal.FillWeight = 74.2386F;
             this.tanggal.HeaderText = "tanggal";
             this.tanggal.Name = "tanggal";
             this.tanggal.ReadOnly = true;
             // 
             // keterangan
             // 
+            this.keterangan.FillWeight = 203.0457F;
             this.keterangan.HeaderText = "keterangan";
             this.keterangan.Name = "keterangan";
             this.keterangan.ReadOnly = true;
             // 
             // debit
             // 
+            this.debit.FillWeight = 74.2386F;
             this.debit.HeaderText = "debit";
             this.debit.Name = "debit";
             this.debit.ReadOnly = true;
             // 
             // kredit
             // 
+            this.kredit.FillWeight = 74.2386F;
             this.kredit.HeaderText = "kredit";
             this.kredit.Name = "kredit";
             this.kredit.ReadOnly = true;
             // 
             // saldo
             // 
+            this.saldo.FillWeight = 74.2386F;
             this.saldo.HeaderText = "saldo";
             this.saldo.Name = "saldo";
             this.saldo.ReadOnly = true;
@@ -2211,11 +2237,6 @@
         private System.Windows.Forms.Label label_ubah_email;
         private System.Windows.Forms.ToolStripMenuItem riwayatTransaksiToolStripMenuItem;
         private System.Windows.Forms.DataGridView grid_transaksi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn keterangan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn debit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kredit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
         private System.Windows.Forms.Label label_transaksi;
         private CustomControls.DRMDropDownMenu drop_down_tabungan;
         private System.Windows.Forms.ToolStripMenuItem TabunganImpiantoolStripMenuItem;
@@ -2262,6 +2283,11 @@
         private System.Windows.Forms.TextBox txt_isi_saldo_impian;
         private System.Windows.Forms.Button button_batal_isi_saldo_impian;
         private System.Windows.Forms.Button button_simpan_isi_saldo_impian;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn keterangan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn debit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
     }
 }
 

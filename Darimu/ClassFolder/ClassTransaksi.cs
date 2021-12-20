@@ -50,7 +50,7 @@ namespace Darimu.ClassFolder
 
             if(saldo_baru <= 0)
             {
-                saldo_baru = 0;
+                saldo_baru = get_saldo(nama_pengguna);
                 return saldo_baru;
             }
             else
