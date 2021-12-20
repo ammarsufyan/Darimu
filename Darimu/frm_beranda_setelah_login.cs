@@ -89,6 +89,7 @@ namespace Darimu
                                 "Tidak Ada Impian",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                default_impian(logo_impian_1, label_nama_impian_1, label_saldo_impianmu_1, label_saldo_terkumpulmu_1, label_tenggat_waktu_1, button_hapus_impian_1, button_topup_impian_1, button_selesai_impian_1);
             }
             else
             {
@@ -102,7 +103,7 @@ namespace Darimu
                 }
                 else
                 {
-                    default_impian(logo_impian_1, label_nama_impian_1, label_saldo_impianmu_1, label_saldo_impianmu_1, label_tenggat_waktu_1, button_hapus_impian_1, button_topup_impian_1, button_selesai_impian_1);
+                    default_impian(logo_impian_1, label_nama_impian_1, label_saldo_impianmu_1, label_saldo_terkumpulmu_1, label_tenggat_waktu_1, button_hapus_impian_1, button_topup_impian_1, button_selesai_impian_1);
                 }
 
                 if (isi_impian.Count >= 11)
@@ -115,7 +116,7 @@ namespace Darimu
                 }
                 else
                 {
-                    default_impian(logo_impian_2, label_nama_impian_2, label_saldo_impianmu_2, label_saldo_impianmu_2, label_tenggat_waktu_2, button_hapus_impian_2, button_topup_impian_2, button_selesai_impian_2);
+                    default_impian(logo_impian_2, label_nama_impian_2, label_saldo_impianmu_2, label_saldo_terkumpulmu_2, label_tenggat_waktu_2, button_hapus_impian_2, button_topup_impian_2, button_selesai_impian_2);
                 }
 
                 if (isi_impian.Count >= 16)
@@ -128,7 +129,7 @@ namespace Darimu
                 }
                 else
                 {
-                    default_impian(logo_impian_3, label_nama_impian_3, label_saldo_impianmu_3, label_saldo_impianmu_3, label_tenggat_waktu_3, button_hapus_impian_3, button_topup_impian_3, button_selesai_impian_3);
+                    default_impian(logo_impian_3, label_nama_impian_3, label_saldo_impianmu_3, label_saldo_terkumpulmu_3, label_tenggat_waktu_3, button_hapus_impian_3, button_topup_impian_3, button_selesai_impian_3);
                 }
             }
         }
@@ -832,31 +833,20 @@ namespace Darimu
                 {
                     ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[1].ToString();
-                    bool berhasil = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[0].ToString(), long.Parse(isi_impian[4].ToString()), keterangan_impian);
-
-                    if (berhasil)
-                    {
-
-                        tampil_impian();
-                        MessageBox.Show("Selamat! Impianmu sudah terhapus.",
-                                        "Sukses Menghapus Impian",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        tampil_impian();
-                        MessageBox.Show("Yah, impianmu gagal dihapus :(",
-                                        "Gagal Menghapus Impian",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-                    }
+                    long saldo_baru = long.Parse(isi_impian[3].ToString());
+                    label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[0].ToString(), saldo_baru, keterangan_impian).ToString();
+                    MessageBox.Show("Selamat! Impianmu sudah terhapus.",
+                                    "Sukses Menghapus Impian",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    tampil_impian();
                 } catch (Exception ex)
                 {
                     MessageBox.Show("Kamu Belum Mempunyai Impian",
                                     "Gagal Menghapus Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
+                    tampil_impian();
                 }
  
             }

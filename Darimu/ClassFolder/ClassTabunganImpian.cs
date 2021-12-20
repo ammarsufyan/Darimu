@@ -93,7 +93,7 @@ namespace Darimu.ClassFolder
             return saldo_baru;
         }
 
-        public static bool hapusImpian(string nama_pengguna, string id_tabungan_impian, long saldo_terkumpul, string keterangan)
+        public static long hapusImpian(string nama_pengguna, string id_tabungan_impian, long saldo_terkumpul, string keterangan)
         {
             long saldo_baru = ClassTransaksi.isi_saldo(nama_pengguna, saldo_terkumpul, keterangan);
 
@@ -101,7 +101,7 @@ namespace Darimu.ClassFolder
             SqlCommand sqlcom = new SqlCommand("UPDATE tb_tabungan_impian SET status_tabungan_impian = 'Tidak Aktif', tanggal_tutup = GETDATE() WHERE id_tabungan_impian = '" + id_tabungan_impian + "'", sqlcon);
             sqlcom.ExecuteNonQuery();
             sqlcon.Close();
-            return true;
+            return saldo_baru;
         }
     }
 }
