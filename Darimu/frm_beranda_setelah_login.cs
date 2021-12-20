@@ -487,7 +487,6 @@ namespace Darimu
                 // get the datepicker value
                 ubah_tanggal_lahir.Format = DateTimePickerFormat.Custom;
                 ubah_tanggal_lahir.CustomFormat = "yyyy/MM/dd";
-                ubah_tanggal_lahir.ShowUpDown = true;
                 string tanggal_lahir = ubah_tanggal_lahir.Value.ToString("yyyy/MM/dd");
                 var result = MessageBox.Show("Apakah Anda yakin ingin mengubah?",
                                              "Konfirmasi Ubah Data",
@@ -551,7 +550,14 @@ namespace Darimu
 
         private void label_ubah_email_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_ubah_email.ReadOnly = false;
+            if(txt_ubah_email.ReadOnly == false)
+            {
+                txt_ubah_email.ReadOnly = true;
+            }
+            else
+            {
+                txt_ubah_email.ReadOnly = false;
+            }
         }
 
         private void riwayatTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -587,7 +593,6 @@ namespace Darimu
                 // get the datepicker value
                 tenggat_waktu_impian.Format = DateTimePickerFormat.Custom;
                 tenggat_waktu_impian.CustomFormat = "yyyy/MM/dd";
-                tenggat_waktu_impian.ShowUpDown = true;
                 string tenggat_waktu = tenggat_waktu_impian.Value.ToString("yyyy/MM/dd");
 
                 string hasil = ClassTabunganImpian.tambahImpian(nama_pengguna, nama_tabungan_impian, jenis_impian, tautan_gambar, saldo_impian, tenggat_waktu);

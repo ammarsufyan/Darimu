@@ -106,3 +106,5 @@ CREATE TABLE tb_laporan(
     tanggal_laporan_ditutup DATETIME NULL,
     [status_laporan] VARCHAR(100) NULL CHECK ([status_laporan] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
+
+SELECT * FROM tb_tabungan_impian tti 

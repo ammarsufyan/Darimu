@@ -19,7 +19,7 @@ namespace Darimu.ClassFolder
             string val_nama_belakang = nama_belakang.Text.Trim();
             string val_nama_pengguna = nama_pengguna.Text.Trim();
             string val_email = email.Text.Trim();
-            string val_kata_sandi = kata_sandi.Text.Trim();
+            string val_kata_sandi = kata_sandi.Text;
 
             if (String.Equals("", val_nama_depan) || String.Equals("Nama Depan", val_nama_depan))
             {
@@ -41,7 +41,7 @@ namespace Darimu.ClassFolder
             {
                 hasil = "Kata sandi harus diisi dengan benar (MINIMAL 8 HURUF TANPA KARAKTER SPESIAL)";
             }
-            else if (!(String.Equals(val_kata_sandi, konfirmasi_kata_sandi.Text.Trim())))
+            else if (!(String.Equals(val_kata_sandi, konfirmasi_kata_sandi.Text)))
             {
                 hasil = "Kata sandi tidak sama";
             }
@@ -57,7 +57,7 @@ namespace Darimu.ClassFolder
         {
             string hasil;
             string val_username = username.Text.Trim();
-            string val_password = password.Text.Trim();
+            string val_password = password.Text;
 
             if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_username))
             {
@@ -79,7 +79,7 @@ namespace Darimu.ClassFolder
         {
             string hasil;
             string val_nama_pengguna_atau_email = nama_pengguna_atau_email.Text.Trim();
-            string val_kata_sandi = kata_sandi.Text.Trim();
+            string val_kata_sandi = kata_sandi.Text;
             string val_captcha = captcha.Text.Trim();
 
             if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_nama_pengguna_atau_email))

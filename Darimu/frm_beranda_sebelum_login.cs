@@ -417,7 +417,7 @@ namespace Darimu
                 kesempatan_masuk = kesempatan_masuk - 1;
 
                 string nama_pengguna_atau_email_input = txt_nama_pengguna_atau_email_masuk.Text.Trim();
-                string kata_sandi_input = ClassUser.hashPassword(txt_kata_sandi_masuk.Text.Trim());
+                string kata_sandi_input = ClassUser.hashPassword(txt_kata_sandi_masuk.Text);
 
 
                 if (kesempatan_masuk <= 0)
@@ -450,6 +450,13 @@ namespace Darimu
                                     MessageBoxIcon.Exclamation);
                     clear_text();
                 }
+            }
+            else
+            {
+                MessageBox.Show(cek,
+                                "Gagal Masuk",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
             }
         }
 
@@ -597,11 +604,10 @@ namespace Darimu
                     string nama_lengkap = txt_nama_depan.Text.Trim() + " " + nama_belakang;
                     string nama_pengguna = txt_nama_pengguna_daftar.Text.Trim();
                     string alamat_email = txt_email_daftar.Text.Trim();
-                    string kata_sandi = txt_kata_sandi_daftar.Text.Trim();
+                    string kata_sandi = txt_kata_sandi_daftar.Text;
                     //get the datepicker value
                     tanggal_lahir_daftar.Format = DateTimePickerFormat.Custom;
                     tanggal_lahir_daftar.CustomFormat = "yyyy/MM/dd";
-                    tanggal_lahir_daftar.ShowUpDown = true;
                     string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
 
                     string hasil = ClassUser.daftarUser(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
