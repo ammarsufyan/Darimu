@@ -7,10 +7,11 @@ namespace Darimu.ClassFolder
 {
     class ClassValidasi
     {
-        static Regex re_nama_pengguna_atau_kata_sandi = new Regex(@"^[a-zA-Z0-9!@#$%^}|\]\[\\';l,./`~&*()_+<>?]{8,16}$");
+        static Regex re_nama_pengguna = new Regex(@"^[a-zA-Z0-9]{8,16}$");
+        static Regex re_kata_sandi = new Regex(@"^[a-zA-Z0-9!@#$%^{}()\[\]\\/:,._`~'&*+\-?]{8,16}$"); 
         static Regex re_huruf = new Regex(@"^[a-z\sA-Z]+$");
-        static Regex re_saldo = new Regex("^[0-9]+$");
-        static Regex re_email = new Regex("^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
+        static Regex re_saldo = new Regex(@"^[0-9]+$");
+        static Regex re_email = new Regex(@"^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
 
         public static string cekPendaftaran(TextBox nama_depan, TextBox nama_belakang, TextBox email, TextBox nama_pengguna, TextBox kata_sandi, TextBox konfirmasi_kata_sandi)
         {
@@ -29,7 +30,7 @@ namespace Darimu.ClassFolder
             {
                 hasil = "Nama harus huruf";
             }
-            else if (String.Equals("", val_nama_pengguna) || String.Equals("Nama Pengguna", val_nama_pengguna) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_nama_pengguna))
+            else if (String.Equals("", val_nama_pengguna) || String.Equals("Nama Pengguna", val_nama_pengguna) || !re_nama_pengguna.IsMatch(val_nama_pengguna))
             {
                 hasil = "Masukkan nama pengguna (MINIMAL 8 HURUF TANPA KARAKTER SPESIAL)";
             }
@@ -37,7 +38,7 @@ namespace Darimu.ClassFolder
             {
                 hasil = "Email harus diisi dengan benar";
             }
-            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_kata_sandi))
+            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_kata_sandi.IsMatch(val_kata_sandi))
             {
                 hasil = "Kata sandi harus diisi dengan benar (MINIMAL 8 HURUF TANPA KARAKTER SPESIAL)";
             }
@@ -59,11 +60,11 @@ namespace Darimu.ClassFolder
             string val_username = username.Text.Trim();
             string val_password = password.Text;
 
-            if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_username))
+            if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username) || !re_nama_pengguna.IsMatch(val_username))
             {
                 hasil = "Masukkan nama pengguna dengan benar";
             }
-            else if (String.Equals("", val_password) || String.Equals("password", val_password) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_password))
+            else if (String.Equals("", val_password) || String.Equals("password", val_password) || !re_nama_pengguna.IsMatch(val_password))
             {
                 hasil = "Masukkan kata sandi dengan benar";
             }
@@ -82,11 +83,11 @@ namespace Darimu.ClassFolder
             string val_kata_sandi = kata_sandi.Text;
             string val_captcha = captcha.Text.Trim();
 
-            if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_nama_pengguna_atau_email))
+            if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email) || !re_nama_pengguna.IsMatch(val_nama_pengguna_atau_email))
             {
                 hasil = "Masukkan nama pengguna dengan benar";
             }
-            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_nama_pengguna_atau_kata_sandi.IsMatch(val_kata_sandi))
+            else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_kata_sandi.IsMatch(val_kata_sandi))
             {
                 hasil = "Masukkan kata sandi dengan benar";
             }
