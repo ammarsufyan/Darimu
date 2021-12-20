@@ -11,8 +11,6 @@ namespace Darimu
     {
         // declaration var
         private int borderSize = 2;
-        private Size formSize;
-        int angka = 0;
 
         public frm_admin(string nama_pengguna)
         {
@@ -65,7 +63,7 @@ namespace Darimu
 
         private void button_exit_click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menutup aplikasi?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin menutup aplikasi?",
                                          "Keluar Aplikasi",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Stop);

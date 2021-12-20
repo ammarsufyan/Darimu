@@ -43,6 +43,33 @@ namespace Darimu.ClassFolder
             return saldo_baru;
         }
 
+        public static long isi_saldo_impian(string nama_pengguna, long saldo_impian, string keterangan)
+        {
+            long saldo_baru = 0;
+            saldo_baru = get_saldo(nama_pengguna) - saldo_impian;
+
+            if(saldo_baru <= 0)
+            {
+                saldo_baru = 0;
+                return saldo_baru;
+            }
+            else
+            {
+                SqlCommand sqlcom;
+
+                sqlcon.Open();
+                sqlcom = new SqlCommand("UPDATE tb_pengguna SET saldo = '" + saldo_baru + "' WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
+                sqlcom.ExecuteNonQuery();
+                sqlcon.Close();
+
+                sqlcon.Open();
+                sqlcom = new SqlCommand("UPDATE tb_transaksi SET keterangan = '" + keterangan + "' WHERE id_transaksi = (SELECT TOP 1 id_transaksi FROM tb_transaksi WHERE nama_pengguna = '" + nama_pengguna + "' ORDER BY tanggal DESC);", sqlcon);
+                sqlcom.ExecuteNonQuery();
+                sqlcon.Close();
+                return saldo_baru;
+            }
+        }
+
         public static void riwayat_transaksi(string nama_pengguna, DataGridView grid_transaksi)
         {
             grid_transaksi.Rows.Clear();

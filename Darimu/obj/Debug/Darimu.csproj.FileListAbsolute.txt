@@ -8,4 +8,3 @@ C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Dar
 C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.csproj.GenerateResource.Cache
 C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.exe
 C:\Users\ammar\documents\visual studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.pdb
-C:\Users\ammar\Documents\Visual Studio 2015\Projects\Darimu\Darimu\obj\Debug\Darimu.csprojResolveAssemblyReference.cache

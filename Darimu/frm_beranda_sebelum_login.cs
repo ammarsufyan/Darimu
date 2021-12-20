@@ -66,14 +66,14 @@ namespace Darimu
             txt_nama_belakang.Text = "Nama Belakang";
             txt_nama_pengguna_daftar.Text = "Nama Pengguna";
             txt_email_daftar.Text = "Alamat Email";
-            txt_kata_sandi_daftar.Text = "password";
-            txt_konfirmasi_kata_sandi.Text = "konfirmasi password";
+            txt_kata_sandi_daftar.Text = "Password";
+            txt_konfirmasi_kata_sandi.Text = "Konfirmasi Password";
 
             // lupa password
             txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "Nama Pengguna atau Email";
-            txt_lupa_kata_sandi.Text = "password";
-            txt_konfirmasi_lupa_kata_sandi.Text = "konfirmasi password";
-            txt_captcha_lupa_kata_sandi.Text = "captcha";
+            txt_lupa_kata_sandi.Text = "Password";
+            txt_konfirmasi_lupa_kata_sandi.Text = "Konfirmasi Password";
+            txt_captcha_lupa_kata_sandi.Text = "Captcha";
         }
 
         // create method to generate captcha random
@@ -118,7 +118,7 @@ namespace Darimu
 
         private void icon_topup_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Maaf, Anda harus masuk terlebih dahulu.",
+            MessageBox.Show("Masuk akun dulu yuk! :)",
                             "Gagal Mengakses Menu Topup",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -166,7 +166,7 @@ namespace Darimu
         // animate all button in left sidebar
         private void button_profil_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Maaf, Anda harus masuk terlebih dahulu.",
+            MessageBox.Show("Masuk akun dulu yuk! :)",
                             "Gagal Mengakses Profil",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -174,7 +174,7 @@ namespace Darimu
 
         private void button_tabungan_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Maaf, Anda harus masuk terlebih dahulu.",
+            MessageBox.Show("Masuk akun dulu yuk! :)",
                             "Gagal Mengakses Menu Tabungan",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -422,7 +422,7 @@ namespace Darimu
 
                 if (kesempatan_masuk <= 0)
                 {
-                    MessageBox.Show("Maaf, Anda sudah gagal 3 kali untuk mencoba masuk",
+                    MessageBox.Show("Maaf, kamu sudah gagal 3 kali untuk coba masuk :(",
                                     "Keluar Aplikasi",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Stop);
@@ -430,7 +430,7 @@ namespace Darimu
                 }
                 else if (ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input))
                 {
-                    MessageBox.Show("Selamat Anda berhasil masuk!",
+                    MessageBox.Show("Selamat, kamu berhasil masuk!",
                                     "Sukses Masuk",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -444,7 +444,7 @@ namespace Darimu
                 }
                 else
                 {
-                    MessageBox.Show("Nama pengguna, email atau kata sandi salah" + "\nKesempatan Anda sisa " + kesempatan_masuk + " kesempatan",
+                    MessageBox.Show("Nama pengguna, email, atau kata sandi salah" + "\nKesempatan kamu hanya " + kesempatan_masuk + " kesempatan",
                                     "Gagal Masuk",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Exclamation);
@@ -566,7 +566,7 @@ namespace Darimu
             {
                 if (txt_kata_sandi_daftar.Text == "")
                 {
-                    txt_kata_sandi_daftar.Text = "password";
+                    txt_kata_sandi_daftar.Text = "Password";
                 }
             }
 
@@ -574,7 +574,7 @@ namespace Darimu
             {
                 if (txt_konfirmasi_kata_sandi.Text == "")
                 {
-                    txt_konfirmasi_kata_sandi.Text = "konfirmasi password";
+                    txt_konfirmasi_kata_sandi.Text = "Konfirmasi Password";
                 }
             }
 
@@ -611,7 +611,7 @@ namespace Darimu
                     string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
 
                     string hasil = ClassUser.daftarUser(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
-                    if(hasil == "Selamat! Anda telah terdaftar")
+                    if(hasil == "Selamat! Kamu telah terdaftar :D")
                     {
                         MessageBox.Show(hasil, "Sukses Mendaftar",
                         MessageBoxButtons.OK,
@@ -646,7 +646,7 @@ namespace Darimu
                 if (cek == "valid")
                 {
                     string hasil = ClassUser.ubahPassword(txt_nama_pengguna_atau_email_lupa_kata_sandi.Text, txt_lupa_kata_sandi.Text);
-                    MessageBox.Show(hasil, "Sukses Membuat Password Baru",
+                    MessageBox.Show(hasil, "Berhasil Membuat Password Baru",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                     hide_panel();
@@ -657,7 +657,7 @@ namespace Darimu
                 }
                 else
                 {
-                    MessageBox.Show(cek, "Lengkapi Semua Syarat!",
+                    MessageBox.Show(cek, "Lengkapi dulu semua isiannya :)",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
                     generate_captcha_image();
@@ -675,7 +675,7 @@ namespace Darimu
 
             private void txt_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
             {
-                if (txt_lupa_kata_sandi.Text == "password")
+                if (txt_lupa_kata_sandi.Text == "Password")
                 {
                     txt_lupa_kata_sandi.Text = "";
                 }
@@ -683,7 +683,7 @@ namespace Darimu
 
             private void txt_konfirmasi_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
             {
-                if (txt_konfirmasi_lupa_kata_sandi.Text == "konfirmasi password")
+                if (txt_konfirmasi_lupa_kata_sandi.Text == "Konfirmasi Password")
                 {
                     txt_konfirmasi_lupa_kata_sandi.Text = "";
                 }
@@ -691,7 +691,7 @@ namespace Darimu
 
             private void txt_captcha_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
             {
-                if (txt_captcha_lupa_kata_sandi.Text == "captcha")
+                if (txt_captcha_lupa_kata_sandi.Text == "Captcha")
                 {
                     txt_captcha_lupa_kata_sandi.Text = "";
                 }
@@ -744,7 +744,7 @@ namespace Darimu
             {
                 if (txt_lupa_kata_sandi.Text == "")
                 {
-                    txt_lupa_kata_sandi.Text = "password";
+                    txt_lupa_kata_sandi.Text = "Password";
                 }
             }
 
@@ -752,7 +752,7 @@ namespace Darimu
             {
                 if (txt_konfirmasi_lupa_kata_sandi.Text == "")
                 {
-                    txt_konfirmasi_lupa_kata_sandi.Text = "konfirmasi password";
+                    txt_konfirmasi_lupa_kata_sandi.Text = "Konfirmasi Password";
                 }
             }
 
@@ -760,7 +760,7 @@ namespace Darimu
             {
                 if (txt_captcha_lupa_kata_sandi.Text == "")
                 {
-                    txt_captcha_lupa_kata_sandi.Text = "captcha";
+                    txt_captcha_lupa_kata_sandi.Text = "Captcha";
                 }
             }
 

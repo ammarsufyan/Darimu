@@ -118,44 +118,68 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="umum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\umum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gambar_tambah_saldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_tambah_saldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tagline_Beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Tagline_Beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panah_sebelum_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\panah_sebelum_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_tambah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\logo_tambah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_saldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_saldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pilih_bank_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\pilih_bank_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_fashion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\logo_fashion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pilih_bank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\pilih_bank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="elektronik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\elektronik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panah_berikutnya_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\panah_berikutnya_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="elektronik_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\elektronik_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_menu_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_menu_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_tambah_impian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_tambah_impian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoDarimuTransparant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\LogoDarimuTransparant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gambar_faq_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_faq_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jalan_jalan_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\jalan_jalan_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_keluar_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_keluar_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="panah_sebelum" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\panah_sebelum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bank_bni" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\bank_bni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_selesai_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_selesai_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gambar_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gambar_faq_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_faq_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\exit_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_topup_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_topup_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_umum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\logo_umum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gambar_ubah_profil_saya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_ubah_profil_saya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_simpan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\button_simpan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_tabungan_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Blue\icon_tabungan_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_minimize_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_minimize_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fashion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\fashion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,154 +187,148 @@
   <data name="icon_faq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_faq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_tentang_kami" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_tentang_kami.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fashion_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\fashion_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_fashion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\logo_fashion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="panah_sebelum_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\panah_sebelum_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pilih_bank_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\pilih_bank_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="panah_berikutnya" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\panah_berikutnya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_tentang_kami_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_tentang_kami_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_masuk_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_masuk_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_tabungan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_tabungan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gambar_tambah_saldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_tambah_saldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_jalan_jalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\logo_jalan_jalan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_elektronik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\logo_elektronik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="elektronik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\elektronik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gambar_tentang_kami" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_tentang_kami.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_profil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_akun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_saldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_saldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="elektronik_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\elektronik_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jalan_jalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\jalan_jalan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gambar_faq_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_faq_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maskot_beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\maskot_beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_hiburan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\logo_hiburan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_masuk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_masuk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bank_bca" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\bank_bca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tagline_Beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Tagline_Beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_keluar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_keluar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="umum_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\umum_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gambar_profil_saya" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_profil_saya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pilih_bank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\pilih_bank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_topup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_topup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_faq_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_faq_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="panah_berikutnya_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\panah_berikutnya_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_profil_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_profil_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_simpan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\button_simpan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gambar_ubah_profil_saya" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_ubah_profil_saya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_simpan_dipencet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\button_simpan_dipencet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_topup_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_topup_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_menu_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_menu_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bank_bri" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\bank_bri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_batal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\button_batal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gambar_daftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_daftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hiburan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\JenisImpian\hiburan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_batal_dipencet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\button_batal_dipencet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_beranda_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_beranda_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="hiburan_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\JenisImpian\hiburan_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gambar_tambah_impian" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\gambar_tambah_impian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_keluar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_keluar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fashion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\fashion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fashion_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\fashion_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_profil_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_profil_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maskot_beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\maskot_beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_selesai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_selesai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_faq_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_faq_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_faq_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_faq_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tentang_kami_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_tentang_kami_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_elektronik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\logo_elektronik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tabungan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_tabungan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hiburan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\hiburan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_masuk_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_masuk_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jalan_jalan_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\jalan_jalan_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bank_bni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\bank_bni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gambar_isi_impian" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\gambar_isi_impian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_jalan_jalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\logo_jalan_jalan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tentang_kami" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_tentang_kami.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panah_berikutnya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\panah_berikutnya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_profil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_akun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\exit_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_daftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_daftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_masuk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_masuk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_hapus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_hapus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_topup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_topup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="umum_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\umum_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_hiburan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\logo_hiburan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="umum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\umum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_tentang_kami" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_tentang_kami.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bank_bca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\bank_bca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_umum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\logo_umum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bank_bri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\bank_bri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_keluar_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_keluar_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_hapus_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_hapus_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_profil_saya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_profil_saya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_simpan_dipencet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\button_simpan_dipencet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jalan_jalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\JenisImpian\jalan_jalan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_minimize_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_minimize_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_batal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\button_batal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_beranda_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_beranda_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="isi_saldo_impian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\isi_saldo_impian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

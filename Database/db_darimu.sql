@@ -22,7 +22,7 @@ USE db_darimu;
 
 -- ========================================================================
 -- membuat tb_admin
- DROP TABLE tb_admin;
+DROP TABLE tb_admin;
 CREATE TABLE tb_admin(
 	nama_pengguna_admin VARCHAR(100) NOT NULL PRIMARY KEY,
 	nama_lengkap VARCHAR(100) NOT NULL,
@@ -45,7 +45,7 @@ INSERT INTO tb_admin(nik, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_la
 
 -- ========================================================================
 -- membuat tb_pengguna
- DROP TABLE tb_pengguna;
+DROP TABLE tb_pengguna;
 CREATE TABLE tb_pengguna(
     nama_pengguna VARCHAR(100) NOT NULL PRIMARY KEY,
     nama_lengkap VARCHAR(100) NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE tb_pengguna(
 
 -- ========================================================================
 -- membuat tb_transaksi
- DROP TABLE tb_transaksi;
+DROP TABLE tb_transaksi;
 CREATE TABLE tb_transaksi (
     id INT IDENTITY(1,1) NOT NULL,
 	id_transaksi AS ('TR-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
@@ -76,7 +76,7 @@ CREATE TABLE tb_transaksi (
 
 -- ========================================================================
 -- membuat tb_tabungan_impian
- DROP TABLE tb_tabungan_impian;
+DROP TABLE tb_tabungan_impian;
 CREATE TABLE tb_tabungan_impian(
 	id INT IDENTITY(1,1) NOT NULL,
 	id_tabungan_impian AS ('TI-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
@@ -95,7 +95,7 @@ CREATE TABLE tb_tabungan_impian(
 
 -- ========================================================================
 -- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
- DROP TABLE tb_laporan;
+DROP TABLE tb_laporan;
 CREATE TABLE tb_laporan(
     id_laporan INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     nama_pengguna VARCHAR(100) NOT NULL,
@@ -108,3 +108,11 @@ CREATE TABLE tb_laporan(
 );
 
 SELECT * FROM tb_tabungan_impian tti 
+
+TRUNCATE TABLE tb_transaksi 
+
+TRUNCATE TABLE tb_pengguna 
+
+TRUNCATE TABLE tb_tabungan_impian 
+
+SELECT * FROM tb_tabungan_impian WHERE nama_pengguna = 'ammarsufyan' order by count(*) descfetch first 3 rows ONLY;

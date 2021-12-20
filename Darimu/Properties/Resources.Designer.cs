@@ -363,6 +363,26 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_hapus {
+            get {
+                object obj = ResourceManager.GetObject("icon_hapus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_hapus_biru {
+            get {
+                object obj = ResourceManager.GetObject("icon_hapus_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_keluar {
             get {
                 object obj = ResourceManager.GetObject("icon_keluar", resourceCulture);
@@ -463,6 +483,26 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_selesai {
+            get {
+                object obj = ResourceManager.GetObject("icon_selesai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_selesai_biru {
+            get {
+                object obj = ResourceManager.GetObject("icon_selesai_biru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_tabungan {
             get {
                 object obj = ResourceManager.GetObject("icon_tabungan", resourceCulture);
@@ -523,6 +563,16 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap isi_saldo_impian {
+            get {
+                object obj = ResourceManager.GetObject("isi_saldo_impian", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jalan_jalan {
             get {
                 object obj = ResourceManager.GetObject("jalan_jalan", resourceCulture);
@@ -576,6 +626,16 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap logo_jalan_jalan {
             get {
                 object obj = ResourceManager.GetObject("logo_jalan_jalan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_tambah {
+            get {
+                object obj = ResourceManager.GetObject("logo_tambah", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

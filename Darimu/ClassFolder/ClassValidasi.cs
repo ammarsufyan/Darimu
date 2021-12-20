@@ -24,7 +24,7 @@ namespace Darimu.ClassFolder
 
             if (String.Equals("", val_nama_depan) || String.Equals("Nama Depan", val_nama_depan))
             {
-                hasil = "Masukkan nama Anda (MINIMAL NAMA DEPAN)";
+                hasil = "Namamu belum ada nih! Minimal nama depan ya";
             }
             else if (!re_huruf.IsMatch(val_nama_depan) || !re_huruf.IsMatch(val_nama_belakang))
             {
@@ -32,19 +32,19 @@ namespace Darimu.ClassFolder
             }
             else if (String.Equals("", val_nama_pengguna) || String.Equals("Nama Pengguna", val_nama_pengguna) || !re_nama_pengguna.IsMatch(val_nama_pengguna))
             {
-                hasil = "Masukkan nama pengguna (MINIMAL 8 HURUF TANPA KARAKTER SPESIAL)";
+                hasil = "Nama pengguna belum diisi :) Minimal 8 huruf dan tanpa karakter spesial";
             }
             else if (String.Equals("", val_email) || String.Equals("Alamat Email", val_email) || !re_email.IsMatch(val_email))
             {
-                hasil = "Email harus diisi dengan benar";
+                hasil = "Email harus diisi dengan benar. Coba cek lagi!";
             }
             else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_kata_sandi.IsMatch(val_kata_sandi))
             {
-                hasil = "Kata sandi harus diisi dengan benar (MINIMAL 8 HURUF TANPA KARAKTER SPESIAL)";
+                hasil = "Kata sandi harus diisi dengan benar. Mininmal 8 huruf dan tanpa karakter spesial ya :)";
             }
             else if (!(String.Equals(val_kata_sandi, konfirmasi_kata_sandi.Text)))
             {
-                hasil = "Kata sandi tidak sama";
+                hasil = "Yah, kata sandinya tidak sama :(";
             }
             else
             {
@@ -62,11 +62,11 @@ namespace Darimu.ClassFolder
 
             if (String.Equals("", val_username) || String.Equals("Nama Pengguna atau Email", val_username))
             {
-                hasil = "Masukkan nama pengguna atau email dengan benar";
+                hasil = "Isi nama pengguna atau email dengan benar ya!";
             }
             else if (String.Equals("", val_password) || String.Equals("password", val_password) || !re_nama_pengguna.IsMatch(val_password))
             {
-                hasil = "Masukkan kata sandi dengan benar";
+                hasil = "Isi kata sandi dengan benar ya!";
             }
             else
             {
@@ -85,19 +85,19 @@ namespace Darimu.ClassFolder
 
             if (String.Equals("", val_nama_pengguna_atau_email) || String.Equals("Nama Pengguna atau Email", val_nama_pengguna_atau_email))
             {
-                hasil = "Masukkan nama pengguna atau email dengan benar";
+                hasil = "Isi nama pengguna atau emailmu yuk!";
             }
             else if (String.Equals("", val_kata_sandi) || String.Equals("password", val_kata_sandi) || !re_kata_sandi.IsMatch(val_kata_sandi))
             {
-                hasil = "Masukkan kata sandi dengan benar";
+                hasil = "Isi kata sandi dengan benar ya :)";
             }
             else if (!(String.Equals(val_kata_sandi, konfirmasi_kata_sandi.Text)))
             {
-                hasil = "Kata sandi tidak sama";
+                hasil = "Yah, kata sandinya tidak sama :(";
             }
             else if (String.Equals("", val_captcha) || String.Equals("captcha", val_captcha) || !String.Equals(angka_captcha.ToString(), val_captcha))
             {
-                hasil = "Masukkan captcha dengan benar";
+                hasil = "Captcha masih salah nih. Coba lagi yuk!";
             }
             else
             {
@@ -114,18 +114,18 @@ namespace Darimu.ClassFolder
 
             if (String.Equals("", val_tambah_saldo))
             {
-                hasil = "Mohon diisi saldonya terlebih dahulu";
+                hasil = "Isi saldomu dulu yuk!";
             } 
             else if (!re_saldo.IsMatch(val_tambah_saldo))
             {
-                hasil = "Saldo hanya dapat diisi oleh angka saja";
+                hasil = "Isi saldo dengan angka ya :)";
             }
             else if (long.Parse(val_tambah_saldo) < 50000)
             {
                 hasil = "Minimal isi saldo Rp50.000";
             } else if (bank.Image == null)
             {
-                hasil = "Silakan pilih bank dahulu";
+                hasil = "Banknya belum dipilih nih!";
             }
             else
             {
@@ -141,11 +141,11 @@ namespace Darimu.ClassFolder
             string val_email = email.Text.Trim();
 
             if(String.Equals("", val_nama_depan) || !re_huruf.IsMatch(val_nama_depan)) {
-                hasil = "Mohon isi nama depan dengan benar";
+                hasil = "Isi nama depanmu dengan benar ya!";
             } else if(!re_huruf.IsMatch(val_nama_belakang)) {
-                hasil = "Mohon isi nama belakang dengan benar";
+                hasil = "Isi nama belakangmu dengan benar ya!";
             } else if(String.Equals("", val_email) || !re_email.IsMatch(val_email)) {
-                hasil = "Mohon isi email dengan benar";
+                hasil = "Isi emailmu dengan benar yuk!";
             } 
             else
             {
@@ -163,21 +163,45 @@ namespace Darimu.ClassFolder
 
             if (String.Equals("", val_nama_impian) || !re_huruf.IsMatch(val_nama_impian))
             {
-                hasil = "Mohon isi nama impian dengan benar";
+                hasil = "Isi nama impianmu dengan benar ya! :D";
             }
             else if (String.Equals("", val_saldo_impian) || !re_saldo.IsMatch(val_saldo_impian))
             {
-                hasil = "Mohon isi saldo impian dengan benar";
+                hasil = "Isi saldo impianmu dengan benar yuk! :D";
             }
             else if (validasi_button == false)
             {
-                hasil = "Mohon pilih jenis impianmu :)";
+                hasil = "Jenis impianmu belum dipilih nih!";
             }
             else
             {
                 hasil = "valid";
             }
 
+            return hasil;
+        }
+
+        public static string cekTambahSaldoImpian(TextBox tambah_saldo_impian)
+        {
+            string hasil = "";
+            string val_saldo_impian = tambah_saldo_impian.Text.Trim();
+
+            if (String.Equals("Masukkan Nominal Di sini", val_saldo_impian) || String.Equals("", val_saldo_impian))
+            {
+                hasil = "Isi saldomu dulu yuk!";
+            }
+            else if (!re_saldo.IsMatch(val_saldo_impian))
+            {
+                hasil = "Isi saldo dengan angka ya :)";
+            }
+            else if (long.Parse(val_saldo_impian) < 10000)
+            {
+                hasil = "Minimal isi saldo Rp10.000";
+            }
+            else
+            {
+                hasil = "valid";
+            }
             return hasil;
         }
     }

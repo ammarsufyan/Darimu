@@ -137,6 +137,8 @@
     <None Include="Assets\bank_bca.png" />
     <None Include="Assets\bank_bni.png" />
     <None Include="Assets\bank_bri.png" />
+    <None Include="Assets\Blue\icon_hapus_biru.png" />
+    <None Include="Assets\Blue\icon_selesai_biru.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
@@ -156,9 +158,11 @@
     <Content Include="Assets\icon_beranda.png" />
     <Content Include="Assets\icon_faq.png" />
     <None Include="Assets\icon_keluar.png" />
+    <None Include="Assets\icon_hapus.png" />
     <Content Include="Assets\icon_masuk.png" />
     <Content Include="Assets\icon_menu.png" />
     <Content Include="Assets\icon_saldo.png" />
+    <None Include="Assets\icon_selesai.png" />
     <Content Include="Assets\icon_tabungan.png" />
     <Content Include="Assets\icon_tentang_kami.png" />
     <Content Include="Assets\icon_topup.png" />
@@ -178,6 +182,8 @@
     <None Include="Assets\JenisImpian\logo_hiburan.png" />
     <None Include="Assets\JenisImpian\logo_jalan_jalan.png" />
     <None Include="Assets\JenisImpian\logo_umum.png" />
+    <None Include="Assets\JenisImpian\logo_tambah.png" />
+    <None Include="Assets\isi_saldo_impian.png" />
     <Content Include="Assets\LogoDarimuTransparant.png" />
     <Content Include="Assets\maskot_beranda.png" />
     <Content Include="Assets\maximize.png" />
