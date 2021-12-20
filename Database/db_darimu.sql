@@ -22,7 +22,7 @@ USE db_darimu;
 
 -- ========================================================================
 -- membuat tb_admin
-DROP TABLE tb_admin;
+ DROP TABLE tb_admin;
 CREATE TABLE tb_admin(
 	nama_pengguna_admin VARCHAR(100) NOT NULL PRIMARY KEY,
 	nama_lengkap VARCHAR(100) NOT NULL,
@@ -39,13 +39,13 @@ CREATE TABLE tb_admin(
 -- memasukkan data admin (di sini ada 3 admin, yaitu Vera Liani, Uli Paris Usada, dan Maman Sitorus)
 INSERT INTO tb_admin(nik, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_lahir, tanggal_lahir, alamat_email, nama_pengguna_admin, kata_sandi, status_admin)
     VALUES
-    ('vera_liani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', '0F23C5A1EC787D7AB58C34B8FA18158B601789402374420BDBBF1E7E6E6DEB4641DAA0D772D52771A6081AF132B379059128289DD2DE41D75B1F70EBAB8E0588', 'Aktif'),
-    ('Uli_PH', 'Uli Paris Usada', 'Perempuan', 'Kpg. Haji No. 518, Salatiga 99947', 'Gorontalo', '1988-04-01', 'uli_ph@gmail.com', '8795200921584695', '9B348D97A051CDFB8D1C0E10C3A849B9C7C398B33922FEC992EFCA229B7B3415F6611448FF0CA11CAFB33C93E680026BAF95C8100DE9F76EF7F2540D89C82699', 'Aktif'),
-    ('S_maman', 'Maman Sitorus' , 'Laki-laki', 'Psr. Suryo No. 367, Langsa 82078, Jakarta', 'Papua Barat', '1970-06-10', 'abcdefg@gmail.com', '2221686886311030', 'E76D380D70D4F85616708B4A959C75DB7DA9321D4C945FAF5234AEBB218B22F0A6FA1492D86FDC97C701BC3E0C1E1F15BC3CE85A1DF1F4D345CFC1BA5D2BC092', 'Aktif')
+    ('vera_liani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', 'dahC3ahz', 'Aktif'),
+    ('Uli_PH', 'Uli Paris Usada', 'Perempuan', 'Kpg. Haji No. 518, Salatiga 99947', 'Gorontalo', '1988-04-01', 'uli_ph@gmail.com', '8795200921584695', 'uli123', 'Aktif'),
+    ('S_maman', 'Maman Sitorus' , 'Laki-laki', 'Psr. Suryo No. 367, Langsa 82078, Jakarta', 'Papua Barat', '1970-06-10', 'abcdefg@gmail.com', '2221686886311030', 'maman10670', 'Aktif')
 
 -- ========================================================================
 -- membuat tb_pengguna
-DROP TABLE tb_pengguna;
+ DROP TABLE tb_pengguna;
 CREATE TABLE tb_pengguna(
     nama_pengguna VARCHAR(100) NOT NULL PRIMARY KEY,
     nama_lengkap VARCHAR(100) NOT NULL,
@@ -56,30 +56,31 @@ CREATE TABLE tb_pengguna(
     tanggal_buka DATETIME NULL,
     tanggal_tutup DATETIME NULL,
     [status_pengguna] VARCHAR(100) NULL CHECK ([status_pengguna] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
-);
+)
 
 
 -- ========================================================================
 -- membuat tb_transaksi
-DROP TABLE tb_transaksi;
+ DROP TABLE tb_transaksi;
 CREATE TABLE tb_transaksi (
     id INT IDENTITY(1,1) NOT NULL,
-	id_transaksi AS ('TR-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
+	id_transaksi AS ('TR-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
     nama_pengguna VARCHAR(100) NOT NULL,
     tanggal DATETIME NOT NULL,
-    keterangan VARCHAR(255) NOT NULL,
+    keterangan VARCHAR(255) NULL,
     debit BIGINT NOT NULL,
     kredit BIGINT NOT NULL,
     saldo BIGINT NOT NULL,
     [status_data] VARCHAR(100) NULL CHECK ([status_data] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
 
+
 -- ========================================================================
 -- membuat tb_tabungan_impian
-DROP TABLE tb_tabungan_impian;
-CREATE TABLE tb_tabungan_impian(
+ DROP TABLE tb_tabungan_impian;
+CREATE TABLE tb_tabungan_impian (
 	id INT IDENTITY(1,1) NOT NULL,
-	id_tabungan_impian AS ('TI-' + RIGHT('000' + CAST(id AS VARCHAR(10)), 3)) PERSISTED,
+	id_tabungan_impian AS ('TI-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
     nama_pengguna VARCHAR(100) NOT NULL,
     nama_tabungan_impian VARCHAR(100) NOT NULL,
     jenis_impian VARCHAR(100) NOT NULL,
@@ -95,9 +96,10 @@ CREATE TABLE tb_tabungan_impian(
 
 -- ========================================================================
 -- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
-DROP TABLE tb_laporan;
+ DROP TABLE tb_laporan;
 CREATE TABLE tb_laporan(
-    id_laporan INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    id INT IDENTITY(1,1) NOT NULL,
+    id_laporan AS ('LOG-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
     nama_pengguna VARCHAR(100) NOT NULL,
     nama_pengguna_admin VARCHAR(100) NOT NULL,
     subjek_alasan VARCHAR(100) NOT NULL,
@@ -107,12 +109,24 @@ CREATE TABLE tb_laporan(
     [status_laporan] VARCHAR(100) NULL CHECK ([status_laporan] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
 
-SELECT * FROM tb_tabungan_impian tti 
+-- ========================================================================
+-- membuat tb_log_data (untuk melihat apa saja yang dilakukan oleh user (hanya ADMIN!!!!!!!!!!!!!!))
 
-TRUNCATE TABLE tb_transaksi 
+DROP TABLE tb_log_data;
+CREATE TABLE tb_log_data(
+	id INT IDENTITY(1,1) NOT NULL,
+	id_log_data AS ('LOG-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED,
+	nama_pengguna VARCHAR(100) NOT NULL,
+	nama_pengguna_admin VARCHAR(100) NOT NULL,
+	aktivitas VARCHAR(255) NOT NULL,
+	keterangan VARCHAR(255) NOT NULL,
+	tanggal_dibuat DATETIME NULL,
+	tanggal_ditutup DATETIME NULL,
+	[status_log_data] VARCHAR(100) NULL CHECK ([status_log_data] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
+	PRIMARY KEY (id_log_data)
+);
 
-TRUNCATE TABLE tb_pengguna 
+SELECT * FROM tb_log_data;
 
-TRUNCATE TABLE tb_tabungan_impian 
 
-SELECT * FROM tb_tabungan_impian WHERE nama_pengguna = 'ammarsufyan' order by count(*) descfetch first 3 rows ONLY;
+

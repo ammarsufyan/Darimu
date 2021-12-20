@@ -26,18 +26,12 @@ AS
     BEGIN
         IF UPDATE(saldo)
         BEGIN
---	        DECLARE @saldo_before BIGINT
---	        DECLARE @saldo_after BIGINT
 	        DECLARE @nama_pengguna VARCHAR(100)
 	        DECLARE @keterangan VARCHAR(100)
 	        DECLARE @perubahan_saldo BIGINT
---	        SET @saldo_before = (SELECT saldo FROM deleted)
---	        SET @saldo_after = (SELECT saldo FROM inserted)
 	        SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
 	        SET @perubahan_saldo = (SELECT saldo FROM inserted) - (SELECT saldo FROM deleted)
 	        PRINT CONCAT('Perubahan Saldo : ', @perubahan_saldo)
---	        PRINT CONCAT('Saldo Sebelum : ', @saldo_before) 
---	        PRINT CONCAT('Saldo Sesudah : ', @saldo_after) 
 	        IF (@perubahan_saldo < 0)
 	        BEGIN
 		       SET @keterangan = 'Tarik Saldo' 
@@ -69,44 +63,6 @@ AS
 	   			INSERT INTO tb_transaksi(nama_pengguna, tanggal, keterangan, debit, kredit, saldo)
 	   			VALUES(@nama_pengguna, GETDATE(), @keterangan, 0, ABS(@perubahan_saldo), @saldo_saat_ini)
         	END
-    END
-
--- ========================================================================
--- membuat trigger dan procedure untuk update saldo di tabungan impian
-DROP TRIGGER tr_tabungan_impian;
-CREATE TRIGGER tr_tabungan_impian
-    ON tb_tabungan_impian
-    AFTER UPDATE
-AS
-    BEGIN
-        IF UPDATE(saldo_terkumpul)
-        BEGIN
-	        DECLARE @nama_pengguna VARCHAR(100)
-	        DECLARE @keterangan VARCHAR(100)
-	        DECLARE @perubahan_saldo BIGINT
-	        DECLARE @nama_tabungan_impian VARCHAR(255)
-	        
-	        SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
-	        SET @perubahan_saldo = (SELECT saldo_terkumpul FROM inserted) - (SELECT saldo_terkumpul FROM deleted)
-	        SET @nama_tabungan_impian = (SELECT nama_tabungan_impian FROM inserted)
-	        
-	        PRINT CONCAT('Perubahan Saldo : ', @perubahan_saldo)
-	 
-	        IF (@perubahan_saldo < 0)
-	        BEGIN
-		       SET @keterangan = CONCAT('withdraw dari tabungan "', @nama_tabungan_impian, '"') 
-	        END
-	        IF (@perubahan_saldo > 0)
-	        BEGIN
-		        SET @keterangan = CONCAT('transfer ke tabungan "', @nama_tabungan_impian, '"') 
-	        END
-	        
-	        DECLARE @saldo_saat_ini BIGINT
-		    SET @saldo_saat_ini = (SELECT saldo_terkumpul FROM tb_tabungan_impian WHERE id_tabungan_impian = (SELECT id_tabungan_impian FROM inserted))
-			EXEC sp_transaksi @nama_pengguna, @perubahan_saldo, @keterangan, @saldo_saat_ini
-			UPDATE tb_pengguna SET saldo = saldo - @perubahan_saldo WHERE nama_pengguna = @nama_pengguna
-        END
-        
     END
 
 -- ========================================================================
