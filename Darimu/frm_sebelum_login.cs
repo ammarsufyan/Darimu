@@ -9,7 +9,7 @@ using System.Xml;
 
 namespace Darimu
 {
-    public partial class frm_beranda_sebelum_login : Form
+    public partial class frm_sebelum_login : Form
     {
         // declaration var
         int kesempatan_masuk = 3;
@@ -17,7 +17,7 @@ namespace Darimu
         public static string nama_pengguna, kata_sandi, nama_lengkap, tanggal_lahir, alamat_email, saldo, tanggal_buka, tanggal_tutup, status_pengguna;
         private int borderSize = 2;
 
-        public frm_beranda_sebelum_login()
+        public frm_sebelum_login()
         {
             InitializeComponent();
             CollapseMenu();
@@ -438,7 +438,7 @@ namespace Darimu
                     hide_panel();
                     default_color();
                     clear_text();
-                    frm_beranda_setelah_login p = new frm_beranda_setelah_login(nama_pengguna_atau_email_input);
+                    frm_setelah_login p = new frm_setelah_login(nama_pengguna_atau_email_input);
                     this.Hide();
                     p.Show();
                 }

@@ -56,7 +56,7 @@ namespace Darimu.ClassFolder
                     sqlda.SelectCommand.Parameters["@kata_sandi"].Value = hashPassword(kata_sandi);
                     sqlda.SelectCommand.ExecuteNonQuery();
 
-                    hasil = "Selamat! Anda telah terdaftar";
+                    hasil = "Selamat! Kamu telah terdaftar :D";
                 }
             }
             catch (Exception ex)

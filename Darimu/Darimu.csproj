@@ -68,28 +68,28 @@
     <Compile Include="frm_admin.Designer.cs">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_beranda_setelah_login.cs">
+    <Compile Include="frm_setelah_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_beranda_setelah_login.Designer.cs">
-      <DependentUpon>frm_beranda_setelah_login.cs</DependentUpon>
+    <Compile Include="frm_setelah_login.Designer.cs">
+      <DependentUpon>frm_setelah_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_beranda_sebelum_login.cs">
+    <Compile Include="frm_sebelum_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_beranda_sebelum_login.Designer.cs">
-      <DependentUpon>frm_beranda_sebelum_login.cs</DependentUpon>
+    <Compile Include="frm_sebelum_login.Designer.cs">
+      <DependentUpon>frm_sebelum_login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_admin.resx">
       <DependentUpon>frm_admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_beranda_setelah_login.resx">
-      <DependentUpon>frm_beranda_setelah_login.cs</DependentUpon>
+    <EmbeddedResource Include="frm_setelah_login.resx">
+      <DependentUpon>frm_setelah_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_beranda_sebelum_login.resx">
-      <DependentUpon>frm_beranda_sebelum_login.cs</DependentUpon>
+    <EmbeddedResource Include="frm_sebelum_login.resx">
+      <DependentUpon>frm_sebelum_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

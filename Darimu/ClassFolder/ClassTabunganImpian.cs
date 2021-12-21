@@ -65,13 +65,19 @@ namespace Darimu.ClassFolder
             return isi_impian;
         }
 
-        public static long tambahSaldoImpian(string nama_pengguna, long saldo_terkumpul, string id_tabungan_impian, string keterangan)
+        public static long tambahSaldoImpian(string nama_pengguna, long saldo_terkumpul, long saldo_impian, string id_tabungan_impian, string keterangan_impian)
         {
-            long saldo_baru = ClassTransaksi.isi_saldo_impian(nama_pengguna, saldo_terkumpul, keterangan);
-            Console.WriteLine("Saldo Terkumpul" + saldo_baru);
-            if(saldo_baru <= 0)
+            long saldo_baru = ClassTransaksi.isi_saldo_impian(nama_pengguna, saldo_terkumpul, keterangan_impian);
+            if(saldo_baru < 0)
             {
                 MessageBox.Show("Maaf, duit kamu kurang nih. :(",
+                                "Gagal Menambah Saldo Impian",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            } 
+            else if (saldo_impian < saldo_terkumpul)
+            {
+                MessageBox.Show("Wah, kamu tidak bisa topup melebihi saldo impian :).",
                                 "Gagal Menambah Saldo Impian",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);

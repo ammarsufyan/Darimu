@@ -13,7 +13,7 @@ namespace Darimu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_beranda_sebelum_login());
+            Application.Run(new frm_sebelum_login());
         }
     }
 }

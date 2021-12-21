@@ -282,7 +282,7 @@ namespace Darimu
             {
                 hide_panel();
                 default_color();
-                frm_beranda_sebelum_login p = new frm_beranda_sebelum_login();
+                frm_sebelum_login p = new frm_sebelum_login();
                 this.Hide();
                 p.Show();
             }

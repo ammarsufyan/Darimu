@@ -9,14 +9,15 @@ using System.Xml;
 
 namespace Darimu
 {
-    public partial class frm_beranda_setelah_login : Form
+    public partial class frm_setelah_login : Form
     {
         // declaration var
         private string nama_pengguna, pilihan_bank, jenis_impian, tautan_gambar, id_impian, keterangan_impian, keterangan_hapus_impian;
         private bool validasi_button = false;
         private int borderSize = 2;
+        private long saldo_impian = 0;
 
-        public frm_beranda_setelah_login(string nama_pengguna)
+        public frm_setelah_login(string nama_pengguna)
         {
             InitializeComponent();
             CollapseMenu();
@@ -419,7 +420,7 @@ namespace Darimu
             if (result == DialogResult.Yes)
             {
                 hide_panel();
-                frm_beranda_sebelum_login p = new frm_beranda_sebelum_login();
+                frm_sebelum_login p = new frm_sebelum_login();
                 this.Hide();
                 p.Show();
             }
@@ -982,6 +983,7 @@ namespace Darimu
             hide_panel();
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
             id_impian = isi_impian[6].ToString();
+            saldo_impian = long.Parse(isi_impian[10].ToString());
             label_nama_impian_isi_saldo.Text = isi_impian[7].ToString();
             keterangan_impian = "Isi Saldo Impian " + isi_impian[7].ToString();
             panel_isi_saldo_tabungan_impian.Visible = true;
@@ -1002,6 +1004,7 @@ namespace Darimu
             hide_panel();
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
             id_impian = isi_impian[12].ToString();
+            saldo_impian = long.Parse(isi_impian[16].ToString());
             label_nama_impian_isi_saldo.Text = isi_impian[13].ToString();
             keterangan_impian = "Isi Saldo Impian " + isi_impian[13].ToString();
             panel_isi_saldo_tabungan_impian.Visible = true;
@@ -1019,8 +1022,8 @@ namespace Darimu
 
         private void button_selesai_impian_1_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menghapus impian?",
-                                        "Hapus Impian",
+            var result = MessageBox.Show("Apakah Anda yakin ingin menyelesaikan impian?",
+                                        "Selesaikan Impian",
                                         MessageBoxButtons.YesNo,
                                         MessageBoxIcon.Stop);
 
@@ -1052,8 +1055,8 @@ namespace Darimu
 
         private void button_selesai_impian_2_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menghapus impian?",
-                                       "Hapus Impian",
+            var result = MessageBox.Show("Apakah Anda yakin ingin menyelesaikan impian?",
+                                       "Selesaikan Impian",
                                        MessageBoxButtons.YesNo,
                                        MessageBoxIcon.Stop);
 
@@ -1095,8 +1098,8 @@ namespace Darimu
 
         private void button_selesai_impian_3_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menghapus impian?",
-                           "Hapus Impian",
+            var result = MessageBox.Show("Apakah Anda yakin ingin menyelesaikan impian?",
+                           "Selesaikan Impian",
                            MessageBoxButtons.YesNo,
                            MessageBoxIcon.Stop);
 
@@ -1164,6 +1167,7 @@ namespace Darimu
             hide_panel();
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
             id_impian = isi_impian[0].ToString();
+            saldo_impian = long.Parse(isi_impian[4].ToString());
             label_nama_impian_isi_saldo.Text = isi_impian[1].ToString();
             keterangan_impian = "Isi Saldo Impian " + isi_impian[1].ToString();
             panel_isi_saldo_tabungan_impian.Visible = true;
@@ -1175,10 +1179,11 @@ namespace Darimu
             if(cek == "valid")
             {
                 long saldo_baru = long.Parse(txt_isi_saldo_impian.Text.Trim());
-                label_saldo.Text = ClassTabunganImpian.tambahSaldoImpian(nama_pengguna, saldo_baru, id_impian, keterangan_impian).ToString();
+                label_saldo.Text = ClassTabunganImpian.tambahSaldoImpian(nama_pengguna, saldo_baru, saldo_impian, id_impian, keterangan_impian).ToString();
                 hide_panel();
                 tampil_impian();
                 panel_isi_tabungan_impian.Visible = true;
+                txt_isi_saldo_impian.Text = "Masukkan Nominal Di sini";
             }
             else
             {

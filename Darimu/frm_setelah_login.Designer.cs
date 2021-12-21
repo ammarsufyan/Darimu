@@ -1,6 +1,6 @@
 ﻿namespace Darimu
 {
-    partial class frm_beranda_setelah_login
+    partial class frm_setelah_login
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_beranda_setelah_login));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_setelah_login));
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -70,13 +70,6 @@
             this.panel_isi = new System.Windows.Forms.Panel();
             this.panel_border_isi_bawah = new System.Windows.Forms.Panel();
             this.panel_border_isi_kanan = new System.Windows.Forms.Panel();
-            this.panel_isi_saldo_tabungan_impian = new System.Windows.Forms.Panel();
-            this.button_batal_isi_saldo_impian = new System.Windows.Forms.Button();
-            this.button_simpan_isi_saldo_impian = new System.Windows.Forms.Button();
-            this.label_nama_impian_isi_saldo = new System.Windows.Forms.Label();
-            this.txt_isi_saldo_impian = new System.Windows.Forms.TextBox();
-            this.gambar_isi_saldo_impian = new System.Windows.Forms.PictureBox();
-            this.panel_isi_riwayat_tabungan_impian = new System.Windows.Forms.Panel();
             this.panel_isi_tabungan_impian = new System.Windows.Forms.Panel();
             this.button_topup_impian_3 = new System.Windows.Forms.Button();
             this.button_selesai_impian_3 = new System.Windows.Forms.Button();
@@ -155,6 +148,13 @@
             this.txt_saldo_impian = new System.Windows.Forms.TextBox();
             this.txt_nama_tabungan_impian = new System.Windows.Forms.TextBox();
             this.gambar_tambah_impian = new System.Windows.Forms.PictureBox();
+            this.panel_isi_saldo_tabungan_impian = new System.Windows.Forms.Panel();
+            this.button_batal_isi_saldo_impian = new System.Windows.Forms.Button();
+            this.button_simpan_isi_saldo_impian = new System.Windows.Forms.Button();
+            this.label_nama_impian_isi_saldo = new System.Windows.Forms.Label();
+            this.txt_isi_saldo_impian = new System.Windows.Forms.TextBox();
+            this.gambar_isi_saldo_impian = new System.Windows.Forms.PictureBox();
+            this.panel_isi_riwayat_tabungan_impian = new System.Windows.Forms.Panel();
             this.drop_down_profil = new Darimu.CustomControls.DRMDropDownMenu(this.components);
             this.profilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -177,8 +177,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nama_logo_dan_tagline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
             this.panel_isi.SuspendLayout();
-            this.panel_isi_saldo_tabungan_impian.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_saldo_impian)).BeginInit();
             this.panel_isi_tabungan_impian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_impian_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_impian_2)).BeginInit();
@@ -200,6 +198,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_saldo)).BeginInit();
             this.panel_isi_tambah_tabungan_impian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_impian)).BeginInit();
+            this.panel_isi_saldo_tabungan_impian.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_saldo_impian)).BeginInit();
             this.drop_down_profil.SuspendLayout();
             this.drop_down_tabungan.SuspendLayout();
             this.SuspendLayout();
@@ -775,102 +775,6 @@
             this.panel_border_isi_kanan.Name = "panel_border_isi_kanan";
             this.panel_border_isi_kanan.Size = new System.Drawing.Size(2, 470);
             this.panel_border_isi_kanan.TabIndex = 13;
-            // 
-            // panel_isi_saldo_tabungan_impian
-            // 
-            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.button_batal_isi_saldo_impian);
-            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.button_simpan_isi_saldo_impian);
-            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.label_nama_impian_isi_saldo);
-            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.txt_isi_saldo_impian);
-            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.gambar_isi_saldo_impian);
-            this.panel_isi_saldo_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_saldo_tabungan_impian.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_saldo_tabungan_impian.Name = "panel_isi_saldo_tabungan_impian";
-            this.panel_isi_saldo_tabungan_impian.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_saldo_tabungan_impian.TabIndex = 23;
-            this.panel_isi_saldo_tabungan_impian.Visible = false;
-            // 
-            // button_batal_isi_saldo_impian
-            // 
-            this.button_batal_isi_saldo_impian.AutoSize = true;
-            this.button_batal_isi_saldo_impian.BackColor = System.Drawing.Color.White;
-            this.button_batal_isi_saldo_impian.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_batal_isi_saldo_impian.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_batal_isi_saldo_impian.FlatAppearance.BorderSize = 0;
-            this.button_batal_isi_saldo_impian.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_batal_isi_saldo_impian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_batal_isi_saldo_impian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_batal_isi_saldo_impian.Image = global::Darimu.Properties.Resources.button_batal;
-            this.button_batal_isi_saldo_impian.Location = new System.Drawing.Point(572, 376);
-            this.button_batal_isi_saldo_impian.Name = "button_batal_isi_saldo_impian";
-            this.button_batal_isi_saldo_impian.Size = new System.Drawing.Size(67, 40);
-            this.button_batal_isi_saldo_impian.TabIndex = 22;
-            this.button_batal_isi_saldo_impian.UseVisualStyleBackColor = false;
-            this.button_batal_isi_saldo_impian.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_isi_saldo_impian_MouseClick);
-            this.button_batal_isi_saldo_impian.MouseEnter += new System.EventHandler(this.button_batal_isi_saldo_impian_MouseEnter);
-            this.button_batal_isi_saldo_impian.MouseLeave += new System.EventHandler(this.button_batal_isi_saldo_impian_MouseLeave);
-            // 
-            // button_simpan_isi_saldo_impian
-            // 
-            this.button_simpan_isi_saldo_impian.AutoSize = true;
-            this.button_simpan_isi_saldo_impian.BackColor = System.Drawing.Color.White;
-            this.button_simpan_isi_saldo_impian.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_simpan_isi_saldo_impian.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_simpan_isi_saldo_impian.FlatAppearance.BorderSize = 0;
-            this.button_simpan_isi_saldo_impian.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_simpan_isi_saldo_impian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_simpan_isi_saldo_impian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_simpan_isi_saldo_impian.Image = global::Darimu.Properties.Resources.button_simpan;
-            this.button_simpan_isi_saldo_impian.Location = new System.Drawing.Point(645, 376);
-            this.button_simpan_isi_saldo_impian.Name = "button_simpan_isi_saldo_impian";
-            this.button_simpan_isi_saldo_impian.Size = new System.Drawing.Size(67, 40);
-            this.button_simpan_isi_saldo_impian.TabIndex = 21;
-            this.button_simpan_isi_saldo_impian.UseVisualStyleBackColor = false;
-            this.button_simpan_isi_saldo_impian.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_isi_saldo_impian_MouseClick);
-            this.button_simpan_isi_saldo_impian.MouseEnter += new System.EventHandler(this.button_simpan_isi_saldo_impian_MouseEnter);
-            this.button_simpan_isi_saldo_impian.MouseLeave += new System.EventHandler(this.button_simpan_isi_saldo_impian_MouseLeave);
-            // 
-            // label_nama_impian_isi_saldo
-            // 
-            this.label_nama_impian_isi_saldo.AutoSize = true;
-            this.label_nama_impian_isi_saldo.BackColor = System.Drawing.Color.White;
-            this.label_nama_impian_isi_saldo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_impian_isi_saldo.Location = new System.Drawing.Point(240, 174);
-            this.label_nama_impian_isi_saldo.Name = "label_nama_impian_isi_saldo";
-            this.label_nama_impian_isi_saldo.Size = new System.Drawing.Size(214, 22);
-            this.label_nama_impian_isi_saldo.TabIndex = 20;
-            this.label_nama_impian_isi_saldo.Text = "Nama Tabungan Impian";
-            // 
-            // txt_isi_saldo_impian
-            // 
-            this.txt_isi_saldo_impian.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_saldo_impian.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_isi_saldo_impian.Location = new System.Drawing.Point(244, 230);
-            this.txt_isi_saldo_impian.Name = "txt_isi_saldo_impian";
-            this.txt_isi_saldo_impian.Size = new System.Drawing.Size(321, 20);
-            this.txt_isi_saldo_impian.TabIndex = 19;
-            this.txt_isi_saldo_impian.Text = "Masukkan Nominal Di sini";
-            this.txt_isi_saldo_impian.GotFocus += new System.EventHandler(this.txt_isi_saldo_impian_GotFocus);
-            this.txt_isi_saldo_impian.LostFocus += new System.EventHandler(this.txt_isi_saldo_impian_LostFocus);
-            // 
-            // gambar_isi_saldo_impian
-            // 
-            this.gambar_isi_saldo_impian.Image = ((System.Drawing.Image)(resources.GetObject("gambar_isi_saldo_impian.Image")));
-            this.gambar_isi_saldo_impian.Location = new System.Drawing.Point(66, 0);
-            this.gambar_isi_saldo_impian.Name = "gambar_isi_saldo_impian";
-            this.gambar_isi_saldo_impian.Size = new System.Drawing.Size(669, 428);
-            this.gambar_isi_saldo_impian.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_isi_saldo_impian.TabIndex = 0;
-            this.gambar_isi_saldo_impian.TabStop = false;
-            // 
-            // panel_isi_riwayat_tabungan_impian
-            // 
-            this.panel_isi_riwayat_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_riwayat_tabungan_impian.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_riwayat_tabungan_impian.Name = "panel_isi_riwayat_tabungan_impian";
-            this.panel_isi_riwayat_tabungan_impian.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_riwayat_tabungan_impian.TabIndex = 22;
-            this.panel_isi_riwayat_tabungan_impian.Visible = false;
             // 
             // panel_isi_tabungan_impian
             // 
@@ -2002,6 +1906,102 @@
             this.gambar_tambah_impian.TabIndex = 0;
             this.gambar_tambah_impian.TabStop = false;
             // 
+            // panel_isi_saldo_tabungan_impian
+            // 
+            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.button_batal_isi_saldo_impian);
+            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.button_simpan_isi_saldo_impian);
+            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.label_nama_impian_isi_saldo);
+            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.txt_isi_saldo_impian);
+            this.panel_isi_saldo_tabungan_impian.Controls.Add(this.gambar_isi_saldo_impian);
+            this.panel_isi_saldo_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_saldo_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_saldo_tabungan_impian.Name = "panel_isi_saldo_tabungan_impian";
+            this.panel_isi_saldo_tabungan_impian.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_saldo_tabungan_impian.TabIndex = 23;
+            this.panel_isi_saldo_tabungan_impian.Visible = false;
+            // 
+            // button_batal_isi_saldo_impian
+            // 
+            this.button_batal_isi_saldo_impian.AutoSize = true;
+            this.button_batal_isi_saldo_impian.BackColor = System.Drawing.Color.White;
+            this.button_batal_isi_saldo_impian.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_batal_isi_saldo_impian.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_batal_isi_saldo_impian.FlatAppearance.BorderSize = 0;
+            this.button_batal_isi_saldo_impian.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_batal_isi_saldo_impian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_batal_isi_saldo_impian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_batal_isi_saldo_impian.Image = global::Darimu.Properties.Resources.button_batal;
+            this.button_batal_isi_saldo_impian.Location = new System.Drawing.Point(572, 376);
+            this.button_batal_isi_saldo_impian.Name = "button_batal_isi_saldo_impian";
+            this.button_batal_isi_saldo_impian.Size = new System.Drawing.Size(67, 40);
+            this.button_batal_isi_saldo_impian.TabIndex = 22;
+            this.button_batal_isi_saldo_impian.UseVisualStyleBackColor = false;
+            this.button_batal_isi_saldo_impian.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_isi_saldo_impian_MouseClick);
+            this.button_batal_isi_saldo_impian.MouseEnter += new System.EventHandler(this.button_batal_isi_saldo_impian_MouseEnter);
+            this.button_batal_isi_saldo_impian.MouseLeave += new System.EventHandler(this.button_batal_isi_saldo_impian_MouseLeave);
+            // 
+            // button_simpan_isi_saldo_impian
+            // 
+            this.button_simpan_isi_saldo_impian.AutoSize = true;
+            this.button_simpan_isi_saldo_impian.BackColor = System.Drawing.Color.White;
+            this.button_simpan_isi_saldo_impian.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_simpan_isi_saldo_impian.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_simpan_isi_saldo_impian.FlatAppearance.BorderSize = 0;
+            this.button_simpan_isi_saldo_impian.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button_simpan_isi_saldo_impian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_simpan_isi_saldo_impian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_simpan_isi_saldo_impian.Image = global::Darimu.Properties.Resources.button_simpan;
+            this.button_simpan_isi_saldo_impian.Location = new System.Drawing.Point(645, 376);
+            this.button_simpan_isi_saldo_impian.Name = "button_simpan_isi_saldo_impian";
+            this.button_simpan_isi_saldo_impian.Size = new System.Drawing.Size(67, 40);
+            this.button_simpan_isi_saldo_impian.TabIndex = 21;
+            this.button_simpan_isi_saldo_impian.UseVisualStyleBackColor = false;
+            this.button_simpan_isi_saldo_impian.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_isi_saldo_impian_MouseClick);
+            this.button_simpan_isi_saldo_impian.MouseEnter += new System.EventHandler(this.button_simpan_isi_saldo_impian_MouseEnter);
+            this.button_simpan_isi_saldo_impian.MouseLeave += new System.EventHandler(this.button_simpan_isi_saldo_impian_MouseLeave);
+            // 
+            // label_nama_impian_isi_saldo
+            // 
+            this.label_nama_impian_isi_saldo.AutoSize = true;
+            this.label_nama_impian_isi_saldo.BackColor = System.Drawing.Color.White;
+            this.label_nama_impian_isi_saldo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_impian_isi_saldo.Location = new System.Drawing.Point(240, 174);
+            this.label_nama_impian_isi_saldo.Name = "label_nama_impian_isi_saldo";
+            this.label_nama_impian_isi_saldo.Size = new System.Drawing.Size(214, 22);
+            this.label_nama_impian_isi_saldo.TabIndex = 20;
+            this.label_nama_impian_isi_saldo.Text = "Nama Tabungan Impian";
+            // 
+            // txt_isi_saldo_impian
+            // 
+            this.txt_isi_saldo_impian.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_isi_saldo_impian.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_saldo_impian.Location = new System.Drawing.Point(244, 230);
+            this.txt_isi_saldo_impian.Name = "txt_isi_saldo_impian";
+            this.txt_isi_saldo_impian.Size = new System.Drawing.Size(321, 20);
+            this.txt_isi_saldo_impian.TabIndex = 19;
+            this.txt_isi_saldo_impian.Text = "Masukkan Nominal Di sini";
+            this.txt_isi_saldo_impian.GotFocus += new System.EventHandler(this.txt_isi_saldo_impian_GotFocus);
+            this.txt_isi_saldo_impian.LostFocus += new System.EventHandler(this.txt_isi_saldo_impian_LostFocus);
+            // 
+            // gambar_isi_saldo_impian
+            // 
+            this.gambar_isi_saldo_impian.Image = ((System.Drawing.Image)(resources.GetObject("gambar_isi_saldo_impian.Image")));
+            this.gambar_isi_saldo_impian.Location = new System.Drawing.Point(66, 0);
+            this.gambar_isi_saldo_impian.Name = "gambar_isi_saldo_impian";
+            this.gambar_isi_saldo_impian.Size = new System.Drawing.Size(669, 428);
+            this.gambar_isi_saldo_impian.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_isi_saldo_impian.TabIndex = 0;
+            this.gambar_isi_saldo_impian.TabStop = false;
+            // 
+            // panel_isi_riwayat_tabungan_impian
+            // 
+            this.panel_isi_riwayat_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_riwayat_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_riwayat_tabungan_impian.Name = "panel_isi_riwayat_tabungan_impian";
+            this.panel_isi_riwayat_tabungan_impian.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_riwayat_tabungan_impian.TabIndex = 22;
+            this.panel_isi_riwayat_tabungan_impian.Visible = false;
+            // 
             // drop_down_profil
             // 
             this.drop_down_profil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
@@ -2083,7 +2083,7 @@
             this.TambahTabunganImpiantoolStripMenuItem.Text = "Tambah Impianmu";
             this.TambahTabunganImpiantoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // frm_beranda_setelah_login
+            // frm_setelah_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2092,8 +2092,9 @@
             this.Controls.Add(this.panel_title_bar);
             this.Controls.Add(this.panel_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_beranda_setelah_login";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frm_setelah_login";
+            this.Text = "Darimu";
             this.Load += new System.EventHandler(this.frm_beranda_setelah_login_Load);
             this.panel_menu.ResumeLayout(false);
             this.panel_menu.PerformLayout();
@@ -2117,9 +2118,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).EndInit();
             this.panel_isi.ResumeLayout(false);
             this.panel_isi.PerformLayout();
-            this.panel_isi_saldo_tabungan_impian.ResumeLayout(false);
-            this.panel_isi_saldo_tabungan_impian.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_saldo_impian)).EndInit();
             this.panel_isi_tabungan_impian.ResumeLayout(false);
             this.panel_isi_tabungan_impian.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_impian_3)).EndInit();
@@ -2149,6 +2147,9 @@
             this.panel_isi_tambah_tabungan_impian.ResumeLayout(false);
             this.panel_isi_tambah_tabungan_impian.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_tambah_impian)).EndInit();
+            this.panel_isi_saldo_tabungan_impian.ResumeLayout(false);
+            this.panel_isi_saldo_tabungan_impian.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_saldo_impian)).EndInit();
             this.drop_down_profil.ResumeLayout(false);
             this.drop_down_tabungan.ResumeLayout(false);
             this.ResumeLayout(false);

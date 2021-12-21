@@ -1,6 +1,6 @@
 ﻿namespace Darimu
 {
-    partial class frm_beranda_sebelum_login
+    partial class frm_sebelum_login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_beranda_sebelum_login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_sebelum_login));
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -778,7 +778,7 @@
             this.label_daftar_yuk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_daftar_yuk.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_daftar_yuk.ForeColor = System.Drawing.Color.White;
-            this.label_daftar_yuk.Location = new System.Drawing.Point(193, 96);
+            this.label_daftar_yuk.Location = new System.Drawing.Point(193, 103);
             this.label_daftar_yuk.Name = "label_daftar_yuk";
             this.label_daftar_yuk.Size = new System.Drawing.Size(88, 23);
             this.label_daftar_yuk.TabIndex = 17;
@@ -794,7 +794,7 @@
             this.label_belum_punya_akun.Cursor = System.Windows.Forms.Cursors.Default;
             this.label_belum_punya_akun.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_belum_punya_akun.ForeColor = System.Drawing.Color.White;
-            this.label_belum_punya_akun.Location = new System.Drawing.Point(53, 96);
+            this.label_belum_punya_akun.Location = new System.Drawing.Point(53, 103);
             this.label_belum_punya_akun.Name = "label_belum_punya_akun";
             this.label_belum_punya_akun.Size = new System.Drawing.Size(147, 23);
             this.label_belum_punya_akun.TabIndex = 16;
@@ -1226,7 +1226,7 @@
             this.gambar_tentang_kami.TabIndex = 0;
             this.gambar_tentang_kami.TabStop = false;
             // 
-            // frm_beranda_sebelum_login
+            // frm_sebelum_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1235,8 +1235,9 @@
             this.Controls.Add(this.panel_title_bar);
             this.Controls.Add(this.panel_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_beranda_sebelum_login";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frm_sebelum_login";
+            this.Text = "Darimu";
             this.panel_menu.ResumeLayout(false);
             this.panel_menu.PerformLayout();
             this.panel_header_sidebar.ResumeLayout(false);
