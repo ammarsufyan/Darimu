@@ -32,17 +32,6 @@ namespace Darimu
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        // change all button and label color to white
-        private void default_color()
-        {
-            button_beranda.ForeColor = System.Drawing.Color.White;
-            button_profil.ForeColor = System.Drawing.Color.White;
-            button_tabungan.ForeColor = System.Drawing.Color.White;
-            button_faq.ForeColor = System.Drawing.Color.White;
-            button_tentang_kami.ForeColor = System.Drawing.Color.White;
-            button_masuk_sidebar.ForeColor = System.Drawing.Color.White;
-        }
-
         // hide all panel
         private void hide_panel()
         {
@@ -183,7 +172,6 @@ namespace Darimu
         private void button_masuk_sidebar_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_masuk.Visible = true;
             button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
         }
@@ -191,7 +179,6 @@ namespace Darimu
         private void button_beranda_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_beranda.Visible = true;
             button_beranda.ForeColor = System.Drawing.Color.Cyan;
         }
@@ -199,7 +186,6 @@ namespace Darimu
         private void button_faq_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_faq.Visible = true;
             button_faq.ForeColor = System.Drawing.Color.Cyan;
         }
@@ -207,7 +193,6 @@ namespace Darimu
         private void button_tentang_kami_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_tentang_kami.Visible = true;
             button_tentang_kami.ForeColor = System.Drawing.Color.Cyan;
         }
@@ -329,7 +314,6 @@ namespace Darimu
         private void button_nabung_yuk_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             clear_text();
             panel_isi_masuk.Visible = true;
             button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
@@ -374,7 +358,6 @@ namespace Darimu
         private void label_daftar_yuk_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             clear_text();
             panel_isi_daftar.Visible = true;
         }
@@ -392,7 +375,6 @@ namespace Darimu
         private void label_lupa_kata_sandi_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             clear_text();
             generate_captcha_image();
             panel_lupa_kata_sandi.Visible = true;
@@ -436,11 +418,22 @@ namespace Darimu
                                     MessageBoxIcon.Information);
 
                     hide_panel();
-                    default_color();
                     clear_text();
-                    frm_setelah_login p = new frm_setelah_login(nama_pengguna_atau_email_input);
+                    frm_setelah_login masuk = new frm_setelah_login(nama_pengguna_atau_email_input);
                     this.Hide();
-                    p.Show();
+                    masuk.Show();
+                } else if (ClassAdmin.cekAdmin(nama_pengguna_atau_email_input, kata_sandi_input))
+                {
+                    MessageBox.Show("Selamat, Admin berhasil masuk!",
+                                    "Sukses Masuk",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    hide_panel();
+                    clear_text();
+                    frm_admin admin = new frm_admin(nama_pengguna_atau_email_input);
+                    this.Hide();
+                    admin.Show();
                 }
                 else
                 {
@@ -465,7 +458,6 @@ namespace Darimu
             private void label_masuk_yuk_MouseClick(object sender, MouseEventArgs e)
             {
                 hide_panel();
-                default_color();
                 clear_text();
                 panel_isi_masuk.Visible = true;
             }
@@ -581,7 +573,6 @@ namespace Darimu
             private void button_batal_MouseClick(object sender, MouseEventArgs e)
             {
                 hide_panel();
-                default_color();
                 panel_isi_masuk.Visible = true;
             }
 
@@ -618,7 +609,6 @@ namespace Darimu
                         MessageBoxIcon.Information);
 
                         hide_panel();
-                        default_color();
                         clear_text();
                         panel_isi_masuk.Visible = true;
                     }
@@ -650,7 +640,6 @@ namespace Darimu
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                     hide_panel();
-                    default_color();
                     clear_text();
                     panel_isi_masuk.Visible = true;
                     button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
@@ -768,7 +757,6 @@ namespace Darimu
             private void button_batal_lupa_sandi_MouseClick(object sender, MouseEventArgs e)
             {
                 hide_panel();
-                default_color();
                 panel_isi_masuk.Visible = true;
                 button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
             }

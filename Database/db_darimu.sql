@@ -40,7 +40,7 @@ CREATE TABLE tb_admin(
 TRUNCATE TABLE tb_admin;
 -- veraliani veraliani1010
 -- uliparis uliparis2020
--- mamansitorus mamansitorus2020
+-- mamansitorus mamansitorus3030
 INSERT INTO tb_admin(nama_pengguna_admin, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_lahir, tanggal_lahir, alamat_email, nik, kata_sandi, status_admin)
     VALUES
     ('veraliani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', '3C6C01FFC9CC0282161B4E59E476325EAFAAC99D75A78B1F59B24A0C1F766C56CEB216B336E136CAFE08F95585B7477567A9647CD011E6ED699453A913E84165
