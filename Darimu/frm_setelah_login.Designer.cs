@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_setelah_login));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -776,6 +776,11 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_saldo);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_saldo_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_laporan);
             this.panel_isi.Controls.Add(this.panel_isi_rincian_laporan);
             this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
@@ -784,11 +789,6 @@
             this.panel_isi.Controls.Add(this.panel_isi_beranda);
             this.panel_isi.Controls.Add(this.panel_isi_faq);
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
-            this.panel_isi.Controls.Add(this.panel_isi_tambah_saldo);
-            this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_saldo_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
-            this.panel_isi.Controls.Add(this.panel_isi_tambah_laporan);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -876,11 +876,11 @@
             // 
             this.label_tanggal_laporan_dibuat.AutoSize = true;
             this.label_tanggal_laporan_dibuat.BackColor = System.Drawing.Color.White;
-            this.label_tanggal_laporan_dibuat.Font = new System.Drawing.Font("Cabin", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tanggal_laporan_dibuat.Font = new System.Drawing.Font("Cabin", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tanggal_laporan_dibuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            this.label_tanggal_laporan_dibuat.Location = new System.Drawing.Point(149, 357);
+            this.label_tanggal_laporan_dibuat.Location = new System.Drawing.Point(149, 361);
             this.label_tanggal_laporan_dibuat.Name = "label_tanggal_laporan_dibuat";
-            this.label_tanggal_laporan_dibuat.Size = new System.Drawing.Size(112, 20);
+            this.label_tanggal_laporan_dibuat.Size = new System.Drawing.Size(98, 18);
             this.label_tanggal_laporan_dibuat.TabIndex = 7;
             this.label_tanggal_laporan_dibuat.Text = "Tanggal Diajukan";
             // 
@@ -888,11 +888,11 @@
             // 
             this.label_tanggal_laporan_ditutup.AutoSize = true;
             this.label_tanggal_laporan_ditutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.label_tanggal_laporan_ditutup.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tanggal_laporan_ditutup.Font = new System.Drawing.Font("Cabin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tanggal_laporan_ditutup.ForeColor = System.Drawing.Color.White;
-            this.label_tanggal_laporan_ditutup.Location = new System.Drawing.Point(144, 408);
+            this.label_tanggal_laporan_ditutup.Location = new System.Drawing.Point(144, 411);
             this.label_tanggal_laporan_ditutup.Name = "label_tanggal_laporan_ditutup";
-            this.label_tanggal_laporan_ditutup.Size = new System.Drawing.Size(114, 23);
+            this.label_tanggal_laporan_ditutup.Size = new System.Drawing.Size(105, 22);
             this.label_tanggal_laporan_ditutup.TabIndex = 6;
             this.label_tanggal_laporan_ditutup.Text = "Tanggal Selesai";
             // 
@@ -900,11 +900,11 @@
             // 
             this.label_status_laporan.AutoSize = true;
             this.label_status_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.label_status_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_status_laporan.Font = new System.Drawing.Font("Cabin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_status_laporan.ForeColor = System.Drawing.Color.White;
-            this.label_status_laporan.Location = new System.Drawing.Point(144, 385);
+            this.label_status_laporan.Location = new System.Drawing.Point(145, 389);
             this.label_status_laporan.Name = "label_status_laporan";
-            this.label_status_laporan.Size = new System.Drawing.Size(112, 23);
+            this.label_status_laporan.Size = new System.Drawing.Size(104, 22);
             this.label_status_laporan.TabIndex = 5;
             this.label_status_laporan.Text = "Status Laporan";
             // 
@@ -1401,14 +1401,14 @@
             this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_transaksi.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tanggal,
@@ -1416,14 +1416,14 @@
             this.debit,
             this.kredit,
             this.saldo});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle6;
             this.grid_transaksi.EnableHeadersVisualStyles = false;
             this.grid_transaksi.Location = new System.Drawing.Point(32, 47);
             this.grid_transaksi.Name = "grid_transaksi";
@@ -2070,21 +2070,21 @@
             // txt_saldo_impian
             // 
             this.txt_saldo_impian.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_saldo_impian.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_saldo_impian.Location = new System.Drawing.Point(373, 271);
+            this.txt_saldo_impian.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_saldo_impian.Location = new System.Drawing.Point(373, 270);
             this.txt_saldo_impian.MaxLength = 7;
             this.txt_saldo_impian.Name = "txt_saldo_impian";
-            this.txt_saldo_impian.Size = new System.Drawing.Size(214, 20);
+            this.txt_saldo_impian.Size = new System.Drawing.Size(214, 22);
             this.txt_saldo_impian.TabIndex = 20;
             // 
             // txt_nama_tabungan_impian
             // 
             this.txt_nama_tabungan_impian.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_nama_tabungan_impian.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nama_tabungan_impian.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nama_tabungan_impian.Location = new System.Drawing.Point(373, 234);
             this.txt_nama_tabungan_impian.MaxLength = 20;
             this.txt_nama_tabungan_impian.Name = "txt_nama_tabungan_impian";
-            this.txt_nama_tabungan_impian.Size = new System.Drawing.Size(214, 20);
+            this.txt_nama_tabungan_impian.Size = new System.Drawing.Size(214, 22);
             this.txt_nama_tabungan_impian.TabIndex = 19;
             // 
             // gambar_tambah_impian
@@ -2165,11 +2165,11 @@
             // txt_isi_saldo_impian
             // 
             this.txt_isi_saldo_impian.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_saldo_impian.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_saldo_impian.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_isi_saldo_impian.Location = new System.Drawing.Point(244, 230);
             this.txt_isi_saldo_impian.MaxLength = 7;
             this.txt_isi_saldo_impian.Name = "txt_isi_saldo_impian";
-            this.txt_isi_saldo_impian.Size = new System.Drawing.Size(321, 20);
+            this.txt_isi_saldo_impian.Size = new System.Drawing.Size(310, 22);
             this.txt_isi_saldo_impian.TabIndex = 19;
             this.txt_isi_saldo_impian.Text = "Masukkan Nominal Di sini";
             this.txt_isi_saldo_impian.GotFocus += new System.EventHandler(this.txt_isi_saldo_impian_GotFocus);
@@ -2233,14 +2233,14 @@
             this.grid_laporan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_laporan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_laporan.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grid_laporan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_laporan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -2248,14 +2248,14 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle8;
             this.grid_laporan.EnableHeadersVisualStyles = false;
             this.grid_laporan.Location = new System.Drawing.Point(31, 68);
             this.grid_laporan.Name = "grid_laporan";
@@ -2363,11 +2363,11 @@
             // txt_isi_subjek_laporan
             // 
             this.txt_isi_subjek_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_subjek_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_isi_subjek_laporan.Location = new System.Drawing.Point(199, 86);
-            this.txt_isi_subjek_laporan.MaxLength = 55;
+            this.txt_isi_subjek_laporan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_subjek_laporan.Location = new System.Drawing.Point(199, 83);
+            this.txt_isi_subjek_laporan.MaxLength = 52;
             this.txt_isi_subjek_laporan.Name = "txt_isi_subjek_laporan";
-            this.txt_isi_subjek_laporan.Size = new System.Drawing.Size(490, 20);
+            this.txt_isi_subjek_laporan.Size = new System.Drawing.Size(490, 22);
             this.txt_isi_subjek_laporan.TabIndex = 19;
             this.txt_isi_subjek_laporan.Text = "Ketik di sini...";
             this.txt_isi_subjek_laporan.GotFocus += new System.EventHandler(this.txt_isi_subjek_laporan_GotFocus);
