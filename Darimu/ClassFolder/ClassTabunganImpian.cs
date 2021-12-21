@@ -65,29 +65,29 @@ namespace Darimu.ClassFolder
             return isi_impian;
         }
 
-        public static long tambahSaldoImpian(string nama_pengguna, long saldo_terkumpul, long saldo_impian, string id_tabungan_impian, string keterangan_impian)
+        public static long tambahSaldoImpian(string nama_pengguna, long isi_saldo_terkumpul, long saldo_impian, string id_tabungan_impian, string keterangan_impian)
         {
-            long saldo_baru = ClassTransaksi.isi_saldo_impian(nama_pengguna, saldo_terkumpul, keterangan_impian);
-            if(saldo_baru < 0)
-            {
-                MessageBox.Show("Maaf, duit kamu kurang nih. :(",
-                                "Gagal Menambah Saldo Impian",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            } 
-            else if (saldo_impian < saldo_terkumpul)
+            long saldo_baru = ClassTransaksi.isi_saldo_impian(nama_pengguna, isi_saldo_terkumpul, keterangan_impian);
+            if (saldo_impian < isi_saldo_terkumpul)
             {
                 MessageBox.Show("Wah, kamu tidak bisa topup melebihi saldo impian :).",
                                 "Gagal Menambah Saldo Impian",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
+            else if (saldo_baru < 0)
+            {
+                MessageBox.Show("Maaf, duit kamu kurang nih. :(",
+                                "Gagal Menambah Saldo Impian",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            } 
             else
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_tabungan_impian SET saldo_terkumpul = @saldo_terkumpul WHERE id_tabungan_impian = '" + id_tabungan_impian + "' AND status_tabungan_impian = 'Aktif'", sqlcon);
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@saldo_terkumpul", SqlDbType.BigInt));
-                sqlda.SelectCommand.Parameters["@saldo_terkumpul"].Value = saldo_terkumpul;
+                sqlda.SelectCommand.Parameters["@saldo_terkumpul"].Value = isi_saldo_terkumpul;
                 sqlda.SelectCommand.ExecuteNonQuery();
                 sqlcon.Close();
 
