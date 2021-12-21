@@ -86,6 +86,7 @@ namespace Darimu.ClassFolder
             else
             {
                 sqlcon.Open();
+                isi_saldo_tabungan_impian += saldo_terkumpul;
                 SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_tabungan_impian SET saldo_terkumpul = @saldo_terkumpul WHERE id_tabungan_impian = '" + id_tabungan_impian + "' AND status_tabungan_impian = 'Aktif'", sqlcon);
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@saldo_terkumpul", SqlDbType.BigInt));
                 sqlda.SelectCommand.Parameters["@saldo_terkumpul"].Value = isi_saldo_tabungan_impian;

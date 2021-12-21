@@ -22,7 +22,7 @@ FROM tb_laporan AS tbl
 INNER JOIN tb_pengguna AS tbp 
 ON tbl.nama_pengguna = tbp.nama_pengguna;
 
-SELECT * FROM view_laporan_dikirim WHERE [NAMA PENGGUNA] = 'ammarsufyan';
+SELECT * FROM view_laporan_dikirim;
 
 --(VIEW 3) LAPORAN (DITERIMA ADMIN)
 --nama_pengguna | nama_pengguna_admin | subjek_alasan | rincian_alasan | tanggal_laporan_dibuat | tanggal_laporan_dibuat_ditutup | status_laporan
@@ -37,4 +37,4 @@ ON tbl.nama_pengguna = tbp.nama_pengguna
 INNER JOIN tb_admin AS tba 
 ON tbl.nama_pengguna_admin = tba.nama_pengguna_admin;
 
-SELECT * FROM view_laporan_diterima WHERE [NAMA PENGGUNA] = 'ammarsufyan';
+SELECT * FROM view_laporan_diterima;
