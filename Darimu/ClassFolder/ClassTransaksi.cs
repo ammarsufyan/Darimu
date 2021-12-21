@@ -43,14 +43,19 @@ namespace Darimu.ClassFolder
             return saldo_baru;
         }
 
-        public static long isi_saldo_impian(string nama_pengguna, long isi_saldo_terkumpul, string keterangan)
+        public static long isi_saldo_impian(string nama_pengguna, long isi_saldo_terkumpul, long saldo_impian, string keterangan)
         {
             long saldo_lama = 0;
             long saldo_baru = 0;
             saldo_lama = get_saldo(nama_pengguna); 
             saldo_baru = saldo_lama - isi_saldo_terkumpul;
 
-            if(saldo_baru < 0)
+            if(saldo_impian < isi_saldo_terkumpul) 
+            {
+                saldo_baru = saldo_lama;
+                return saldo_baru;
+            }
+            else if (saldo_baru < 0)
             {
                 saldo_baru = saldo_lama; 
                 return saldo_baru;
