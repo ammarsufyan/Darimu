@@ -105,8 +105,6 @@ BEGIN
 	UPDATE tb_tabungan_impian SET status_tabungan_impian = 'Tidak Aktif' WHERE nama_pengguna = @nama_pengguna
 	UPDATE tb_tabungan_impian SET tanggal_tutup = GETDATE() WHERE nama_pengguna = @nama_pengguna
 	UPDATE tb_transaksi SET status_data = 'Tidak Aktif' WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_laporan SET status_laporan = 'Tidak Aktif' WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_laporan SET tanggal_laporan_ditutup = GETDATE() WHERE nama_pengguna = @nama_pengguna
 END
 
 
@@ -135,8 +133,6 @@ BEGIN
 	UPDATE tb_tabungan_impian SET status_tabungan_impian = 'Aktif' WHERE nama_pengguna = @nama_pengguna
 	UPDATE tb_tabungan_impian SET tanggal_tutup = NULL WHERE nama_pengguna = @nama_pengguna
 	UPDATE tb_transaksi SET status_data = 'Aktif' WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_laporan SET status_laporan = 'Aktif' WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_laporan SET tanggal_laporan_ditutup = NULL WHERE nama_pengguna = @nama_pengguna
 END
 
 DROP PROCEDURE sp_log_data;
