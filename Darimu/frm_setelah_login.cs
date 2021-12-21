@@ -108,7 +108,6 @@ namespace Darimu
         private void tampil_impian()
         {
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
-            Console.WriteLine(isi_impian.Count);
             if (isi_impian.Count <= 0)
             {
                 default_impian(logo_impian_1, label_nama_impian_1, label_saldo_impianmu_1, label_saldo_terkumpulmu_1, label_tenggat_waktu_1, button_hapus_impian_1, button_topup_impian_1, button_selesai_impian_1);
@@ -816,7 +815,6 @@ namespace Darimu
         private void TabunganImpiantoolStripMenuItem_Click(object sender, EventArgs e)
         {
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
-            Console.WriteLine(isi_impian.Count);
             if (isi_impian.Count <= 0)
             {
                 tampil_impian();

@@ -50,7 +50,7 @@ namespace Darimu.ClassFolder
             saldo_lama = get_saldo(nama_pengguna); 
             saldo_baru = saldo_lama - isi_saldo_tabungan_impian;
 
-            if(saldo_impian <= saldo_terkumpul) 
+            if(saldo_impian < saldo_terkumpul) 
             {
                 saldo_baru = saldo_lama;
                 return saldo_baru;

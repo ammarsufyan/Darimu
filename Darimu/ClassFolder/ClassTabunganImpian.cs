@@ -67,8 +67,9 @@ namespace Darimu.ClassFolder
 
         public static long tambahSaldoImpian(string nama_pengguna, long isi_saldo_tabungan_impian, long saldo_terkumpul, long saldo_impian, string id_tabungan_impian, string keterangan_impian)
         {
+            saldo_terkumpul += isi_saldo_tabungan_impian;
             long saldo_baru = ClassTransaksi.isi_saldo_impian(nama_pengguna, isi_saldo_tabungan_impian, saldo_terkumpul, saldo_impian, keterangan_impian);
-            if (saldo_impian <= saldo_terkumpul)
+            if (saldo_impian < saldo_terkumpul)
             {
                 MessageBox.Show("Wah, kamu tidak bisa topup melebihi saldo impian :).",
                                 "Gagal Menambah Saldo Impian",
@@ -86,10 +87,9 @@ namespace Darimu.ClassFolder
             else
             {
                 sqlcon.Open();
-                isi_saldo_tabungan_impian += saldo_terkumpul;
                 SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_tabungan_impian SET saldo_terkumpul = @saldo_terkumpul WHERE id_tabungan_impian = '" + id_tabungan_impian + "' AND status_tabungan_impian = 'Aktif'", sqlcon);
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@saldo_terkumpul", SqlDbType.BigInt));
-                sqlda.SelectCommand.Parameters["@saldo_terkumpul"].Value = isi_saldo_tabungan_impian;
+                sqlda.SelectCommand.Parameters["@saldo_terkumpul"].Value = saldo_terkumpul;
                 sqlda.SelectCommand.ExecuteNonQuery();
                 sqlcon.Close();
 
