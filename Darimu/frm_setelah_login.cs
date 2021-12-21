@@ -25,13 +25,13 @@ namespace Darimu
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(33, 106, 155);
+            this.nama_pengguna = nama_pengguna;
+            label_saldo.Text = ClassTransaksi.get_saldo(nama_pengguna).ToString();
+            ambil_data_profil();
             panel_isi_beranda.Visible = true;
             logo_tambah = Darimu.Properties.Resources.logo_tambah;
             tenggat_waktu_impian.MinDate = System.DateTime.Now;
             tenggat_waktu_impian.Value = System.DateTime.Now;
-            label_username.Text = nama_pengguna;
-            label_saldo.Text = ClassTransaksi.get_saldo(nama_pengguna).ToString();
-            this.nama_pengguna = nama_pengguna;
         }
 
         // drag form
@@ -44,6 +44,7 @@ namespace Darimu
         private void ambil_data_profil()
         {
             ArrayList data_pengguna = ClassUser.lihatPengguna(nama_pengguna);
+            label_username.Text = data_pengguna[1].ToString();
             string[] nama_depan_belakang = data_pengguna[1].ToString().Split(' ');
             txt_ubah_nama_depan.Text = nama_depan_belakang[0];
             txt_ubah_nama_belakang.Text = nama_depan_belakang[1];

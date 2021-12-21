@@ -81,6 +81,7 @@ namespace Darimu.ClassFolder
                                 "Gagal Menambah Saldo Impian",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                saldo_baru = ClassTransaksi.get_saldo(nama_pengguna);
             } 
             else
             {

@@ -37,11 +37,16 @@ CREATE TABLE tb_admin(
 );
 
 -- memasukkan data admin (di sini ada 3 admin, yaitu Vera Liani, Uli Paris Usada, dan Maman Sitorus)
+TRUNCATE TABLE tb_admin;
+-- veraliani veraliani1010
+-- uliparis uliparis2020
+-- mamansitorus mamansitorus2020
 INSERT INTO tb_admin(nama_pengguna_admin, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_lahir, tanggal_lahir, alamat_email, nik, kata_sandi, status_admin)
     VALUES
-    ('veraliani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', '0F23C5A1EC787D7AB58C34B8FA18158B601789402374420BDBBF1E7E6E6DEB4641DAA0D772D52771A6081AF132B379059128289DD2DE41D75B1F70EBAB8E0588', 'Aktif'),
-    ('uliparis', 'Uli Paris Usada', 'Perempuan', 'Kpg. Haji No. 518, Salatiga 99947', 'Gorontalo', '1988-04-01', 'uli_ph@gmail.com', '8795200921584695', '9B348D97A051CDFB8D1C0E10C3A849B9C7C398B33922FEC992EFCA229B7B3415F6611448FF0CA11CAFB33C93E680026BAF95C8100DE9F76EF7F2540D89C82699', 'Aktif'),
-    ('mamansitorus', 'Maman Sitorus' , 'Laki-laki', 'Psr. Suryo No. 367, Langsa 82078, Jakarta', 'Papua Barat', '1970-06-10', 'abcdefg@gmail.com', '2221686886311030', 'E76D380D70D4F85616708B4A959C75DB7DA9321D4C945FAF5234AEBB218B22F0A6FA1492D86FDC97C701BC3E0C1E1F15BC3CE85A1DF1F4D345CFC1BA5D2BC092', 'Aktif')    
+    ('veraliani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', '3C6C01FFC9CC0282161B4E59E476325EAFAAC99D75A78B1F59B24A0C1F766C56CEB216B336E136CAFE08F95585B7477567A9647CD011E6ED699453A913E84165
+', 'Aktif'),
+    ('uliparis', 'Uli Paris Usada', 'Perempuan', 'Kpg. Haji No. 518, Salatiga 99947', 'Gorontalo', '1988-04-01', 'uli_ph@gmail.com', '8795200921584695', 'E7749DCF0075979E070B30DB98112FD222F8F299678EF40BBE22EFB060F7A7959B25E06FFF9F256EB672501799FFBAE76FD4A6324702191A06289401F3778B78', 'Aktif'),
+    ('mamansitorus', 'Maman Sitorus' , 'Laki-laki', 'Psr. Suryo No. 367, Langsa 82078, Jakarta', 'Papua Barat', '1970-06-10', 'abcdefg@gmail.com', '2221686886311030', 'AD73E20D5A3F8648BA866220371F175CD9DE207FCB477785003EECFBD4F64128EA7229CD9DD28F8AD13C9367BAD0CF991D53D60D39298D08E6F8EF59894F25BB', 'Aktif')    
     
 -- ========================================================================
 -- membuat tb_pengguna

@@ -60,7 +60,7 @@ namespace Darimu.ClassFolder
         public static bool buat_laporan(string nama_pengguna, string subjek_alasan, string rincian_alasan)
         {
             sqlcon.Open();
-            SqlDataAdapter sqlda = new SqlDataAdapter("INSERT INTO tb_pengguna (nama_pengguna, subjek_alasan, rincian_alasan, tanggal_laporan_dibuat, status_laporan) VALUES(@nama_pengguna, @subjek_alasan, @rincian_alasan, GETDATE(), 'Belum Selesai'", sqlcon);
+            SqlDataAdapter sqlda = new SqlDataAdapter("INSERT INTO tb_laporan (nama_pengguna, subjek_alasan, rincian_alasan, tanggal_laporan_dibuat, status_laporan) VALUES(@nama_pengguna, @subjek_alasan, @rincian_alasan, GETDATE(), 'Belum Selesai')", sqlcon);
             sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna", SqlDbType.VarChar, 100));
             sqlda.SelectCommand.Parameters.Add(new SqlParameter("@subjek_alasan", SqlDbType.VarChar, 100));
             sqlda.SelectCommand.Parameters.Add(new SqlParameter("@rincian_alasan", SqlDbType.VarChar, 255));

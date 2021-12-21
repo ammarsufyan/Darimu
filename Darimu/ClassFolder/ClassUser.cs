@@ -116,7 +116,7 @@ namespace Darimu.ClassFolder
         {
             sqlcon.Open();
             ArrayList data_pengguna = new ArrayList();
-            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE nama_pengguna = '" + nama_pengguna_atau_email + "'", sqlcon);
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE nama_pengguna = '" + nama_pengguna_atau_email + "' OR alamat_email = '" + nama_pengguna_atau_email + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
             if (dr.Read())
             {

@@ -33,7 +33,7 @@ namespace Darimu
         {
             button_beranda.ForeColor = System.Drawing.Color.White;
             button_profil.ForeColor = System.Drawing.Color.White;
-            button_tabungan.ForeColor = System.Drawing.Color.White;
+            button_laporan.ForeColor = System.Drawing.Color.White;
             button_faq.ForeColor = System.Drawing.Color.White;
             button_tentang_kami.ForeColor = System.Drawing.Color.White;
             button_keluar.ForeColor = System.Drawing.Color.White;
@@ -176,16 +176,16 @@ namespace Darimu
             button_profil.Image = global::Darimu.Properties.Resources.icon_profil;
         }
 
-        private void button_tabungan_MouseEnter(object sender, EventArgs e)
+        private void button_laporan_MouseEnter(object sender, EventArgs e)
         {
-            button_tabungan.ForeColor = System.Drawing.Color.Cyan;
-            button_tabungan.Image = global::Darimu.Properties.Resources.icon_tabungan_biru;
+            button_laporan.ForeColor = System.Drawing.Color.Cyan;
+            button_laporan.Image = global::Darimu.Properties.Resources.icon_laporan_biru;
         }
 
-        private void button_tabungan_MouseLeave(object sender, EventArgs e)
+        private void button_laporan_MouseLeave(object sender, EventArgs e)
         {
-            button_tabungan.ForeColor = System.Drawing.Color.White;
-            button_tabungan.Image = global::Darimu.Properties.Resources.icon_tabungan;
+            button_laporan.ForeColor = System.Drawing.Color.White;
+            button_laporan.Image = global::Darimu.Properties.Resources.icon_laporan;
         }
 
         private void button_faq_MouseEnter(object sender, EventArgs e)

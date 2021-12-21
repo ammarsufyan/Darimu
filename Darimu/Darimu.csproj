@@ -140,6 +140,7 @@
     <None Include="Assets\bank_bri.png" />
     <None Include="Assets\Blue\icon_hapus_biru.png" />
     <None Include="Assets\Blue\icon_selesai_biru.png" />
+    <None Include="Assets\Blue\icon_laporan_biru.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
@@ -162,6 +163,7 @@
     <Content Include="Assets\icon_faq.png" />
     <None Include="Assets\icon_keluar.png" />
     <None Include="Assets\icon_hapus.png" />
+    <None Include="Assets\icon_laporan.png" />
     <Content Include="Assets\icon_masuk.png" />
     <Content Include="Assets\icon_menu.png" />
     <Content Include="Assets\icon_saldo.png" />

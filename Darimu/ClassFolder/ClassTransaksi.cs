@@ -57,7 +57,6 @@ namespace Darimu.ClassFolder
             }
             else if (saldo_baru < 0)
             {
-                saldo_baru = saldo_lama; 
                 return saldo_baru;
             }
             else
