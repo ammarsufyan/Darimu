@@ -272,7 +272,7 @@ namespace Darimu
 
         private void button_keluar_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin keluar akun?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin keluar akun?",
                                          "Keluar Akun",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Information);

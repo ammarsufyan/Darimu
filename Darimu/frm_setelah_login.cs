@@ -16,6 +16,8 @@ namespace Darimu
         private bool validasi_button = false;
         private int borderSize = 2;
         private long saldo_impian = 0;
+        private long saldo_terkumpul = 0;
+        private Image logo_tambah;
 
         public frm_setelah_login(string nama_pengguna)
         {
@@ -24,6 +26,7 @@ namespace Darimu
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(33, 106, 155);
             panel_isi_beranda.Visible = true;
+            logo_tambah = Darimu.Properties.Resources.logo_tambah;
             tenggat_waktu_impian.MinDate = System.DateTime.Now;
             tenggat_waktu_impian.Value = System.DateTime.Now;
             label_username.Text = nama_pengguna;
@@ -58,19 +61,25 @@ namespace Darimu
             panel_isi_beranda.Visible = false;
             panel_isi_faq.Visible = false;
             panel_isi_tentang_kami.Visible = false;
+
+            panel_isi_profil_saya.Visible = false;
+            panel_isi_ubah_profil_saya.Visible = false;
+
+            panel_isi_tabungan_impian.Visible = false;
+            panel_isi_tambah_saldo.Visible = false;
+            panel_isi_tambah_tabungan_impian.Visible = false;
             panel_isi_saldo_tabungan_impian.Visible = false;
             panel_isi_riwayat_transaksi.Visible = false;
-            panel_isi_profil_saya.Visible = false;
-            panel_isi_riwayat_tabungan_impian.Visible = false;
-            panel_isi_tabungan_impian.Visible = false;
-            panel_isi_tambah_tabungan_impian.Visible = false;
-            panel_isi_ubah_profil_saya.Visible = false;
-            panel_isi_tambah_saldo.Visible = false;
+
+            panel_isi_laporan_saya.Visible = false;
+            panel_isi_tambah_laporan.Visible = false;
+            panel_isi_rincian_laporan.Visible = false;
         }
 
-        private void default_impian(PictureBox logo, Label nama_impian, Label saldo_impian, Label saldo_terkumpul, Label tenggat_waktu, Button hapus, Button topup, Button selesai) 
+        private void default_impian(PictureBox logo, Label nama_impian, Label saldo_impian, Label saldo_terkumpul, Label tenggat_waktu, Button hapus, Button topup, Button selesai)
         {
-            logo.Image = logo.Image = global::Darimu.Properties.Resources.logo_tambah;
+            logo.Image = logo_tambah;
+            logo.Cursor = System.Windows.Forms.Cursors.Hand;
             nama_impian.Text = "Nama Impianmu Di sini";
             saldo_impian.Text = "0";
             saldo_terkumpul.Text = "0";
@@ -85,7 +94,7 @@ namespace Darimu
             hapus.Visible = true;
             topup.Visible = true;
 
-            if(saldo_terkumpul.Text.Trim() == saldo_impian.Text.Trim())
+            if (saldo_terkumpul.Text.Trim() == saldo_impian.Text.Trim())
             {
                 selesai.Visible = true;
             }
@@ -101,10 +110,6 @@ namespace Darimu
             Console.WriteLine(isi_impian.Count);
             if (isi_impian.Count <= 0)
             {
-                MessageBox.Show("Kamu belum membuat impian",
-                                "Tidak Ada Impian",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
                 default_impian(logo_impian_1, label_nama_impian_1, label_saldo_impianmu_1, label_saldo_terkumpulmu_1, label_tenggat_waktu_1, button_hapus_impian_1, button_topup_impian_1, button_selesai_impian_1);
                 default_impian(logo_impian_2, label_nama_impian_2, label_saldo_impianmu_2, label_saldo_terkumpulmu_2, label_tenggat_waktu_2, button_hapus_impian_2, button_topup_impian_2, button_selesai_impian_2);
                 default_impian(logo_impian_3, label_nama_impian_3, label_saldo_impianmu_3, label_saldo_terkumpulmu_3, label_tenggat_waktu_3, button_hapus_impian_3, button_topup_impian_3, button_selesai_impian_3);
@@ -157,19 +162,24 @@ namespace Darimu
 
         private void set_logo_impian(string tautan_logo, PictureBox logo)
         {
-            if(tautan_logo == "global::Darimu.Properties.Resources.logo_umum")
+            logo.Cursor = System.Windows.Forms.Cursors.Default;
+            if (tautan_logo == "global::Darimu.Properties.Resources.logo_umum")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_umum;
-            } else if(tautan_logo == "global::Darimu.Properties.Resources.logo_jalan_jalan")
+            }
+            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_jalan_jalan")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_jalan_jalan;
-            } else if(tautan_logo == "global::Darimu.Properties.Resources.logo_elektronik")
+            }
+            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_elektronik")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_elektronik;
-            } else if(tautan_logo == "global::Darimu.Properties.Resources.logo_fashion")
+            }
+            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_fashion")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_fashion;
-            } else if(tautan_logo == "global::Darimu.Properties.Resources.logo_hiburan")
+            }
+            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_hiburan")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_hiburan;
             }
@@ -569,6 +579,8 @@ namespace Darimu
 
         private void button_batal_saldo_MouseClick(object sender, MouseEventArgs e)
         {
+            txt_isi_saldo.Text = "";
+            gambar_bank.Image = null;
             hide_panel();
             panel_isi_beranda.Visible = true;
         }
@@ -595,7 +607,7 @@ namespace Darimu
                 ubah_tanggal_lahir.Format = DateTimePickerFormat.Custom;
                 ubah_tanggal_lahir.CustomFormat = "yyyy/MM/dd";
                 string tanggal_lahir = ubah_tanggal_lahir.Value.ToString("yyyy/MM/dd");
-                var result = MessageBox.Show("Apakah Anda yakin ingin mengubah?",
+                var result = MessageBox.Show("Apakah kamu yakin ingin mengubah data?",
                                              "Konfirmasi Ubah Data",
                                              MessageBoxButtons.YesNo,
                                              MessageBoxIcon.Warning);
@@ -612,10 +624,11 @@ namespace Darimu
                         panel_isi_profil_saya.Visible = true;
                         txt_ubah_email.ReadOnly = true;
                         ambil_data_profil();
-                    } else
+                    }
+                    else
                     {
                         string hasil = ClassUser.ubah_data_pengguna(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email);
-                        if(hasil == "Data Berhasil Diubah")
+                        if (hasil == "Data Berhasil Diubah")
                         {
                             MessageBox.Show(hasil, "Sukses Mengubah Data",
                                             MessageBoxButtons.OK,
@@ -637,9 +650,10 @@ namespace Darimu
                         }
                     }
                 }
-            } else
+            }
+            else
             {
-                MessageBox.Show(cek, "Lengkapi Syarat",
+                MessageBox.Show(cek, "Lengkapi dulu semua isiannya :)",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
             }
@@ -657,7 +671,7 @@ namespace Darimu
 
         private void label_ubah_email_MouseClick(object sender, MouseEventArgs e)
         {
-            if(txt_ubah_email.ReadOnly == false)
+            if (txt_ubah_email.ReadOnly == false)
             {
                 txt_ubah_email.ReadOnly = true;
             }
@@ -693,42 +707,50 @@ namespace Darimu
         private void button_simpan_impian_MouseClick(object sender, MouseEventArgs e)
         {
             string cek = ClassValidasi.cekDaftarImpian(txt_nama_tabungan_impian, txt_saldo_impian, validasi_button);
-            if(cek == "valid")
+            if (cek == "valid")
             {
-                string nama_tabungan_impian = txt_nama_tabungan_impian.Text.Trim();
-                string saldo_impian = txt_saldo_impian.Text.Trim();
-                // get the datepicker value
-                tenggat_waktu_impian.Format = DateTimePickerFormat.Custom;
-                tenggat_waktu_impian.CustomFormat = "yyyy/MM/dd";
-                string tenggat_waktu = tenggat_waktu_impian.Value.ToString("yyyy/MM/dd");
+                var result = MessageBox.Show("Apakah kamu yakin ingin menambah impian?",
+                                             "Konfirmasi Tambah Impian",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Information);
 
-                bool berhasil = ClassTabunganImpian.tambahImpian(nama_pengguna, nama_tabungan_impian, jenis_impian, tautan_gambar, saldo_impian, tenggat_waktu);
-
-                if(berhasil)
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Selamat! Impianmu telah terdaftar :D",
-                                    "Sukses Menambah Impian",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                    hide_panel();
-                    txt_nama_tabungan_impian.Text = "";
-                    txt_saldo_impian.Text = "";
-                    default_impian();
-                    jenis_impian = "";
-                    tautan_gambar = "";
-                    validasi_button = false;
-                    tampil_impian();
-                    panel_isi_tabungan_impian.Visible = true;
-                }
-                else
-                {
-                    MessageBox.Show("Maaf, maksimum tabungan impianmu hanya 3 nih :(",
-                                    "Gagal Menambah Impian",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
+                    string nama_tabungan_impian = txt_nama_tabungan_impian.Text.Trim();
+                    string saldo_impian = txt_saldo_impian.Text.Trim();
+                    // get the datepicker value
+                    tenggat_waktu_impian.Format = DateTimePickerFormat.Custom;
+                    tenggat_waktu_impian.CustomFormat = "yyyy/MM/dd";
+                    string tenggat_waktu = tenggat_waktu_impian.Value.ToString("yyyy/MM/dd");
 
-            } else
+                    bool berhasil = ClassTabunganImpian.tambahImpian(nama_pengguna, nama_tabungan_impian, jenis_impian, tautan_gambar, saldo_impian, tenggat_waktu);
+
+                    if (berhasil)
+                    {
+                        MessageBox.Show("Selamat! Impianmu telah terdaftar :D",
+                                        "Sukses Menambah Impian",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        hide_panel();
+                        txt_nama_tabungan_impian.Text = "";
+                        txt_saldo_impian.Text = "";
+                        default_impian();
+                        jenis_impian = "";
+                        tautan_gambar = "";
+                        validasi_button = false;
+                        tampil_impian();
+                        panel_isi_tabungan_impian.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Maaf, maksimum tabungan impianmu hanya 3 nih :(",
+                                        "Gagal Menambah Impian",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
             {
                 MessageBox.Show(cek,
                                 "Gagal Menambah Impian",
@@ -797,7 +819,7 @@ namespace Darimu
             if (isi_impian.Count <= 0)
             {
                 tampil_impian();
-                MessageBox.Show("Anda belum mempunyai impian",
+                MessageBox.Show("Kamu belum mempunyai impian. Buat dulu yuk! :)",
                                 "Tidak Ada Impian",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
@@ -843,7 +865,7 @@ namespace Darimu
 
         private void button_hapus_impian_1_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menghapus impian?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin menghapus impian?",
                                          "Hapus Impian",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Stop);
@@ -857,14 +879,15 @@ namespace Darimu
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[1].ToString();
                     long saldo_baru = long.Parse(isi_impian[3].ToString());
                     label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[0].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
-                    MessageBox.Show("Selamat! Impianmu sudah terhapus.",
+                    MessageBox.Show("Selamat! Impianmu berhasil terhapus.",
                                     "Sukses Menghapus Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                     tampil_impian();
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Kamu Belum Mempunyai Impian",
+                    MessageBox.Show("Kamu belum mempunyai impian. Buat dulu yuk! :)",
                                     "Gagal Menghapus Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -895,7 +918,7 @@ namespace Darimu
 
         private void button_hapus_impian_2_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menghapus impian?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin menghapus impian?",
                                          "Hapus Impian",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Stop);
@@ -909,7 +932,7 @@ namespace Darimu
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[7].ToString();
                     long saldo_baru = long.Parse(isi_impian[9].ToString());
                     label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[6].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
-                    MessageBox.Show("Selamat! Impianmu sudah terhapus.",
+                    MessageBox.Show("Selamat! Impianmu berhasil terhapus.",
                                     "Sukses Menghapus Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -917,7 +940,7 @@ namespace Darimu
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Kamu Belum Mempunyai Impian",
+                    MessageBox.Show("Kamu belum mempunyai impian. Buat dulu yuk! :)",
                                     "Gagal Menghapus Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -938,7 +961,7 @@ namespace Darimu
 
         private void button_hapus_impian_3_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menghapus impian?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin menghapus impian?",
                                          "Hapus Impian",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Stop);
@@ -960,7 +983,7 @@ namespace Darimu
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Kamu Belum Mempunyai Impian",
+                    MessageBox.Show("Kamu belum mempunyai impian. Buat dulu yuk! :)",
                                     "Gagal Menghapus Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -983,6 +1006,7 @@ namespace Darimu
             hide_panel();
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
             id_impian = isi_impian[6].ToString();
+            saldo_terkumpul = long.Parse(isi_impian[9].ToString());
             saldo_impian = long.Parse(isi_impian[10].ToString());
             label_nama_impian_isi_saldo.Text = isi_impian[7].ToString();
             keterangan_impian = "Isi Saldo Impian " + isi_impian[7].ToString();
@@ -1004,9 +1028,10 @@ namespace Darimu
             hide_panel();
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
             id_impian = isi_impian[12].ToString();
+            saldo_terkumpul = long.Parse(isi_impian[15].ToString());
             saldo_impian = long.Parse(isi_impian[16].ToString());
             label_nama_impian_isi_saldo.Text = isi_impian[13].ToString();
-            keterangan_impian = "Isi Saldo Impian " + isi_impian[13].ToString();
+            keterangan_impian = "Isi Saldo Impian" + isi_impian[13].ToString();
             panel_isi_saldo_tabungan_impian.Visible = true;
         }
 
@@ -1022,10 +1047,10 @@ namespace Darimu
 
         private void button_selesai_impian_1_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menyelesaikan impian?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin menyelesaikan impian?",
                                         "Selesaikan Impian",
                                         MessageBoxButtons.YesNo,
-                                        MessageBoxIcon.Stop);
+                                        MessageBoxIcon.Information);
 
             // If the yes button was pressed ...
             if (result == DialogResult.Yes)
@@ -1036,7 +1061,7 @@ namespace Darimu
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[1].ToString();
                     long saldo_baru = long.Parse(isi_impian[3].ToString());
                     label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[0].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
-                    MessageBox.Show("Selamat! Impianmu sudah selesai.",
+                    MessageBox.Show("Hore! Impianmu sudah selesai :D",
                                     "Sukses Menyelesaikan Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -1044,7 +1069,7 @@ namespace Darimu
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Kamu Belum Mempunyai Impian",
+                    MessageBox.Show("Kamu belum mempunyai impian. Buat dulu yuk! :)",
                                     "Gagal Menyelesaikan Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -1055,10 +1080,10 @@ namespace Darimu
 
         private void button_selesai_impian_2_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menyelesaikan impian?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin menyelesaikan impian?",
                                        "Selesaikan Impian",
                                        MessageBoxButtons.YesNo,
-                                       MessageBoxIcon.Stop);
+                                       MessageBoxIcon.Information);
 
             // If the yes button was pressed ...
             if (result == DialogResult.Yes)
@@ -1077,7 +1102,7 @@ namespace Darimu
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Kamu Belum Mempunyai Impian",
+                    MessageBox.Show("Kamu belum mempunyai impian. Buat dulu yuk! :)",
                                     "Gagal Menyelesaikan Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -1098,10 +1123,10 @@ namespace Darimu
 
         private void button_selesai_impian_3_MouseClick(object sender, MouseEventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menyelesaikan impian?",
-                           "Selesaikan Impian",
-                           MessageBoxButtons.YesNo,
-                           MessageBoxIcon.Stop);
+            var result = MessageBox.Show("Apakah kamu yakin ingin menyelesaikan impian?",
+                                         "Selesaikan Impian",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Information);
 
             // If the yes button was pressed ...
             if (result == DialogResult.Yes)
@@ -1120,7 +1145,7 @@ namespace Darimu
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Kamu Belum Mempunyai Impian",
+                    MessageBox.Show("Kamu belum mempunyai impian. Buat dulu yuk! :)",
                                     "Gagal Menyelesaikan Impian",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -1155,11 +1180,237 @@ namespace Darimu
             }
         }
 
+        private void logo_impian_1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (logo_impian_1.Image == logo_tambah)
+            {
+                hide_panel();
+                tampil_impian();
+                panel_isi_tambah_tabungan_impian.Visible = true;
+            }
+        }
+
+        private void logo_impian_2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (logo_impian_2.Image == logo_tambah)
+            {
+                hide_panel();
+                tampil_impian();
+                panel_isi_tambah_tabungan_impian.Visible = true;
+            }
+        }
+
+        private void logo_impian_3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (logo_impian_3.Image == logo_tambah)
+            {
+                hide_panel();
+                tampil_impian();
+                panel_isi_tambah_tabungan_impian.Visible = true;
+            }
+        }
+
+        private void button_batal_impian_MouseClick(object sender, MouseEventArgs e)
+        {
+            hide_panel();
+            txt_nama_tabungan_impian.Text = "";
+            txt_saldo_impian.Text = "";
+            default_impian();
+            jenis_impian = "";
+            tautan_gambar = "";
+            validasi_button = false;
+            tampil_impian();
+            panel_isi_tabungan_impian.Visible = true;
+        }
+
+        private void laporanSayaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hide_panel();
+            ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+            panel_isi_laporan_saya.Visible = true;
+        }
+
+        private void grid_laporan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id_laporan = grid_laporan.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string status_laporan = grid_laporan.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                if (status_laporan == "Selesai")
+                {
+                    ArrayList data_rincian_laporan = ClassLaporan.rincian_laporan(id_laporan);
+                    label_nomor_laporan.Text = data_rincian_laporan[0].ToString();
+                    label_nama_pengguna_laporan.Text = data_rincian_laporan[1].ToString();
+                    label_nama_admin_laporan.Text = data_rincian_laporan[2].ToString();
+                    label_subjek_laporan.Text = data_rincian_laporan[3].ToString();
+                    txt_rincian_laporan.Text = data_rincian_laporan[4].ToString();
+                    label_tanggal_laporan_dibuat.Text = data_rincian_laporan[5].ToString();
+                    label_tanggal_laporan_ditutup.Text = data_rincian_laporan[6].ToString();
+                    label_status_laporan.Text = data_rincian_laporan[7].ToString();
+                    hide_panel();
+                    panel_isi_rincian_laporan.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Maaf, jadi buat kamu menunggu :(",
+                                    "Laporanmu Sedang Kami Atasi",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Jika ingin melihat rincian laporanmu\nSilakan klik dua kali barisnya, ya. :)",
+                                "Silakan Klik Dua Kali Barisnya",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+        }
+
+        private void txt_isi_subjek_laporan_GotFocus(object sender, EventArgs e)
+        {
+            if (txt_isi_subjek_laporan.Text == "Ketik di sini...")
+            {
+                txt_isi_subjek_laporan.Text = "";
+            }
+        }
+
+        private void txt_isi_subjek_laporan_LostFocus(object sender, EventArgs e)
+        {
+            if (txt_isi_subjek_laporan.Text == "")
+            {
+                txt_isi_subjek_laporan.Text = "Ketik di sini...";
+            }
+        }
+
+        private void txt_isi_rincian_laporan_GotFocus(object sender, EventArgs e)
+        {
+            if (txt_isi_rincian_laporan.Text == "Ketik di sini...")
+            {
+                txt_isi_rincian_laporan.Text = "";
+            }
+        }
+
+        private void txt_isi_rincian_laporan_LostFocus(object sender, EventArgs e)
+        {
+            if (txt_isi_rincian_laporan.Text == "")
+            {
+                txt_isi_rincian_laporan.Text = "Ketik di sini...";
+            }
+        }
+
+        private void button_simpan_laporan_MouseClick(object sender, MouseEventArgs e)
+        {
+            string cek = ClassValidasi.cekBuatLaporan(txt_isi_subjek_laporan, txt_isi_rincian_laporan);
+            if(cek == "valid") {
+                var result = MessageBox.Show("Apakah kamu yakin ingin membuat laporan?",
+                                "Konfirmasi Buat Laporan",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Information);
+
+                // If the yes button was pressed ...
+                if (result == DialogResult.Yes)
+                {
+                    string subjek_laporan = txt_isi_subjek_laporan.Text.Trim();
+                    string rincian_laporan = txt_isi_rincian_laporan.Text.Trim();
+                    bool berhasil = ClassLaporan.buat_laporan(nama_pengguna, subjek_laporan, rincian_laporan);
+                    if(berhasil) {
+                        MessageBox.Show("Maaf, ya, kalau ngerepotin kamu. :(",
+                                        "Berhasil Membuat Laporan",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    } else {
+                        MessageBox.Show("Yah, gagal buat laporan. :(",
+                                        "Gagal Membuat Laporan",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+                    txt_isi_subjek_laporan.Text = "Ketik di sini...";
+                    txt_isi_rincian_laporan.Text = "Ketik di sini...";
+                    hide_panel();
+                    panel_isi_laporan_saya.Visible = true;
+            }
+            } else {
+                MessageBox.Show(cek,
+                                "Gagal Membuat Laporan",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+        }
+
+        private void button_simpan_laporan_MouseEnter(object sender, EventArgs e)
+        {
+            button_simpan_laporan.Image = global::Darimu.Properties.Resources.button_simpan_dipencet;
+        }
+
+        private void button_simpan_laporan_MouseLeave(object sender, EventArgs e)
+        {
+            button_simpan_laporan.Image = global::Darimu.Properties.Resources.button_simpan;
+        }
+
+        private void button_batal_laporan_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_isi_subjek_laporan.Text = "Ketik di sini...";
+            txt_isi_rincian_laporan.Text = "Ketik di sini...";
+            ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+            hide_panel();
+            panel_isi_laporan_saya.Visible = true;
+        }
+
+        private void button_batal_laporan_MouseEnter(object sender, EventArgs e)
+        {
+            button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
+        }
+
+        private void button_batal_laporan_MouseLeave(object sender, EventArgs e)
+        {
+            button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal;
+        }
+
+        private void label_kembali_laporan_MouseClick(object sender, MouseEventArgs e)
+        {
+            ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+            txt_isi_subjek_laporan.Text = "Ketik di sini...";
+            txt_isi_rincian_laporan.Text = "Ketik di sini...";
+            hide_panel();
+            panel_isi_laporan_saya.Visible = true;
+        }
+
+        private void label_kembali_laporan_MouseEnter(object sender, EventArgs e)
+        {
+            label_kembali_laporan.ForeColor = Color.Cyan;
+        }
+
+        private void label_kembali_laporan_MouseLeave(object sender, EventArgs e)
+        {
+            label_kembali_laporan.ForeColor = Color.White;
+        }
+
+        private void label_buat_laporan_MouseClick(object sender, MouseEventArgs e)
+        {
+            hide_panel();
+            label_isi_nama_pengguna_laporan.Text = nama_pengguna;
+            panel_isi_tambah_laporan.Visible = true;
+        }
+
+        private void label_buat_laporan_MouseEnter(object sender, EventArgs e)
+        {
+            label_buat_laporan.ForeColor = Color.Cyan;
+        }
+
+        private void label_buat_laporan_MouseLeave(object sender, EventArgs e)
+        {
+            label_buat_laporan.ForeColor = Color.White;
+        }
+
         private void button_batal_isi_saldo_impian_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
             tampil_impian();
             panel_isi_tabungan_impian.Visible = true;
+            txt_isi_saldo_impian.Text = "Masukkan Nominal Di sini";
         }
 
         private void button_topup_impian_1_MouseClick(object sender, MouseEventArgs e)
@@ -1167,6 +1418,7 @@ namespace Darimu
             hide_panel();
             ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
             id_impian = isi_impian[0].ToString();
+            saldo_terkumpul = long.Parse(isi_impian[3].ToString());
             saldo_impian = long.Parse(isi_impian[4].ToString());
             label_nama_impian_isi_saldo.Text = isi_impian[1].ToString();
             keterangan_impian = "Isi Saldo Impian " + isi_impian[1].ToString();
@@ -1176,10 +1428,10 @@ namespace Darimu
         private void button_simpan_isi_saldo_impian_MouseClick(object sender, MouseEventArgs e)
         {
             string cek = ClassValidasi.cekTambahSaldoImpian(txt_isi_saldo_impian);
-            if(cek == "valid")
+            if (cek == "valid")
             {
                 long saldo_baru = long.Parse(txt_isi_saldo_impian.Text.Trim());
-                label_saldo.Text = ClassTabunganImpian.tambahSaldoImpian(nama_pengguna, saldo_baru, saldo_impian, id_impian, keterangan_impian).ToString();
+                label_saldo.Text = ClassTabunganImpian.tambahSaldoImpian(nama_pengguna, saldo_baru, saldo_terkumpul, saldo_impian, id_impian, keterangan_impian).ToString();
                 hide_panel();
                 tampil_impian();
                 panel_isi_tabungan_impian.Visible = true;
@@ -1216,22 +1468,32 @@ namespace Darimu
         {
             string cek = ClassValidasi.cekTambahSaldo(txt_isi_saldo, gambar_bank);
 
-            if(cek == "valid")
+            if (cek == "valid")
             {
-                long saldo_baru = long.Parse(txt_isi_saldo.Text.Trim());
-                label_saldo.Text = ClassTransaksi.isi_saldo(nama_pengguna, saldo_baru, pilihan_bank).ToString();
-                MessageBox.Show("Selamat! Anda berhasil tambah saldo",
-                                "Tambah Saldo Berhasil",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                txt_isi_saldo.Text = "";
-                gambar_bank.Image = null;
-                hide_panel();
-                panel_isi_beranda.Visible = true;
-            } else
+                var result = MessageBox.Show("Apakah kamu yakin ingin menambah saldo?",
+                                             "Konfirmasi Tambah Saldo",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Information);
+
+                // If the yes button was pressed ...
+                if (result == DialogResult.Yes)
+                {
+                    long saldo_baru = long.Parse(txt_isi_saldo.Text.Trim());
+                    label_saldo.Text = ClassTransaksi.isi_saldo(nama_pengguna, saldo_baru, pilihan_bank).ToString();
+                    MessageBox.Show("Selamat! Kamu berhasil tambah saldo :D",
+                                    "Tambah Saldo Berhasil",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    txt_isi_saldo.Text = "";
+                    gambar_bank.Image = null;
+                    hide_panel();
+                    panel_isi_beranda.Visible = true;
+                }
+            }
+            else
             {
                 MessageBox.Show(cek,
-                                "Lengkapi Syarat!",
+                                "Lengkapi dulu semua isiannya :)",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }

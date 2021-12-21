@@ -658,12 +658,12 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
-            this.panel_isi.Controls.Add(this.panel_isi_masuk);
-            this.panel_isi.Controls.Add(this.panel_isi_daftar);
             this.panel_isi.Controls.Add(this.panel_isi_faq);
             this.panel_isi.Controls.Add(this.panel_lupa_kata_sandi);
             this.panel_isi.Controls.Add(this.panel_isi_beranda);
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
+            this.panel_isi.Controls.Add(this.panel_isi_masuk);
+            this.panel_isi.Controls.Add(this.panel_isi_daftar);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -762,13 +762,14 @@
             // 
             // txt_nama_pengguna_atau_email_masuk
             // 
+            this.txt_nama_pengguna_atau_email_masuk.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txt_nama_pengguna_atau_email_masuk.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nama_pengguna_atau_email_masuk.ForeColor = System.Drawing.Color.Black;
             this.txt_nama_pengguna_atau_email_masuk.Location = new System.Drawing.Point(57, 132);
             this.txt_nama_pengguna_atau_email_masuk.Name = "txt_nama_pengguna_atau_email_masuk";
             this.txt_nama_pengguna_atau_email_masuk.Size = new System.Drawing.Size(324, 27);
             this.txt_nama_pengguna_atau_email_masuk.TabIndex = 18;
-            this.txt_nama_pengguna_atau_email_masuk.Text = "Nama Pengguna atau Email";
+            this.txt_nama_pengguna_atau_email_masuk.Text = "nama pengguna atau email";
             this.txt_nama_pengguna_atau_email_masuk.GotFocus += new System.EventHandler(this.txt_nama_pengguna_atau_email_masuk_GotFocus);
             this.txt_nama_pengguna_atau_email_masuk.LostFocus += new System.EventHandler(this.txt_nama_pengguna_atau_email_masuk_LostFocus);
             // 
@@ -927,13 +928,14 @@
             // 
             // txt_nama_pengguna_daftar
             // 
+            this.txt_nama_pengguna_daftar.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txt_nama_pengguna_daftar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_nama_pengguna_daftar.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nama_pengguna_daftar.Location = new System.Drawing.Point(74, 94);
             this.txt_nama_pengguna_daftar.Name = "txt_nama_pengguna_daftar";
             this.txt_nama_pengguna_daftar.Size = new System.Drawing.Size(274, 27);
             this.txt_nama_pengguna_daftar.TabIndex = 15;
-            this.txt_nama_pengguna_daftar.Text = "Nama Pengguna";
+            this.txt_nama_pengguna_daftar.Text = "nama pengguna";
             this.txt_nama_pengguna_daftar.GotFocus += new System.EventHandler(this.txt_nama_pengguna_daftar_GotFocus);
             this.txt_nama_pengguna_daftar.LostFocus += new System.EventHandler(this.txt_nama_pengguna_daftar_LostFocus);
             // 

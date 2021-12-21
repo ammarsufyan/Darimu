@@ -58,19 +58,19 @@ namespace Darimu
         private void clear_text()
         {
             // login
-            txt_nama_pengguna_atau_email_masuk.Text = "Nama Pengguna atau Email";
-            txt_kata_sandi_masuk.Text = "password";
+            txt_nama_pengguna_atau_email_masuk.Text = "nama pengguna atau email";
+            txt_kata_sandi_masuk.Text = "Password";
 
             // daftar
             txt_nama_depan.Text = "Nama Depan";
             txt_nama_belakang.Text = "Nama Belakang";
-            txt_nama_pengguna_daftar.Text = "Nama Pengguna";
+            txt_nama_pengguna_daftar.Text = "nama pengguna";
             txt_email_daftar.Text = "Alamat Email";
             txt_kata_sandi_daftar.Text = "Password";
             txt_konfirmasi_kata_sandi.Text = "Konfirmasi Password";
 
             // lupa password
-            txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "Nama Pengguna atau Email";
+            txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "nama pengguna atau email";
             txt_lupa_kata_sandi.Text = "Password";
             txt_konfirmasi_lupa_kata_sandi.Text = "Konfirmasi Password";
             txt_captcha_lupa_kata_sandi.Text = "Captcha";
@@ -104,7 +104,7 @@ namespace Darimu
 
         private void button_exit_click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Apakah Anda yakin ingin menutup aplikasi?",
+            var result = MessageBox.Show("Apakah kamu yakin ingin menutup aplikasi?",
                                          "Keluar Aplikasi",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Stop);
@@ -339,7 +339,7 @@ namespace Darimu
         // gotfocus login
         private void txt_nama_pengguna_atau_email_masuk_GotFocus(object sender, EventArgs e)
         {
-            if (txt_nama_pengguna_atau_email_masuk.Text == "Nama Pengguna atau Email")
+            if (txt_nama_pengguna_atau_email_masuk.Text == "nama pengguna atau email")
             {
                 txt_nama_pengguna_atau_email_masuk.Text = "";
             }
@@ -347,7 +347,7 @@ namespace Darimu
 
         private void txt_kata_sandi_masuk_GotFocus(object sender, EventArgs e)
         {
-            if (txt_kata_sandi_masuk.Text == "password")
+            if (txt_kata_sandi_masuk.Text == "Password")
             {
                 txt_kata_sandi_masuk.Text = "";
             }
@@ -358,7 +358,7 @@ namespace Darimu
         {
             if (txt_nama_pengguna_atau_email_masuk.Text == "")
             {
-                txt_nama_pengguna_atau_email_masuk.Text = "Nama Pengguna atau Email";
+                txt_nama_pengguna_atau_email_masuk.Text = "nama pengguna atau email";
             }
         }
 
@@ -366,7 +366,7 @@ namespace Darimu
         {
             if (txt_kata_sandi_masuk.Text == "")
             {
-                txt_kata_sandi_masuk.Text = "password";
+                txt_kata_sandi_masuk.Text = "Password";
             }
         }
 
@@ -499,7 +499,7 @@ namespace Darimu
 
             private void txt_nama_pengguna_daftar_GotFocus(object sender, EventArgs e)
             {
-                if (txt_nama_pengguna_daftar.Text == "Nama Pengguna")
+                if (txt_nama_pengguna_daftar.Text == "nama pengguna")
                 {
                     txt_nama_pengguna_daftar.Text = "";
                 }
@@ -515,7 +515,7 @@ namespace Darimu
 
             private void txt_kata_sandi_daftar_GotFocus(object sender, EventArgs e)
             {
-                if (txt_kata_sandi_daftar.Text == "password")
+                if (txt_kata_sandi_daftar.Text == "Password")
                 {
                     txt_kata_sandi_daftar.Text = "";
                 }
@@ -523,7 +523,7 @@ namespace Darimu
 
             private void txt_konfirmasi_kata_sandi_GotFocus(object sender, EventArgs e)
             {
-                if (txt_konfirmasi_kata_sandi.Text == "konfirmasi password")
+                if (txt_konfirmasi_kata_sandi.Text == "Konfirmasi Password")
                 {
                     txt_konfirmasi_kata_sandi.Text = "";
                 }
@@ -550,7 +550,7 @@ namespace Darimu
             {
                 if (txt_nama_pengguna_daftar.Text == "")
                 {
-                    txt_nama_pengguna_daftar.Text = "Nama Pengguna";
+                    txt_nama_pengguna_daftar.Text = "nama pengguna";
                 }
             }
 
@@ -667,7 +667,7 @@ namespace Darimu
             // gotfocus lupa sandi
             private void txt_nama_pengguna_atau_email_lupa_kata_sandi_GotFocus(object sender, EventArgs e)
             {
-                if (txt_nama_pengguna_atau_email_lupa_kata_sandi.Text == "Nama Pengguna atau Email")
+                if (txt_nama_pengguna_atau_email_lupa_kata_sandi.Text == "nama pengguna atau email")
                 {
                     txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "";
                 }
@@ -736,7 +736,7 @@ namespace Darimu
             {
                 if (txt_nama_pengguna_atau_email_lupa_kata_sandi.Text == "")
                 {
-                    txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "Nama Pengguna atau Email";
+                    txt_nama_pengguna_atau_email_lupa_kata_sandi.Text = "nama pengguna atau email";
                 }
             }
 

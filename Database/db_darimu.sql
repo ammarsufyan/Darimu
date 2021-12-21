@@ -37,7 +37,7 @@ CREATE TABLE tb_admin(
 );
 
 -- memasukkan data admin (di sini ada 3 admin, yaitu Vera Liani, Uli Paris Usada, dan Maman Sitorus)
-INSERT INTO tb_admin(nik, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_lahir, tanggal_lahir, alamat_email, nama_pengguna_admin, kata_sandi, status_admin)
+INSERT INTO tb_admin(nama_pengguna_admin, nama_lengkap, jenis_kelamin, tempat_tinggal, tempat_lahir, tanggal_lahir, alamat_email, nik, kata_sandi, status_admin)
     VALUES
     ('veraliani', 'Vera Liani', 'Perempuan', 'Jl Ir H Juanda 5 A Plaza Ciputat Mas Bl C/P', 'Jakarta', '1992-04-29', 'vera_liani@gmail.com', '2375780219825719', '0F23C5A1EC787D7AB58C34B8FA18158B601789402374420BDBBF1E7E6E6DEB4641DAA0D772D52771A6081AF132B379059128289DD2DE41D75B1F70EBAB8E0588', 'Aktif'),
     ('uliparis', 'Uli Paris Usada', 'Perempuan', 'Kpg. Haji No. 518, Salatiga 99947', 'Gorontalo', '1988-04-01', 'uli_ph@gmail.com', '8795200921584695', '9B348D97A051CDFB8D1C0E10C3A849B9C7C398B33922FEC992EFCA229B7B3415F6611448FF0CA11CAFB33C93E680026BAF95C8100DE9F76EF7F2540D89C82699', 'Aktif'),
@@ -96,14 +96,14 @@ CREATE TABLE tb_tabungan_impian (
  DROP TABLE tb_laporan;
 CREATE TABLE tb_laporan(
     id INT IDENTITY(1,1) NOT NULL,
-    id_laporan AS ('LOG-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
+    id_laporan AS ('LPR-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
     nama_pengguna VARCHAR(100) NOT NULL,
-    nama_pengguna_admin VARCHAR(100) NOT NULL,
+    nama_pengguna_admin VARCHAR(100) NULL,
     subjek_alasan VARCHAR(100) NOT NULL,
     rincian_alasan VARCHAR(255) NOT NULL,
     tanggal_laporan_dibuat DATETIME NOT NULL,
     tanggal_laporan_ditutup DATETIME NULL,
-    [status_laporan] VARCHAR(100) NULL CHECK ([status_laporan] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
+    [status_laporan] VARCHAR(100) NULL CHECK ([status_laporan] IN ('Selesai', 'Belum Selesai')) DEFAULT 'Belum Selesai'
 );
 
 -- ========================================================================
@@ -121,3 +121,22 @@ CREATE TABLE tb_log_data(
 	[status_log_data] VARCHAR(100) NULL CHECK ([status_log_data] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 	PRIMARY KEY (id_log_data)
 );
+
+SELECT * FROM tb_laporan tl
+
+SELECT * FROM tb_pengguna tp 
+
+TRUNCATE TABLE tb_laporan 
+
+INSERT INTO tb_laporan(nama_pengguna, subjek_alasan,rincian_alasan,tanggal_laporan_dibuat)
+	VALUES
+        ('ammarsufyan', 'Lupa akun', 'Akun saya Hilang Setelah hibernasi', GETDATE()),
+		('ammarsufyan', 'Ditimpuk', 'Abis ditimpuk botol', GETDATE()),
+		('ammarsufyan', 'BUG', 'BUG A ketemu B', GETDATE()),
+		('ammarsufyan', 'Kosong', 'kosong pak', GETDATE());
+		
+INSERT INTO tb_laporan(nama_pengguna, nama_pengguna_admin, subjek_alasan,rincian_alasan,tanggal_laporan_dibuat, tanggal_laporan_ditutup, status_laporan)
+	VALUES
+        ('ammarsufyan', 'veraliani', 'Lupa akun', 'Akun saya Hilang Setelah hibernasi', GETDATE(), GETDATE(), 'Selesai'),
+		('ammarsufyan', 'veraliani', 'Ditimpuk', 'Abis ditimpuk botol', GETDATE(), GETDATE(), 'Selesai'),
+		('ammarsufyan', 'veraliani', 'BUG', 'BUG A ketemu B', GETDATE(), GETDATE(), 'Selesai');

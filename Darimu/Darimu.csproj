@@ -53,6 +53,7 @@
     <Compile Include="ClassFolder\ClassAdmin.cs" />
     <Compile Include="ClassFolder\ClassGaram.cs" />
     <Compile Include="ClassFolder\ClassKoneksi.cs" />
+    <Compile Include="ClassFolder\ClassLaporan.cs" />
     <Compile Include="ClassFolder\ClassTabunganImpian.cs" />
     <Compile Include="ClassFolder\ClassTransaksi.cs" />
     <Compile Include="ClassFolder\ClassUser.cs" />
@@ -143,6 +144,7 @@
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
     <None Include="Assets\exit_pressed.png" />
+    <None Include="Assets\gambar_buat_laporan.png" />
     <Content Include="Assets\gambar_daftar.png" />
     <Content Include="Assets\gambar_faq.png" />
     <None Include="Assets\gambar_faq_1.png" />
@@ -152,6 +154,7 @@
     <None Include="Assets\gambar_profil_saya.png" />
     <None Include="Assets\gambar_tambah_saldo.png" />
     <None Include="Assets\gambar_tambah_impian.png" />
+    <None Include="Assets\gambar_rincian_laporan.png" />
     <Content Include="Assets\gambar_tentang_kami.png" />
     <None Include="Assets\gambar_ubah_profil_saya.png" />
     <Content Include="Assets\icon_akun.png" />

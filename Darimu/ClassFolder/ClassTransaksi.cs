@@ -43,14 +43,14 @@ namespace Darimu.ClassFolder
             return saldo_baru;
         }
 
-        public static long isi_saldo_impian(string nama_pengguna, long isi_saldo_terkumpul, long saldo_impian, string keterangan)
+        public static long isi_saldo_impian(string nama_pengguna, long isi_saldo_tabungan_impian, long saldo_terkumpul, long saldo_impian, string keterangan)
         {
             long saldo_lama = 0;
             long saldo_baru = 0;
             saldo_lama = get_saldo(nama_pengguna); 
-            saldo_baru = saldo_lama - isi_saldo_terkumpul;
+            saldo_baru = saldo_lama - isi_saldo_tabungan_impian;
 
-            if(saldo_impian < isi_saldo_terkumpul) 
+            if(saldo_impian <= saldo_terkumpul) 
             {
                 saldo_baru = saldo_lama;
                 return saldo_baru;
@@ -81,15 +81,15 @@ namespace Darimu.ClassFolder
         {
             grid_transaksi.Rows.Clear();
             sqlcon.Open();
-            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_transaksi WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM view_transaksi WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
             while(dr.Read())
             {
-                string tanggal = dr.GetDateTime(3).ToString();
-                string keterangan = dr.GetString(4);
-                string debit = dr.GetInt64(5).ToString();
-                string kredit = dr.GetInt64(6).ToString();
-                string saldo = dr.GetInt64(7).ToString();
+                string tanggal = dr.GetDateTime(1).ToString();
+                string keterangan = dr.GetString(2);
+                string debit = dr.GetInt64(3).ToString();
+                string kredit = dr.GetInt64(4).ToString();
+                string saldo = dr.GetInt64(5).ToString();
                 grid_transaksi.Rows.Add(tanggal, keterangan, debit, kredit, saldo);
             }
             sqlcon.Close();
