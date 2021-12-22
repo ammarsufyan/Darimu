@@ -9,7 +9,7 @@ namespace Darimu.ClassFolder
     class ClassTabunganImpian
     {
         static SqlConnection sqlcon = new ClassKoneksi().getSQLCon();
-        public static bool tambahImpian(string id_pengguna, string nama_tabungan_impian, string jenis_impian, string saldo_impian, string tenggat_waktu)
+        public static bool tambahImpian(string id_pengguna, string id_jenis_impian, string nama_tabungan_impian, string saldo_impian, string tenggat_waktu)
         {
             bool berhasil = false;
             sqlcon.Open();
@@ -21,16 +21,16 @@ namespace Darimu.ClassFolder
             }
             else
             {
-                SqlDataAdapter sqlda = new SqlDataAdapter("INSERT INTO tb_tabungan_impian(id_pengguna, nama_tabungan_impian, jenis_impian, saldo_terkumpul, saldo_impian, tenggat_waktu, tanggal_buka, status_tabungan_impian) VALUES(@id_pengguna, @nama_tabungan_impian, @jenis_impian, 0, @saldo_impian, @tenggat_waktu, GETDATE(), 'Aktif')", sqlcon);
+                SqlDataAdapter sqlda = new SqlDataAdapter("INSERT INTO tb_tabungan_impian(id_pengguna, id_jenis_impian, nama_tabungan_impian, saldo_terkumpul, saldo_impian, tenggat_waktu, tanggal_buka, status_tabungan_impian) VALUES(@id_pengguna, @id_jenis_impian, @nama_tabungan_impian, 0, @saldo_impian, @tenggat_waktu, GETDATE(), 'Aktif')", sqlcon);
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@id_pengguna", SqlDbType.VarChar, 20));
+                sqlda.SelectCommand.Parameters.Add(new SqlParameter("@id_jenis_impian", SqlDbType.VarChar, 20));
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_tabungan_impian", SqlDbType.VarChar, 100));
-                sqlda.SelectCommand.Parameters.Add(new SqlParameter("@jenis_impian", SqlDbType.VarChar, 100));
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@saldo_impian", SqlDbType.BigInt));
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@tenggat_waktu", SqlDbType.DateTime));
 
                 sqlda.SelectCommand.Parameters["@id_pengguna"].Value = id_pengguna;
+                sqlda.SelectCommand.Parameters["@id_jenis_impian"].Value = id_jenis_impian;
                 sqlda.SelectCommand.Parameters["@nama_tabungan_impian"].Value = nama_tabungan_impian;
-                sqlda.SelectCommand.Parameters["@jenis_impian"].Value = jenis_impian;
                 sqlda.SelectCommand.Parameters["@saldo_impian"].Value = saldo_impian;
                 sqlda.SelectCommand.Parameters["@tenggat_waktu"].Value = tenggat_waktu;
                 sqlda.SelectCommand.ExecuteNonQuery();
@@ -47,17 +47,17 @@ namespace Darimu.ClassFolder
             ArrayList isi_impian = new ArrayList();
 
             sqlcon.Open();
-            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_tabungan_impian WHERE id_pengguna = '" + id_pengguna + "' AND status_tabungan_impian = 'Aktif'", sqlcon);
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM view_isi_tabungan_impian WHERE [ID PENGGUNA] = '" + id_pengguna + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
 
             while (dr.Read())
             {
-                isi_impian.Add(dr.GetString(1));
+                isi_impian.Add(dr.GetString(0));
+                isi_impian.Add(dr.GetString(2));
                 isi_impian.Add(dr.GetString(3));
-                isi_impian.Add(dr.GetString(4));
+                isi_impian.Add(dr.GetInt64(4).ToString());
                 isi_impian.Add(dr.GetInt64(5).ToString());
-                isi_impian.Add(dr.GetInt64(6).ToString());
-                isi_impian.Add(dr.GetDateTime(7).ToString("dd/MM/yyyy"));
+                isi_impian.Add(dr.GetDateTime(6).ToString("dd/MM/yyyy"));
             }
 
             sqlcon.Close();
@@ -120,14 +120,14 @@ namespace Darimu.ClassFolder
             SqlDataReader dr = sqlcom.ExecuteReader();
             while (dr.Read())
             {
-                string tanggal_ditutup = dr.GetDateTime(6).ToString();
-                string nama_impian = dr.GetString(2);
-                string jenis_impian = dr.GetString(3);
-                string saldo_terkumpul = dr.GetInt64(4).ToString();
-                string saldo_impian = dr.GetInt64(5).ToString();
+                string nama_impian = dr.GetString(1);
+                string jenis_impian = dr.GetString(2);
+                string saldo_terkumpul = dr.GetInt64(3).ToString();
+                string saldo_impian = dr.GetInt64(4).ToString();
+                string tanggal_ditutup = dr.GetDateTime(5).ToString();
                 string status;
 
-                if (dr.GetInt64(4) >= dr.GetInt64(5))
+                if (dr.GetInt64(3) >= dr.GetInt64(4))
                 {
                     status = "Berhasil";
                 }

@@ -85,8 +85,8 @@ CREATE TABLE tb_tabungan_impian (
 	id INT IDENTITY(1,1) NOT NULL,
 	id_tabungan_impian AS ('TI-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
     id_pengguna VARCHAR(20) NOT NULL,
-    nama_tabungan_impian VARCHAR(100) NOT NULL,
     id_jenis_impian VARCHAR(20) NOT NULL,
+    nama_tabungan_impian VARCHAR(100) NOT NULL,
     saldo_terkumpul BIGINT NOT NULL,
     saldo_impian BIGINT NOT NULL,
     tenggat_waktu DATETIME NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE tb_laporan(
 );
 
 -- ========================================================================
--- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
+-- membuat tb_jenis_impian
 DROP TABLE tb_jenis_impian;
 CREATE TABLE tb_jenis_impian(
 	id INT IDENTITY(1,1) NOT NULL,
@@ -133,20 +133,6 @@ SELECT * FROM tb_pengguna;
 SELECT * FROM tb_admin;
 SELECT * FROM tb_laporan;
 SELECT * FROM tb_tabungan_impian;
+SELECT * FROM tb_jenis_impian;
 SELECT * FROM tb_transaksi;
 SELECT * FROM tb_jenis_impian;
-
--- ========================================================================
--- membuat tb_log_data (untuk melihat apa saja yang dilakukan oleh user (hanya ADMIN!!!!!!!!!!!!!!))
-CREATE TABLE tb_log_data(
-	id INT IDENTITY(1,1) NOT NULL,
-	id_log_data AS ('LOG-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED,
-	id_pengguna VARCHAR(20) NOT NULL,
-	id_admin VARCHAR(20) NOT NULL,
-	aktivitas VARCHAR(255) NOT NULL,
-	keterangan VARCHAR(255) NOT NULL,
-	tanggal_dibuat DATETIME NULL,
-	tanggal_ditutup DATETIME NULL,
-	[status_log_data] VARCHAR(100) NULL CHECK ([status_log_data] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
-	PRIMARY KEY (id_log_data)
-);

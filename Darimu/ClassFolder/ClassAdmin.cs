@@ -41,6 +41,7 @@ namespace Darimu.ClassFolder
                 data_admin.Add(dr.GetString(8));
             }
 
+            dr.Close();
             sqlcon.Close();
             return data_admin;
         }
@@ -54,8 +55,8 @@ namespace Darimu.ClassFolder
             while (dr.Read())
             {
                 string id_laporan = dr.GetString(0);
-                string subjek_laporan = dr.GetString(2);
-                string tanggal_dibuat = dr.GetDateTime(4).ToString();
+                string subjek_laporan = dr.GetString(3);
+                string tanggal_dibuat = dr.GetDateTime(5).ToString();
                 string tanggal_ditutup;
                 try
                 {
@@ -65,9 +66,10 @@ namespace Darimu.ClassFolder
                 {
                     tanggal_ditutup = "Belum Ditentukan";
                 }
-                string status = dr.GetString(6);
+                string status = dr.GetString(7);
                 grid_laporan.Rows.Add(id_laporan, subjek_laporan, tanggal_dibuat, tanggal_ditutup, status);
             }
+            dr.Close();
             sqlcon.Close();
         }
 
@@ -80,12 +82,13 @@ namespace Darimu.ClassFolder
             if (dr.Read())
             {
                 data_rincian_laporan.Add(dr.GetString(0));
-                data_rincian_laporan.Add(dr.GetString(1));
                 data_rincian_laporan.Add(dr.GetString(2));
                 data_rincian_laporan.Add(dr.GetString(3));
-                data_rincian_laporan.Add(dr.GetDateTime(4).ToString("dd/MM/yyyy"));
+                data_rincian_laporan.Add(dr.GetString(4));
+                data_rincian_laporan.Add(dr.GetDateTime(5).ToString("dd/MM/yyyy"));
             }
 
+            dr.Close();
             sqlcon.Close();
             return data_rincian_laporan;
         }
@@ -93,8 +96,8 @@ namespace Darimu.ClassFolder
         public static void selesaikan_laporan(string id_admin, string id_laporan)
         {
             sqlcon.Open();
-            SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_laporan SET id_pengguna_admin = @id_pengguna_admin, tanggal_laporan_ditutup = GETDATE(), status_laporan = 'Selesai' WHERE id_laporan = @id_laporan", sqlcon);
-            sqlda.SelectCommand.Parameters.Add(new SqlParameter("@id_pengguna_admin", SqlDbType.VarChar, 100));
+            SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_laporan SET id_admin = @id_admin, tanggal_laporan_ditutup = GETDATE(), status_laporan = 'Selesai' WHERE id_laporan = @id_laporan", sqlcon);
+            sqlda.SelectCommand.Parameters.Add(new SqlParameter("@id_admin", SqlDbType.VarChar, 20));
             sqlda.SelectCommand.Parameters.Add(new SqlParameter("@id_laporan", SqlDbType.VarChar, 20));
 
             sqlda.SelectCommand.Parameters["@id_admin"].Value = id_admin;
@@ -119,6 +122,7 @@ namespace Darimu.ClassFolder
                 string saldo = dr.GetInt64(5).ToString();
                 grid_transaksi.Rows.Add(tanggal, nama_pengguna, keterangan, debit, kredit, saldo);
             }
+            dr.Close();
             sqlcon.Close();
         }
     }

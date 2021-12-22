@@ -76,15 +76,28 @@ namespace Darimu.ClassFolder
             try
             {
                 sqlcon.Open();
-                SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_pengguna SET kata_sandi = @kata_sandi WHERE nama_pengguna = @nama_pengguna_atau_email OR alamat_email = @nama_pengguna_atau_email", sqlcon);
-                sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna", SqlDbType.VarChar, 100));
-                sqlda.SelectCommand.Parameters.Add(new SqlParameter("@kata_sandi", SqlDbType.NVarChar, 255));
+                SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE nama_pengguna = '" + nama_pengguna_atau_email + "' OR alamat_email = '" + nama_pengguna_atau_email + "'", sqlcon);
+                SqlDataReader dr = sqlcom.ExecuteReader();
+                if (dr.Read())
+                {
+                    dr.Close();
+                    SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_pengguna SET kata_sandi = @kata_sandi WHERE nama_pengguna = @nama_pengguna_atau_email OR alamat_email = @nama_pengguna_atau_email", sqlcon);
+                    sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna_atau_email", SqlDbType.VarChar, 100));
+                    sqlda.SelectCommand.Parameters.Add(new SqlParameter("@kata_sandi", SqlDbType.NVarChar, 255));
 
-                sqlda.SelectCommand.Parameters["@nama_pengguna_atau_email"].Value = nama_pengguna_atau_email;
-                sqlda.SelectCommand.Parameters["@kata_sandi"].Value = hashKataSandi(kata_sandi);
+                    sqlda.SelectCommand.Parameters["@nama_pengguna_atau_email"].Value = nama_pengguna_atau_email;
+                    sqlda.SelectCommand.Parameters["@kata_sandi"].Value = hashKataSandi(kata_sandi);
 
-                sqlda.SelectCommand.ExecuteNonQuery();
-                hasil = "Kata sandi berhasil diubah";
+                    sqlda.SelectCommand.ExecuteNonQuery();
+                    hasil = "Kata sandi berhasil diubah";
+                    sqlcon.Close();
+                } 
+                else 
+                {
+                    dr.Close();
+                    sqlcon.Close();
+                    hasil = "Nama pengguna atau email tidak ditemukan";
+                }
             }
             catch (Exception ex)
             {

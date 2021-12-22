@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_admin));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -106,15 +106,15 @@
             this.panel_isi_transaksi_pengguna = new System.Windows.Forms.Panel();
             this.label_transaksi = new System.Windows.Forms.Label();
             this.grid_transaksi = new System.Windows.Forms.DataGridView();
+            this.drop_down_laporan = new Darimu.CustomControls.DRMDropDownMenu(this.components);
+            this.laporanPenggunaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.riwayatTransaksiPenggunaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namapengguna = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpengguna = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.keterangan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.debit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drop_down_laporan = new Darimu.CustomControls.DRMDropDownMenu(this.components);
-            this.laporanPenggunaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.riwayatTransaksiPenggunaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_menu.SuspendLayout();
             this.panel_header_sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).BeginInit();
@@ -234,8 +234,8 @@
             this.button_laporan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button_laporan.Size = new System.Drawing.Size(203, 60);
             this.button_laporan.TabIndex = 25;
-            this.button_laporan.Tag = " Laporan";
-            this.button_laporan.Text = " Laporan";
+            this.button_laporan.Tag = "  Riwayat";
+            this.button_laporan.Text = "  Riwayat";
             this.button_laporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_laporan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_laporan.UseVisualStyleBackColor = true;
@@ -624,6 +624,7 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
+            this.panel_isi.Controls.Add(this.panel_isi_transaksi_pengguna);
             this.panel_isi.Controls.Add(this.panel_isi_rincian_laporan);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
@@ -634,7 +635,6 @@
             this.panel_isi.Controls.Add(this.panel_isi_faq);
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
             this.panel_isi.Controls.Add(this.panel_isi_laporan_pengguna);
-            this.panel_isi.Controls.Add(this.panel_isi_transaksi_pengguna);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -1012,14 +1012,14 @@
             this.grid_laporan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_laporan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_laporan.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grid_laporan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_laporan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -1027,14 +1027,14 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle4;
             this.grid_laporan.EnableHeadersVisualStyles = false;
             this.grid_laporan.Location = new System.Drawing.Point(31, 69);
             this.grid_laporan.Name = "grid_laporan";
@@ -1115,30 +1115,30 @@
             this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_transaksi.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tanggal,
-            this.namapengguna,
+            this.idpengguna,
             this.keterangan,
             this.debit,
             this.kredit,
             this.saldo});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle2;
             this.grid_transaksi.EnableHeadersVisualStyles = false;
             this.grid_transaksi.Location = new System.Drawing.Point(31, 71);
             this.grid_transaksi.Name = "grid_transaksi";
@@ -1146,52 +1146,6 @@
             this.grid_transaksi.RowHeadersVisible = false;
             this.grid_transaksi.Size = new System.Drawing.Size(733, 374);
             this.grid_transaksi.TabIndex = 7;
-            // 
-            // tanggal
-            // 
-            this.tanggal.FillWeight = 74.2386F;
-            this.tanggal.HeaderText = "Tanggal";
-            this.tanggal.Name = "tanggal";
-            this.tanggal.ReadOnly = true;
-            // 
-            // namapengguna
-            // 
-            this.namapengguna.HeaderText = "Nama Pengguna";
-            this.namapengguna.Name = "namapengguna";
-            this.namapengguna.ReadOnly = true;
-            this.namapengguna.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // keterangan
-            // 
-            this.keterangan.FillWeight = 203.0457F;
-            this.keterangan.HeaderText = "Keterangan Transaksi";
-            this.keterangan.Name = "keterangan";
-            this.keterangan.ReadOnly = true;
-            this.keterangan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // debit
-            // 
-            this.debit.FillWeight = 74.2386F;
-            this.debit.HeaderText = "Debit";
-            this.debit.Name = "debit";
-            this.debit.ReadOnly = true;
-            this.debit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // kredit
-            // 
-            this.kredit.FillWeight = 74.2386F;
-            this.kredit.HeaderText = "Kredit";
-            this.kredit.Name = "kredit";
-            this.kredit.ReadOnly = true;
-            this.kredit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // saldo
-            // 
-            this.saldo.FillWeight = 74.2386F;
-            this.saldo.HeaderText = "Saldo";
-            this.saldo.Name = "saldo";
-            this.saldo.ReadOnly = true;
-            this.saldo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // drop_down_laporan
             // 
@@ -1224,6 +1178,52 @@
             this.riwayatTransaksiPenggunaToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.riwayatTransaksiPenggunaToolStripMenuItem.Text = "Transaksi Pengguna";
             this.riwayatTransaksiPenggunaToolStripMenuItem.Click += new System.EventHandler(this.riwayatTransaksiPenggunaToolStripMenuItem_Click);
+            // 
+            // tanggal
+            // 
+            this.tanggal.FillWeight = 74.2386F;
+            this.tanggal.HeaderText = "Tanggal";
+            this.tanggal.Name = "tanggal";
+            this.tanggal.ReadOnly = true;
+            // 
+            // idpengguna
+            // 
+            this.idpengguna.HeaderText = "ID Pengguna";
+            this.idpengguna.Name = "idpengguna";
+            this.idpengguna.ReadOnly = true;
+            this.idpengguna.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // keterangan
+            // 
+            this.keterangan.FillWeight = 203.0457F;
+            this.keterangan.HeaderText = "Keterangan Transaksi";
+            this.keterangan.Name = "keterangan";
+            this.keterangan.ReadOnly = true;
+            this.keterangan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // debit
+            // 
+            this.debit.FillWeight = 74.2386F;
+            this.debit.HeaderText = "Debit";
+            this.debit.Name = "debit";
+            this.debit.ReadOnly = true;
+            this.debit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // kredit
+            // 
+            this.kredit.FillWeight = 74.2386F;
+            this.kredit.HeaderText = "Kredit";
+            this.kredit.Name = "kredit";
+            this.kredit.ReadOnly = true;
+            this.kredit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // saldo
+            // 
+            this.saldo.FillWeight = 74.2386F;
+            this.saldo.HeaderText = "Saldo";
+            this.saldo.Name = "saldo";
+            this.saldo.ReadOnly = true;
+            this.saldo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // frm_admin
             // 
@@ -1347,12 +1347,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label_transaksi;
         private System.Windows.Forms.DataGridView grid_transaksi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namapengguna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn keterangan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn debit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kredit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
         private System.Windows.Forms.TextBox txt_rincian_laporan;
         private System.Windows.Forms.Label label_tanggal_laporan_dibuat;
         private System.Windows.Forms.Label label_nomor_laporan;
@@ -1361,6 +1355,12 @@
         private System.Windows.Forms.PictureBox gambar_rincian_laporan;
         private System.Windows.Forms.Button button_batal_laporan;
         private System.Windows.Forms.Button button_selesai_laporan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpengguna;
+        private System.Windows.Forms.DataGridViewTextBoxColumn keterangan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn debit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
     }
 }
 

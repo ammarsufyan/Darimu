@@ -12,7 +12,7 @@ namespace Darimu
     public partial class frm_setelah_login : Form
     {
         // declaration var
-        private string id_pengguna, nama_pengguna, pilihan_bank, jenis_impian, id_impian, keterangan_impian, keterangan_hapus_impian;
+        private string id_pengguna, nama_pengguna, pilihan_bank, id_jenis_impian, id_impian, keterangan_impian, keterangan_hapus_impian;
         private bool validasi_button = false;
         private int borderSize = 2;
         private long saldo_impian = 0;
@@ -165,7 +165,7 @@ namespace Darimu
         private void set_logo_impian(string jenis_impian, PictureBox logo)
         {
             logo.Cursor = System.Windows.Forms.Cursors.Default;
-            if (jenis_impian == ("Umum"))
+            if (jenis_impian == "Umum")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_umum;
             }
@@ -595,7 +595,7 @@ namespace Darimu
             {
                 string nama_belakang;
 
-                if (txt_ubah_nama_belakang.Text == "Nama Belakang" || txt_ubah_nama_belakang.Text == "")
+                if (txt_ubah_nama_belakang.Text == "Nama Belakang")
                 {
                     nama_belakang = "";
                 }
@@ -725,7 +725,7 @@ namespace Darimu
                     tenggat_waktu_impian.CustomFormat = "yyyy/MM/dd";
                     string tenggat_waktu = tenggat_waktu_impian.Value.ToString("yyyy/MM/dd");
 
-                    bool berhasil = ClassTabunganImpian.tambahImpian(id_pengguna, nama_tabungan_impian, jenis_impian, saldo_impian, tenggat_waktu);
+                    bool berhasil = ClassTabunganImpian.tambahImpian(id_pengguna, id_jenis_impian, nama_tabungan_impian, saldo_impian, tenggat_waktu);
 
                     if (berhasil)
                     {
@@ -737,7 +737,7 @@ namespace Darimu
                         txt_nama_tabungan_impian.Text = "";
                         txt_saldo_impian.Text = "";
                         default_impian();
-                        jenis_impian = "";
+                        id_jenis_impian = "";
                         validasi_button = false;
                         tampil_impian();
                         panel_isi_tabungan_impian.Visible = true;
@@ -773,7 +773,7 @@ namespace Darimu
         {
             default_impian();
             jenis_impian_umum.Image = global::Darimu.Properties.Resources.umum_biru;
-            jenis_impian = "Umum";
+            id_jenis_impian = "JNS-0001";
             validasi_button = true;
         }
 
@@ -781,7 +781,7 @@ namespace Darimu
         {
             default_impian();
             jenis_impian_jalan_jalan.Image = global::Darimu.Properties.Resources.jalan_jalan_biru;
-            jenis_impian = "Jalan-jalan";
+            id_jenis_impian = "JNS-0002";
             validasi_button = true;
         }
 
@@ -789,7 +789,7 @@ namespace Darimu
         {
             default_impian();
             jenis_impian_elektronik.Image = global::Darimu.Properties.Resources.elektronik_biru;
-            jenis_impian = "Elektronik";
+            id_jenis_impian = "JNS-0003";
             validasi_button = true;
         }
 
@@ -1213,7 +1213,7 @@ namespace Darimu
             txt_nama_tabungan_impian.Text = "";
             txt_saldo_impian.Text = "";
             default_impian();
-            jenis_impian = "";
+            id_jenis_impian = "";
             validasi_button = false;
             tampil_impian();
             panel_isi_tabungan_impian.Visible = true;
@@ -1459,7 +1459,7 @@ namespace Darimu
         {
             default_impian();
             jenis_impian_fashion.Image = global::Darimu.Properties.Resources.fashion_biru;
-            jenis_impian = "Fashion";
+            id_jenis_impian = "JNS-0004";
             validasi_button = true;
         }
 
@@ -1467,7 +1467,7 @@ namespace Darimu
         {
             default_impian();
             jenis_impian_hiburan.Image = global::Darimu.Properties.Resources.hiburan_biru;
-            jenis_impian = "Hiburan";
+            id_jenis_impian = "JNS-0005";
             validasi_button = true;
         }
 

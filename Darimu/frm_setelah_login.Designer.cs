@@ -790,7 +790,6 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
-            this.panel_isi.Controls.Add(this.panel_isi_riwayat_impian);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Controls.Add(this.panel_isi_ubah_profil_saya);
             this.panel_isi.Controls.Add(this.panel_isi_profil_saya);
@@ -804,6 +803,7 @@
             this.panel_isi.Controls.Add(this.panel_isi_tambah_laporan);
             this.panel_isi.Controls.Add(this.panel_isi_rincian_laporan);
             this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_impian);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";

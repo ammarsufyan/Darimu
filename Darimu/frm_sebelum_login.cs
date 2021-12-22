@@ -637,13 +637,21 @@ namespace Darimu
             if (cek == "valid")
             {
                 string hasil = ClassUser.ubahKataSandi(txt_nama_pengguna_atau_email_lupa_kata_sandi.Text, txt_lupa_kata_sandi.Text);
-                MessageBox.Show(hasil, "Berhasil Membuat Password Baru",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                hide_panel();
-                clear_text();
-                panel_isi_masuk.Visible = true;
-                button_masuk_sidebar.ForeColor = System.Drawing.Color.Cyan;
+                if(hasil == "Kata sandi berhasil diubah")
+                {
+                    MessageBox.Show(hasil, "Berhasil Membuat Password Baru",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Information);
+                    hide_panel();
+                    clear_text();
+                    panel_isi_masuk.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show(hasil, "Gagal Membuat Password Baru",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
             }
             else
             {

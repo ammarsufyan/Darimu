@@ -10,6 +10,7 @@ namespace Darimu.ClassFolder
         static Regex re_nama_pengguna = new Regex("^[a-zA-Z0-9_]{8,16}$");
         static Regex re_kata_sandi = new Regex(@"^[a-zA-Z0-9!@#$%^{}()\[\]\\/:,._`~'&*+\-?]{8,16}$");
         static Regex re_huruf = new Regex(@"^[a-z\sA-Z]+$");
+        static Regex re_nama_belakang = new Regex(@"^[a-z\sA-Z]*$");
         static Regex re_saldo = new Regex("^[0-9]+$");
         static Regex re_email = new Regex("^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
 
@@ -26,7 +27,7 @@ namespace Darimu.ClassFolder
             {
                 hasil = "Nama belum ada nih! Minimal nama depan ya";
             }
-            else if (!re_huruf.IsMatch(val_nama_depan) || !re_huruf.IsMatch(val_nama_belakang))
+            else if (!re_huruf.IsMatch(val_nama_depan) || !re_nama_belakang.IsMatch(val_nama_belakang))
             {
                 hasil = "Nama harus huruf";
             }
@@ -145,7 +146,7 @@ namespace Darimu.ClassFolder
             {
                 hasil = "Isi nama depanmu dengan benar ya!";
             }
-            else if (!re_huruf.IsMatch(val_nama_belakang))
+            else if (!re_nama_belakang.IsMatch(val_nama_belakang))
             {
                 hasil = "Isi nama belakangmu dengan benar ya!";
             }
