@@ -52,7 +52,7 @@ ON tbl.id_admin = tba.id_admin;
 -- ========================================================================
 --(VIEW 4) RIWAYAT TABUNGAN
 CREATE VIEW view_riwayat_tabungan_impian AS
-SELECT tbi.id_pengguna AS 'ID Pengguna', tbi.nama_tabungan_impian AS 'Nama Tabungan Impian', tbj.id_jenis_impian AS 'ID Jenis Impian', tbi.saldo_terkumpul AS 'Saldo Terkumpul', tbi.saldo_impian AS 'Saldo Impian', tbi.tanggal_tutup AS 'Tanggal Tutup' 
+SELECT tbi.id_pengguna AS 'ID Pengguna', tbi.nama_tabungan_impian AS 'Nama Tabungan Impian', tbj.jenis_impian AS 'Jenis Impian', tbi.saldo_terkumpul AS 'Saldo Terkumpul', tbi.saldo_impian AS 'Saldo Impian', tbi.tanggal_tutup AS 'Tanggal Tutup' 
 FROM tb_tabungan_impian AS tbi
 INNER JOIN tb_jenis_impian AS tbj
 ON tbi.id_jenis_impian = tbj.id_jenis_impian
