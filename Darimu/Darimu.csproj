@@ -141,6 +141,8 @@
     <None Include="Assets\Blue\icon_hapus_biru.png" />
     <None Include="Assets\Blue\icon_selesai_biru.png" />
     <None Include="Assets\Blue\icon_laporan_biru.png" />
+    <None Include="Assets\button_selesai.png" />
+    <None Include="Assets\button_selesai_dipencet.png" />
     <Content Include="Assets\Contacts.png" />
     <Content Include="Assets\daftar.png" />
     <Content Include="Assets\exit.png" />
@@ -156,6 +158,7 @@
     <None Include="Assets\gambar_tambah_saldo.png" />
     <None Include="Assets\gambar_tambah_impian.png" />
     <None Include="Assets\gambar_rincian_laporan.png" />
+    <None Include="Assets\gambar_rincian_laporan_admin.png" />
     <Content Include="Assets\gambar_tentang_kami.png" />
     <None Include="Assets\gambar_ubah_profil_saya.png" />
     <Content Include="Assets\icon_akun.png" />

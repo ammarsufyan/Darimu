@@ -30,10 +30,11 @@ namespace Darimu.ClassFolder
                 if (dr.Read())
                 {
                     string ambil_nama_pengguna = dr.GetString(0);
-                    if(ambil_nama_pengguna == nama_pengguna)
+                    if (ambil_nama_pengguna == nama_pengguna)
                     {
                         hasil = "Nama pengguna sudah terdaftar";
-                    } else
+                    }
+                    else
                     {
                         hasil = "Email sudah terdaftar";
                     }
@@ -145,7 +146,7 @@ namespace Darimu.ClassFolder
                 if (dr.Read())
                 {
                     hasil = "Email sudah terdaftar";
-                } 
+                }
                 else
                 {
                     dr.Close();

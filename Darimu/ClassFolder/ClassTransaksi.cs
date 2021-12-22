@@ -24,7 +24,7 @@ namespace Darimu.ClassFolder
             return ambil_saldo;
         }
 
-        public static long isi_saldo (string nama_pengguna, long saldo, string keterangan)
+        public static long isi_saldo(string nama_pengguna, long saldo, string keterangan)
         {
             long saldo_baru = 0;
             saldo_baru = saldo + get_saldo(nama_pengguna);
@@ -47,10 +47,10 @@ namespace Darimu.ClassFolder
         {
             long saldo_lama = 0;
             long saldo_baru = 0;
-            saldo_lama = get_saldo(nama_pengguna); 
+            saldo_lama = get_saldo(nama_pengguna);
             saldo_baru = saldo_lama - isi_saldo_tabungan_impian;
 
-            if(saldo_impian < saldo_terkumpul) 
+            if (saldo_impian < saldo_terkumpul)
             {
                 saldo_baru = saldo_lama;
                 return saldo_baru;
@@ -82,7 +82,7 @@ namespace Darimu.ClassFolder
             sqlcon.Open();
             SqlCommand sqlcom = new SqlCommand("SELECT * FROM view_transaksi WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
-            while(dr.Read())
+            while (dr.Read())
             {
                 string tanggal = dr.GetDateTime(1).ToString();
                 string keterangan = dr.GetString(2);

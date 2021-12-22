@@ -223,6 +223,9 @@
   <data name="icon_selesai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_selesai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_laporan_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Blue\icon_laporan_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_faq_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Blue\icon_faq_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -234,6 +237,9 @@
   </data>
   <data name="Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gambar_rincian_laporan_admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gambar_rincian_laporan_admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo_elektronik" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\JenisImpian\logo_elektronik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -279,6 +285,9 @@
   </data>
   <data name="gambar_daftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\gambar_daftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_laporan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon_laporan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_masuk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_masuk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,10 +346,10 @@
   <data name="icon_beranda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\icon_beranda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_laporan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icon_laporan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_selesai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\button_selesai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_laporan_biru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Blue\icon_laporan_biru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_selesai_dipencet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\button_selesai_dipencet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_setelah_login));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -73,6 +73,13 @@
             this.panel_isi = new System.Windows.Forms.Panel();
             this.panel_border_isi_bawah = new System.Windows.Forms.Panel();
             this.panel_border_isi_kanan = new System.Windows.Forms.Panel();
+            this.panel_isi_tambah_laporan = new System.Windows.Forms.Panel();
+            this.button_batal_laporan = new System.Windows.Forms.Button();
+            this.button_simpan_laporan = new System.Windows.Forms.Button();
+            this.txt_isi_subjek_laporan = new System.Windows.Forms.TextBox();
+            this.label_isi_nama_pengguna_laporan = new System.Windows.Forms.Label();
+            this.txt_isi_rincian_laporan = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_isi_rincian_laporan = new System.Windows.Forms.Panel();
             this.label_kembali_laporan = new System.Windows.Forms.Label();
             this.txt_rincian_laporan = new System.Windows.Forms.TextBox();
@@ -177,13 +184,6 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel_isi_tambah_laporan = new System.Windows.Forms.Panel();
-            this.button_batal_laporan = new System.Windows.Forms.Button();
-            this.button_simpan_laporan = new System.Windows.Forms.Button();
-            this.txt_isi_subjek_laporan = new System.Windows.Forms.TextBox();
-            this.label_isi_nama_pengguna_laporan = new System.Windows.Forms.Label();
-            this.txt_isi_rincian_laporan = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.drop_down_profil = new Darimu.CustomControls.DRMDropDownMenu(this.components);
             this.profilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -206,6 +206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nama_logo_dan_tagline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
             this.panel_isi.SuspendLayout();
+            this.panel_isi_tambah_laporan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_isi_rincian_laporan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_rincian_laporan)).BeginInit();
             this.panel_isi_tabungan_impian.SuspendLayout();
@@ -233,8 +235,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_saldo_impian)).BeginInit();
             this.panel_isi_laporan_saya.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_laporan)).BeginInit();
-            this.panel_isi_tambah_laporan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.drop_down_profil.SuspendLayout();
             this.drop_down_tabungan.SuspendLayout();
             this.SuspendLayout();
@@ -776,9 +776,6 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
-            this.panel_isi.Controls.Add(this.panel_isi_tambah_saldo);
-            this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
-            this.panel_isi.Controls.Add(this.panel_isi_saldo_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
             this.panel_isi.Controls.Add(this.panel_isi_tambah_laporan);
             this.panel_isi.Controls.Add(this.panel_isi_rincian_laporan);
@@ -789,6 +786,9 @@
             this.panel_isi.Controls.Add(this.panel_isi_beranda);
             this.panel_isi.Controls.Add(this.panel_isi_faq);
             this.panel_isi.Controls.Add(this.panel_isi_tentang_kami);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_saldo);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_saldo_tabungan_impian);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -812,6 +812,109 @@
             this.panel_border_isi_kanan.Name = "panel_border_isi_kanan";
             this.panel_border_isi_kanan.Size = new System.Drawing.Size(2, 470);
             this.panel_border_isi_kanan.TabIndex = 13;
+            // 
+            // panel_isi_tambah_laporan
+            // 
+            this.panel_isi_tambah_laporan.Controls.Add(this.button_batal_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.button_simpan_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_subjek_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.label_isi_nama_pengguna_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_rincian_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.pictureBox1);
+            this.panel_isi_tambah_laporan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tambah_laporan.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tambah_laporan.Name = "panel_isi_tambah_laporan";
+            this.panel_isi_tambah_laporan.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_tambah_laporan.TabIndex = 24;
+            this.panel_isi_tambah_laporan.Visible = false;
+            // 
+            // button_batal_laporan
+            // 
+            this.button_batal_laporan.AutoSize = true;
+            this.button_batal_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_batal_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.FlatAppearance.BorderSize = 0;
+            this.button_batal_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal;
+            this.button_batal_laporan.Location = new System.Drawing.Point(611, 403);
+            this.button_batal_laporan.Name = "button_batal_laporan";
+            this.button_batal_laporan.Size = new System.Drawing.Size(67, 40);
+            this.button_batal_laporan.TabIndex = 21;
+            this.button_batal_laporan.UseVisualStyleBackColor = false;
+            this.button_batal_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_laporan_MouseClick);
+            this.button_batal_laporan.MouseEnter += new System.EventHandler(this.button_batal_laporan_MouseEnter);
+            this.button_batal_laporan.MouseLeave += new System.EventHandler(this.button_batal_laporan_MouseLeave);
+            // 
+            // button_simpan_laporan
+            // 
+            this.button_simpan_laporan.AutoSize = true;
+            this.button_simpan_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_simpan_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.FlatAppearance.BorderSize = 0;
+            this.button_simpan_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_simpan_laporan.Image = global::Darimu.Properties.Resources.button_simpan;
+            this.button_simpan_laporan.Location = new System.Drawing.Point(684, 403);
+            this.button_simpan_laporan.Name = "button_simpan_laporan";
+            this.button_simpan_laporan.Size = new System.Drawing.Size(67, 40);
+            this.button_simpan_laporan.TabIndex = 20;
+            this.button_simpan_laporan.UseVisualStyleBackColor = false;
+            this.button_simpan_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_laporan_MouseClick);
+            this.button_simpan_laporan.MouseEnter += new System.EventHandler(this.button_simpan_laporan_MouseEnter);
+            this.button_simpan_laporan.MouseLeave += new System.EventHandler(this.button_simpan_laporan_MouseLeave);
+            // 
+            // txt_isi_subjek_laporan
+            // 
+            this.txt_isi_subjek_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_isi_subjek_laporan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_subjek_laporan.Location = new System.Drawing.Point(199, 83);
+            this.txt_isi_subjek_laporan.MaxLength = 52;
+            this.txt_isi_subjek_laporan.Name = "txt_isi_subjek_laporan";
+            this.txt_isi_subjek_laporan.Size = new System.Drawing.Size(490, 22);
+            this.txt_isi_subjek_laporan.TabIndex = 19;
+            this.txt_isi_subjek_laporan.Text = "Ketik di sini...";
+            this.txt_isi_subjek_laporan.GotFocus += new System.EventHandler(this.txt_isi_subjek_laporan_GotFocus);
+            this.txt_isi_subjek_laporan.LostFocus += new System.EventHandler(this.txt_isi_subjek_laporan_LostFocus);
+            // 
+            // label_isi_nama_pengguna_laporan
+            // 
+            this.label_isi_nama_pengguna_laporan.AutoSize = true;
+            this.label_isi_nama_pengguna_laporan.BackColor = System.Drawing.Color.White;
+            this.label_isi_nama_pengguna_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_isi_nama_pengguna_laporan.Location = new System.Drawing.Point(195, 50);
+            this.label_isi_nama_pengguna_laporan.Name = "label_isi_nama_pengguna_laporan";
+            this.label_isi_nama_pengguna_laporan.Size = new System.Drawing.Size(124, 23);
+            this.label_isi_nama_pengguna_laporan.TabIndex = 11;
+            this.label_isi_nama_pengguna_laporan.Text = "Nama Pengguna";
+            // 
+            // txt_isi_rincian_laporan
+            // 
+            this.txt_isi_rincian_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_isi_rincian_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_rincian_laporan.Location = new System.Drawing.Point(66, 167);
+            this.txt_isi_rincian_laporan.MaxLength = 511;
+            this.txt_isi_rincian_laporan.Multiline = true;
+            this.txt_isi_rincian_laporan.Name = "txt_isi_rincian_laporan";
+            this.txt_isi_rincian_laporan.Size = new System.Drawing.Size(669, 177);
+            this.txt_isi_rincian_laporan.TabIndex = 10;
+            this.txt_isi_rincian_laporan.Text = "Ketik di sini...";
+            this.txt_isi_rincian_laporan.GotFocus += new System.EventHandler(this.txt_isi_rincian_laporan_GotFocus);
+            this.txt_isi_rincian_laporan.LostFocus += new System.EventHandler(this.txt_isi_rincian_laporan_LostFocus);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(27, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(748, 387);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel_isi_rincian_laporan
             // 
@@ -943,7 +1046,7 @@
             // 
             // gambar_rincian_laporan
             // 
-            this.gambar_rincian_laporan.Image = ((System.Drawing.Image)(resources.GetObject("gambar_rincian_laporan.Image")));
+            this.gambar_rincian_laporan.Image = global::Darimu.Properties.Resources.gambar_rincian_laporan;
             this.gambar_rincian_laporan.Location = new System.Drawing.Point(27, 3);
             this.gambar_rincian_laporan.Name = "gambar_rincian_laporan";
             this.gambar_rincian_laporan.Size = new System.Drawing.Size(748, 462);
@@ -1401,14 +1504,14 @@
             this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_transaksi.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tanggal,
@@ -1416,16 +1519,16 @@
             this.debit,
             this.kredit,
             this.saldo});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle4;
             this.grid_transaksi.EnableHeadersVisualStyles = false;
-            this.grid_transaksi.Location = new System.Drawing.Point(32, 47);
+            this.grid_transaksi.Location = new System.Drawing.Point(32, 50);
             this.grid_transaksi.Name = "grid_transaksi";
             this.grid_transaksi.ReadOnly = true;
             this.grid_transaksi.RowHeadersVisible = false;
@@ -2233,14 +2336,14 @@
             this.grid_laporan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_laporan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_laporan.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_laporan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_laporan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -2248,14 +2351,14 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle2;
             this.grid_laporan.EnableHeadersVisualStyles = false;
             this.grid_laporan.Location = new System.Drawing.Point(31, 68);
             this.grid_laporan.Name = "grid_laporan";
@@ -2304,109 +2407,6 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // panel_isi_tambah_laporan
-            // 
-            this.panel_isi_tambah_laporan.Controls.Add(this.button_batal_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.button_simpan_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_subjek_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.label_isi_nama_pengguna_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_rincian_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.pictureBox1);
-            this.panel_isi_tambah_laporan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_tambah_laporan.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_tambah_laporan.Name = "panel_isi_tambah_laporan";
-            this.panel_isi_tambah_laporan.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_tambah_laporan.TabIndex = 24;
-            this.panel_isi_tambah_laporan.Visible = false;
-            // 
-            // button_batal_laporan
-            // 
-            this.button_batal_laporan.AutoSize = true;
-            this.button_batal_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_batal_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.FlatAppearance.BorderSize = 0;
-            this.button_batal_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal;
-            this.button_batal_laporan.Location = new System.Drawing.Point(611, 403);
-            this.button_batal_laporan.Name = "button_batal_laporan";
-            this.button_batal_laporan.Size = new System.Drawing.Size(67, 40);
-            this.button_batal_laporan.TabIndex = 21;
-            this.button_batal_laporan.UseVisualStyleBackColor = false;
-            this.button_batal_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_laporan_MouseClick);
-            this.button_batal_laporan.MouseEnter += new System.EventHandler(this.button_batal_laporan_MouseEnter);
-            this.button_batal_laporan.MouseLeave += new System.EventHandler(this.button_batal_laporan_MouseLeave);
-            // 
-            // button_simpan_laporan
-            // 
-            this.button_simpan_laporan.AutoSize = true;
-            this.button_simpan_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_simpan_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.FlatAppearance.BorderSize = 0;
-            this.button_simpan_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_simpan_laporan.Image = global::Darimu.Properties.Resources.button_simpan;
-            this.button_simpan_laporan.Location = new System.Drawing.Point(684, 403);
-            this.button_simpan_laporan.Name = "button_simpan_laporan";
-            this.button_simpan_laporan.Size = new System.Drawing.Size(67, 40);
-            this.button_simpan_laporan.TabIndex = 20;
-            this.button_simpan_laporan.UseVisualStyleBackColor = false;
-            this.button_simpan_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_laporan_MouseClick);
-            this.button_simpan_laporan.MouseEnter += new System.EventHandler(this.button_simpan_laporan_MouseEnter);
-            this.button_simpan_laporan.MouseLeave += new System.EventHandler(this.button_simpan_laporan_MouseLeave);
-            // 
-            // txt_isi_subjek_laporan
-            // 
-            this.txt_isi_subjek_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_subjek_laporan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_isi_subjek_laporan.Location = new System.Drawing.Point(199, 83);
-            this.txt_isi_subjek_laporan.MaxLength = 52;
-            this.txt_isi_subjek_laporan.Name = "txt_isi_subjek_laporan";
-            this.txt_isi_subjek_laporan.Size = new System.Drawing.Size(490, 22);
-            this.txt_isi_subjek_laporan.TabIndex = 19;
-            this.txt_isi_subjek_laporan.Text = "Ketik di sini...";
-            this.txt_isi_subjek_laporan.GotFocus += new System.EventHandler(this.txt_isi_subjek_laporan_GotFocus);
-            this.txt_isi_subjek_laporan.LostFocus += new System.EventHandler(this.txt_isi_subjek_laporan_LostFocus);
-            // 
-            // label_isi_nama_pengguna_laporan
-            // 
-            this.label_isi_nama_pengguna_laporan.AutoSize = true;
-            this.label_isi_nama_pengguna_laporan.BackColor = System.Drawing.Color.White;
-            this.label_isi_nama_pengguna_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_isi_nama_pengguna_laporan.Location = new System.Drawing.Point(195, 50);
-            this.label_isi_nama_pengguna_laporan.Name = "label_isi_nama_pengguna_laporan";
-            this.label_isi_nama_pengguna_laporan.Size = new System.Drawing.Size(124, 23);
-            this.label_isi_nama_pengguna_laporan.TabIndex = 11;
-            this.label_isi_nama_pengguna_laporan.Text = "Nama Pengguna";
-            // 
-            // txt_isi_rincian_laporan
-            // 
-            this.txt_isi_rincian_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_rincian_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_isi_rincian_laporan.Location = new System.Drawing.Point(66, 167);
-            this.txt_isi_rincian_laporan.MaxLength = 511;
-            this.txt_isi_rincian_laporan.Multiline = true;
-            this.txt_isi_rincian_laporan.Name = "txt_isi_rincian_laporan";
-            this.txt_isi_rincian_laporan.Size = new System.Drawing.Size(669, 177);
-            this.txt_isi_rincian_laporan.TabIndex = 10;
-            this.txt_isi_rincian_laporan.Text = "Ketik di sini...";
-            this.txt_isi_rincian_laporan.GotFocus += new System.EventHandler(this.txt_isi_rincian_laporan_GotFocus);
-            this.txt_isi_rincian_laporan.LostFocus += new System.EventHandler(this.txt_isi_rincian_laporan_LostFocus);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(748, 387);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // drop_down_profil
             // 
@@ -2525,6 +2525,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).EndInit();
             this.panel_isi.ResumeLayout(false);
             this.panel_isi.PerformLayout();
+            this.panel_isi_tambah_laporan.ResumeLayout(false);
+            this.panel_isi_tambah_laporan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_isi_rincian_laporan.ResumeLayout(false);
             this.panel_isi_rincian_laporan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gambar_rincian_laporan)).EndInit();
@@ -2563,9 +2566,6 @@
             this.panel_isi_laporan_saya.ResumeLayout(false);
             this.panel_isi_laporan_saya.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_laporan)).EndInit();
-            this.panel_isi_tambah_laporan.ResumeLayout(false);
-            this.panel_isi_tambah_laporan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.drop_down_profil.ResumeLayout(false);
             this.drop_down_tabungan.ResumeLayout(false);
             this.ResumeLayout(false);

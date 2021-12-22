@@ -1,5 +1,6 @@
 ﻿using Darimu.ClassFolder;
 using System;
+using System.Collections;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -10,6 +11,7 @@ namespace Darimu
     public partial class frm_admin : Form
     {
         // declaration var
+        private string nama_pengguna;
         private int borderSize = 2;
 
         public frm_admin(string nama_pengguna)
@@ -18,8 +20,9 @@ namespace Darimu
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(33, 106, 155);
+            this.nama_pengguna = nama_pengguna;
+            lihat_data_admin();
             panel_isi_beranda.Visible = true;
-            label_username.Text = nama_pengguna;
         }
 
         // drag form
@@ -28,23 +31,16 @@ namespace Darimu
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        // change all button and label color to white
-        private void default_color()
-        {
-            button_beranda.ForeColor = System.Drawing.Color.White;
-            button_profil.ForeColor = System.Drawing.Color.White;
-            button_laporan.ForeColor = System.Drawing.Color.White;
-            button_faq.ForeColor = System.Drawing.Color.White;
-            button_tentang_kami.ForeColor = System.Drawing.Color.White;
-            button_keluar.ForeColor = System.Drawing.Color.White;
-        }
-
         // hide all panel
         private void hide_panel()
         {
             panel_isi_beranda.Visible = false;
+            panel_isi_profil_saya.Visible = false;
             panel_isi_faq.Visible = false;
             panel_isi_tentang_kami.Visible = false;
+            panel_isi_laporan_pengguna.Visible = false;
+            panel_isi_transaksi_pengguna.Visible = false;
+            panel_isi_rincian_laporan.Visible = false;
         }
 
         /* event title bar */
@@ -73,10 +69,6 @@ namespace Darimu
             {
                 Application.Exit();
             }
-        }
-
-        private void icon_topup_MouseClick(object sender, MouseEventArgs e)
-        {
         }
 
         // create method to collapse and uncollapse menu
@@ -112,6 +104,17 @@ namespace Darimu
             }
         }
 
+        private void lihat_data_admin()
+        {
+            ArrayList data_admin = ClassAdmin.lihatAdmin(nama_pengguna);
+            label_username.Text = data_admin[1].ToString();
+            string[] nama_depan_belakang = data_admin[1].ToString().Split(' ');
+            label_nama_depan.Text = nama_depan_belakang[0];
+            label_nama_belakang.Text = nama_depan_belakang[1];
+            label_tanggal_lahir.Text = data_admin[2].ToString();
+            label_alamat_email.Text = data_admin[3].ToString();
+        }
+
         // event menu ( 3 row icon )
         private void button_menu_MouseClick(object sender, MouseEventArgs e)
         {
@@ -119,37 +122,22 @@ namespace Darimu
         }
 
         // animate all button in left sidebar
-        private void button_profil_MouseClick(object sender, MouseEventArgs e)
-        {
-            drop_down_profil.Show(button_profil, button_profil.Width, 0);
-        }
-
-        private void button_tabungan_MouseClick(object sender, MouseEventArgs e)
-        {
-        }
-
         private void button_beranda_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_beranda.Visible = true;
-            button_beranda.ForeColor = System.Drawing.Color.Cyan;
         }
 
         private void button_faq_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_faq.Visible = true;
-            button_faq.ForeColor = System.Drawing.Color.Cyan;
         }
 
         private void button_tentang_kami_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            default_color();
             panel_isi_tentang_kami.Visible = true;
-            button_tentang_kami.ForeColor = System.Drawing.Color.Cyan;
         }
 
         private void button_beranda_MouseLeave(object sender, EventArgs e)
@@ -256,18 +244,10 @@ namespace Darimu
             button_exit.Image = global::Darimu.Properties.Resources.exit;
         }
 
-        // event beranda
-        private void button_nabung_MouseClick(object sender, MouseEventArgs e)
-        {
-            hide_panel();
-            default_color();
-            button_keluar.ForeColor = System.Drawing.Color.Cyan;
-        }
-
         private void frm_beranda_setelah_login_Load(object sender, EventArgs e)
         {
-            drop_down_profil.IsMainMenu = true;
-            drop_down_profil.PrimaryColor = Color.FromArgb(16, 53, 78);
+            drop_down_laporan.IsMainMenu = true;
+            drop_down_laporan.PrimaryColor = Color.FromArgb(16, 53, 78);
         }
 
         private void button_keluar_MouseClick(object sender, MouseEventArgs e)
@@ -281,10 +261,9 @@ namespace Darimu
             if (result == DialogResult.Yes)
             {
                 hide_panel();
-                default_color();
-                frm_sebelum_login p = new frm_sebelum_login();
+                frm_sebelum_login sebelum_login = new frm_sebelum_login();
                 this.Hide();
-                p.Show();
+                sebelum_login.Show();
             }
         }
 
@@ -320,6 +299,109 @@ namespace Darimu
         private void button_berikutnya_faq_MouseLeave(object sender, EventArgs e)
         {
             button_berikutnya_faq.Image = global::Darimu.Properties.Resources.panah_berikutnya;
+        }
+
+        private void button_laporan_MouseClick(object sender, MouseEventArgs e)
+        {
+            drop_down_laporan.Show(button_laporan, button_laporan.Width, 0);
+        }
+
+        private void button_profil_MouseClick(object sender, MouseEventArgs e)
+        {
+            hide_panel();
+            ClassAdmin.riwayat_laporan_untuk_admin(grid_laporan);
+            panel_isi_profil_saya.Visible = true;
+        }
+
+        private void laporanPenggunaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hide_panel();
+            ClassAdmin.riwayat_laporan_untuk_admin(grid_laporan);
+            panel_isi_laporan_pengguna.Visible = true;
+        }
+
+        private void riwayatTransaksiPenggunaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hide_panel();
+            ClassAdmin.riwayat_transaksi_untuk_admin(grid_transaksi);
+            panel_isi_transaksi_pengguna.Visible = true;
+        }
+
+        private void button_kerja_MouseClick(object sender, MouseEventArgs e)
+        {
+            hide_panel();
+            ClassAdmin.riwayat_laporan_untuk_admin(grid_laporan);
+            panel_isi_laporan_pengguna.Visible = true;
+        }
+
+        private void button_selesai_laporan_MouseClick(object sender, MouseEventArgs e)
+        {
+            var result = MessageBox.Show("Apakah kamu yakin ingin selesaikan laporan?",
+                                         "Selesaikan Laporan",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Information);
+
+            // If the yes button was pressed ...
+            if (result == DialogResult.Yes)
+            {
+                string id_laporan = label_nomor_laporan.Text.Trim();
+                ClassAdmin.selesaikan_laporan(nama_pengguna, id_laporan);
+                ClassAdmin.riwayat_laporan_untuk_admin(grid_laporan);
+                hide_panel();
+                panel_isi_laporan_pengguna.Visible = true;
+            }
+        }
+
+        private void button_selesai_laporan_MouseEnter(object sender, EventArgs e)
+        {
+            button_selesai_laporan.Image = global::Darimu.Properties.Resources.button_selesai_dipencet;
+
+        }
+
+        private void button_selesai_laporan_MouseLeave(object sender, EventArgs e)
+        {
+            button_selesai_laporan.Image = global::Darimu.Properties.Resources.button_selesai;
+        }
+
+        private void button_batal_laporan_MouseClick(object sender, MouseEventArgs e)
+        {
+            hide_panel();
+            panel_isi_laporan_pengguna.Visible = true;
+        }
+
+        private void button_batal_laporan_MouseEnter(object sender, EventArgs e)
+        {
+            button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal_dipencet;
+        }
+
+        private void button_batal_laporan_MouseLeave(object sender, EventArgs e)
+        {
+            button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal;
+        }
+
+        private void grid_laporan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id_laporan = grid_laporan.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string status_laporan = grid_laporan.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                ArrayList data_rincian_laporan = ClassAdmin.rincian_laporan_untuk_admin(id_laporan);
+                label_nomor_laporan.Text = data_rincian_laporan[0].ToString();
+                label_nama_pengguna_laporan.Text = data_rincian_laporan[1].ToString();
+                label_subjek_laporan.Text = data_rincian_laporan[2].ToString();
+                txt_rincian_laporan.Text = data_rincian_laporan[3].ToString();
+                label_tanggal_laporan_dibuat.Text = data_rincian_laporan[4].ToString();
+                hide_panel();
+                panel_isi_rincian_laporan.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Jika ingin melihat rincian laporan pengguna\nSilakan klik dua kali barisnya, ya. :)",
+                                "Silakan Klik Dua Kali Barisnya",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
         }
     }
 }

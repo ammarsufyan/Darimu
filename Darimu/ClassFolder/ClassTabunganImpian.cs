@@ -15,10 +15,11 @@ namespace Darimu.ClassFolder
             sqlcon.Open();
             SqlCommand sqlcom = new SqlCommand("SELECT COUNT(*) FROM tb_tabungan_impian WHERE nama_pengguna = '" + nama_pengguna + "' AND status_tabungan_impian = 'Aktif'", sqlcon);
             Int32 count = Convert.ToInt32(sqlcom.ExecuteScalar());
-            if(count > 2)
+            if (count > 2)
             {
                 sqlcon.Close();
-            } else
+            }
+            else
             {
                 SqlDataAdapter sqlda = new SqlDataAdapter("INSERT INTO tb_tabungan_impian(nama_pengguna, nama_tabungan_impian, jenis_impian, tautan_gambar, saldo_terkumpul, saldo_impian, tenggat_waktu, tanggal_buka, status_tabungan_impian) VALUES(@nama_pengguna, @nama_tabungan_impian, @jenis_impian, @tautan_gambar, 0, @saldo_impian, @tenggat_waktu, GETDATE(), 'Aktif')", sqlcon);
                 sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna", SqlDbType.VarChar, 100));
@@ -43,9 +44,10 @@ namespace Darimu.ClassFolder
             return berhasil;
         }
 
-        public static ArrayList lihatImpian(string nama_pengguna) {
+        public static ArrayList lihatImpian(string nama_pengguna)
+        {
             ArrayList isi_impian = new ArrayList();
-            
+
             sqlcon.Open();
             SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_tabungan_impian WHERE nama_pengguna = '" + nama_pengguna + "' AND status_tabungan_impian = 'Aktif'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
@@ -58,7 +60,7 @@ namespace Darimu.ClassFolder
                 isi_impian.Add(dr.GetInt64(6).ToString());
                 isi_impian.Add(dr.GetInt64(7).ToString());
                 isi_impian.Add(dr.GetDateTime(8).ToString("dd/MM/yyyy"));
-            } 
+            }
 
             sqlcon.Close();
 
@@ -83,7 +85,7 @@ namespace Darimu.ClassFolder
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
                 saldo_baru = ClassTransaksi.get_saldo(nama_pengguna);
-            } 
+            }
             else
             {
                 sqlcon.Open();

@@ -38,3 +38,5 @@ INNER JOIN tb_admin AS tba
 ON tbl.nama_pengguna_admin = tba.nama_pengguna_admin;
 
 SELECT * FROM view_laporan_diterima;
+
+SELECT * FROM view_laporan_dikirim WHERE [STATUS LAPORAN] = 'Belum Selesai'

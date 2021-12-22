@@ -1258,7 +1258,7 @@ namespace Darimu
                                     MessageBoxIcon.Information);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Jika ingin melihat rincian laporanmu\nSilakan klik dua kali barisnya, ya. :)",
                                 "Silakan Klik Dua Kali Barisnya",
@@ -1302,7 +1302,8 @@ namespace Darimu
         private void button_simpan_laporan_MouseClick(object sender, MouseEventArgs e)
         {
             string cek = ClassValidasi.cekBuatLaporan(txt_isi_subjek_laporan, txt_isi_rincian_laporan);
-            if(cek == "valid") {
+            if (cek == "valid")
+            {
                 var result = MessageBox.Show("Apakah kamu yakin ingin membuat laporan?",
                                 "Konfirmasi Buat Laporan",
                                 MessageBoxButtons.YesNo,
@@ -1314,12 +1315,15 @@ namespace Darimu
                     string subjek_laporan = txt_isi_subjek_laporan.Text.Trim();
                     string rincian_laporan = txt_isi_rincian_laporan.Text.Trim();
                     bool berhasil = ClassLaporan.buat_laporan(nama_pengguna, subjek_laporan, rincian_laporan);
-                    if(berhasil) {
+                    if (berhasil)
+                    {
                         MessageBox.Show("Maaf, ya, kalau ngerepotin kamu. :(",
                                         "Berhasil Membuat Laporan",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
-                    } else {
+                    }
+                    else
+                    {
                         MessageBox.Show("Yah, gagal buat laporan. :(",
                                         "Gagal Membuat Laporan",
                                         MessageBoxButtons.OK,
@@ -1330,8 +1334,10 @@ namespace Darimu
                     txt_isi_rincian_laporan.Text = "Ketik di sini...";
                     hide_panel();
                     panel_isi_laporan_saya.Visible = true;
+                }
             }
-            } else {
+            else
+            {
                 MessageBox.Show(cek,
                                 "Gagal Membuat Laporan",
                                 MessageBoxButtons.OK,

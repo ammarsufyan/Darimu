@@ -113,6 +113,26 @@ namespace Darimu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_selesai {
+            get {
+                object obj = ResourceManager.GetObject("button_selesai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_selesai_dipencet {
+            get {
+                object obj = ResourceManager.GetObject("button_selesai_dipencet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_simpan {
             get {
                 object obj = ResourceManager.GetObject("button_simpan", resourceCulture);
@@ -276,6 +296,16 @@ namespace Darimu.Properties {
         internal static System.Drawing.Bitmap gambar_rincian_laporan {
             get {
                 object obj = ResourceManager.GetObject("gambar_rincian_laporan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gambar_rincian_laporan_admin {
+            get {
+                object obj = ResourceManager.GetObject("gambar_rincian_laporan_admin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

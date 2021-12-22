@@ -8,7 +8,7 @@ namespace Darimu.ClassFolder
     class ClassValidasi
     {
         static Regex re_nama_pengguna = new Regex("^[a-zA-Z0-9_]{8,16}$");
-        static Regex re_kata_sandi = new Regex(@"^[a-zA-Z0-9!@#$%^{}()\[\]\\/:,._`~'&*+\-?]{8,16}$"); 
+        static Regex re_kata_sandi = new Regex(@"^[a-zA-Z0-9!@#$%^{}()\[\]\\/:,._`~'&*+\-?]{8,16}$");
         static Regex re_huruf = new Regex(@"^[a-z\sA-Z]+$");
         static Regex re_saldo = new Regex("^[0-9]+$");
         static Regex re_email = new Regex("^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$");
@@ -115,7 +115,7 @@ namespace Darimu.ClassFolder
             if (String.Equals("", val_tambah_saldo))
             {
                 hasil = "Isi saldomu dulu yuk!";
-            } 
+            }
             else if (!re_saldo.IsMatch(val_tambah_saldo))
             {
                 hasil = "Isi saldo dengan angka ya :)";
@@ -123,7 +123,8 @@ namespace Darimu.ClassFolder
             else if (long.Parse(val_tambah_saldo) < 50000)
             {
                 hasil = "Minimal isi saldo Rp50.000";
-            } else if (bank.Image == null)
+            }
+            else if (bank.Image == null)
             {
                 hasil = "Banknya belum dipilih nih!";
             }
@@ -140,13 +141,18 @@ namespace Darimu.ClassFolder
             string val_nama_belakang = nama_belakang.Text.Trim();
             string val_email = email.Text.Trim();
 
-            if(String.Equals("", val_nama_depan) || !re_huruf.IsMatch(val_nama_depan)) {
+            if (String.Equals("", val_nama_depan) || !re_huruf.IsMatch(val_nama_depan))
+            {
                 hasil = "Isi nama depanmu dengan benar ya!";
-            } else if(!re_huruf.IsMatch(val_nama_belakang)) {
+            }
+            else if (!re_huruf.IsMatch(val_nama_belakang))
+            {
                 hasil = "Isi nama belakangmu dengan benar ya!";
-            } else if(String.Equals("", val_email) || !re_email.IsMatch(val_email)) {
+            }
+            else if (String.Equals("", val_email) || !re_email.IsMatch(val_email))
+            {
                 hasil = "Isi emailmu dengan benar yuk!";
-            } 
+            }
             else
             {
                 hasil = "valid";
@@ -205,16 +211,22 @@ namespace Darimu.ClassFolder
             return hasil;
         }
 
-        public static string cekBuatLaporan(TextBox subjek_laporan, TextBox rincian_laporan) {
+        public static string cekBuatLaporan(TextBox subjek_laporan, TextBox rincian_laporan)
+        {
             string hasil = "";
             string val_subjek_laporan = subjek_laporan.Text.Trim();
             string val_rincian_laporan = rincian_laporan.Text.Trim();
 
-            if(String.Equals("Ketik di sini...", val_subjek_laporan) || String.Equals("", val_subjek_laporan)) {
+            if (String.Equals("Ketik di sini...", val_subjek_laporan) || String.Equals("", val_subjek_laporan))
+            {
                 hasil = "Isi subjek laporanmu dengan benar ya!";
-            } else if(String.Equals("Ketik di sini...", val_rincian_laporan) || String.Equals("", val_rincian_laporan)) {
+            }
+            else if (String.Equals("Ketik di sini...", val_rincian_laporan) || String.Equals("", val_rincian_laporan))
+            {
                 hasil = "Isi rincian laporanmu dengan benar ya!";
-            } else {
+            }
+            else
+            {
                 hasil = "valid";
             }
 
