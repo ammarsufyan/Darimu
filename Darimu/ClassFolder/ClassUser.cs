@@ -24,7 +24,7 @@ namespace Darimu.ClassFolder
             try
             {
                 sqlcon.Open();
-                SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE alamat_email = '" + alamat_email + "'", sqlcon);
+                SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_pengguna WHERE nama_pengguna = '" + nama_pengguna + "' OR alamat_email = '" + alamat_email + "'", sqlcon);
                 SqlDataReader dr = sqlcom.ExecuteReader();
 
                 if (dr.Read())
@@ -134,7 +134,7 @@ namespace Darimu.ClassFolder
             return data_pengguna;
         }
 
-        public static string ubah_data_pengguna(string nama_pengguna, String nama_lengkap, string tanggal_lahir, string alamat_email)
+        public static string ubah_data_pengguna(string nama_pengguna, string nama_lengkap, string tanggal_lahir, string alamat_email)
         {
             string hasil = "";
             try

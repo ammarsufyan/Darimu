@@ -152,7 +152,7 @@ namespace Darimu.ClassFolder
             else if (String.Equals("", val_email) || !re_email.IsMatch(val_email))
             {
                 hasil = "Isi emailmu dengan benar yuk!";
-            }
+            } 
             else
             {
                 hasil = "valid";
@@ -178,6 +178,10 @@ namespace Darimu.ClassFolder
             else if (validasi_button == false)
             {
                 hasil = "Jenis impianmu belum dipilih nih!";
+            }
+            else if (long.Parse(val_saldo_impian) < 10000)
+            {
+                hasil = "Minimal saldo impianmu Rp10.000, ya.";
             }
             else
             {

@@ -136,7 +136,6 @@ VALUES
 	('Fashion', 'global::Darimu.Properties.Resources.logo_fashion'),
 	('Hiburan', 'global::Darimu.Properties.Resources.logo_hiburan');
 
-
 SELECT * FROM tb_pengguna;
 SELECT * FROM tb_admin;
 SELECT * FROM tb_laporan;
