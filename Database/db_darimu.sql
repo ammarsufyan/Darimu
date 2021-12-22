@@ -24,7 +24,9 @@ USE db_darimu;
 -- membuat tb_admin
  DROP TABLE tb_admin;
 CREATE TABLE tb_admin(
-	nama_pengguna_admin VARCHAR(100) NOT NULL PRIMARY KEY,
+	id INT IDENTITY(1,1) NOT NULL,
+	id_admin AS ('ADM-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
+	nama_pengguna_admin VARCHAR(100) NOT NULL,
 	nama_lengkap VARCHAR(100) NOT NULL,
     jenis_kelamin VARCHAR(100) NOT NULL,
     tempat_tinggal VARCHAR(255) NOT NULL,
@@ -52,7 +54,9 @@ INSERT INTO tb_admin(nama_pengguna_admin, nama_lengkap, jenis_kelamin, tempat_ti
 -- membuat tb_pengguna
  DROP TABLE tb_pengguna;
 CREATE TABLE tb_pengguna(
-    nama_pengguna VARCHAR(100) NOT NULL PRIMARY KEY,
+	id INT IDENTITY(1,1) NOT NULL,
+	id_pengguna AS ('USER-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
+    nama_pengguna VARCHAR(100) NOT NULL,
     nama_lengkap VARCHAR(100) NOT NULL,
     tanggal_lahir DATE NOT NULL,
     alamat_email VARCHAR(100) NOT NULL,
@@ -110,6 +114,19 @@ CREATE TABLE tb_laporan(
     tanggal_laporan_ditutup DATETIME NULL,
     [status_laporan] VARCHAR(100) NULL CHECK ([status_laporan] IN ('Selesai', 'Belum Selesai')) DEFAULT 'Belum Selesai'
 );
+
+-- ========================================================================
+-- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
+DROP TABLE tb_jenis_impian;
+CREATE TABLE tb_jenis_impian(
+	id INT IDENTITY(1,1) NOT NULL,
+	id_jenis_impian AS ('JNS-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
+	tautan_gambar VARCHAR(255) NOT NULL,
+	tanggal_dibuat DATETIME NOT NULL DEFAULT GETDATE(),
+	tanggal_ditutup DATETIME NULL,
+	[status_jenis_impian] VARCHAR(100) NULL CHECK ([status_jenis_impian] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
+);
+
 
 -- ========================================================================
 -- membuat tb_log_data (untuk melihat apa saja yang dilakukan oleh user (hanya ADMIN!!!!!!!!!!!!!!))

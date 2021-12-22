@@ -33,10 +33,10 @@ namespace Darimu.ClassFolder
             SqlDataReader dr = sqlcom.ExecuteReader();
             if (dr.Read())
             {
-                data_admin.Add(dr.GetString(0));
-                data_admin.Add(dr.GetString(1));
-                data_admin.Add(dr.GetDateTime(5).ToString("dd/MM/yyyy"));
-                data_admin.Add(dr.GetString(6));
+                data_admin.Add(dr.GetString(2));
+                data_admin.Add(dr.GetString(3));
+                data_admin.Add(dr.GetDateTime(7).ToString("dd/MM/yyyy"));
+                data_admin.Add(dr.GetString(8));
             }
 
             sqlcon.Close();

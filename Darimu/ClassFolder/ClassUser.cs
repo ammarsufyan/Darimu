@@ -29,7 +29,7 @@ namespace Darimu.ClassFolder
 
                 if (dr.Read())
                 {
-                    string ambil_nama_pengguna = dr.GetString(0);
+                    string ambil_nama_pengguna = dr.GetString(2);
                     if (ambil_nama_pengguna == nama_pengguna)
                     {
                         hasil = "Nama pengguna sudah terdaftar";
@@ -121,13 +121,13 @@ namespace Darimu.ClassFolder
             SqlDataReader dr = sqlcom.ExecuteReader();
             if (dr.Read())
             {
-                data_pengguna.Add(dr.GetString(0));
-                data_pengguna.Add(dr.GetString(1));
-                data_pengguna.Add(dr.GetDateTime(2).ToString("dd/MM/yyyy"));
+                data_pengguna.Add(dr.GetString(2));
                 data_pengguna.Add(dr.GetString(3));
-                data_pengguna.Add(dr.GetString(4));
-                data_pengguna.Add(dr.GetInt64(5));
-                data_pengguna.Add(dr.GetDateTime(6));
+                data_pengguna.Add(dr.GetDateTime(4).ToString("dd/MM/yyyy"));
+                data_pengguna.Add(dr.GetString(5));
+                data_pengguna.Add(dr.GetString(6));
+                data_pengguna.Add(dr.GetInt64(7));
+                data_pengguna.Add(dr.GetDateTime(8));
             }
 
             sqlcon.Close();
