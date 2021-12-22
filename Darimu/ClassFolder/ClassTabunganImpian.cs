@@ -113,5 +113,34 @@ namespace Darimu.ClassFolder
             sqlcon.Close();
             return saldo_baru;
         }
+
+        public static void riwayat_impian(string nama_pengguna, DataGridView grid_riwayat_impian)
+        {
+            grid_riwayat_impian.Rows.Clear();
+            sqlcon.Open();
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM view_riwayat_tabungan_impian WHERE [NAMA PENGGUNA] = '" + nama_pengguna + "' ORDER BY [TANGGAL TUTUP] DESC;", sqlcon);
+            SqlDataReader dr = sqlcom.ExecuteReader();
+            while (dr.Read())
+            {
+                string tanggal_ditutup = dr.GetDateTime(6).ToString();
+                string nama_impian = dr.GetString(2);
+                string jenis_impian = dr.GetString(3);
+                string saldo_terkumpul = dr.GetInt64(4).ToString();
+                string saldo_impian = dr.GetInt64(5).ToString();
+                string status;
+
+                if (dr.GetInt64(4) >= dr.GetInt64(5))
+                {
+                    status = "Berhasil";
+                }
+                else
+                {
+                    status = "Gagal";
+                }
+                
+                grid_riwayat_impian.Rows.Add(tanggal_ditutup,nama_impian,jenis_impian,saldo_terkumpul,saldo_impian,status);
+            }
+            sqlcon.Close();
+        }
     }
 }

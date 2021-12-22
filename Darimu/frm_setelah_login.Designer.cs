@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_setelah_login));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_setelah_login));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -73,51 +75,15 @@
             this.panel_isi = new System.Windows.Forms.Panel();
             this.panel_border_isi_bawah = new System.Windows.Forms.Panel();
             this.panel_border_isi_kanan = new System.Windows.Forms.Panel();
-            this.panel_isi_tambah_laporan = new System.Windows.Forms.Panel();
-            this.button_batal_laporan = new System.Windows.Forms.Button();
-            this.button_simpan_laporan = new System.Windows.Forms.Button();
-            this.txt_isi_subjek_laporan = new System.Windows.Forms.TextBox();
-            this.label_isi_nama_pengguna_laporan = new System.Windows.Forms.Label();
-            this.txt_isi_rincian_laporan = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel_isi_rincian_laporan = new System.Windows.Forms.Panel();
-            this.label_kembali_laporan = new System.Windows.Forms.Label();
-            this.txt_rincian_laporan = new System.Windows.Forms.TextBox();
-            this.label_nama_admin_laporan = new System.Windows.Forms.Label();
-            this.label_tanggal_laporan_dibuat = new System.Windows.Forms.Label();
-            this.label_tanggal_laporan_ditutup = new System.Windows.Forms.Label();
-            this.label_status_laporan = new System.Windows.Forms.Label();
-            this.label_nomor_laporan = new System.Windows.Forms.Label();
-            this.label_subjek_laporan = new System.Windows.Forms.Label();
-            this.label_nama_pengguna_laporan = new System.Windows.Forms.Label();
-            this.gambar_rincian_laporan = new System.Windows.Forms.PictureBox();
-            this.panel_isi_tabungan_impian = new System.Windows.Forms.Panel();
-            this.button_topup_impian_3 = new System.Windows.Forms.Button();
-            this.button_selesai_impian_3 = new System.Windows.Forms.Button();
-            this.button_hapus_impian_3 = new System.Windows.Forms.Button();
-            this.button_topup_impian_2 = new System.Windows.Forms.Button();
-            this.button_selesai_impian_2 = new System.Windows.Forms.Button();
-            this.button_hapus_impian_2 = new System.Windows.Forms.Button();
-            this.button_topup_impian_1 = new System.Windows.Forms.Button();
-            this.button_selesai_impian_1 = new System.Windows.Forms.Button();
-            this.button_hapus_impian_1 = new System.Windows.Forms.Button();
-            this.logo_impian_3 = new System.Windows.Forms.PictureBox();
-            this.logo_impian_2 = new System.Windows.Forms.PictureBox();
-            this.logo_impian_1 = new System.Windows.Forms.PictureBox();
-            this.label_tenggat_waktu_3 = new System.Windows.Forms.Label();
-            this.label_tenggat_waktu_2 = new System.Windows.Forms.Label();
-            this.label_tenggat_waktu_1 = new System.Windows.Forms.Label();
-            this.label_saldo_terkumpulmu_3 = new System.Windows.Forms.Label();
-            this.label_saldo_impianmu_3 = new System.Windows.Forms.Label();
-            this.label_nama_impian_3 = new System.Windows.Forms.Label();
-            this.label_saldo_terkumpulmu_2 = new System.Windows.Forms.Label();
-            this.label_saldo_impianmu_2 = new System.Windows.Forms.Label();
-            this.label_nama_impian_2 = new System.Windows.Forms.Label();
-            this.label_saldo_terkumpulmu_1 = new System.Windows.Forms.Label();
-            this.label_saldo_impianmu_1 = new System.Windows.Forms.Label();
-            this.label_nama_impian_1 = new System.Windows.Forms.Label();
-            this.label_impian_anda = new System.Windows.Forms.Label();
-            this.gambar_isi_impian = new System.Windows.Forms.PictureBox();
+            this.panel_isi_riwayat_impian = new System.Windows.Forms.Panel();
+            this.label_judul_riwayat_impian = new System.Windows.Forms.Label();
+            this.grid_riwayat_impian = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_isi_riwayat_transaksi = new System.Windows.Forms.Panel();
             this.label_transaksi = new System.Windows.Forms.Label();
             this.grid_transaksi = new System.Windows.Forms.DataGridView();
@@ -184,6 +150,51 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_isi_tambah_laporan = new System.Windows.Forms.Panel();
+            this.button_batal_laporan = new System.Windows.Forms.Button();
+            this.button_simpan_laporan = new System.Windows.Forms.Button();
+            this.txt_isi_subjek_laporan = new System.Windows.Forms.TextBox();
+            this.label_isi_nama_pengguna_laporan = new System.Windows.Forms.Label();
+            this.txt_isi_rincian_laporan = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_isi_rincian_laporan = new System.Windows.Forms.Panel();
+            this.label_kembali_laporan = new System.Windows.Forms.Label();
+            this.txt_rincian_laporan = new System.Windows.Forms.TextBox();
+            this.label_nama_admin_laporan = new System.Windows.Forms.Label();
+            this.label_tanggal_laporan_dibuat = new System.Windows.Forms.Label();
+            this.label_tanggal_laporan_ditutup = new System.Windows.Forms.Label();
+            this.label_status_laporan = new System.Windows.Forms.Label();
+            this.label_nomor_laporan = new System.Windows.Forms.Label();
+            this.label_subjek_laporan = new System.Windows.Forms.Label();
+            this.label_nama_pengguna_laporan = new System.Windows.Forms.Label();
+            this.gambar_rincian_laporan = new System.Windows.Forms.PictureBox();
+            this.panel_isi_tabungan_impian = new System.Windows.Forms.Panel();
+            this.button_topup_impian_3 = new System.Windows.Forms.Button();
+            this.button_selesai_impian_3 = new System.Windows.Forms.Button();
+            this.button_hapus_impian_3 = new System.Windows.Forms.Button();
+            this.button_topup_impian_2 = new System.Windows.Forms.Button();
+            this.button_selesai_impian_2 = new System.Windows.Forms.Button();
+            this.button_hapus_impian_2 = new System.Windows.Forms.Button();
+            this.button_topup_impian_1 = new System.Windows.Forms.Button();
+            this.button_selesai_impian_1 = new System.Windows.Forms.Button();
+            this.button_hapus_impian_1 = new System.Windows.Forms.Button();
+            this.logo_impian_3 = new System.Windows.Forms.PictureBox();
+            this.logo_impian_2 = new System.Windows.Forms.PictureBox();
+            this.logo_impian_1 = new System.Windows.Forms.PictureBox();
+            this.label_tenggat_waktu_3 = new System.Windows.Forms.Label();
+            this.label_tenggat_waktu_2 = new System.Windows.Forms.Label();
+            this.label_tenggat_waktu_1 = new System.Windows.Forms.Label();
+            this.label_saldo_terkumpulmu_3 = new System.Windows.Forms.Label();
+            this.label_saldo_impianmu_3 = new System.Windows.Forms.Label();
+            this.label_nama_impian_3 = new System.Windows.Forms.Label();
+            this.label_saldo_terkumpulmu_2 = new System.Windows.Forms.Label();
+            this.label_saldo_impianmu_2 = new System.Windows.Forms.Label();
+            this.label_nama_impian_2 = new System.Windows.Forms.Label();
+            this.label_saldo_terkumpulmu_1 = new System.Windows.Forms.Label();
+            this.label_saldo_impianmu_1 = new System.Windows.Forms.Label();
+            this.label_nama_impian_1 = new System.Windows.Forms.Label();
+            this.label_impian_anda = new System.Windows.Forms.Label();
+            this.gambar_isi_impian = new System.Windows.Forms.PictureBox();
             this.drop_down_profil = new Darimu.CustomControls.DRMDropDownMenu(this.components);
             this.profilSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanSayaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -192,6 +203,7 @@
             this.drop_down_tabungan = new Darimu.CustomControls.DRMDropDownMenu(this.components);
             this.TabunganImpiantoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TambahTabunganImpiantoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.riwayatImpianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_menu.SuspendLayout();
             this.panel_header_sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_darimu)).BeginInit();
@@ -206,15 +218,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nama_logo_dan_tagline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).BeginInit();
             this.panel_isi.SuspendLayout();
-            this.panel_isi_tambah_laporan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel_isi_rincian_laporan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_rincian_laporan)).BeginInit();
-            this.panel_isi_tabungan_impian.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_impian)).BeginInit();
+            this.panel_isi_riwayat_impian.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_riwayat_impian)).BeginInit();
             this.panel_isi_riwayat_transaksi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).BeginInit();
             this.panel_isi_ubah_profil_saya.SuspendLayout();
@@ -235,6 +240,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_saldo_impian)).BeginInit();
             this.panel_isi_laporan_saya.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_laporan)).BeginInit();
+            this.panel_isi_tambah_laporan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_isi_rincian_laporan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_rincian_laporan)).BeginInit();
+            this.panel_isi_tabungan_impian.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_impian)).BeginInit();
             this.drop_down_profil.SuspendLayout();
             this.drop_down_tabungan.SuspendLayout();
             this.SuspendLayout();
@@ -495,11 +509,11 @@
             // label_nama_logo
             // 
             this.label_nama_logo.AutoSize = true;
-            this.label_nama_logo.Font = new System.Drawing.Font("Klavika Bd", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_logo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_nama_logo.ForeColor = System.Drawing.Color.White;
             this.label_nama_logo.Location = new System.Drawing.Point(69, 40);
             this.label_nama_logo.Name = "label_nama_logo";
-            this.label_nama_logo.Size = new System.Drawing.Size(72, 23);
+            this.label_nama_logo.Size = new System.Drawing.Size(80, 25);
             this.label_nama_logo.TabIndex = 11;
             this.label_nama_logo.Text = "Darimu";
             this.label_nama_logo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -776,10 +790,7 @@
             this.panel_isi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
             this.panel_isi.Controls.Add(this.panel_border_isi_bawah);
             this.panel_isi.Controls.Add(this.panel_border_isi_kanan);
-            this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
-            this.panel_isi.Controls.Add(this.panel_isi_tambah_laporan);
-            this.panel_isi.Controls.Add(this.panel_isi_rincian_laporan);
-            this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_riwayat_impian);
             this.panel_isi.Controls.Add(this.panel_isi_riwayat_transaksi);
             this.panel_isi.Controls.Add(this.panel_isi_ubah_profil_saya);
             this.panel_isi.Controls.Add(this.panel_isi_profil_saya);
@@ -789,6 +800,10 @@
             this.panel_isi.Controls.Add(this.panel_isi_tambah_saldo);
             this.panel_isi.Controls.Add(this.panel_isi_tambah_tabungan_impian);
             this.panel_isi.Controls.Add(this.panel_isi_saldo_tabungan_impian);
+            this.panel_isi.Controls.Add(this.panel_isi_laporan_saya);
+            this.panel_isi.Controls.Add(this.panel_isi_tambah_laporan);
+            this.panel_isi.Controls.Add(this.panel_isi_rincian_laporan);
+            this.panel_isi.Controls.Add(this.panel_isi_tabungan_impian);
             this.panel_isi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_isi.Location = new System.Drawing.Point(205, 100);
             this.panel_isi.Name = "panel_isi";
@@ -813,665 +828,115 @@
             this.panel_border_isi_kanan.Size = new System.Drawing.Size(2, 470);
             this.panel_border_isi_kanan.TabIndex = 13;
             // 
-            // panel_isi_tambah_laporan
-            // 
-            this.panel_isi_tambah_laporan.Controls.Add(this.button_batal_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.button_simpan_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_subjek_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.label_isi_nama_pengguna_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_rincian_laporan);
-            this.panel_isi_tambah_laporan.Controls.Add(this.pictureBox1);
-            this.panel_isi_tambah_laporan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_tambah_laporan.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_tambah_laporan.Name = "panel_isi_tambah_laporan";
-            this.panel_isi_tambah_laporan.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_tambah_laporan.TabIndex = 24;
-            this.panel_isi_tambah_laporan.Visible = false;
-            // 
-            // button_batal_laporan
-            // 
-            this.button_batal_laporan.AutoSize = true;
-            this.button_batal_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_batal_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.FlatAppearance.BorderSize = 0;
-            this.button_batal_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_batal_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal;
-            this.button_batal_laporan.Location = new System.Drawing.Point(611, 403);
-            this.button_batal_laporan.Name = "button_batal_laporan";
-            this.button_batal_laporan.Size = new System.Drawing.Size(67, 40);
-            this.button_batal_laporan.TabIndex = 21;
-            this.button_batal_laporan.UseVisualStyleBackColor = false;
-            this.button_batal_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_laporan_MouseClick);
-            this.button_batal_laporan.MouseEnter += new System.EventHandler(this.button_batal_laporan_MouseEnter);
-            this.button_batal_laporan.MouseLeave += new System.EventHandler(this.button_batal_laporan_MouseLeave);
-            // 
-            // button_simpan_laporan
-            // 
-            this.button_simpan_laporan.AutoSize = true;
-            this.button_simpan_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_simpan_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.FlatAppearance.BorderSize = 0;
-            this.button_simpan_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.button_simpan_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_simpan_laporan.Image = global::Darimu.Properties.Resources.button_simpan;
-            this.button_simpan_laporan.Location = new System.Drawing.Point(684, 403);
-            this.button_simpan_laporan.Name = "button_simpan_laporan";
-            this.button_simpan_laporan.Size = new System.Drawing.Size(67, 40);
-            this.button_simpan_laporan.TabIndex = 20;
-            this.button_simpan_laporan.UseVisualStyleBackColor = false;
-            this.button_simpan_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_laporan_MouseClick);
-            this.button_simpan_laporan.MouseEnter += new System.EventHandler(this.button_simpan_laporan_MouseEnter);
-            this.button_simpan_laporan.MouseLeave += new System.EventHandler(this.button_simpan_laporan_MouseLeave);
-            // 
-            // txt_isi_subjek_laporan
-            // 
-            this.txt_isi_subjek_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_subjek_laporan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_isi_subjek_laporan.Location = new System.Drawing.Point(199, 83);
-            this.txt_isi_subjek_laporan.MaxLength = 52;
-            this.txt_isi_subjek_laporan.Name = "txt_isi_subjek_laporan";
-            this.txt_isi_subjek_laporan.Size = new System.Drawing.Size(490, 22);
-            this.txt_isi_subjek_laporan.TabIndex = 19;
-            this.txt_isi_subjek_laporan.Text = "Ketik di sini...";
-            this.txt_isi_subjek_laporan.GotFocus += new System.EventHandler(this.txt_isi_subjek_laporan_GotFocus);
-            this.txt_isi_subjek_laporan.LostFocus += new System.EventHandler(this.txt_isi_subjek_laporan_LostFocus);
-            // 
-            // label_isi_nama_pengguna_laporan
-            // 
-            this.label_isi_nama_pengguna_laporan.AutoSize = true;
-            this.label_isi_nama_pengguna_laporan.BackColor = System.Drawing.Color.White;
-            this.label_isi_nama_pengguna_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_isi_nama_pengguna_laporan.Location = new System.Drawing.Point(195, 50);
-            this.label_isi_nama_pengguna_laporan.Name = "label_isi_nama_pengguna_laporan";
-            this.label_isi_nama_pengguna_laporan.Size = new System.Drawing.Size(124, 23);
-            this.label_isi_nama_pengguna_laporan.TabIndex = 11;
-            this.label_isi_nama_pengguna_laporan.Text = "Nama Pengguna";
-            // 
-            // txt_isi_rincian_laporan
-            // 
-            this.txt_isi_rincian_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_isi_rincian_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_isi_rincian_laporan.Location = new System.Drawing.Point(66, 167);
-            this.txt_isi_rincian_laporan.MaxLength = 511;
-            this.txt_isi_rincian_laporan.Multiline = true;
-            this.txt_isi_rincian_laporan.Name = "txt_isi_rincian_laporan";
-            this.txt_isi_rincian_laporan.Size = new System.Drawing.Size(669, 177);
-            this.txt_isi_rincian_laporan.TabIndex = 10;
-            this.txt_isi_rincian_laporan.Text = "Ketik di sini...";
-            this.txt_isi_rincian_laporan.GotFocus += new System.EventHandler(this.txt_isi_rincian_laporan_GotFocus);
-            this.txt_isi_rincian_laporan.LostFocus += new System.EventHandler(this.txt_isi_rincian_laporan_LostFocus);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(748, 387);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel_isi_rincian_laporan
-            // 
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_kembali_laporan);
-            this.panel_isi_rincian_laporan.Controls.Add(this.txt_rincian_laporan);
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_nama_admin_laporan);
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_tanggal_laporan_dibuat);
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_tanggal_laporan_ditutup);
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_status_laporan);
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_nomor_laporan);
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_subjek_laporan);
-            this.panel_isi_rincian_laporan.Controls.Add(this.label_nama_pengguna_laporan);
-            this.panel_isi_rincian_laporan.Controls.Add(this.gambar_rincian_laporan);
-            this.panel_isi_rincian_laporan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_rincian_laporan.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_rincian_laporan.Name = "panel_isi_rincian_laporan";
-            this.panel_isi_rincian_laporan.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_rincian_laporan.TabIndex = 25;
-            this.panel_isi_rincian_laporan.Visible = false;
-            // 
-            // label_kembali_laporan
-            // 
-            this.label_kembali_laporan.AutoSize = true;
-            this.label_kembali_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.label_kembali_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_kembali_laporan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_kembali_laporan.ForeColor = System.Drawing.Color.White;
-            this.label_kembali_laporan.Location = new System.Drawing.Point(666, 11);
-            this.label_kembali_laporan.Name = "label_kembali_laporan";
-            this.label_kembali_laporan.Size = new System.Drawing.Size(101, 22);
-            this.label_kembali_laporan.TabIndex = 10;
-            this.label_kembali_laporan.Text = "<- Kembali";
-            this.label_kembali_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_kembali_laporan_MouseClick);
-            this.label_kembali_laporan.MouseEnter += new System.EventHandler(this.label_kembali_laporan_MouseEnter);
-            this.label_kembali_laporan.MouseLeave += new System.EventHandler(this.label_kembali_laporan_MouseLeave);
-            // 
-            // txt_rincian_laporan
-            // 
-            this.txt_rincian_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_rincian_laporan.Location = new System.Drawing.Point(66, 164);
-            this.txt_rincian_laporan.MaxLength = 511;
-            this.txt_rincian_laporan.Multiline = true;
-            this.txt_rincian_laporan.Name = "txt_rincian_laporan";
-            this.txt_rincian_laporan.ReadOnly = true;
-            this.txt_rincian_laporan.Size = new System.Drawing.Size(669, 177);
-            this.txt_rincian_laporan.TabIndex = 9;
-            // 
-            // label_nama_admin_laporan
-            // 
-            this.label_nama_admin_laporan.AutoSize = true;
-            this.label_nama_admin_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.label_nama_admin_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_admin_laporan.ForeColor = System.Drawing.Color.White;
-            this.label_nama_admin_laporan.Location = new System.Drawing.Point(64, 434);
-            this.label_nama_admin_laporan.Name = "label_nama_admin_laporan";
-            this.label_nama_admin_laporan.Size = new System.Drawing.Size(101, 23);
-            this.label_nama_admin_laporan.TabIndex = 8;
-            this.label_nama_admin_laporan.Text = "Nama Admin";
-            this.label_nama_admin_laporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label_tanggal_laporan_dibuat
-            // 
-            this.label_tanggal_laporan_dibuat.AutoSize = true;
-            this.label_tanggal_laporan_dibuat.BackColor = System.Drawing.Color.White;
-            this.label_tanggal_laporan_dibuat.Font = new System.Drawing.Font("Cabin", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tanggal_laporan_dibuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            this.label_tanggal_laporan_dibuat.Location = new System.Drawing.Point(149, 361);
-            this.label_tanggal_laporan_dibuat.Name = "label_tanggal_laporan_dibuat";
-            this.label_tanggal_laporan_dibuat.Size = new System.Drawing.Size(98, 18);
-            this.label_tanggal_laporan_dibuat.TabIndex = 7;
-            this.label_tanggal_laporan_dibuat.Text = "Tanggal Diajukan";
-            // 
-            // label_tanggal_laporan_ditutup
-            // 
-            this.label_tanggal_laporan_ditutup.AutoSize = true;
-            this.label_tanggal_laporan_ditutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.label_tanggal_laporan_ditutup.Font = new System.Drawing.Font("Cabin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tanggal_laporan_ditutup.ForeColor = System.Drawing.Color.White;
-            this.label_tanggal_laporan_ditutup.Location = new System.Drawing.Point(144, 411);
-            this.label_tanggal_laporan_ditutup.Name = "label_tanggal_laporan_ditutup";
-            this.label_tanggal_laporan_ditutup.Size = new System.Drawing.Size(105, 22);
-            this.label_tanggal_laporan_ditutup.TabIndex = 6;
-            this.label_tanggal_laporan_ditutup.Text = "Tanggal Selesai";
-            // 
-            // label_status_laporan
-            // 
-            this.label_status_laporan.AutoSize = true;
-            this.label_status_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
-            this.label_status_laporan.Font = new System.Drawing.Font("Cabin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_status_laporan.ForeColor = System.Drawing.Color.White;
-            this.label_status_laporan.Location = new System.Drawing.Point(145, 389);
-            this.label_status_laporan.Name = "label_status_laporan";
-            this.label_status_laporan.Size = new System.Drawing.Size(104, 22);
-            this.label_status_laporan.TabIndex = 5;
-            this.label_status_laporan.Text = "Status Laporan";
-            // 
-            // label_nomor_laporan
-            // 
-            this.label_nomor_laporan.AutoSize = true;
-            this.label_nomor_laporan.BackColor = System.Drawing.Color.White;
-            this.label_nomor_laporan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nomor_laporan.Location = new System.Drawing.Point(125, 7);
-            this.label_nomor_laporan.Name = "label_nomor_laporan";
-            this.label_nomor_laporan.Size = new System.Drawing.Size(94, 22);
-            this.label_nomor_laporan.TabIndex = 4;
-            this.label_nomor_laporan.Text = "LPR-0000";
-            // 
-            // label_subjek_laporan
-            // 
-            this.label_subjek_laporan.AutoSize = true;
-            this.label_subjek_laporan.BackColor = System.Drawing.Color.White;
-            this.label_subjek_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_subjek_laporan.Location = new System.Drawing.Point(185, 83);
-            this.label_subjek_laporan.Name = "label_subjek_laporan";
-            this.label_subjek_laporan.Size = new System.Drawing.Size(117, 23);
-            this.label_subjek_laporan.TabIndex = 3;
-            this.label_subjek_laporan.Text = "Subjek Laporan";
-            // 
-            // label_nama_pengguna_laporan
-            // 
-            this.label_nama_pengguna_laporan.AutoSize = true;
-            this.label_nama_pengguna_laporan.BackColor = System.Drawing.Color.White;
-            this.label_nama_pengguna_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_pengguna_laporan.Location = new System.Drawing.Point(185, 50);
-            this.label_nama_pengguna_laporan.Name = "label_nama_pengguna_laporan";
-            this.label_nama_pengguna_laporan.Size = new System.Drawing.Size(124, 23);
-            this.label_nama_pengguna_laporan.TabIndex = 2;
-            this.label_nama_pengguna_laporan.Text = "Nama Pengguna";
-            // 
-            // gambar_rincian_laporan
-            // 
-            this.gambar_rincian_laporan.Image = global::Darimu.Properties.Resources.gambar_rincian_laporan;
-            this.gambar_rincian_laporan.Location = new System.Drawing.Point(27, 3);
-            this.gambar_rincian_laporan.Name = "gambar_rincian_laporan";
-            this.gambar_rincian_laporan.Size = new System.Drawing.Size(748, 462);
-            this.gambar_rincian_laporan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_rincian_laporan.TabIndex = 0;
-            this.gambar_rincian_laporan.TabStop = false;
-            // 
-            // panel_isi_tabungan_impian
-            // 
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_topup_impian_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_selesai_impian_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_hapus_impian_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_topup_impian_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_selesai_impian_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_hapus_impian_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_topup_impian_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_selesai_impian_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.button_hapus_impian_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.logo_impian_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.logo_impian_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.logo_impian_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_tenggat_waktu_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_tenggat_waktu_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_tenggat_waktu_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_terkumpulmu_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_impianmu_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_nama_impian_3);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_terkumpulmu_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_impianmu_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_nama_impian_2);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_terkumpulmu_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_impianmu_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_nama_impian_1);
-            this.panel_isi_tabungan_impian.Controls.Add(this.label_impian_anda);
-            this.panel_isi_tabungan_impian.Controls.Add(this.gambar_isi_impian);
-            this.panel_isi_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_isi_tabungan_impian.Location = new System.Drawing.Point(0, 0);
-            this.panel_isi_tabungan_impian.Name = "panel_isi_tabungan_impian";
-            this.panel_isi_tabungan_impian.Size = new System.Drawing.Size(795, 470);
-            this.panel_isi_tabungan_impian.TabIndex = 21;
-            this.panel_isi_tabungan_impian.Visible = false;
-            // 
-            // button_topup_impian_3
-            // 
-            this.button_topup_impian_3.AutoSize = true;
-            this.button_topup_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_topup_impian_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_3.FlatAppearance.BorderSize = 0;
-            this.button_topup_impian_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_topup_impian_3.Image = global::Darimu.Properties.Resources.icon_topup;
-            this.button_topup_impian_3.Location = new System.Drawing.Point(630, 408);
-            this.button_topup_impian_3.Name = "button_topup_impian_3";
-            this.button_topup_impian_3.Size = new System.Drawing.Size(35, 35);
-            this.button_topup_impian_3.TabIndex = 34;
-            this.button_topup_impian_3.UseVisualStyleBackColor = false;
-            this.button_topup_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_3_MouseClick);
-            this.button_topup_impian_3.MouseEnter += new System.EventHandler(this.button_topup_impian_3_MouseEnter);
-            this.button_topup_impian_3.MouseLeave += new System.EventHandler(this.button_topup_impian_3_MouseLeave);
-            // 
-            // button_selesai_impian_3
-            // 
-            this.button_selesai_impian_3.AutoSize = true;
-            this.button_selesai_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_selesai_impian_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_3.FlatAppearance.BorderSize = 0;
-            this.button_selesai_impian_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_selesai_impian_3.Image = global::Darimu.Properties.Resources.icon_selesai;
-            this.button_selesai_impian_3.Location = new System.Drawing.Point(700, 408);
-            this.button_selesai_impian_3.Name = "button_selesai_impian_3";
-            this.button_selesai_impian_3.Size = new System.Drawing.Size(35, 35);
-            this.button_selesai_impian_3.TabIndex = 33;
-            this.button_selesai_impian_3.UseVisualStyleBackColor = false;
-            this.button_selesai_impian_3.Visible = false;
-            this.button_selesai_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_3_MouseClick);
-            this.button_selesai_impian_3.MouseEnter += new System.EventHandler(this.button_selesai_impian_3_MouseEnter);
-            this.button_selesai_impian_3.MouseLeave += new System.EventHandler(this.button_selesai_impian_3_MouseLeave);
-            // 
-            // button_hapus_impian_3
-            // 
-            this.button_hapus_impian_3.AutoSize = true;
-            this.button_hapus_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_hapus_impian_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_3.FlatAppearance.BorderSize = 0;
-            this.button_hapus_impian_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_hapus_impian_3.Image = global::Darimu.Properties.Resources.icon_hapus;
-            this.button_hapus_impian_3.Location = new System.Drawing.Point(556, 408);
-            this.button_hapus_impian_3.Name = "button_hapus_impian_3";
-            this.button_hapus_impian_3.Size = new System.Drawing.Size(35, 35);
-            this.button_hapus_impian_3.TabIndex = 32;
-            this.button_hapus_impian_3.UseVisualStyleBackColor = false;
-            this.button_hapus_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_3_MouseClick);
-            this.button_hapus_impian_3.MouseEnter += new System.EventHandler(this.button_hapus_impian_3_MouseEnter);
-            this.button_hapus_impian_3.MouseLeave += new System.EventHandler(this.button_hapus_impian_3_MouseLeave);
-            // 
-            // button_topup_impian_2
-            // 
-            this.button_topup_impian_2.AutoSize = true;
-            this.button_topup_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_topup_impian_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_2.FlatAppearance.BorderSize = 0;
-            this.button_topup_impian_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_topup_impian_2.Image = global::Darimu.Properties.Resources.icon_topup;
-            this.button_topup_impian_2.Location = new System.Drawing.Point(387, 408);
-            this.button_topup_impian_2.Name = "button_topup_impian_2";
-            this.button_topup_impian_2.Size = new System.Drawing.Size(35, 35);
-            this.button_topup_impian_2.TabIndex = 31;
-            this.button_topup_impian_2.UseVisualStyleBackColor = false;
-            this.button_topup_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_2_MouseClick);
-            this.button_topup_impian_2.MouseEnter += new System.EventHandler(this.button_topup_impian_2_MouseEnter);
-            this.button_topup_impian_2.MouseLeave += new System.EventHandler(this.button_topup_impian_2_MouseLeave);
-            // 
-            // button_selesai_impian_2
-            // 
-            this.button_selesai_impian_2.AutoSize = true;
-            this.button_selesai_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_selesai_impian_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_2.FlatAppearance.BorderSize = 0;
-            this.button_selesai_impian_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_selesai_impian_2.Image = global::Darimu.Properties.Resources.icon_selesai;
-            this.button_selesai_impian_2.Location = new System.Drawing.Point(457, 408);
-            this.button_selesai_impian_2.Name = "button_selesai_impian_2";
-            this.button_selesai_impian_2.Size = new System.Drawing.Size(35, 35);
-            this.button_selesai_impian_2.TabIndex = 30;
-            this.button_selesai_impian_2.UseVisualStyleBackColor = false;
-            this.button_selesai_impian_2.Visible = false;
-            this.button_selesai_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_2_MouseClick);
-            this.button_selesai_impian_2.MouseEnter += new System.EventHandler(this.button_selesai_impian_2_MouseEnter);
-            this.button_selesai_impian_2.MouseLeave += new System.EventHandler(this.button_selesai_impian_2_MouseLeave);
-            // 
-            // button_hapus_impian_2
-            // 
-            this.button_hapus_impian_2.AutoSize = true;
-            this.button_hapus_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_hapus_impian_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_2.FlatAppearance.BorderSize = 0;
-            this.button_hapus_impian_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_hapus_impian_2.Image = global::Darimu.Properties.Resources.icon_hapus;
-            this.button_hapus_impian_2.Location = new System.Drawing.Point(313, 408);
-            this.button_hapus_impian_2.Name = "button_hapus_impian_2";
-            this.button_hapus_impian_2.Size = new System.Drawing.Size(35, 35);
-            this.button_hapus_impian_2.TabIndex = 29;
-            this.button_hapus_impian_2.UseVisualStyleBackColor = false;
-            this.button_hapus_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_2_MouseClick);
-            this.button_hapus_impian_2.MouseEnter += new System.EventHandler(this.button_hapus_impian_2_MouseEnter);
-            this.button_hapus_impian_2.MouseLeave += new System.EventHandler(this.button_hapus_impian_2_MouseLeave);
-            // 
-            // button_topup_impian_1
-            // 
-            this.button_topup_impian_1.AutoSize = true;
-            this.button_topup_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_topup_impian_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_1.FlatAppearance.BorderSize = 0;
-            this.button_topup_impian_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_topup_impian_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_topup_impian_1.Image = global::Darimu.Properties.Resources.icon_topup;
-            this.button_topup_impian_1.Location = new System.Drawing.Point(129, 408);
-            this.button_topup_impian_1.Name = "button_topup_impian_1";
-            this.button_topup_impian_1.Size = new System.Drawing.Size(35, 35);
-            this.button_topup_impian_1.TabIndex = 28;
-            this.button_topup_impian_1.UseVisualStyleBackColor = false;
-            this.button_topup_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_1_MouseClick);
-            this.button_topup_impian_1.MouseEnter += new System.EventHandler(this.button_topup_impian_1_MouseEnter);
-            this.button_topup_impian_1.MouseLeave += new System.EventHandler(this.button_topup_impian_1_MouseLeave);
-            // 
-            // button_selesai_impian_1
-            // 
-            this.button_selesai_impian_1.AutoSize = true;
-            this.button_selesai_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_selesai_impian_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_1.FlatAppearance.BorderSize = 0;
-            this.button_selesai_impian_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_selesai_impian_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_selesai_impian_1.Image = global::Darimu.Properties.Resources.icon_selesai;
-            this.button_selesai_impian_1.Location = new System.Drawing.Point(199, 408);
-            this.button_selesai_impian_1.Name = "button_selesai_impian_1";
-            this.button_selesai_impian_1.Size = new System.Drawing.Size(35, 35);
-            this.button_selesai_impian_1.TabIndex = 27;
-            this.button_selesai_impian_1.UseVisualStyleBackColor = false;
-            this.button_selesai_impian_1.Visible = false;
-            this.button_selesai_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_1_MouseClick);
-            this.button_selesai_impian_1.MouseEnter += new System.EventHandler(this.button_selesai_impian_1_MouseEnter);
-            this.button_selesai_impian_1.MouseLeave += new System.EventHandler(this.button_selesai_impian_1_MouseLeave);
-            // 
-            // button_hapus_impian_1
-            // 
-            this.button_hapus_impian_1.AutoSize = true;
-            this.button_hapus_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_hapus_impian_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_1.FlatAppearance.BorderSize = 0;
-            this.button_hapus_impian_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.button_hapus_impian_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_hapus_impian_1.Image = global::Darimu.Properties.Resources.icon_hapus;
-            this.button_hapus_impian_1.Location = new System.Drawing.Point(55, 408);
-            this.button_hapus_impian_1.Name = "button_hapus_impian_1";
-            this.button_hapus_impian_1.Size = new System.Drawing.Size(35, 35);
-            this.button_hapus_impian_1.TabIndex = 8;
-            this.button_hapus_impian_1.UseVisualStyleBackColor = false;
-            this.button_hapus_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_1_MouseClick);
-            this.button_hapus_impian_1.MouseEnter += new System.EventHandler(this.button_hapus_impian_1_MouseEnter);
-            this.button_hapus_impian_1.MouseLeave += new System.EventHandler(this.button_hapus_impian_1_MouseLeave);
-            // 
-            // logo_impian_3
-            // 
-            this.logo_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.logo_impian_3.Image = global::Darimu.Properties.Resources.logo_tambah;
-            this.logo_impian_3.Location = new System.Drawing.Point(597, 80);
-            this.logo_impian_3.Name = "logo_impian_3";
-            this.logo_impian_3.Size = new System.Drawing.Size(100, 100);
-            this.logo_impian_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.logo_impian_3.TabIndex = 26;
-            this.logo_impian_3.TabStop = false;
-            this.logo_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logo_impian_3_MouseClick);
-            // 
-            // logo_impian_2
-            // 
-            this.logo_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.logo_impian_2.Image = global::Darimu.Properties.Resources.logo_tambah;
-            this.logo_impian_2.Location = new System.Drawing.Point(342, 80);
-            this.logo_impian_2.Name = "logo_impian_2";
-            this.logo_impian_2.Size = new System.Drawing.Size(100, 100);
-            this.logo_impian_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.logo_impian_2.TabIndex = 25;
-            this.logo_impian_2.TabStop = false;
-            this.logo_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logo_impian_2_MouseClick);
-            // 
-            // logo_impian_1
-            // 
-            this.logo_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.logo_impian_1.Image = global::Darimu.Properties.Resources.logo_tambah;
-            this.logo_impian_1.Location = new System.Drawing.Point(98, 80);
-            this.logo_impian_1.Name = "logo_impian_1";
-            this.logo_impian_1.Size = new System.Drawing.Size(100, 100);
-            this.logo_impian_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.logo_impian_1.TabIndex = 24;
-            this.logo_impian_1.TabStop = false;
-            this.logo_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logo_impian_1_MouseClick);
-            // 
-            // label_tenggat_waktu_3
-            // 
-            this.label_tenggat_waktu_3.AutoSize = true;
-            this.label_tenggat_waktu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_tenggat_waktu_3.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tenggat_waktu_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_tenggat_waktu_3.Location = new System.Drawing.Point(550, 383);
-            this.label_tenggat_waktu_3.Name = "label_tenggat_waktu_3";
-            this.label_tenggat_waktu_3.Size = new System.Drawing.Size(110, 23);
-            this.label_tenggat_waktu_3.TabIndex = 23;
-            this.label_tenggat_waktu_3.Text = "00/00/0000";
-            // 
-            // label_tenggat_waktu_2
-            // 
-            this.label_tenggat_waktu_2.AutoSize = true;
-            this.label_tenggat_waktu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_tenggat_waktu_2.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tenggat_waktu_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_tenggat_waktu_2.Location = new System.Drawing.Point(300, 383);
-            this.label_tenggat_waktu_2.Name = "label_tenggat_waktu_2";
-            this.label_tenggat_waktu_2.Size = new System.Drawing.Size(110, 23);
-            this.label_tenggat_waktu_2.TabIndex = 22;
-            this.label_tenggat_waktu_2.Text = "00/00/0000";
-            // 
-            // label_tenggat_waktu_1
-            // 
-            this.label_tenggat_waktu_1.AutoSize = true;
-            this.label_tenggat_waktu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_tenggat_waktu_1.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tenggat_waktu_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_tenggat_waktu_1.Location = new System.Drawing.Point(50, 383);
-            this.label_tenggat_waktu_1.Name = "label_tenggat_waktu_1";
-            this.label_tenggat_waktu_1.Size = new System.Drawing.Size(110, 23);
-            this.label_tenggat_waktu_1.TabIndex = 21;
-            this.label_tenggat_waktu_1.Text = "00/00/0000";
-            // 
-            // label_saldo_terkumpulmu_3
-            // 
-            this.label_saldo_terkumpulmu_3.AutoSize = true;
-            this.label_saldo_terkumpulmu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_saldo_terkumpulmu_3.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_saldo_terkumpulmu_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_saldo_terkumpulmu_3.Location = new System.Drawing.Point(569, 318);
-            this.label_saldo_terkumpulmu_3.Name = "label_saldo_terkumpulmu_3";
-            this.label_saldo_terkumpulmu_3.Size = new System.Drawing.Size(21, 23);
-            this.label_saldo_terkumpulmu_3.TabIndex = 20;
-            this.label_saldo_terkumpulmu_3.Text = "0";
-            // 
-            // label_saldo_impianmu_3
-            // 
-            this.label_saldo_impianmu_3.AutoSize = true;
-            this.label_saldo_impianmu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_saldo_impianmu_3.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_saldo_impianmu_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_saldo_impianmu_3.Location = new System.Drawing.Point(569, 256);
-            this.label_saldo_impianmu_3.Name = "label_saldo_impianmu_3";
-            this.label_saldo_impianmu_3.Size = new System.Drawing.Size(21, 23);
-            this.label_saldo_impianmu_3.TabIndex = 19;
-            this.label_saldo_impianmu_3.Text = "0";
-            // 
-            // label_nama_impian_3
-            // 
-            this.label_nama_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_nama_impian_3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_impian_3.ForeColor = System.Drawing.Color.White;
-            this.label_nama_impian_3.Location = new System.Drawing.Point(541, 191);
-            this.label_nama_impian_3.Name = "label_nama_impian_3";
-            this.label_nama_impian_3.Size = new System.Drawing.Size(210, 22);
-            this.label_nama_impian_3.TabIndex = 18;
-            this.label_nama_impian_3.Text = "Nama Impianmu Di sini";
-            this.label_nama_impian_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_saldo_terkumpulmu_2
-            // 
-            this.label_saldo_terkumpulmu_2.AutoSize = true;
-            this.label_saldo_terkumpulmu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_saldo_terkumpulmu_2.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_saldo_terkumpulmu_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_saldo_terkumpulmu_2.Location = new System.Drawing.Point(320, 318);
-            this.label_saldo_terkumpulmu_2.Name = "label_saldo_terkumpulmu_2";
-            this.label_saldo_terkumpulmu_2.Size = new System.Drawing.Size(21, 23);
-            this.label_saldo_terkumpulmu_2.TabIndex = 16;
-            this.label_saldo_terkumpulmu_2.Text = "0";
-            // 
-            // label_saldo_impianmu_2
-            // 
-            this.label_saldo_impianmu_2.AutoSize = true;
-            this.label_saldo_impianmu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_saldo_impianmu_2.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_saldo_impianmu_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_saldo_impianmu_2.Location = new System.Drawing.Point(320, 256);
-            this.label_saldo_impianmu_2.Name = "label_saldo_impianmu_2";
-            this.label_saldo_impianmu_2.Size = new System.Drawing.Size(21, 23);
-            this.label_saldo_impianmu_2.TabIndex = 15;
-            this.label_saldo_impianmu_2.Text = "0";
-            // 
-            // label_nama_impian_2
-            // 
-            this.label_nama_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_nama_impian_2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_impian_2.ForeColor = System.Drawing.Color.White;
-            this.label_nama_impian_2.Location = new System.Drawing.Point(292, 191);
-            this.label_nama_impian_2.Name = "label_nama_impian_2";
-            this.label_nama_impian_2.Size = new System.Drawing.Size(210, 22);
-            this.label_nama_impian_2.TabIndex = 14;
-            this.label_nama_impian_2.Text = "Nama Impianmu Di sini";
-            this.label_nama_impian_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_saldo_terkumpulmu_1
-            // 
-            this.label_saldo_terkumpulmu_1.AutoSize = true;
-            this.label_saldo_terkumpulmu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_saldo_terkumpulmu_1.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_saldo_terkumpulmu_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_saldo_terkumpulmu_1.Location = new System.Drawing.Point(69, 318);
-            this.label_saldo_terkumpulmu_1.Name = "label_saldo_terkumpulmu_1";
-            this.label_saldo_terkumpulmu_1.Size = new System.Drawing.Size(21, 23);
-            this.label_saldo_terkumpulmu_1.TabIndex = 12;
-            this.label_saldo_terkumpulmu_1.Text = "0";
-            // 
-            // label_saldo_impianmu_1
-            // 
-            this.label_saldo_impianmu_1.AutoSize = true;
-            this.label_saldo_impianmu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_saldo_impianmu_1.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_saldo_impianmu_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label_saldo_impianmu_1.Location = new System.Drawing.Point(69, 256);
-            this.label_saldo_impianmu_1.Name = "label_saldo_impianmu_1";
-            this.label_saldo_impianmu_1.Size = new System.Drawing.Size(21, 23);
-            this.label_saldo_impianmu_1.TabIndex = 11;
-            this.label_saldo_impianmu_1.Text = "0";
-            // 
-            // label_nama_impian_1
-            // 
-            this.label_nama_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            this.label_nama_impian_1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nama_impian_1.ForeColor = System.Drawing.Color.White;
-            this.label_nama_impian_1.Location = new System.Drawing.Point(42, 191);
-            this.label_nama_impian_1.Name = "label_nama_impian_1";
-            this.label_nama_impian_1.Size = new System.Drawing.Size(210, 22);
-            this.label_nama_impian_1.TabIndex = 8;
-            this.label_nama_impian_1.Text = "Nama Impianmu Di sini";
-            this.label_nama_impian_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_impian_anda
-            // 
-            this.label_impian_anda.AutoSize = true;
-            this.label_impian_anda.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_impian_anda.ForeColor = System.Drawing.Color.White;
-            this.label_impian_anda.Location = new System.Drawing.Point(237, 2);
-            this.label_impian_anda.Name = "label_impian_anda";
-            this.label_impian_anda.Size = new System.Drawing.Size(317, 37);
-            this.label_impian_anda.TabIndex = 7;
-            this.label_impian_anda.Text = "Tabungan Impianmu";
-            // 
-            // gambar_isi_impian
-            // 
-            this.gambar_isi_impian.Image = ((System.Drawing.Image)(resources.GetObject("gambar_isi_impian.Image")));
-            this.gambar_isi_impian.Location = new System.Drawing.Point(32, 47);
-            this.gambar_isi_impian.Name = "gambar_isi_impian";
-            this.gambar_isi_impian.Size = new System.Drawing.Size(730, 400);
-            this.gambar_isi_impian.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.gambar_isi_impian.TabIndex = 1;
-            this.gambar_isi_impian.TabStop = false;
+            // panel_isi_riwayat_impian
+            // 
+            this.panel_isi_riwayat_impian.Controls.Add(this.label_judul_riwayat_impian);
+            this.panel_isi_riwayat_impian.Controls.Add(this.grid_riwayat_impian);
+            this.panel_isi_riwayat_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_riwayat_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_riwayat_impian.Name = "panel_isi_riwayat_impian";
+            this.panel_isi_riwayat_impian.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_riwayat_impian.TabIndex = 7;
+            this.panel_isi_riwayat_impian.Visible = false;
+            // 
+            // label_judul_riwayat_impian
+            // 
+            this.label_judul_riwayat_impian.AutoSize = true;
+            this.label_judul_riwayat_impian.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_judul_riwayat_impian.ForeColor = System.Drawing.Color.White;
+            this.label_judul_riwayat_impian.Location = new System.Drawing.Point(190, 11);
+            this.label_judul_riwayat_impian.Name = "label_judul_riwayat_impian";
+            this.label_judul_riwayat_impian.Size = new System.Drawing.Size(393, 37);
+            this.label_judul_riwayat_impian.TabIndex = 8;
+            this.label_judul_riwayat_impian.Text = "Riwayat Tabungan Impian";
+            // 
+            // grid_riwayat_impian
+            // 
+            this.grid_riwayat_impian.AllowUserToAddRows = false;
+            this.grid_riwayat_impian.AllowUserToDeleteRows = false;
+            this.grid_riwayat_impian.AllowUserToResizeColumns = false;
+            this.grid_riwayat_impian.AllowUserToResizeRows = false;
+            this.grid_riwayat_impian.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid_riwayat_impian.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grid_riwayat_impian.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_riwayat_impian.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_riwayat_impian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_riwayat_impian.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_riwayat_impian.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grid_riwayat_impian.EnableHeadersVisualStyles = false;
+            this.grid_riwayat_impian.Location = new System.Drawing.Point(27, 54);
+            this.grid_riwayat_impian.Name = "grid_riwayat_impian";
+            this.grid_riwayat_impian.ReadOnly = true;
+            this.grid_riwayat_impian.RowHeadersVisible = false;
+            this.grid_riwayat_impian.Size = new System.Drawing.Size(733, 374);
+            this.grid_riwayat_impian.TabIndex = 7;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 110F;
+            this.Column1.HeaderText = "Tanggal Ditutup";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.FillWeight = 199.2386F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Nama Tabungan Impian";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.FillWeight = 74.71447F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Jenis Impian";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.FillWeight = 74.71447F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Saldo Terkumpul";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.FillWeight = 74.71447F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Saldo Impian";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.FillWeight = 74.71447F;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // panel_isi_riwayat_transaksi
             // 
@@ -2336,14 +1801,14 @@
             this.grid_laporan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_laporan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_laporan.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grid_laporan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_laporan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -2351,14 +1816,14 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle6;
             this.grid_laporan.EnableHeadersVisualStyles = false;
             this.grid_laporan.Location = new System.Drawing.Point(31, 68);
             this.grid_laporan.Name = "grid_laporan";
@@ -2407,6 +1872,666 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // panel_isi_tambah_laporan
+            // 
+            this.panel_isi_tambah_laporan.Controls.Add(this.button_batal_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.button_simpan_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_subjek_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.label_isi_nama_pengguna_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.txt_isi_rincian_laporan);
+            this.panel_isi_tambah_laporan.Controls.Add(this.pictureBox1);
+            this.panel_isi_tambah_laporan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tambah_laporan.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tambah_laporan.Name = "panel_isi_tambah_laporan";
+            this.panel_isi_tambah_laporan.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_tambah_laporan.TabIndex = 24;
+            this.panel_isi_tambah_laporan.Visible = false;
+            // 
+            // button_batal_laporan
+            // 
+            this.button_batal_laporan.AutoSize = true;
+            this.button_batal_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_batal_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.FlatAppearance.BorderSize = 0;
+            this.button_batal_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_batal_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_batal_laporan.Image = global::Darimu.Properties.Resources.button_batal;
+            this.button_batal_laporan.Location = new System.Drawing.Point(611, 403);
+            this.button_batal_laporan.Name = "button_batal_laporan";
+            this.button_batal_laporan.Size = new System.Drawing.Size(67, 40);
+            this.button_batal_laporan.TabIndex = 21;
+            this.button_batal_laporan.UseVisualStyleBackColor = false;
+            this.button_batal_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_batal_laporan_MouseClick);
+            this.button_batal_laporan.MouseEnter += new System.EventHandler(this.button_batal_laporan_MouseEnter);
+            this.button_batal_laporan.MouseLeave += new System.EventHandler(this.button_batal_laporan_MouseLeave);
+            // 
+            // button_simpan_laporan
+            // 
+            this.button_simpan_laporan.AutoSize = true;
+            this.button_simpan_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_simpan_laporan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.FlatAppearance.BorderSize = 0;
+            this.button_simpan_laporan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.button_simpan_laporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_simpan_laporan.Image = global::Darimu.Properties.Resources.button_simpan;
+            this.button_simpan_laporan.Location = new System.Drawing.Point(684, 403);
+            this.button_simpan_laporan.Name = "button_simpan_laporan";
+            this.button_simpan_laporan.Size = new System.Drawing.Size(67, 40);
+            this.button_simpan_laporan.TabIndex = 20;
+            this.button_simpan_laporan.UseVisualStyleBackColor = false;
+            this.button_simpan_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_simpan_laporan_MouseClick);
+            this.button_simpan_laporan.MouseEnter += new System.EventHandler(this.button_simpan_laporan_MouseEnter);
+            this.button_simpan_laporan.MouseLeave += new System.EventHandler(this.button_simpan_laporan_MouseLeave);
+            // 
+            // txt_isi_subjek_laporan
+            // 
+            this.txt_isi_subjek_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_isi_subjek_laporan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_subjek_laporan.Location = new System.Drawing.Point(199, 83);
+            this.txt_isi_subjek_laporan.MaxLength = 52;
+            this.txt_isi_subjek_laporan.Name = "txt_isi_subjek_laporan";
+            this.txt_isi_subjek_laporan.Size = new System.Drawing.Size(490, 22);
+            this.txt_isi_subjek_laporan.TabIndex = 19;
+            this.txt_isi_subjek_laporan.Text = "Ketik di sini...";
+            this.txt_isi_subjek_laporan.GotFocus += new System.EventHandler(this.txt_isi_subjek_laporan_GotFocus);
+            this.txt_isi_subjek_laporan.LostFocus += new System.EventHandler(this.txt_isi_subjek_laporan_LostFocus);
+            // 
+            // label_isi_nama_pengguna_laporan
+            // 
+            this.label_isi_nama_pengguna_laporan.AutoSize = true;
+            this.label_isi_nama_pengguna_laporan.BackColor = System.Drawing.Color.White;
+            this.label_isi_nama_pengguna_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_isi_nama_pengguna_laporan.Location = new System.Drawing.Point(195, 50);
+            this.label_isi_nama_pengguna_laporan.Name = "label_isi_nama_pengguna_laporan";
+            this.label_isi_nama_pengguna_laporan.Size = new System.Drawing.Size(124, 23);
+            this.label_isi_nama_pengguna_laporan.TabIndex = 11;
+            this.label_isi_nama_pengguna_laporan.Text = "Nama Pengguna";
+            // 
+            // txt_isi_rincian_laporan
+            // 
+            this.txt_isi_rincian_laporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_isi_rincian_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_isi_rincian_laporan.Location = new System.Drawing.Point(66, 167);
+            this.txt_isi_rincian_laporan.MaxLength = 511;
+            this.txt_isi_rincian_laporan.Multiline = true;
+            this.txt_isi_rincian_laporan.Name = "txt_isi_rincian_laporan";
+            this.txt_isi_rincian_laporan.Size = new System.Drawing.Size(669, 177);
+            this.txt_isi_rincian_laporan.TabIndex = 10;
+            this.txt_isi_rincian_laporan.Text = "Ketik di sini...";
+            this.txt_isi_rincian_laporan.GotFocus += new System.EventHandler(this.txt_isi_rincian_laporan_GotFocus);
+            this.txt_isi_rincian_laporan.LostFocus += new System.EventHandler(this.txt_isi_rincian_laporan_LostFocus);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(27, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(748, 387);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel_isi_rincian_laporan
+            // 
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_kembali_laporan);
+            this.panel_isi_rincian_laporan.Controls.Add(this.txt_rincian_laporan);
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_nama_admin_laporan);
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_tanggal_laporan_dibuat);
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_tanggal_laporan_ditutup);
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_status_laporan);
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_nomor_laporan);
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_subjek_laporan);
+            this.panel_isi_rincian_laporan.Controls.Add(this.label_nama_pengguna_laporan);
+            this.panel_isi_rincian_laporan.Controls.Add(this.gambar_rincian_laporan);
+            this.panel_isi_rincian_laporan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_rincian_laporan.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_rincian_laporan.Name = "panel_isi_rincian_laporan";
+            this.panel_isi_rincian_laporan.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_rincian_laporan.TabIndex = 25;
+            this.panel_isi_rincian_laporan.Visible = false;
+            // 
+            // label_kembali_laporan
+            // 
+            this.label_kembali_laporan.AutoSize = true;
+            this.label_kembali_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.label_kembali_laporan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_kembali_laporan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_kembali_laporan.ForeColor = System.Drawing.Color.White;
+            this.label_kembali_laporan.Location = new System.Drawing.Point(666, 11);
+            this.label_kembali_laporan.Name = "label_kembali_laporan";
+            this.label_kembali_laporan.Size = new System.Drawing.Size(101, 22);
+            this.label_kembali_laporan.TabIndex = 10;
+            this.label_kembali_laporan.Text = "<- Kembali";
+            this.label_kembali_laporan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_kembali_laporan_MouseClick);
+            this.label_kembali_laporan.MouseEnter += new System.EventHandler(this.label_kembali_laporan_MouseEnter);
+            this.label_kembali_laporan.MouseLeave += new System.EventHandler(this.label_kembali_laporan_MouseLeave);
+            // 
+            // txt_rincian_laporan
+            // 
+            this.txt_rincian_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_rincian_laporan.Location = new System.Drawing.Point(66, 164);
+            this.txt_rincian_laporan.MaxLength = 511;
+            this.txt_rincian_laporan.Multiline = true;
+            this.txt_rincian_laporan.Name = "txt_rincian_laporan";
+            this.txt_rincian_laporan.ReadOnly = true;
+            this.txt_rincian_laporan.Size = new System.Drawing.Size(669, 177);
+            this.txt_rincian_laporan.TabIndex = 9;
+            // 
+            // label_nama_admin_laporan
+            // 
+            this.label_nama_admin_laporan.AutoSize = true;
+            this.label_nama_admin_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.label_nama_admin_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_admin_laporan.ForeColor = System.Drawing.Color.White;
+            this.label_nama_admin_laporan.Location = new System.Drawing.Point(64, 434);
+            this.label_nama_admin_laporan.Name = "label_nama_admin_laporan";
+            this.label_nama_admin_laporan.Size = new System.Drawing.Size(101, 23);
+            this.label_nama_admin_laporan.TabIndex = 8;
+            this.label_nama_admin_laporan.Text = "Nama Admin";
+            this.label_nama_admin_laporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label_tanggal_laporan_dibuat
+            // 
+            this.label_tanggal_laporan_dibuat.AutoSize = true;
+            this.label_tanggal_laporan_dibuat.BackColor = System.Drawing.Color.White;
+            this.label_tanggal_laporan_dibuat.Font = new System.Drawing.Font("Cabin", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tanggal_laporan_dibuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.label_tanggal_laporan_dibuat.Location = new System.Drawing.Point(149, 361);
+            this.label_tanggal_laporan_dibuat.Name = "label_tanggal_laporan_dibuat";
+            this.label_tanggal_laporan_dibuat.Size = new System.Drawing.Size(98, 18);
+            this.label_tanggal_laporan_dibuat.TabIndex = 7;
+            this.label_tanggal_laporan_dibuat.Text = "Tanggal Diajukan";
+            // 
+            // label_tanggal_laporan_ditutup
+            // 
+            this.label_tanggal_laporan_ditutup.AutoSize = true;
+            this.label_tanggal_laporan_ditutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.label_tanggal_laporan_ditutup.Font = new System.Drawing.Font("Cabin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tanggal_laporan_ditutup.ForeColor = System.Drawing.Color.White;
+            this.label_tanggal_laporan_ditutup.Location = new System.Drawing.Point(144, 411);
+            this.label_tanggal_laporan_ditutup.Name = "label_tanggal_laporan_ditutup";
+            this.label_tanggal_laporan_ditutup.Size = new System.Drawing.Size(105, 22);
+            this.label_tanggal_laporan_ditutup.TabIndex = 6;
+            this.label_tanggal_laporan_ditutup.Text = "Tanggal Selesai";
+            // 
+            // label_status_laporan
+            // 
+            this.label_status_laporan.AutoSize = true;
+            this.label_status_laporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(106)))), ((int)(((byte)(155)))));
+            this.label_status_laporan.Font = new System.Drawing.Font("Cabin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_status_laporan.ForeColor = System.Drawing.Color.White;
+            this.label_status_laporan.Location = new System.Drawing.Point(145, 389);
+            this.label_status_laporan.Name = "label_status_laporan";
+            this.label_status_laporan.Size = new System.Drawing.Size(104, 22);
+            this.label_status_laporan.TabIndex = 5;
+            this.label_status_laporan.Text = "Status Laporan";
+            // 
+            // label_nomor_laporan
+            // 
+            this.label_nomor_laporan.AutoSize = true;
+            this.label_nomor_laporan.BackColor = System.Drawing.Color.White;
+            this.label_nomor_laporan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nomor_laporan.Location = new System.Drawing.Point(125, 7);
+            this.label_nomor_laporan.Name = "label_nomor_laporan";
+            this.label_nomor_laporan.Size = new System.Drawing.Size(94, 22);
+            this.label_nomor_laporan.TabIndex = 4;
+            this.label_nomor_laporan.Text = "LPR-0000";
+            // 
+            // label_subjek_laporan
+            // 
+            this.label_subjek_laporan.AutoSize = true;
+            this.label_subjek_laporan.BackColor = System.Drawing.Color.White;
+            this.label_subjek_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_subjek_laporan.Location = new System.Drawing.Point(185, 83);
+            this.label_subjek_laporan.Name = "label_subjek_laporan";
+            this.label_subjek_laporan.Size = new System.Drawing.Size(117, 23);
+            this.label_subjek_laporan.TabIndex = 3;
+            this.label_subjek_laporan.Text = "Subjek Laporan";
+            // 
+            // label_nama_pengguna_laporan
+            // 
+            this.label_nama_pengguna_laporan.AutoSize = true;
+            this.label_nama_pengguna_laporan.BackColor = System.Drawing.Color.White;
+            this.label_nama_pengguna_laporan.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_pengguna_laporan.Location = new System.Drawing.Point(185, 50);
+            this.label_nama_pengguna_laporan.Name = "label_nama_pengguna_laporan";
+            this.label_nama_pengguna_laporan.Size = new System.Drawing.Size(124, 23);
+            this.label_nama_pengguna_laporan.TabIndex = 2;
+            this.label_nama_pengguna_laporan.Text = "Nama Pengguna";
+            // 
+            // gambar_rincian_laporan
+            // 
+            this.gambar_rincian_laporan.Image = global::Darimu.Properties.Resources.gambar_rincian_laporan;
+            this.gambar_rincian_laporan.Location = new System.Drawing.Point(27, 3);
+            this.gambar_rincian_laporan.Name = "gambar_rincian_laporan";
+            this.gambar_rincian_laporan.Size = new System.Drawing.Size(748, 462);
+            this.gambar_rincian_laporan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_rincian_laporan.TabIndex = 0;
+            this.gambar_rincian_laporan.TabStop = false;
+            // 
+            // panel_isi_tabungan_impian
+            // 
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_topup_impian_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_selesai_impian_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_hapus_impian_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_topup_impian_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_selesai_impian_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_hapus_impian_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_topup_impian_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_selesai_impian_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.button_hapus_impian_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.logo_impian_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.logo_impian_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.logo_impian_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_tenggat_waktu_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_tenggat_waktu_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_tenggat_waktu_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_terkumpulmu_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_impianmu_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_nama_impian_3);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_terkumpulmu_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_impianmu_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_nama_impian_2);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_terkumpulmu_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_saldo_impianmu_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_nama_impian_1);
+            this.panel_isi_tabungan_impian.Controls.Add(this.label_impian_anda);
+            this.panel_isi_tabungan_impian.Controls.Add(this.gambar_isi_impian);
+            this.panel_isi_tabungan_impian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_isi_tabungan_impian.Location = new System.Drawing.Point(0, 0);
+            this.panel_isi_tabungan_impian.Name = "panel_isi_tabungan_impian";
+            this.panel_isi_tabungan_impian.Size = new System.Drawing.Size(795, 470);
+            this.panel_isi_tabungan_impian.TabIndex = 21;
+            this.panel_isi_tabungan_impian.Visible = false;
+            // 
+            // button_topup_impian_3
+            // 
+            this.button_topup_impian_3.AutoSize = true;
+            this.button_topup_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_topup_impian_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_3.FlatAppearance.BorderSize = 0;
+            this.button_topup_impian_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_topup_impian_3.Image = global::Darimu.Properties.Resources.icon_topup;
+            this.button_topup_impian_3.Location = new System.Drawing.Point(630, 408);
+            this.button_topup_impian_3.Name = "button_topup_impian_3";
+            this.button_topup_impian_3.Size = new System.Drawing.Size(35, 35);
+            this.button_topup_impian_3.TabIndex = 34;
+            this.button_topup_impian_3.UseVisualStyleBackColor = false;
+            this.button_topup_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_3_MouseClick);
+            this.button_topup_impian_3.MouseEnter += new System.EventHandler(this.button_topup_impian_3_MouseEnter);
+            this.button_topup_impian_3.MouseLeave += new System.EventHandler(this.button_topup_impian_3_MouseLeave);
+            // 
+            // button_selesai_impian_3
+            // 
+            this.button_selesai_impian_3.AutoSize = true;
+            this.button_selesai_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_selesai_impian_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_3.FlatAppearance.BorderSize = 0;
+            this.button_selesai_impian_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_selesai_impian_3.Image = global::Darimu.Properties.Resources.icon_selesai;
+            this.button_selesai_impian_3.Location = new System.Drawing.Point(700, 408);
+            this.button_selesai_impian_3.Name = "button_selesai_impian_3";
+            this.button_selesai_impian_3.Size = new System.Drawing.Size(35, 35);
+            this.button_selesai_impian_3.TabIndex = 33;
+            this.button_selesai_impian_3.UseVisualStyleBackColor = false;
+            this.button_selesai_impian_3.Visible = false;
+            this.button_selesai_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_3_MouseClick);
+            this.button_selesai_impian_3.MouseEnter += new System.EventHandler(this.button_selesai_impian_3_MouseEnter);
+            this.button_selesai_impian_3.MouseLeave += new System.EventHandler(this.button_selesai_impian_3_MouseLeave);
+            // 
+            // button_hapus_impian_3
+            // 
+            this.button_hapus_impian_3.AutoSize = true;
+            this.button_hapus_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_hapus_impian_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_3.FlatAppearance.BorderSize = 0;
+            this.button_hapus_impian_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_hapus_impian_3.Image = global::Darimu.Properties.Resources.icon_hapus;
+            this.button_hapus_impian_3.Location = new System.Drawing.Point(556, 408);
+            this.button_hapus_impian_3.Name = "button_hapus_impian_3";
+            this.button_hapus_impian_3.Size = new System.Drawing.Size(35, 35);
+            this.button_hapus_impian_3.TabIndex = 32;
+            this.button_hapus_impian_3.UseVisualStyleBackColor = false;
+            this.button_hapus_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_3_MouseClick);
+            this.button_hapus_impian_3.MouseEnter += new System.EventHandler(this.button_hapus_impian_3_MouseEnter);
+            this.button_hapus_impian_3.MouseLeave += new System.EventHandler(this.button_hapus_impian_3_MouseLeave);
+            // 
+            // button_topup_impian_2
+            // 
+            this.button_topup_impian_2.AutoSize = true;
+            this.button_topup_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_topup_impian_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_2.FlatAppearance.BorderSize = 0;
+            this.button_topup_impian_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_topup_impian_2.Image = global::Darimu.Properties.Resources.icon_topup;
+            this.button_topup_impian_2.Location = new System.Drawing.Point(387, 408);
+            this.button_topup_impian_2.Name = "button_topup_impian_2";
+            this.button_topup_impian_2.Size = new System.Drawing.Size(35, 35);
+            this.button_topup_impian_2.TabIndex = 31;
+            this.button_topup_impian_2.UseVisualStyleBackColor = false;
+            this.button_topup_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_2_MouseClick);
+            this.button_topup_impian_2.MouseEnter += new System.EventHandler(this.button_topup_impian_2_MouseEnter);
+            this.button_topup_impian_2.MouseLeave += new System.EventHandler(this.button_topup_impian_2_MouseLeave);
+            // 
+            // button_selesai_impian_2
+            // 
+            this.button_selesai_impian_2.AutoSize = true;
+            this.button_selesai_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_selesai_impian_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_2.FlatAppearance.BorderSize = 0;
+            this.button_selesai_impian_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_selesai_impian_2.Image = global::Darimu.Properties.Resources.icon_selesai;
+            this.button_selesai_impian_2.Location = new System.Drawing.Point(457, 408);
+            this.button_selesai_impian_2.Name = "button_selesai_impian_2";
+            this.button_selesai_impian_2.Size = new System.Drawing.Size(35, 35);
+            this.button_selesai_impian_2.TabIndex = 30;
+            this.button_selesai_impian_2.UseVisualStyleBackColor = false;
+            this.button_selesai_impian_2.Visible = false;
+            this.button_selesai_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_2_MouseClick);
+            this.button_selesai_impian_2.MouseEnter += new System.EventHandler(this.button_selesai_impian_2_MouseEnter);
+            this.button_selesai_impian_2.MouseLeave += new System.EventHandler(this.button_selesai_impian_2_MouseLeave);
+            // 
+            // button_hapus_impian_2
+            // 
+            this.button_hapus_impian_2.AutoSize = true;
+            this.button_hapus_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_hapus_impian_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_2.FlatAppearance.BorderSize = 0;
+            this.button_hapus_impian_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_hapus_impian_2.Image = global::Darimu.Properties.Resources.icon_hapus;
+            this.button_hapus_impian_2.Location = new System.Drawing.Point(313, 408);
+            this.button_hapus_impian_2.Name = "button_hapus_impian_2";
+            this.button_hapus_impian_2.Size = new System.Drawing.Size(35, 35);
+            this.button_hapus_impian_2.TabIndex = 29;
+            this.button_hapus_impian_2.UseVisualStyleBackColor = false;
+            this.button_hapus_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_2_MouseClick);
+            this.button_hapus_impian_2.MouseEnter += new System.EventHandler(this.button_hapus_impian_2_MouseEnter);
+            this.button_hapus_impian_2.MouseLeave += new System.EventHandler(this.button_hapus_impian_2_MouseLeave);
+            // 
+            // button_topup_impian_1
+            // 
+            this.button_topup_impian_1.AutoSize = true;
+            this.button_topup_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_topup_impian_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_1.FlatAppearance.BorderSize = 0;
+            this.button_topup_impian_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_topup_impian_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_topup_impian_1.Image = global::Darimu.Properties.Resources.icon_topup;
+            this.button_topup_impian_1.Location = new System.Drawing.Point(129, 408);
+            this.button_topup_impian_1.Name = "button_topup_impian_1";
+            this.button_topup_impian_1.Size = new System.Drawing.Size(35, 35);
+            this.button_topup_impian_1.TabIndex = 28;
+            this.button_topup_impian_1.UseVisualStyleBackColor = false;
+            this.button_topup_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_topup_impian_1_MouseClick);
+            this.button_topup_impian_1.MouseEnter += new System.EventHandler(this.button_topup_impian_1_MouseEnter);
+            this.button_topup_impian_1.MouseLeave += new System.EventHandler(this.button_topup_impian_1_MouseLeave);
+            // 
+            // button_selesai_impian_1
+            // 
+            this.button_selesai_impian_1.AutoSize = true;
+            this.button_selesai_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_selesai_impian_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_1.FlatAppearance.BorderSize = 0;
+            this.button_selesai_impian_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_selesai_impian_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_selesai_impian_1.Image = global::Darimu.Properties.Resources.icon_selesai;
+            this.button_selesai_impian_1.Location = new System.Drawing.Point(199, 408);
+            this.button_selesai_impian_1.Name = "button_selesai_impian_1";
+            this.button_selesai_impian_1.Size = new System.Drawing.Size(35, 35);
+            this.button_selesai_impian_1.TabIndex = 27;
+            this.button_selesai_impian_1.UseVisualStyleBackColor = false;
+            this.button_selesai_impian_1.Visible = false;
+            this.button_selesai_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_selesai_impian_1_MouseClick);
+            this.button_selesai_impian_1.MouseEnter += new System.EventHandler(this.button_selesai_impian_1_MouseEnter);
+            this.button_selesai_impian_1.MouseLeave += new System.EventHandler(this.button_selesai_impian_1_MouseLeave);
+            // 
+            // button_hapus_impian_1
+            // 
+            this.button_hapus_impian_1.AutoSize = true;
+            this.button_hapus_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_hapus_impian_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_1.FlatAppearance.BorderSize = 0;
+            this.button_hapus_impian_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.button_hapus_impian_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_hapus_impian_1.Image = global::Darimu.Properties.Resources.icon_hapus;
+            this.button_hapus_impian_1.Location = new System.Drawing.Point(55, 408);
+            this.button_hapus_impian_1.Name = "button_hapus_impian_1";
+            this.button_hapus_impian_1.Size = new System.Drawing.Size(35, 35);
+            this.button_hapus_impian_1.TabIndex = 8;
+            this.button_hapus_impian_1.UseVisualStyleBackColor = false;
+            this.button_hapus_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_hapus_impian_1_MouseClick);
+            this.button_hapus_impian_1.MouseEnter += new System.EventHandler(this.button_hapus_impian_1_MouseEnter);
+            this.button_hapus_impian_1.MouseLeave += new System.EventHandler(this.button_hapus_impian_1_MouseLeave);
+            // 
+            // logo_impian_3
+            // 
+            this.logo_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.logo_impian_3.Image = global::Darimu.Properties.Resources.logo_tambah;
+            this.logo_impian_3.Location = new System.Drawing.Point(597, 80);
+            this.logo_impian_3.Name = "logo_impian_3";
+            this.logo_impian_3.Size = new System.Drawing.Size(100, 100);
+            this.logo_impian_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.logo_impian_3.TabIndex = 26;
+            this.logo_impian_3.TabStop = false;
+            this.logo_impian_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logo_impian_3_MouseClick);
+            // 
+            // logo_impian_2
+            // 
+            this.logo_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.logo_impian_2.Image = global::Darimu.Properties.Resources.logo_tambah;
+            this.logo_impian_2.Location = new System.Drawing.Point(342, 80);
+            this.logo_impian_2.Name = "logo_impian_2";
+            this.logo_impian_2.Size = new System.Drawing.Size(100, 100);
+            this.logo_impian_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.logo_impian_2.TabIndex = 25;
+            this.logo_impian_2.TabStop = false;
+            this.logo_impian_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logo_impian_2_MouseClick);
+            // 
+            // logo_impian_1
+            // 
+            this.logo_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.logo_impian_1.Image = global::Darimu.Properties.Resources.logo_tambah;
+            this.logo_impian_1.Location = new System.Drawing.Point(98, 80);
+            this.logo_impian_1.Name = "logo_impian_1";
+            this.logo_impian_1.Size = new System.Drawing.Size(100, 100);
+            this.logo_impian_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.logo_impian_1.TabIndex = 24;
+            this.logo_impian_1.TabStop = false;
+            this.logo_impian_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.logo_impian_1_MouseClick);
+            // 
+            // label_tenggat_waktu_3
+            // 
+            this.label_tenggat_waktu_3.AutoSize = true;
+            this.label_tenggat_waktu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_tenggat_waktu_3.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tenggat_waktu_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_tenggat_waktu_3.Location = new System.Drawing.Point(550, 383);
+            this.label_tenggat_waktu_3.Name = "label_tenggat_waktu_3";
+            this.label_tenggat_waktu_3.Size = new System.Drawing.Size(110, 23);
+            this.label_tenggat_waktu_3.TabIndex = 23;
+            this.label_tenggat_waktu_3.Text = "00/00/0000";
+            // 
+            // label_tenggat_waktu_2
+            // 
+            this.label_tenggat_waktu_2.AutoSize = true;
+            this.label_tenggat_waktu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_tenggat_waktu_2.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tenggat_waktu_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_tenggat_waktu_2.Location = new System.Drawing.Point(300, 383);
+            this.label_tenggat_waktu_2.Name = "label_tenggat_waktu_2";
+            this.label_tenggat_waktu_2.Size = new System.Drawing.Size(110, 23);
+            this.label_tenggat_waktu_2.TabIndex = 22;
+            this.label_tenggat_waktu_2.Text = "00/00/0000";
+            // 
+            // label_tenggat_waktu_1
+            // 
+            this.label_tenggat_waktu_1.AutoSize = true;
+            this.label_tenggat_waktu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_tenggat_waktu_1.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tenggat_waktu_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_tenggat_waktu_1.Location = new System.Drawing.Point(50, 383);
+            this.label_tenggat_waktu_1.Name = "label_tenggat_waktu_1";
+            this.label_tenggat_waktu_1.Size = new System.Drawing.Size(110, 23);
+            this.label_tenggat_waktu_1.TabIndex = 21;
+            this.label_tenggat_waktu_1.Text = "00/00/0000";
+            // 
+            // label_saldo_terkumpulmu_3
+            // 
+            this.label_saldo_terkumpulmu_3.AutoSize = true;
+            this.label_saldo_terkumpulmu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_saldo_terkumpulmu_3.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_terkumpulmu_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_saldo_terkumpulmu_3.Location = new System.Drawing.Point(569, 318);
+            this.label_saldo_terkumpulmu_3.Name = "label_saldo_terkumpulmu_3";
+            this.label_saldo_terkumpulmu_3.Size = new System.Drawing.Size(21, 23);
+            this.label_saldo_terkumpulmu_3.TabIndex = 20;
+            this.label_saldo_terkumpulmu_3.Text = "0";
+            // 
+            // label_saldo_impianmu_3
+            // 
+            this.label_saldo_impianmu_3.AutoSize = true;
+            this.label_saldo_impianmu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_saldo_impianmu_3.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_impianmu_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_saldo_impianmu_3.Location = new System.Drawing.Point(569, 256);
+            this.label_saldo_impianmu_3.Name = "label_saldo_impianmu_3";
+            this.label_saldo_impianmu_3.Size = new System.Drawing.Size(21, 23);
+            this.label_saldo_impianmu_3.TabIndex = 19;
+            this.label_saldo_impianmu_3.Text = "0";
+            // 
+            // label_nama_impian_3
+            // 
+            this.label_nama_impian_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_nama_impian_3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_impian_3.ForeColor = System.Drawing.Color.White;
+            this.label_nama_impian_3.Location = new System.Drawing.Point(541, 191);
+            this.label_nama_impian_3.Name = "label_nama_impian_3";
+            this.label_nama_impian_3.Size = new System.Drawing.Size(210, 22);
+            this.label_nama_impian_3.TabIndex = 18;
+            this.label_nama_impian_3.Text = "Nama Impianmu Di sini";
+            this.label_nama_impian_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_saldo_terkumpulmu_2
+            // 
+            this.label_saldo_terkumpulmu_2.AutoSize = true;
+            this.label_saldo_terkumpulmu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_saldo_terkumpulmu_2.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_terkumpulmu_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_saldo_terkumpulmu_2.Location = new System.Drawing.Point(320, 318);
+            this.label_saldo_terkumpulmu_2.Name = "label_saldo_terkumpulmu_2";
+            this.label_saldo_terkumpulmu_2.Size = new System.Drawing.Size(21, 23);
+            this.label_saldo_terkumpulmu_2.TabIndex = 16;
+            this.label_saldo_terkumpulmu_2.Text = "0";
+            // 
+            // label_saldo_impianmu_2
+            // 
+            this.label_saldo_impianmu_2.AutoSize = true;
+            this.label_saldo_impianmu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_saldo_impianmu_2.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_impianmu_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_saldo_impianmu_2.Location = new System.Drawing.Point(320, 256);
+            this.label_saldo_impianmu_2.Name = "label_saldo_impianmu_2";
+            this.label_saldo_impianmu_2.Size = new System.Drawing.Size(21, 23);
+            this.label_saldo_impianmu_2.TabIndex = 15;
+            this.label_saldo_impianmu_2.Text = "0";
+            // 
+            // label_nama_impian_2
+            // 
+            this.label_nama_impian_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_nama_impian_2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_impian_2.ForeColor = System.Drawing.Color.White;
+            this.label_nama_impian_2.Location = new System.Drawing.Point(292, 191);
+            this.label_nama_impian_2.Name = "label_nama_impian_2";
+            this.label_nama_impian_2.Size = new System.Drawing.Size(210, 22);
+            this.label_nama_impian_2.TabIndex = 14;
+            this.label_nama_impian_2.Text = "Nama Impianmu Di sini";
+            this.label_nama_impian_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_saldo_terkumpulmu_1
+            // 
+            this.label_saldo_terkumpulmu_1.AutoSize = true;
+            this.label_saldo_terkumpulmu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_saldo_terkumpulmu_1.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_terkumpulmu_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_saldo_terkumpulmu_1.Location = new System.Drawing.Point(69, 318);
+            this.label_saldo_terkumpulmu_1.Name = "label_saldo_terkumpulmu_1";
+            this.label_saldo_terkumpulmu_1.Size = new System.Drawing.Size(21, 23);
+            this.label_saldo_terkumpulmu_1.TabIndex = 12;
+            this.label_saldo_terkumpulmu_1.Text = "0";
+            // 
+            // label_saldo_impianmu_1
+            // 
+            this.label_saldo_impianmu_1.AutoSize = true;
+            this.label_saldo_impianmu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_saldo_impianmu_1.Font = new System.Drawing.Font("Cabin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_saldo_impianmu_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.label_saldo_impianmu_1.Location = new System.Drawing.Point(69, 256);
+            this.label_saldo_impianmu_1.Name = "label_saldo_impianmu_1";
+            this.label_saldo_impianmu_1.Size = new System.Drawing.Size(21, 23);
+            this.label_saldo_impianmu_1.TabIndex = 11;
+            this.label_saldo_impianmu_1.Text = "0";
+            // 
+            // label_nama_impian_1
+            // 
+            this.label_nama_impian_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            this.label_nama_impian_1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_impian_1.ForeColor = System.Drawing.Color.White;
+            this.label_nama_impian_1.Location = new System.Drawing.Point(42, 191);
+            this.label_nama_impian_1.Name = "label_nama_impian_1";
+            this.label_nama_impian_1.Size = new System.Drawing.Size(210, 22);
+            this.label_nama_impian_1.TabIndex = 8;
+            this.label_nama_impian_1.Text = "Nama Impianmu Di sini";
+            this.label_nama_impian_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_impian_anda
+            // 
+            this.label_impian_anda.AutoSize = true;
+            this.label_impian_anda.Font = new System.Drawing.Font("Montserrat", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_impian_anda.ForeColor = System.Drawing.Color.White;
+            this.label_impian_anda.Location = new System.Drawing.Point(237, 2);
+            this.label_impian_anda.Name = "label_impian_anda";
+            this.label_impian_anda.Size = new System.Drawing.Size(317, 37);
+            this.label_impian_anda.TabIndex = 7;
+            this.label_impian_anda.Text = "Tabungan Impianmu";
+            // 
+            // gambar_isi_impian
+            // 
+            this.gambar_isi_impian.Image = ((System.Drawing.Image)(resources.GetObject("gambar_isi_impian.Image")));
+            this.gambar_isi_impian.Location = new System.Drawing.Point(32, 47);
+            this.gambar_isi_impian.Name = "gambar_isi_impian";
+            this.gambar_isi_impian.Size = new System.Drawing.Size(730, 400);
+            this.gambar_isi_impian.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.gambar_isi_impian.TabIndex = 1;
+            this.gambar_isi_impian.TabStop = false;
             // 
             // drop_down_profil
             // 
@@ -2466,13 +2591,14 @@
             this.drop_down_tabungan.IsMainMenu = false;
             this.drop_down_tabungan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TabunganImpiantoolStripMenuItem,
-            this.TambahTabunganImpiantoolStripMenuItem});
+            this.TambahTabunganImpiantoolStripMenuItem,
+            this.riwayatImpianToolStripMenuItem});
             this.drop_down_tabungan.MenuItemHeight = 25;
             this.drop_down_tabungan.MenuItemTextColor = System.Drawing.Color.Empty;
             this.drop_down_tabungan.Name = "drop_down_profil";
             this.drop_down_tabungan.PrimaryColor = System.Drawing.Color.Empty;
             this.drop_down_tabungan.ShowItemToolTips = false;
-            this.drop_down_tabungan.Size = new System.Drawing.Size(195, 48);
+            this.drop_down_tabungan.Size = new System.Drawing.Size(195, 70);
             // 
             // TabunganImpiantoolStripMenuItem
             // 
@@ -2489,6 +2615,14 @@
             this.TambahTabunganImpiantoolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.TambahTabunganImpiantoolStripMenuItem.Text = "Tambah Impianmu";
             this.TambahTabunganImpiantoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // riwayatImpianToolStripMenuItem
+            // 
+            this.riwayatImpianToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.riwayatImpianToolStripMenuItem.Name = "riwayatImpianToolStripMenuItem";
+            this.riwayatImpianToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.riwayatImpianToolStripMenuItem.Text = "Riwayat Impian";
+            this.riwayatImpianToolStripMenuItem.Click += new System.EventHandler(this.riwayatImpianToolStripMenuItem_Click);
             // 
             // frm_setelah_login
             // 
@@ -2525,18 +2659,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.maskot_beranda)).EndInit();
             this.panel_isi.ResumeLayout(false);
             this.panel_isi.PerformLayout();
-            this.panel_isi_tambah_laporan.ResumeLayout(false);
-            this.panel_isi_tambah_laporan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel_isi_rincian_laporan.ResumeLayout(false);
-            this.panel_isi_rincian_laporan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_rincian_laporan)).EndInit();
-            this.panel_isi_tabungan_impian.ResumeLayout(false);
-            this.panel_isi_tabungan_impian.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_impian)).EndInit();
+            this.panel_isi_riwayat_impian.ResumeLayout(false);
+            this.panel_isi_riwayat_impian.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_riwayat_impian)).EndInit();
             this.panel_isi_riwayat_transaksi.ResumeLayout(false);
             this.panel_isi_riwayat_transaksi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_transaksi)).EndInit();
@@ -2566,6 +2691,18 @@
             this.panel_isi_laporan_saya.ResumeLayout(false);
             this.panel_isi_laporan_saya.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_laporan)).EndInit();
+            this.panel_isi_tambah_laporan.ResumeLayout(false);
+            this.panel_isi_tambah_laporan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_isi_rincian_laporan.ResumeLayout(false);
+            this.panel_isi_rincian_laporan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_rincian_laporan)).EndInit();
+            this.panel_isi_tabungan_impian.ResumeLayout(false);
+            this.panel_isi_tabungan_impian.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_impian_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gambar_isi_impian)).EndInit();
             this.drop_down_profil.ResumeLayout(false);
             this.drop_down_tabungan.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -2731,6 +2868,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Panel panel_isi_riwayat_impian;
+        private System.Windows.Forms.Label label_judul_riwayat_impian;
+        private System.Windows.Forms.DataGridView grid_riwayat_impian;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.ToolStripMenuItem riwayatImpianToolStripMenuItem;
     }
 }
 

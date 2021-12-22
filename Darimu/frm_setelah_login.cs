@@ -71,6 +71,7 @@ namespace Darimu
             panel_isi_tambah_tabungan_impian.Visible = false;
             panel_isi_saldo_tabungan_impian.Visible = false;
             panel_isi_riwayat_transaksi.Visible = false;
+            panel_isi_riwayat_impian.Visible = false;
 
             panel_isi_laporan_saya.Visible = false;
             panel_isi_tambah_laporan.Visible = false;
@@ -1408,6 +1409,13 @@ namespace Darimu
         private void label_buat_laporan_MouseLeave(object sender, EventArgs e)
         {
             label_buat_laporan.ForeColor = Color.White;
+        }
+
+        private void riwayatImpianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hide_panel();
+            panel_isi_riwayat_impian.Visible = true;
+            ClassTabunganImpian.riwayat_impian(nama_pengguna,grid_riwayat_impian);
         }
 
         private void button_batal_isi_saldo_impian_MouseClick(object sender, MouseEventArgs e)

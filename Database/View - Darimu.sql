@@ -60,4 +60,4 @@ SELECT id_tabungan_impian AS 'ID',nama_pengguna AS 'NAMA PENGGUNA',nama_tabungan
 FROM tb_tabungan_impian
 WHERE status_tabungan_impian = 'Tidak Aktif';
 
-SELECT * FROM view_riwayat_tabungan_impian ORDER BY [TANGGAL TUTUP] DESC;
+SELECT * FROM view_riwayat_tabungan_impian WHERE [NAMA PENGGUNA] = 'riandinp' ORDER BY [TANGGAL TUTUP] DESC;
