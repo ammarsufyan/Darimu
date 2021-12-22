@@ -135,8 +135,8 @@ namespace Darimu.ClassFolder
                 {
                     status = "Gagal";
                 }
-                
-                grid_riwayat_impian.Rows.Add(tanggal_ditutup,nama_impian,jenis_impian,saldo_terkumpul,saldo_impian,status);
+
+                grid_riwayat_impian.Rows.Add(tanggal_ditutup, nama_impian, jenis_impian, saldo_terkumpul, saldo_impian, status);
             }
             sqlcon.Close();
         }

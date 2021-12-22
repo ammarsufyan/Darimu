@@ -603,9 +603,9 @@ namespace Darimu
                 string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
 
                 string hasil = ClassUser.daftarPengguna(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
-                if (hasil == "Selamat! Kamu telah terdaftar :D")
+                if (hasil == "sukses")
                 {
-                    MessageBox.Show(hasil, "Sukses Mendaftar",
+                    MessageBox.Show("Selamat! Kamu telah terdaftar :D", "Sukses Mendaftar",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
@@ -637,7 +637,7 @@ namespace Darimu
             if (cek == "valid")
             {
                 string hasil = ClassUser.ubahKataSandi(txt_nama_pengguna_atau_email_lupa_kata_sandi.Text, txt_lupa_kata_sandi.Text);
-                if(hasil == "Kata sandi berhasil diubah")
+                if (hasil == "Kata sandi berhasil diubah")
                 {
                     MessageBox.Show(hasil, "Berhasil Membuat Password Baru",
                                             MessageBoxButtons.OK,

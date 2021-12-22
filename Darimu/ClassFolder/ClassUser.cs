@@ -57,7 +57,7 @@ namespace Darimu.ClassFolder
                     sqlda.SelectCommand.Parameters["@kata_sandi"].Value = hashKataSandi(kata_sandi);
                     sqlda.SelectCommand.ExecuteNonQuery();
 
-                    hasil = "Selamat! Kamu telah terdaftar :D";
+                    hasil = "sukses";
                 }
             }
             catch (Exception ex)
@@ -91,8 +91,8 @@ namespace Darimu.ClassFolder
                     sqlda.SelectCommand.ExecuteNonQuery();
                     hasil = "Kata sandi berhasil diubah";
                     sqlcon.Close();
-                } 
-                else 
+                }
+                else
                 {
                     dr.Close();
                     sqlcon.Close();

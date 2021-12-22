@@ -1411,7 +1411,7 @@ namespace Darimu
         {
             hide_panel();
             panel_isi_riwayat_impian.Visible = true;
-            ClassTabunganImpian.riwayat_impian(id_pengguna,grid_riwayat_impian);
+            ClassTabunganImpian.riwayat_impian(id_pengguna, grid_riwayat_impian);
         }
 
         private void button_batal_isi_saldo_impian_MouseClick(object sender, MouseEventArgs e)
