@@ -25,7 +25,7 @@ USE db_darimu;
  DROP TABLE tb_admin;
 CREATE TABLE tb_admin(
 	id INT IDENTITY(1,1) NOT NULL,
-	id_admin AS ('ADM-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
+	id_admin AS ('ADM-' + RIGHT('000' + CAST(id AS VARCHAR(20)), 3)) PERSISTED PRIMARY KEY,
 	nama_pengguna_admin VARCHAR(100) NOT NULL,
 	nama_lengkap VARCHAR(100) NOT NULL,
     jenis_kelamin VARCHAR(100) NOT NULL,
@@ -121,12 +121,28 @@ DROP TABLE tb_jenis_impian;
 CREATE TABLE tb_jenis_impian(
 	id INT IDENTITY(1,1) NOT NULL,
 	id_jenis_impian AS ('JNS-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
+	jenis_impian VARCHAR(100) NOT NULL,
 	tautan_gambar VARCHAR(255) NOT NULL,
 	tanggal_dibuat DATETIME NOT NULL DEFAULT GETDATE(),
 	tanggal_ditutup DATETIME NULL,
 	[status_jenis_impian] VARCHAR(100) NULL CHECK ([status_jenis_impian] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
 );
 
+INSERT INTO tb_jenis_impian(jenis_impian,tautan_gambar)
+VALUES
+	('Umum', 'global::Darimu.Properties.Resources.logo_umum'),
+	('Jalan-jalan', 'global::Darimu.Properties.Resources.logo_jalan_jalan'),
+	('Elektronik', 'global::Darimu.Properties.Resources.logo_elektronik'),
+	('Fashion', 'global::Darimu.Properties.Resources.logo_fashion'),
+	('Hiburan', 'global::Darimu.Properties.Resources.logo_hiburan');
+
+
+SELECT * FROM tb_pengguna;
+SELECT * FROM tb_admin;
+SELECT * FROM tb_laporan;
+SELECT * FROM tb_tabungan_impian;
+SELECT * FROM tb_transaksi;
+SELECT * FROM tb_jenis_impian;
 
 -- ========================================================================
 -- membuat tb_log_data (untuk melihat apa saja yang dilakukan oleh user (hanya ADMIN!!!!!!!!!!!!!!))
