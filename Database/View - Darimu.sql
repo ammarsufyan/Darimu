@@ -55,12 +55,26 @@ DROP VIEW view_laporan_dikirim
 
 -- ========================================================================
 --(VIEW 4) RIWAYAT TABUNGAN
+DROP VIEW view_riwayat_tabungan_impian;
 CREATE VIEW view_riwayat_tabungan_impian AS
-SELECT id_tabungan_impian AS 'ID Tabungan', id_pengguna AS 'ID Pengguna', nama_tabungan_impian AS 'Nama Tabungan Impian', jenis_impian AS 'Jenis Impian', saldo_terkumpul AS 'Saldo Terkumpul', saldo_impian AS 'Saldo Impian', tanggal_tutup AS 'Tanggal Tutup' 
-FROM tb_tabungan_impian
+SELECT tbi.id_tabungan_impian AS 'ID Tabungan', tbi.id_pengguna AS 'ID Pengguna', tbi.nama_tabungan_impian AS 'Nama Tabungan Impian', tbj.id_jenis_impian AS 'ID Jenis Impian', tbi.saldo_terkumpul AS 'Saldo Terkumpul', tbi.saldo_impian AS 'Saldo Impian', tbi.tanggal_tutup AS 'Tanggal Tutup' 
+FROM tb_tabungan_impian AS tbi
+INNER JOIN tb_jenis_impian AS tbj
+ON tbi.id_jenis_impian = tbj.id_jenis_impian
 WHERE status_tabungan_impian = 'Tidak Aktif';
 
-SELECT * FROM view_laporan_dikirim;
-SELECT * FROM view_riwayat_tabungan_impian;
+-- ========================================================================
+--(VIEW 5) ISI TABUNGAN IMPIAN
+DROP VIEW view_isi_tabungan_impian;
+CREATE VIEW view_isi_tabungan_impian AS 
+SELECT tbi.id_tabungan_impian AS 'ID Tabungan', tbj.id_jenis_impian AS 'ID Jenis Impian', tbi.id_pengguna AS 'ID Pengguna', tbi.nama_tabungan_impian AS 'Nama Tabungan Impian', tbj.jenis_impian AS 'Jenis Impian' ,tbi.saldo_terkumpul AS 'Saldo Terkumpul', tbi.saldo_impian AS 'Saldo Impian', tbi.tenggat_waktu AS 'Tenggat Waktu' 
+FROM tb_tabungan_impian AS tbi
+INNER JOIN tb_jenis_impian AS tbj
+ON tbi.id_jenis_impian = tbj.id_jenis_impian
+WHERE status_tabungan_impian = 'Aktif';
 
-DROP VIEW view_riwayat_tabungan_impian 
+SELECT * FROM view_laporan_diterima;
+SELECT * FROM view_laporan_dikirim WHERE [ID Pengguna] = 'USER-0001';
+SELECT * FROM view_riwayat_tabungan_impian;
+SELECT * FROM view_isi_tabungan_impian;
+

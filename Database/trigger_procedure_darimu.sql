@@ -74,6 +74,9 @@ BEGIN
 	UPDATE tb_transaksi SET status_data = 'Tidak Aktif' WHERE id_pengguna = @id_pengguna
 END
 
+DELETE tb_pengguna WHERE id_pengguna = 'USER-0001';
+UPDATE tb_pengguna SET status_pengguna = 'Aktif' WHERE id_pengguna = 'USER-0001';
+
 -- ========================================================================
 -- membuat trigger dan procedure untuk mengembalikan akun pengguna
 CREATE TRIGGER tr_mengembalikan_pengguna

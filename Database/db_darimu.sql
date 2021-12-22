@@ -86,7 +86,7 @@ CREATE TABLE tb_tabungan_impian (
 	id_tabungan_impian AS ('TI-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
     id_pengguna VARCHAR(20) NOT NULL,
     nama_tabungan_impian VARCHAR(100) NOT NULL,
-    jenis_impian VARCHAR(100) NOT NULL,
+    id_jenis_impian VARCHAR(20) NOT NULL,
     saldo_terkumpul BIGINT NOT NULL,
     saldo_impian BIGINT NOT NULL,
     tenggat_waktu DATETIME NOT NULL,
@@ -108,6 +108,26 @@ CREATE TABLE tb_laporan(
     tanggal_laporan_ditutup DATETIME NULL,
     [status_laporan] VARCHAR(100) NULL CHECK ([status_laporan] IN ('Selesai', 'Belum Selesai')) DEFAULT 'Belum Selesai'
 );
+
+-- ========================================================================
+-- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
+DROP TABLE tb_jenis_impian;
+CREATE TABLE tb_jenis_impian(
+	id INT IDENTITY(1,1) NOT NULL,
+	id_jenis_impian AS ('JNS-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
+	jenis_impian VARCHAR(100) NOT NULL,
+	tanggal_dibuat DATETIME NOT NULL DEFAULT GETDATE(),
+	tanggal_ditutup DATETIME NULL,
+	[status_jenis_impian] VARCHAR(100) NULL CHECK ([status_jenis_impian] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
+);
+
+INSERT INTO tb_jenis_impian(jenis_impian)
+VALUES
+	('Umum'),
+	('Jalan-jalan'),
+	('Elektronik'),
+	('Fashion'),
+	('Hiburan');
 
 SELECT * FROM tb_pengguna;	
 SELECT * FROM tb_admin;
