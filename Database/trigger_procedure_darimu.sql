@@ -55,32 +55,6 @@ AS
     END
 
 -- ========================================================================
--- membuat trigger dan procedure untuk update saldo di tabungan impian
---DROP TRIGGER tr_tabungan_impian;
---CREATE TRIGGER tr_tabungan_impian
---    ON tb_tabungan_impian
---    AFTER UPDATE
---AS
---    BEGIN
---        IF UPDATE(saldo_terkumpul)
---        BEGIN
---	        DECLARE @nama_pengguna VARCHAR(100)
---	        DECLARE @perubahan_saldo BIGINT
---	        DECLARE @nama_tabungan_impian VARCHAR(255)
---	        
---	        SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
---	        SET @perubahan_saldo = (SELECT saldo_terkumpul FROM inserted) - (SELECT saldo_terkumpul FROM deleted)
---	        SET @nama_tabungan_impian = (SELECT nama_tabungan_impian FROM inserted)
---	 	        
---	        DECLARE @saldo_saat_ini BIGINT
---		    SET @saldo_saat_ini = (SELECT saldo_terkumpul FROM tb_tabungan_impian WHERE id_tabungan_impian = (SELECT id_tabungan_impian FROM inserted))
---			EXEC sp_transaksi @nama_pengguna, @perubahan_saldo, @keterangan, @saldo_saat_ini
---			UPDATE tb_pengguna SET saldo = saldo - @perubahan_saldo WHERE nama_pengguna = @nama_pengguna
---        END
---        
---    END
-
--- ========================================================================
 -- membuat trigger dan procedure untuk hapus pengguna
 DROP TRIGGER  tr_hapus_pengguna;
 CREATE TRIGGER tr_hapus_pengguna
@@ -106,7 +80,6 @@ BEGIN
 	UPDATE tb_tabungan_impian SET tanggal_tutup = GETDATE() WHERE nama_pengguna = @nama_pengguna
 	UPDATE tb_transaksi SET status_data = 'Tidak Aktif' WHERE nama_pengguna = @nama_pengguna
 END
-
 
 -- ========================================================================
 -- membuat trigger dan procedure untuk mengembalikan akun pengguna
@@ -134,25 +107,3 @@ BEGIN
 	UPDATE tb_tabungan_impian SET tanggal_tutup = NULL WHERE nama_pengguna = @nama_pengguna
 	UPDATE tb_transaksi SET status_data = 'Aktif' WHERE nama_pengguna = @nama_pengguna
 END
-
-DROP PROCEDURE sp_log_data;
-CREATE PROCEDURE sp_log_data
-	@gatau VARCHAR(100), @gatau VARCHAR(100), @gatau VARCHAR(100), @gatau VARCHAR(100)
-AS
-BEGIN
---	ISI PROCEDURE
-END
-
---DROP TRIGGER tr_pengguna_tidak_aktif;
---CREATE TRIGGER tr_pengguna_tidak_aktif
---	ON tb_pengguna
---	AFTER UPDATE
---AS
---BEGIN
---	DECLARE @nama_pengguna VARCHAR(100)
---	SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
---	IF UPDATE(status_pengguna)
---	BEGIN
---		
---	END	
---END
