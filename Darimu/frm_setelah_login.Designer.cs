@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_setelah_login));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.button_tentang_kami = new System.Windows.Forms.Button();
             this.button_faq = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             this.panel_greeting = new System.Windows.Forms.Panel();
             this.panel_greeting_atas = new System.Windows.Forms.Panel();
             this.label_hi = new System.Windows.Forms.Label();
-            this.label_username = new System.Windows.Forms.Label();
+            this.label_nama_lengkap_title_bar = new System.Windows.Forms.Label();
             this.panel_control_box = new System.Windows.Forms.Panel();
             this.panel_right_control = new System.Windows.Forms.Panel();
             this.panel_control_box_atas = new System.Windows.Forms.Panel();
@@ -547,7 +547,7 @@
             this.panel_topup.AutoSize = true;
             this.panel_topup.Controls.Add(this.icon_topup);
             this.panel_topup.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_topup.Location = new System.Drawing.Point(231, 2);
+            this.panel_topup.Location = new System.Drawing.Point(263, 2);
             this.panel_topup.Name = "panel_topup";
             this.panel_topup.Size = new System.Drawing.Size(31, 98);
             this.panel_topup.TabIndex = 19;
@@ -575,7 +575,7 @@
             this.panel_saldo_and_topup.Controls.Add(this.label_Rp);
             this.panel_saldo_and_topup.Controls.Add(this.icon_saldo);
             this.panel_saldo_and_topup.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_saldo_and_topup.Location = new System.Drawing.Point(148, 2);
+            this.panel_saldo_and_topup.Location = new System.Drawing.Point(180, 2);
             this.panel_saldo_and_topup.Name = "panel_saldo_and_topup";
             this.panel_saldo_and_topup.Size = new System.Drawing.Size(83, 98);
             this.panel_saldo_and_topup.TabIndex = 18;
@@ -619,9 +619,9 @@
             // 
             this.panel_title_bar_atas.BackColor = System.Drawing.Color.White;
             this.panel_title_bar_atas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_title_bar_atas.Location = new System.Drawing.Point(148, 0);
+            this.panel_title_bar_atas.Location = new System.Drawing.Point(180, 0);
             this.panel_title_bar_atas.Name = "panel_title_bar_atas";
-            this.panel_title_bar_atas.Size = new System.Drawing.Size(532, 2);
+            this.panel_title_bar_atas.Size = new System.Drawing.Size(500, 2);
             this.panel_title_bar_atas.TabIndex = 17;
             // 
             // panel_greeting
@@ -629,11 +629,11 @@
             this.panel_greeting.AutoSize = true;
             this.panel_greeting.Controls.Add(this.panel_greeting_atas);
             this.panel_greeting.Controls.Add(this.label_hi);
-            this.panel_greeting.Controls.Add(this.label_username);
+            this.panel_greeting.Controls.Add(this.label_nama_lengkap_title_bar);
             this.panel_greeting.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_greeting.Location = new System.Drawing.Point(0, 0);
             this.panel_greeting.Name = "panel_greeting";
-            this.panel_greeting.Size = new System.Drawing.Size(148, 100);
+            this.panel_greeting.Size = new System.Drawing.Size(180, 100);
             this.panel_greeting.TabIndex = 16;
             // 
             // panel_greeting_atas
@@ -642,7 +642,7 @@
             this.panel_greeting_atas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_greeting_atas.Location = new System.Drawing.Point(0, 0);
             this.panel_greeting_atas.Name = "panel_greeting_atas";
-            this.panel_greeting_atas.Size = new System.Drawing.Size(148, 2);
+            this.panel_greeting_atas.Size = new System.Drawing.Size(180, 2);
             this.panel_greeting_atas.TabIndex = 5;
             // 
             // label_hi
@@ -655,16 +655,16 @@
             this.label_hi.TabIndex = 3;
             this.label_hi.Text = "Hi,";
             // 
-            // label_username
+            // label_nama_lengkap_title_bar
             // 
-            this.label_username.AutoSize = true;
-            this.label_username.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_username.ForeColor = System.Drawing.Color.White;
-            this.label_username.Location = new System.Drawing.Point(50, 42);
-            this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(95, 22);
-            this.label_username.TabIndex = 4;
-            this.label_username.Text = "username";
+            this.label_nama_lengkap_title_bar.AutoSize = true;
+            this.label_nama_lengkap_title_bar.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nama_lengkap_title_bar.ForeColor = System.Drawing.Color.White;
+            this.label_nama_lengkap_title_bar.Location = new System.Drawing.Point(50, 42);
+            this.label_nama_lengkap_title_bar.Name = "label_nama_lengkap_title_bar";
+            this.label_nama_lengkap_title_bar.Size = new System.Drawing.Size(127, 22);
+            this.label_nama_lengkap_title_bar.TabIndex = 4;
+            this.label_nama_lengkap_title_bar.Text = "namalengkap";
             // 
             // panel_control_box
             // 
@@ -859,14 +859,14 @@
             this.grid_riwayat_impian.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_riwayat_impian.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_riwayat_impian.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_riwayat_impian.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_riwayat_impian.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grid_riwayat_impian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_riwayat_impian.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -875,14 +875,14 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_riwayat_impian.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_riwayat_impian.DefaultCellStyle = dataGridViewCellStyle8;
             this.grid_riwayat_impian.EnableHeadersVisualStyles = false;
             this.grid_riwayat_impian.Location = new System.Drawing.Point(27, 54);
             this.grid_riwayat_impian.Name = "grid_riwayat_impian";
@@ -969,14 +969,14 @@
             this.grid_transaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_transaksi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_transaksi.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.grid_transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_transaksi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tanggal,
@@ -984,14 +984,14 @@
             this.debit,
             this.kredit,
             this.saldo});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_transaksi.DefaultCellStyle = dataGridViewCellStyle10;
             this.grid_transaksi.EnableHeadersVisualStyles = false;
             this.grid_transaksi.Location = new System.Drawing.Point(32, 50);
             this.grid_transaksi.Name = "grid_transaksi";
@@ -1801,14 +1801,14 @@
             this.grid_laporan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_laporan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid_laporan.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(53)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.grid_laporan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_laporan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -1816,14 +1816,14 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_laporan.DefaultCellStyle = dataGridViewCellStyle12;
             this.grid_laporan.EnableHeadersVisualStyles = false;
             this.grid_laporan.Location = new System.Drawing.Point(31, 68);
             this.grid_laporan.Name = "grid_laporan";
@@ -2728,7 +2728,7 @@
         private System.Windows.Forms.Panel panel_greeting;
         private System.Windows.Forms.Panel panel_greeting_atas;
         private System.Windows.Forms.Label label_hi;
-        private System.Windows.Forms.Label label_username;
+        private System.Windows.Forms.Label label_nama_lengkap_title_bar;
         private System.Windows.Forms.Panel panel_isi_beranda;
         private System.Windows.Forms.Button button_nabung;
         private System.Windows.Forms.PictureBox nama_logo_dan_tagline;

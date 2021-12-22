@@ -7,12 +7,12 @@ namespace Darimu.ClassFolder
     class ClassTransaksi
     {
         static SqlConnection sqlcon = new ClassKoneksi().getSQLCon();
-        public static long get_saldo(string nama_pengguna)
+        public static long get_saldo(string id_pengguna)
         {
             long ambil_saldo = 0;
 
             sqlcon.Open();
-            SqlCommand sqlcom = new SqlCommand("SELECT saldo FROM tb_pengguna WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
+            SqlCommand sqlcom = new SqlCommand("SELECT saldo FROM tb_pengguna WHERE id_pengguna = '" + id_pengguna + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
 
             if (dr.Read())
@@ -24,30 +24,30 @@ namespace Darimu.ClassFolder
             return ambil_saldo;
         }
 
-        public static long isi_saldo(string nama_pengguna, long saldo, string keterangan)
+        public static long isi_saldo(string id_pengguna, long saldo, string keterangan)
         {
             long saldo_baru = 0;
-            saldo_baru = saldo + get_saldo(nama_pengguna);
+            saldo_baru = saldo + get_saldo(id_pengguna);
             SqlCommand sqlcom;
 
             sqlcon.Open();
-            sqlcom = new SqlCommand("UPDATE tb_pengguna SET saldo = '" + saldo_baru + "' WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
+            sqlcom = new SqlCommand("UPDATE tb_pengguna SET saldo = '" + saldo_baru + "' WHERE id_pengguna = '" + id_pengguna + "'", sqlcon);
             sqlcom.ExecuteNonQuery();
             sqlcon.Close();
 
             sqlcon.Open();
-            sqlcom = new SqlCommand("UPDATE tb_transaksi SET keterangan = '" + keterangan + "' WHERE id_transaksi = (SELECT TOP 1 id_transaksi FROM tb_transaksi WHERE nama_pengguna = '" + nama_pengguna + "' ORDER BY tanggal DESC);", sqlcon);
+            sqlcom = new SqlCommand("UPDATE tb_transaksi SET keterangan = '" + keterangan + "' WHERE id_transaksi = (SELECT TOP 1 id_transaksi FROM tb_transaksi WHERE id_pengguna = '" + id_pengguna + "' ORDER BY tanggal DESC);", sqlcon);
             sqlcom.ExecuteNonQuery();
             sqlcon.Close();
 
             return saldo_baru;
         }
 
-        public static long isi_saldo_impian(string nama_pengguna, long isi_saldo_tabungan_impian, long saldo_terkumpul, long saldo_impian, string keterangan)
+        public static long isi_saldo_impian(string id_pengguna, long isi_saldo_tabungan_impian, long saldo_terkumpul, long saldo_impian, string keterangan)
         {
             long saldo_lama = 0;
             long saldo_baru = 0;
-            saldo_lama = get_saldo(nama_pengguna);
+            saldo_lama = get_saldo(id_pengguna);
             saldo_baru = saldo_lama - isi_saldo_tabungan_impian;
 
             if (saldo_impian < saldo_terkumpul)
@@ -64,23 +64,23 @@ namespace Darimu.ClassFolder
                 SqlCommand sqlcom;
 
                 sqlcon.Open();
-                sqlcom = new SqlCommand("UPDATE tb_pengguna SET saldo = '" + saldo_baru + "' WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
+                sqlcom = new SqlCommand("UPDATE tb_pengguna SET saldo = '" + saldo_baru + "' WHERE id_pengguna = '" + id_pengguna + "'", sqlcon);
                 sqlcom.ExecuteNonQuery();
                 sqlcon.Close();
 
                 sqlcon.Open();
-                sqlcom = new SqlCommand("UPDATE tb_transaksi SET keterangan = '" + keterangan + "' WHERE id_transaksi = (SELECT TOP 1 id_transaksi FROM tb_transaksi WHERE nama_pengguna = '" + nama_pengguna + "' ORDER BY tanggal DESC);", sqlcon);
+                sqlcom = new SqlCommand("UPDATE tb_transaksi SET keterangan = '" + keterangan + "' WHERE id_transaksi = (SELECT TOP 1 id_transaksi FROM tb_transaksi WHERE id_pengguna = '" + id_pengguna + "' ORDER BY tanggal DESC);", sqlcon);
                 sqlcom.ExecuteNonQuery();
                 sqlcon.Close();
                 return saldo_baru;
             }
         }
 
-        public static void riwayat_transaksi(string nama_pengguna, DataGridView grid_transaksi)
+        public static void riwayat_transaksi(string id_pengguna, DataGridView grid_transaksi)
         {
             grid_transaksi.Rows.Clear();
             sqlcon.Open();
-            SqlCommand sqlcom = new SqlCommand("SELECT * FROM view_transaksi WHERE nama_pengguna = '" + nama_pengguna + "'", sqlcon);
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM view_transaksi WHERE [ID PENGGUNA] = '" + id_pengguna + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
             while (dr.Read())
             {

@@ -21,43 +21,46 @@ USE db_darimu;
 --tanggal | keterangan | debit | kredit | saldo
 
 CREATE VIEW view_transaksi AS
-SELECT tbp.nama_pengguna, tbt.tanggal AS 'Tanggal Transaksi', tbt.keterangan AS 'Keterangan Transaksi', tbt.debit AS 'Debit', tbt.kredit AS 'Kredit', tbt.saldo AS 'Saldo'
+SELECT tbp.id_pengguna AS 'ID Pengguna', tbt.tanggal AS 'Tanggal Transaksi', tbt.keterangan AS 'Keterangan Transaksi', tbt.debit AS 'Debit', tbt.kredit AS 'Kredit', tbt.saldo AS 'Saldo'
 FROM tb_transaksi AS tbt
 INNER JOIN tb_pengguna tbp
-ON tbt.nama_pengguna = tbp.nama_pengguna
+ON tbt.id_pengguna = tbp.id_pengguna
 WHERE tbp.status_pengguna = 'Aktif';
 
 SELECT * FROM view_transaksi;
 
 -- ========================================================================
 --(VIEW 2) LAPORAN (KIRIM)
---nama_pengguna | subjek_alasan | rincian_alasan | tanggal_laporan_dibuat | tanggal_laporan_dibuat_ditutup | status_laporan
+--ID LAPORAN | id_pengguna | nama_pengguna | subjek_alasan | rincian_alasan | tanggal_laporan_dibuat | tanggal_laporan_dibuat_ditutup | status_laporan
 
 CREATE VIEW view_laporan_dikirim AS
-SELECT tbl.id_laporan AS 'ID Laporan', tbp.nama_pengguna AS 'Nama Pengguna', tbl.subjek_alasan AS 'Subjek', tbl.rincian_alasan AS 'Rincian', tbl.tanggal_laporan_dibuat AS 'Tanggal Dibuat', tbl.tanggal_laporan_ditutup AS 'Tanggal Ditutup', tbl.status_laporan AS 'Status Laporan'
+SELECT tbl.id_laporan AS 'ID Laporan', tbp.id_pengguna AS 'ID Pengguna', tbp.nama_pengguna AS 'Nama Pengguna', tbl.subjek_alasan AS 'Subjek', tbl.rincian_alasan AS 'Rincian', tbl.tanggal_laporan_dibuat AS 'Tanggal Dibuat', tbl.tanggal_laporan_ditutup AS 'Tanggal Ditutup', tbl.status_laporan AS 'Status Laporan'
 FROM tb_laporan AS tbl
 INNER JOIN tb_pengguna AS tbp 
-ON tbl.nama_pengguna = tbp.nama_pengguna;
+ON tbl.id_pengguna = tbp.id_pengguna;
 
 -- ========================================================================
 --(VIEW 3) LAPORAN (ADMIN SELESAIKAN)
---nama_pengguna | nama_pengguna_admin | subjek_alasan | rincian_alasan | tanggal_laporan_dibuat | tanggal_laporan_dibuat_ditutup | status_laporan
-DROP VIEW view_laporan_diterima;
+--id_laporan | nama_pengguna | nama_lengkap | subjek_alasan | rincian_alasan | tanggal_laporan_dibuat | tanggal_laporan_dibuat_ditutup | status_laporan
+
 CREATE VIEW view_laporan_diterima AS
 SELECT tbl.id_laporan AS 'ID Laporan', tbp.nama_pengguna AS 'Nama Pengguna', tba.nama_lengkap AS 'Nama Admin', tbl.subjek_alasan AS 'Subjek', tbl.rincian_alasan AS 'Rincian', tbl.tanggal_laporan_dibuat AS 'Tanggal Dibuat', tbl.tanggal_laporan_ditutup AS 'Tanggal Ditutup', tbl.status_laporan AS 'Status Laporan'
 FROM tb_laporan AS tbl
 INNER JOIN tb_pengguna AS tbp 
-ON tbl.nama_pengguna = tbp.nama_pengguna
+ON tbl.id_pengguna = tbp.id_pengguna
 INNER JOIN tb_admin AS tba 
-ON tbl.nama_pengguna_admin = tba.nama_pengguna_admin;
+ON tbl.id_admin = tba.id_admin;
 
+DROP VIEW view_laporan_dikirim
 
 -- ========================================================================
 --(VIEW 4) RIWAYAT TABUNGAN
-DROP VIEW  view_riwayat_tabungan_impian;
 CREATE VIEW view_riwayat_tabungan_impian AS
-SELECT id_tabungan_impian AS 'ID',nama_pengguna AS 'NAMA PENGGUNA',nama_tabungan_impian AS 'NAMA TABUNGAN IMPIAN', jenis_impian AS 'JENIS IMPIAN', saldo_terkumpul AS 'SALDO TERKUMPUL', saldo_impian AS 'SALDO IMPIAN', tanggal_tutup AS 'TANGGAL TUTUP' 
+SELECT id_tabungan_impian AS 'ID Tabungan', id_pengguna AS 'ID Pengguna', nama_tabungan_impian AS 'Nama Tabungan Impian', jenis_impian AS 'Jenis Impian', saldo_terkumpul AS 'Saldo Terkumpul', saldo_impian AS 'Saldo Impian', tanggal_tutup AS 'Tanggal Tutup' 
 FROM tb_tabungan_impian
 WHERE status_tabungan_impian = 'Tidak Aktif';
 
-SELECT * FROM view_riwayat_tabungan_impian WHERE [NAMA PENGGUNA] = 'riandinp' ORDER BY [TANGGAL TUTUP] DESC;
+SELECT * FROM view_laporan_dikirim;
+SELECT * FROM view_riwayat_tabungan_impian;
+
+DROP VIEW view_riwayat_tabungan_impian 

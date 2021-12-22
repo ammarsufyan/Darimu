@@ -11,16 +11,16 @@ namespace Darimu
     public partial class frm_admin : Form
     {
         // declaration var
-        private string nama_pengguna;
+        private string id_admin;
         private int borderSize = 2;
 
-        public frm_admin(string nama_pengguna)
+        public frm_admin(string id_admin)
         {
             InitializeComponent();
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(33, 106, 155);
-            this.nama_pengguna = nama_pengguna;
+            this.id_admin = id_admin;
             lihat_data_admin();
             panel_isi_beranda.Visible = true;
         }
@@ -106,7 +106,7 @@ namespace Darimu
 
         private void lihat_data_admin()
         {
-            ArrayList data_admin = ClassAdmin.lihatAdmin(nama_pengguna);
+            ArrayList data_admin = ClassAdmin.lihatAdmin(id_admin);
             label_username.Text = data_admin[1].ToString();
             string[] nama_depan_belakang = data_admin[1].ToString().Split(' ');
             label_nama_depan.Text = nama_depan_belakang[0];
@@ -345,7 +345,7 @@ namespace Darimu
             if (result == DialogResult.Yes)
             {
                 string id_laporan = label_nomor_laporan.Text.Trim();
-                ClassAdmin.selesaikan_laporan(nama_pengguna, id_laporan);
+                ClassAdmin.selesaikan_laporan(id_admin, id_laporan);
                 ClassAdmin.riwayat_laporan_untuk_admin(grid_laporan);
                 hide_panel();
                 panel_isi_laporan_pengguna.Visible = true;

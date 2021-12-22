@@ -25,11 +25,11 @@ namespace Darimu.ClassFolder
             return false;
         }
 
-        public static ArrayList lihatAdmin(string nama_pengguna_admin_atau_email)
+        public static ArrayList lihatAdmin(string id_admin)
         {
             sqlcon.Open();
             ArrayList data_admin = new ArrayList();
-            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_admin WHERE nama_pengguna_admin = '" + nama_pengguna_admin_atau_email + "' OR alamat_email = '" + nama_pengguna_admin_atau_email + "'", sqlcon);
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_admin WHERE id_admin = '" + id_admin + "'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
             if (dr.Read())
             {
@@ -88,14 +88,14 @@ namespace Darimu.ClassFolder
             return data_rincian_laporan;
         }
 
-        public static void selesaikan_laporan(string nama_pengguna_admin, string id_laporan)
+        public static void selesaikan_laporan(string id_admin, string id_laporan)
         {
             sqlcon.Open();
-            SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_laporan SET nama_pengguna_admin = @nama_pengguna_admin, tanggal_laporan_ditutup = GETDATE(), status_laporan = 'Selesai' WHERE id_laporan = @id_laporan", sqlcon);
-            sqlda.SelectCommand.Parameters.Add(new SqlParameter("@nama_pengguna_admin", SqlDbType.VarChar, 100));
+            SqlDataAdapter sqlda = new SqlDataAdapter("UPDATE tb_laporan SET id_pengguna_admin = @id_pengguna_admin, tanggal_laporan_ditutup = GETDATE(), status_laporan = 'Selesai' WHERE id_laporan = @id_laporan", sqlcon);
+            sqlda.SelectCommand.Parameters.Add(new SqlParameter("@id_pengguna_admin", SqlDbType.VarChar, 100));
             sqlda.SelectCommand.Parameters.Add(new SqlParameter("@id_laporan", SqlDbType.VarChar, 20));
 
-            sqlda.SelectCommand.Parameters["@nama_pengguna_admin"].Value = nama_pengguna_admin;
+            sqlda.SelectCommand.Parameters["@id_admin"].Value = id_admin;
             sqlda.SelectCommand.Parameters["@id_laporan"].Value = id_laporan;
             sqlda.SelectCommand.ExecuteNonQuery();
             sqlcon.Close();

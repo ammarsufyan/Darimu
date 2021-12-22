@@ -22,7 +22,6 @@ USE db_darimu;
 
 -- ========================================================================
 -- membuat tb_admin
- DROP TABLE tb_admin;
 CREATE TABLE tb_admin(
 	id INT IDENTITY(1,1) NOT NULL,
 	id_admin AS ('ADM-' + RIGHT('000' + CAST(id AS VARCHAR(20)), 3)) PERSISTED PRIMARY KEY,
@@ -52,7 +51,6 @@ INSERT INTO tb_admin(nama_pengguna_admin, nama_lengkap, jenis_kelamin, tempat_ti
     
 -- ========================================================================
 -- membuat tb_pengguna
- DROP TABLE tb_pengguna;
 CREATE TABLE tb_pengguna(
 	id INT IDENTITY(1,1) NOT NULL,
 	id_pengguna AS ('USER-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
@@ -69,11 +67,10 @@ CREATE TABLE tb_pengguna(
 
 -- ========================================================================
 -- membuat tb_transaksi
- DROP TABLE tb_transaksi;
 CREATE TABLE tb_transaksi (
     id INT IDENTITY(1,1) NOT NULL,
 	id_transaksi AS ('TR-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
-    nama_pengguna VARCHAR(100) NOT NULL,
+    id_pengguna VARCHAR(20) NOT NULL,
     tanggal DATETIME NOT NULL,
     keterangan VARCHAR(255) NULL,
     debit BIGINT NOT NULL,
@@ -84,14 +81,12 @@ CREATE TABLE tb_transaksi (
 
 -- ========================================================================
 -- membuat tb_tabungan_impian
- DROP TABLE tb_tabungan_impian;
 CREATE TABLE tb_tabungan_impian (
 	id INT IDENTITY(1,1) NOT NULL,
 	id_tabungan_impian AS ('TI-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
-    nama_pengguna VARCHAR(100) NOT NULL,
+    id_pengguna VARCHAR(20) NOT NULL,
     nama_tabungan_impian VARCHAR(100) NOT NULL,
     jenis_impian VARCHAR(100) NOT NULL,
-    tautan_gambar VARCHAR(255) NOT NULL,
     saldo_terkumpul BIGINT NOT NULL,
     saldo_impian BIGINT NOT NULL,
     tenggat_waktu DATETIME NOT NULL,
@@ -102,12 +97,11 @@ CREATE TABLE tb_tabungan_impian (
 
 -- ========================================================================
 -- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
- DROP TABLE tb_laporan;
 CREATE TABLE tb_laporan(
     id INT IDENTITY(1,1) NOT NULL,
     id_laporan AS ('LPR-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
-    nama_pengguna VARCHAR(100) NOT NULL,
-    nama_pengguna_admin VARCHAR(100) NULL,
+    id_pengguna VARCHAR(20) NOT NULL,
+    id_admin VARCHAR(20) NULL,
     subjek_alasan VARCHAR(100) NOT NULL,
     rincian_alasan VARCHAR(255) NOT NULL,
     tanggal_laporan_dibuat DATETIME NOT NULL,
@@ -115,28 +109,7 @@ CREATE TABLE tb_laporan(
     [status_laporan] VARCHAR(100) NULL CHECK ([status_laporan] IN ('Selesai', 'Belum Selesai')) DEFAULT 'Belum Selesai'
 );
 
--- ========================================================================
--- membuat tb_laporan (untuk menampung data laporan dan dikirim ke admin)
-DROP TABLE tb_jenis_impian;
-CREATE TABLE tb_jenis_impian(
-	id INT IDENTITY(1,1) NOT NULL,
-	id_jenis_impian AS ('JNS-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED PRIMARY KEY,
-	jenis_impian VARCHAR(100) NOT NULL,
-	tautan_gambar VARCHAR(255) NOT NULL,
-	tanggal_dibuat DATETIME NOT NULL DEFAULT GETDATE(),
-	tanggal_ditutup DATETIME NULL,
-	[status_jenis_impian] VARCHAR(100) NULL CHECK ([status_jenis_impian] IN ('Aktif', 'Tidak Aktif')) DEFAULT 'Aktif'
-);
-
-INSERT INTO tb_jenis_impian(jenis_impian,tautan_gambar)
-VALUES
-	('Umum', 'global::Darimu.Properties.Resources.logo_umum'),
-	('Jalan-jalan', 'global::Darimu.Properties.Resources.logo_jalan_jalan'),
-	('Elektronik', 'global::Darimu.Properties.Resources.logo_elektronik'),
-	('Fashion', 'global::Darimu.Properties.Resources.logo_fashion'),
-	('Hiburan', 'global::Darimu.Properties.Resources.logo_hiburan');
-
-SELECT * FROM tb_pengguna;
+SELECT * FROM tb_pengguna;	
 SELECT * FROM tb_admin;
 SELECT * FROM tb_laporan;
 SELECT * FROM tb_tabungan_impian;
@@ -145,12 +118,11 @@ SELECT * FROM tb_jenis_impian;
 
 -- ========================================================================
 -- membuat tb_log_data (untuk melihat apa saja yang dilakukan oleh user (hanya ADMIN!!!!!!!!!!!!!!))
-DROP TABLE tb_log_data;
 CREATE TABLE tb_log_data(
 	id INT IDENTITY(1,1) NOT NULL,
 	id_log_data AS ('LOG-' + RIGHT('0000' + CAST(id AS VARCHAR(20)), 4)) PERSISTED,
-	nama_pengguna VARCHAR(100) NOT NULL,
-	nama_pengguna_admin VARCHAR(100) NOT NULL,
+	id_pengguna VARCHAR(20) NOT NULL,
+	id_admin VARCHAR(20) NOT NULL,
 	aktivitas VARCHAR(255) NOT NULL,
 	keterangan VARCHAR(255) NOT NULL,
 	tanggal_dibuat DATETIME NULL,

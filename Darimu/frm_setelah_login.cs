@@ -12,22 +12,22 @@ namespace Darimu
     public partial class frm_setelah_login : Form
     {
         // declaration var
-        private string nama_pengguna, pilihan_bank, jenis_impian, tautan_gambar, id_impian, keterangan_impian, keterangan_hapus_impian;
+        private string id_pengguna, nama_pengguna, pilihan_bank, jenis_impian, id_impian, keterangan_impian, keterangan_hapus_impian;
         private bool validasi_button = false;
         private int borderSize = 2;
         private long saldo_impian = 0;
         private long saldo_terkumpul = 0;
         private Image logo_tambah;
 
-        public frm_setelah_login(string nama_pengguna)
+        public frm_setelah_login(string id_pengguna)
         {
             InitializeComponent();
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(33, 106, 155);
-            this.nama_pengguna = nama_pengguna;
-            label_saldo.Text = ClassTransaksi.get_saldo(nama_pengguna).ToString();
-            ambil_data_profil();
+            this.id_pengguna = id_pengguna;
+            label_saldo.Text = ClassTransaksi.get_saldo(id_pengguna).ToString();
+            ambil_data_pengguna();
             panel_isi_beranda.Visible = true;
             logo_tambah = Darimu.Properties.Resources.logo_tambah;
             tenggat_waktu_impian.MinDate = System.DateTime.Now;
@@ -41,10 +41,11 @@ namespace Darimu
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         // get profile data
-        private void ambil_data_profil()
+        private void ambil_data_pengguna()
         {
-            ArrayList data_pengguna = ClassUser.lihatPengguna(nama_pengguna);
-            label_username.Text = data_pengguna[1].ToString();
+            ArrayList data_pengguna = ClassUser.lihatPengguna(id_pengguna);
+            label_nama_lengkap_title_bar.Text = data_pengguna[1].ToString();
+            this.nama_pengguna = data_pengguna[0].ToString();
             string[] nama_depan_belakang = data_pengguna[1].ToString().Split(' ');
             txt_ubah_nama_depan.Text = nama_depan_belakang[0];
             txt_ubah_nama_belakang.Text = nama_depan_belakang[1];
@@ -108,7 +109,7 @@ namespace Darimu
 
         private void tampil_impian()
         {
-            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
             if (isi_impian.Count <= 0)
             {
                 default_impian(logo_impian_1, label_nama_impian_1, label_saldo_impianmu_1, label_saldo_terkumpulmu_1, label_tenggat_waktu_1, button_hapus_impian_1, button_topup_impian_1, button_selesai_impian_1);
@@ -161,26 +162,26 @@ namespace Darimu
             }
         }
 
-        private void set_logo_impian(string tautan_logo, PictureBox logo)
+        private void set_logo_impian(string jenis_impian, PictureBox logo)
         {
             logo.Cursor = System.Windows.Forms.Cursors.Default;
-            if (tautan_logo == "global::Darimu.Properties.Resources.logo_umum")
+            if (jenis_impian == ("Umum"))
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_umum;
             }
-            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_jalan_jalan")
+            else if (jenis_impian == "Jalan-jalan")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_jalan_jalan;
             }
-            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_elektronik")
+            else if (jenis_impian == "Elektronik")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_elektronik;
             }
-            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_fashion")
+            else if (jenis_impian == "Fashion")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_fashion;
             }
-            else if (tautan_logo == "global::Darimu.Properties.Resources.logo_hiburan")
+            else if (jenis_impian == "Hiburan")
             {
                 logo.Image = global::Darimu.Properties.Resources.logo_hiburan;
             }
@@ -480,7 +481,7 @@ namespace Darimu
         {
             hide_panel();
             panel_isi_profil_saya.Visible = true;
-            ambil_data_profil();
+            ambil_data_pengguna();
         }
 
         private void button_simpan_MouseEnter(object sender, EventArgs e)
@@ -507,7 +508,7 @@ namespace Darimu
         {
             hide_panel();
             panel_isi_ubah_profil_saya.Visible = true;
-            ambil_data_profil();
+            ambil_data_pengguna();
         }
 
         private void button_BRI_MouseEnter(object sender, EventArgs e)
@@ -617,18 +618,18 @@ namespace Darimu
                 {
                     if (txt_ubah_email.ReadOnly == true)
                     {
-                        string hasil = ClassUser.ubah_data_pengguna_tanpa_email(nama_pengguna, nama_lengkap, tanggal_lahir);
+                        string hasil = ClassUser.ubah_data_pengguna_tanpa_email(id_pengguna, nama_lengkap, tanggal_lahir);
                         MessageBox.Show(hasil, "Sukses Mengubah Data",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                         hide_panel();
                         panel_isi_profil_saya.Visible = true;
                         txt_ubah_email.ReadOnly = true;
-                        ambil_data_profil();
+                        ambil_data_pengguna();
                     }
                     else
                     {
-                        string hasil = ClassUser.ubah_data_pengguna(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email);
+                        string hasil = ClassUser.ubah_data_pengguna(id_pengguna, nama_lengkap, tanggal_lahir, alamat_email);
                         if (hasil == "Data Berhasil Diubah")
                         {
                             MessageBox.Show(hasil, "Sukses Mengubah Data",
@@ -637,7 +638,7 @@ namespace Darimu
                             hide_panel();
                             panel_isi_profil_saya.Visible = true;
                             txt_ubah_email.ReadOnly = true;
-                            ambil_data_profil();
+                            ambil_data_pengguna();
                         }
                         else
                         {
@@ -647,7 +648,7 @@ namespace Darimu
                             hide_panel();
                             panel_isi_profil_saya.Visible = true;
                             txt_ubah_email.ReadOnly = true;
-                            ambil_data_profil();
+                            ambil_data_pengguna();
                         }
                     }
                 }
@@ -686,7 +687,7 @@ namespace Darimu
         {
             hide_panel();
             panel_isi_riwayat_transaksi.Visible = true;
-            ClassTransaksi.riwayat_transaksi(nama_pengguna, grid_transaksi);
+            ClassTransaksi.riwayat_transaksi(id_pengguna, grid_transaksi);
         }
 
         private void button_simpan_impian_MouseEnter(object sender, EventArgs e)
@@ -724,7 +725,7 @@ namespace Darimu
                     tenggat_waktu_impian.CustomFormat = "yyyy/MM/dd";
                     string tenggat_waktu = tenggat_waktu_impian.Value.ToString("yyyy/MM/dd");
 
-                    bool berhasil = ClassTabunganImpian.tambahImpian(nama_pengguna, nama_tabungan_impian, jenis_impian, tautan_gambar, saldo_impian, tenggat_waktu);
+                    bool berhasil = ClassTabunganImpian.tambahImpian(id_pengguna, nama_tabungan_impian, jenis_impian, saldo_impian, tenggat_waktu);
 
                     if (berhasil)
                     {
@@ -737,7 +738,6 @@ namespace Darimu
                         txt_saldo_impian.Text = "";
                         default_impian();
                         jenis_impian = "";
-                        tautan_gambar = "";
                         validasi_button = false;
                         tampil_impian();
                         panel_isi_tabungan_impian.Visible = true;
@@ -774,7 +774,6 @@ namespace Darimu
             default_impian();
             jenis_impian_umum.Image = global::Darimu.Properties.Resources.umum_biru;
             jenis_impian = "Umum";
-            tautan_gambar = "global::Darimu.Properties.Resources.logo_umum";
             validasi_button = true;
         }
 
@@ -783,7 +782,6 @@ namespace Darimu
             default_impian();
             jenis_impian_jalan_jalan.Image = global::Darimu.Properties.Resources.jalan_jalan_biru;
             jenis_impian = "Jalan-jalan";
-            tautan_gambar = "global::Darimu.Properties.Resources.logo_jalan_jalan";
             validasi_button = true;
         }
 
@@ -792,7 +790,6 @@ namespace Darimu
             default_impian();
             jenis_impian_elektronik.Image = global::Darimu.Properties.Resources.elektronik_biru;
             jenis_impian = "Elektronik";
-            tautan_gambar = "global::Darimu.Properties.Resources.logo_elektronik";
             validasi_button = true;
         }
 
@@ -800,7 +797,7 @@ namespace Darimu
         {
             hide_panel();
             panel_isi_profil_saya.Visible = true;
-            ambil_data_profil();
+            ambil_data_pengguna();
         }
 
         private void button_batal_impian_MouseEnter(object sender, EventArgs e)
@@ -815,7 +812,7 @@ namespace Darimu
 
         private void TabunganImpiantoolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
             if (isi_impian.Count <= 0)
             {
                 tampil_impian();
@@ -875,10 +872,10 @@ namespace Darimu
             {
                 try
                 {
-                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[1].ToString();
                     long saldo_baru = long.Parse(isi_impian[3].ToString());
-                    label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[0].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
+                    label_saldo.Text = ClassTabunganImpian.hapusImpian(id_pengguna, isi_impian[0].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
                     MessageBox.Show("Selamat! Impianmu berhasil terhapus.",
                                     "Sukses Menghapus Impian",
                                     MessageBoxButtons.OK,
@@ -928,10 +925,10 @@ namespace Darimu
             {
                 try
                 {
-                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[7].ToString();
                     long saldo_baru = long.Parse(isi_impian[9].ToString());
-                    label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[6].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
+                    label_saldo.Text = ClassTabunganImpian.hapusImpian(id_pengguna, isi_impian[6].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
                     MessageBox.Show("Selamat! Impianmu berhasil terhapus.",
                                     "Sukses Menghapus Impian",
                                     MessageBoxButtons.OK,
@@ -971,10 +968,10 @@ namespace Darimu
             {
                 try
                 {
-                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[13].ToString();
                     long saldo_baru = long.Parse(isi_impian[15].ToString());
-                    label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[12].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
+                    label_saldo.Text = ClassTabunganImpian.hapusImpian(id_pengguna, isi_impian[12].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
                     MessageBox.Show("Selamat! Impianmu sudah terhapus.",
                                     "Sukses Menghapus Impian",
                                     MessageBoxButtons.OK,
@@ -1004,7 +1001,7 @@ namespace Darimu
         private void button_topup_impian_2_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
             id_impian = isi_impian[6].ToString();
             saldo_terkumpul = long.Parse(isi_impian[9].ToString());
             saldo_impian = long.Parse(isi_impian[10].ToString());
@@ -1026,7 +1023,7 @@ namespace Darimu
         private void button_topup_impian_3_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
             id_impian = isi_impian[12].ToString();
             saldo_terkumpul = long.Parse(isi_impian[15].ToString());
             saldo_impian = long.Parse(isi_impian[16].ToString());
@@ -1057,10 +1054,10 @@ namespace Darimu
             {
                 try
                 {
-                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[1].ToString();
                     long saldo_baru = long.Parse(isi_impian[3].ToString());
-                    label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[0].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
+                    label_saldo.Text = ClassTabunganImpian.hapusImpian(id_pengguna, isi_impian[0].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
                     MessageBox.Show("Hore! Impianmu sudah selesai :D",
                                     "Sukses Menyelesaikan Impian",
                                     MessageBoxButtons.OK,
@@ -1090,10 +1087,10 @@ namespace Darimu
             {
                 try
                 {
-                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[7].ToString();
                     long saldo_baru = long.Parse(isi_impian[9].ToString());
-                    label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[6].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
+                    label_saldo.Text = ClassTabunganImpian.hapusImpian(id_pengguna, isi_impian[6].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
                     MessageBox.Show("Selamat! Impianmu sudah selesai.",
                                     "Sukses Menyelesaikan Impian",
                                     MessageBoxButtons.OK,
@@ -1133,10 +1130,10 @@ namespace Darimu
             {
                 try
                 {
-                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+                    ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
                     keterangan_hapus_impian = "Ambil saldo dari impian " + isi_impian[13].ToString();
                     long saldo_baru = long.Parse(isi_impian[15].ToString());
-                    label_saldo.Text = ClassTabunganImpian.hapusImpian(nama_pengguna, isi_impian[12].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
+                    label_saldo.Text = ClassTabunganImpian.hapusImpian(id_pengguna, isi_impian[12].ToString(), saldo_baru, keterangan_hapus_impian).ToString();
                     MessageBox.Show("Selamat! Impianmu sudah selesai.",
                                     "Sukses Menyelesaikan Impian",
                                     MessageBoxButtons.OK,
@@ -1217,7 +1214,6 @@ namespace Darimu
             txt_saldo_impian.Text = "";
             default_impian();
             jenis_impian = "";
-            tautan_gambar = "";
             validasi_button = false;
             tampil_impian();
             panel_isi_tabungan_impian.Visible = true;
@@ -1226,7 +1222,7 @@ namespace Darimu
         private void laporanSayaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             hide_panel();
-            ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+            ClassLaporan.riwayat_laporan(id_pengguna, grid_laporan);
             panel_isi_laporan_saya.Visible = true;
         }
 
@@ -1315,7 +1311,7 @@ namespace Darimu
                 {
                     string subjek_laporan = txt_isi_subjek_laporan.Text.Trim();
                     string rincian_laporan = txt_isi_rincian_laporan.Text.Trim();
-                    bool berhasil = ClassLaporan.buat_laporan(nama_pengguna, subjek_laporan, rincian_laporan);
+                    bool berhasil = ClassLaporan.buat_laporan(id_pengguna, subjek_laporan, rincian_laporan);
                     if (berhasil)
                     {
                         MessageBox.Show("Maaf, ya, kalau ngerepotin kamu. :(",
@@ -1330,7 +1326,7 @@ namespace Darimu
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
-                    ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+                    ClassLaporan.riwayat_laporan(id_pengguna, grid_laporan);
                     txt_isi_subjek_laporan.Text = "Ketik di sini...";
                     txt_isi_rincian_laporan.Text = "Ketik di sini...";
                     hide_panel();
@@ -1360,7 +1356,7 @@ namespace Darimu
         {
             txt_isi_subjek_laporan.Text = "Ketik di sini...";
             txt_isi_rincian_laporan.Text = "Ketik di sini...";
-            ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+            ClassLaporan.riwayat_laporan(id_pengguna, grid_laporan);
             hide_panel();
             panel_isi_laporan_saya.Visible = true;
         }
@@ -1377,7 +1373,7 @@ namespace Darimu
 
         private void label_kembali_laporan_MouseClick(object sender, MouseEventArgs e)
         {
-            ClassLaporan.riwayat_laporan(nama_pengguna, grid_laporan);
+            ClassLaporan.riwayat_laporan(id_pengguna, grid_laporan);
             txt_isi_subjek_laporan.Text = "Ketik di sini...";
             txt_isi_rincian_laporan.Text = "Ketik di sini...";
             hide_panel();
@@ -1415,7 +1411,7 @@ namespace Darimu
         {
             hide_panel();
             panel_isi_riwayat_impian.Visible = true;
-            ClassTabunganImpian.riwayat_impian(nama_pengguna,grid_riwayat_impian);
+            ClassTabunganImpian.riwayat_impian(id_pengguna,grid_riwayat_impian);
         }
 
         private void button_batal_isi_saldo_impian_MouseClick(object sender, MouseEventArgs e)
@@ -1429,7 +1425,7 @@ namespace Darimu
         private void button_topup_impian_1_MouseClick(object sender, MouseEventArgs e)
         {
             hide_panel();
-            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(nama_pengguna);
+            ArrayList isi_impian = ClassTabunganImpian.lihatImpian(id_pengguna);
             id_impian = isi_impian[0].ToString();
             saldo_terkumpul = long.Parse(isi_impian[3].ToString());
             saldo_impian = long.Parse(isi_impian[4].ToString());
@@ -1444,7 +1440,7 @@ namespace Darimu
             if (cek == "valid")
             {
                 long saldo_baru = long.Parse(txt_isi_saldo_impian.Text.Trim());
-                label_saldo.Text = ClassTabunganImpian.tambahSaldoImpian(nama_pengguna, saldo_baru, saldo_terkumpul, saldo_impian, id_impian, keterangan_impian).ToString();
+                label_saldo.Text = ClassTabunganImpian.tambahSaldoImpian(id_pengguna, saldo_baru, saldo_terkumpul, saldo_impian, id_impian, keterangan_impian).ToString();
                 hide_panel();
                 tampil_impian();
                 panel_isi_tabungan_impian.Visible = true;
@@ -1464,7 +1460,6 @@ namespace Darimu
             default_impian();
             jenis_impian_fashion.Image = global::Darimu.Properties.Resources.fashion_biru;
             jenis_impian = "Fashion";
-            tautan_gambar = "global::Darimu.Properties.Resources.logo_fashion";
             validasi_button = true;
         }
 
@@ -1473,7 +1468,6 @@ namespace Darimu
             default_impian();
             jenis_impian_hiburan.Image = global::Darimu.Properties.Resources.hiburan_biru;
             jenis_impian = "Hiburan";
-            tautan_gambar = "global::Darimu.Properties.Resources.logo_hiburan";
             validasi_button = true;
         }
 
@@ -1492,7 +1486,7 @@ namespace Darimu
                 if (result == DialogResult.Yes)
                 {
                     long saldo_baru = long.Parse(txt_isi_saldo.Text.Trim());
-                    label_saldo.Text = ClassTransaksi.isi_saldo(nama_pengguna, saldo_baru, pilihan_bank).ToString();
+                    label_saldo.Text = ClassTransaksi.isi_saldo(id_pengguna, saldo_baru, pilihan_bank).ToString();
                     MessageBox.Show("Selamat! Kamu berhasil tambah saldo :D",
                                     "Tambah Saldo Berhasil",
                                     MessageBoxButtons.OK,

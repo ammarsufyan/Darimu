@@ -14,7 +14,7 @@ namespace Darimu
         // declaration var
         int kesempatan_masuk = 3;
         int angka = 0;
-        public static string nama_pengguna, kata_sandi, nama_lengkap, tanggal_lahir, alamat_email, saldo, tanggal_buka, tanggal_tutup, status_pengguna;
+        public static string id_pengguna, nama_pengguna, kata_sandi, nama_lengkap, tanggal_lahir, alamat_email, saldo, tanggal_buka, tanggal_tutup, status_pengguna;
         private int borderSize = 2;
 
         public frm_sebelum_login()
@@ -399,8 +399,8 @@ namespace Darimu
                 kesempatan_masuk = kesempatan_masuk - 1;
 
                 string nama_pengguna_atau_email_input = txt_nama_pengguna_atau_email_masuk.Text.Trim();
-                string kata_sandi_input = ClassUser.hashPassword(txt_kata_sandi_masuk.Text);
-
+                string kata_sandi_input = ClassUser.hashKataSandi(txt_kata_sandi_masuk.Text);
+                string ambil_id_pengguna = ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input);
 
                 if (kesempatan_masuk <= 0)
                 {
@@ -410,16 +410,16 @@ namespace Darimu
                                     MessageBoxIcon.Stop);
                     Application.Exit();
                 }
-                else if (ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input))
+                else if (ambil_id_pengguna != "gagal")
                 {
                     MessageBox.Show("Selamat, kamu berhasil masuk!",
                                     "Sukses Masuk",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-
+                    id_pengguna = ambil_id_pengguna;
                     hide_panel();
                     clear_text();
-                    frm_setelah_login masuk = new frm_setelah_login(nama_pengguna_atau_email_input);
+                    frm_setelah_login masuk = new frm_setelah_login(id_pengguna);
                     this.Hide();
                     masuk.Show();
                 }
@@ -602,7 +602,7 @@ namespace Darimu
                 tanggal_lahir_daftar.CustomFormat = "yyyy/MM/dd";
                 string tanggal_lahir = tanggal_lahir_daftar.Value.ToString("yyyy/MM/dd");
 
-                string hasil = ClassUser.daftarUser(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
+                string hasil = ClassUser.daftarPengguna(nama_pengguna, nama_lengkap, tanggal_lahir, alamat_email, kata_sandi);
                 if (hasil == "Selamat! Kamu telah terdaftar :D")
                 {
                     MessageBox.Show(hasil, "Sukses Mendaftar",
@@ -636,7 +636,7 @@ namespace Darimu
 
             if (cek == "valid")
             {
-                string hasil = ClassUser.ubahPassword(txt_nama_pengguna_atau_email_lupa_kata_sandi.Text, txt_lupa_kata_sandi.Text);
+                string hasil = ClassUser.ubahKataSandi(txt_nama_pengguna_atau_email_lupa_kata_sandi.Text, txt_lupa_kata_sandi.Text);
                 MessageBox.Show(hasil, "Berhasil Membuat Password Baru",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);

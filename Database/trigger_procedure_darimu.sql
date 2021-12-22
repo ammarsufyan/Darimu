@@ -18,7 +18,6 @@ USE db_darimu;
 
 -- ========================================================================
 -- membuat trigger dan procedure untuk update saldo di tabungan
-DROP TRIGGER tr_transaksi_saldo;
 CREATE TRIGGER tr_transaksi_saldo
     ON tb_pengguna
     AFTER UPDATE 
@@ -26,84 +25,76 @@ AS
     BEGIN
         IF UPDATE(saldo)
         BEGIN
-	        DECLARE @nama_pengguna VARCHAR(100)
+	        DECLARE @id_pengguna VARCHAR(20)
 	        DECLARE @perubahan_saldo BIGINT
-	        SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
+	        SET @id_pengguna = (SELECT id_pengguna FROM inserted)
 	        SET @perubahan_saldo = (SELECT saldo FROM inserted) - (SELECT saldo FROM deleted)
-	        PRINT CONCAT('Perubahan Saldo : ', @perubahan_saldo)
 	        DECLARE @saldo_saat_ini BIGINT
-		    SET @saldo_saat_ini = (SELECT saldo FROM tb_pengguna WHERE nama_pengguna = @nama_pengguna)
-			EXEC sp_transaksi @nama_pengguna, @perubahan_saldo, @saldo_saat_ini
+		    SET @saldo_saat_ini = (SELECT saldo FROM tb_pengguna WHERE id_pengguna = @id_pengguna)
+			EXEC sp_transaksi @id_pengguna, @perubahan_saldo, @saldo_saat_ini
         END
     END
 
-DROP PROCEDURE sp_transaksi;
 CREATE PROCEDURE sp_transaksi
-	@nama_pengguna VARCHAR(100), @perubahan_saldo BIGINT, @saldo_saat_ini BIGINT
+	@id_pengguna VARCHAR(20), @perubahan_saldo BIGINT, @saldo_saat_ini BIGINT
 AS
     BEGIN
         IF (@perubahan_saldo > 0)
         	BEGIN
-	   			INSERT INTO tb_transaksi(nama_pengguna, tanggal, debit, kredit, saldo)
-	   			VALUES(@nama_pengguna, GETDATE(), ABS(@perubahan_saldo), 0, @saldo_saat_ini)
+	   			INSERT INTO tb_transaksi(id_pengguna, tanggal, debit, kredit, saldo)
+	   			VALUES(@id_pengguna, GETDATE(), ABS(@perubahan_saldo), 0, @saldo_saat_ini)
         	END
 		IF (@perubahan_saldo < 0)
 			BEGIN
-	   			INSERT INTO tb_transaksi(nama_pengguna, tanggal, debit, kredit, saldo)
-	   			VALUES(@nama_pengguna, GETDATE(), 0, ABS(@perubahan_saldo), @saldo_saat_ini)
+	   			INSERT INTO tb_transaksi(id_pengguna, tanggal, debit, kredit, saldo)
+	   			VALUES(@id_pengguna, GETDATE(), 0, ABS(@perubahan_saldo), @saldo_saat_ini)
         	END
     END
 
 -- ========================================================================
 -- membuat trigger dan procedure untuk hapus pengguna
-DROP TRIGGER  tr_hapus_pengguna;
 CREATE TRIGGER tr_hapus_pengguna
 	ON tb_pengguna
 	INSTEAD OF DELETE 	
 AS 
 BEGIN
-	DECLARE @nama_pengguna VARCHAR(100)
-	SET @nama_pengguna = (SELECT nama_pengguna FROM deleted)
-	PRINT @nama_pengguna
-	EXEC sp_hapus_pengguna @nama_pengguna 
+	DECLARE @id_pengguna VARCHAR(20)
+	SET @id_pengguna = (SELECT id_pengguna FROM deleted)
+	EXEC sp_hapus_pengguna @id_pengguna 
 END
 
-
-DROP PROCEDURE sp_hapus_pengguna;
 CREATE PROCEDURE sp_hapus_pengguna
-	@nama_pengguna VARCHAR(100)
+	@id_pengguna VARCHAR(20)
 AS 
 BEGIN
-	UPDATE tb_pengguna SET status_pengguna = 'Tidak Aktif' WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_pengguna SET tanggal_tutup = GETDATE() WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_tabungan_impian SET status_tabungan_impian = 'Tidak Aktif' WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_tabungan_impian SET tanggal_tutup = GETDATE() WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_transaksi SET status_data = 'Tidak Aktif' WHERE nama_pengguna = @nama_pengguna
+	UPDATE tb_pengguna SET status_pengguna = 'Tidak Aktif' WHERE id_pengguna = @id_pengguna
+	UPDATE tb_pengguna SET tanggal_tutup = GETDATE() WHERE id_pengguna = @id_pengguna
+	UPDATE tb_tabungan_impian SET status_tabungan_impian = 'Tidak Aktif' WHERE id_pengguna = @id_pengguna
+	UPDATE tb_tabungan_impian SET tanggal_tutup = GETDATE() WHERE id_pengguna = @id_pengguna
+	UPDATE tb_transaksi SET status_data = 'Tidak Aktif' WHERE id_pengguna = @id_pengguna
 END
 
 -- ========================================================================
 -- membuat trigger dan procedure untuk mengembalikan akun pengguna
-DROP TRIGGER  tr_mengembalikan_pengguna;
 CREATE TRIGGER tr_mengembalikan_pengguna
 	ON tb_pengguna
 	AFTER UPDATE
 AS 
 BEGIN
-	DECLARE @nama_pengguna VARCHAR(100)
-	SET @nama_pengguna = (SELECT nama_pengguna FROM inserted)
+	DECLARE @id_pengguna VARCHAR(20)
+	SET @id_pengguna = (SELECT id_pengguna FROM inserted)
 	IF UPDATE(status_pengguna)
 	BEGIN
-		EXEC sp_mengembalikan_pengguna @nama_pengguna	
+		EXEC sp_mengembalikan_pengguna @id_pengguna	
 	END
 END
 
-DROP PROCEDURE sp_mengembalikan_pengguna;
 CREATE PROCEDURE sp_mengembalikan_pengguna
-	@nama_pengguna VARCHAR(100)
+	@id_pengguna VARCHAR(20)
 AS 
 BEGIN
-	UPDATE tb_pengguna SET tanggal_tutup = NULL WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_tabungan_impian SET status_tabungan_impian = 'Aktif' WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_tabungan_impian SET tanggal_tutup = NULL WHERE nama_pengguna = @nama_pengguna
-	UPDATE tb_transaksi SET status_data = 'Aktif' WHERE nama_pengguna = @nama_pengguna
+	UPDATE tb_pengguna SET tanggal_tutup = NULL WHERE id_pengguna = @id_pengguna
+	UPDATE tb_tabungan_impian SET status_tabungan_impian = 'Aktif' WHERE id_pengguna = @id_pengguna
+	UPDATE tb_tabungan_impian SET tanggal_tutup = NULL WHERE id_pengguna = @id_pengguna
+	UPDATE tb_transaksi SET status_data = 'Aktif' WHERE id_pengguna = @id_pengguna
 END
