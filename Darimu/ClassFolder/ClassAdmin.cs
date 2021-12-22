@@ -9,20 +9,22 @@ namespace Darimu.ClassFolder
     class ClassAdmin
     {
         static SqlConnection sqlcon = new ClassKoneksi().getSQLCon();
-        public static bool cekAdmin(string nama_pengguna_admin_atau_email, string kata_sandi)
+        public static string cekAdmin(string nama_pengguna_admin_atau_email, string kata_sandi)
         {
             sqlcon.Open();
+            string id_admin = "gagal";
             SqlCommand sqlcom = new SqlCommand("SELECT * FROM tb_admin WHERE nama_pengguna_admin = '" + nama_pengguna_admin_atau_email + "' OR alamat_email = '" + nama_pengguna_admin_atau_email + "'AND kata_sandi = '" + kata_sandi + "' AND status_admin = 'Aktif'", sqlcon);
             SqlDataReader dr = sqlcom.ExecuteReader();
 
             if (dr.Read())
             {
+                id_admin = dr.GetString(1).ToString();
                 sqlcon.Close();
-                return true;
+                return id_admin;
             }
 
             sqlcon.Close();
-            return false;
+            return id_admin;
         }
 
         public static ArrayList lihatAdmin(string id_admin)

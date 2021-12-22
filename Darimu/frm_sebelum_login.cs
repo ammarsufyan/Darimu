@@ -14,7 +14,7 @@ namespace Darimu
         // declaration var
         int kesempatan_masuk = 3;
         int angka = 0;
-        public static string id_pengguna, nama_pengguna, kata_sandi, nama_lengkap, tanggal_lahir, alamat_email, saldo, tanggal_buka, tanggal_tutup, status_pengguna;
+        public static string nama_pengguna, kata_sandi, nama_lengkap, tanggal_lahir, alamat_email, saldo, tanggal_buka, tanggal_tutup, status_pengguna;
         private int borderSize = 2;
 
         public frm_sebelum_login()
@@ -401,6 +401,7 @@ namespace Darimu
                 string nama_pengguna_atau_email_input = txt_nama_pengguna_atau_email_masuk.Text.Trim();
                 string kata_sandi_input = ClassUser.hashKataSandi(txt_kata_sandi_masuk.Text);
                 string ambil_id_pengguna = ClassUser.cekMasuk(nama_pengguna_atau_email_input, kata_sandi_input);
+                string ambil_id_admin = ClassAdmin.cekAdmin(nama_pengguna_atau_email_input, kata_sandi_input);
 
                 if (kesempatan_masuk <= 0)
                 {
@@ -416,14 +417,13 @@ namespace Darimu
                                     "Sukses Masuk",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-                    id_pengguna = ambil_id_pengguna;
                     hide_panel();
                     clear_text();
-                    frm_setelah_login masuk = new frm_setelah_login(id_pengguna);
+                    frm_setelah_login masuk = new frm_setelah_login(ambil_id_pengguna);
                     this.Hide();
                     masuk.Show();
                 }
-                else if (ClassAdmin.cekAdmin(nama_pengguna_atau_email_input, kata_sandi_input))
+                else if (ambil_id_admin != "gagal")
                 {
                     MessageBox.Show("Selamat, Admin berhasil masuk!",
                                     "Sukses Masuk",
@@ -432,7 +432,7 @@ namespace Darimu
 
                     hide_panel();
                     clear_text();
-                    frm_admin admin = new frm_admin(nama_pengguna_atau_email_input);
+                    frm_admin admin = new frm_admin(ambil_id_admin);
                     this.Hide();
                     admin.Show();
                 }

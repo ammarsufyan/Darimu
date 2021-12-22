@@ -595,7 +595,7 @@ namespace Darimu
             {
                 string nama_belakang;
 
-                if (txt_ubah_nama_belakang.Text == "Nama Belakang")
+                if (txt_ubah_nama_belakang.Text == "Nama Belakang" || txt_ubah_nama_belakang.Text == "")
                 {
                     nama_belakang = "";
                 }
