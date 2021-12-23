@@ -1,2 +1,4 @@
-# Darimu
- Wujudkan Impianmu
+# Tugas Akhir Sistem Basis Data 
+# Aplikasi Tabungan "Darimu"
+ _Wujudkan Impianmu
+
