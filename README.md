@@ -8,18 +8,19 @@ _Wujudkan Impianmu_
 ➤ Ammar Sufyan (11200910000054)  
 ➤ Riandi Nandaputra (11200910000062)  
 
-### Alat dan Pengujian ###  
+## Alat dan Pengujian ##  
 • Visual Studio 2015 Enterprise  
 • SQL Server Enterprise 2014  
 • Telah diuji di Windows 10 Pro  
 • Github  
 • Figma  
 
-### Font yang Dibutuhkan ###  
+## Font yang Dibutuhkan ##   
 • Cabin  
 • Montserrat  
 • Klavika  
 
-### Rincian Aplikasi ###  
+## Rincian Aplikasi ##  
 • _Front end_ dan _back end_ menggunakan c# .NET  
-• Sistem manajemen basis data relasional untuk menyimpan data menggunakan SQL Server
+• Sistem manajemen basis data relasional untuk menyimpan data menggunakan SQL Server  
+• Buka dan ubah isi ClassKoneksi.cs pada ClassFolder dan sesuaikan nama sql server, username, serta password kalian
